@@ -1,0 +1,469 @@
+/*-- ---------------- --*/
+/*-- WIREFRAME BASICS --*/
+/*-- ---------------- --*/
+
+body {
+	margin: 0;
+}
+
+section.wireframe-wrapper {
+	padding: 0 1em;
+}
+
+header#header {
+  background-color: white;
+	border-bottom: 1px solid lightgrey;
+  height: 137px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;/* at the top of the stack */
+}
+
+header#header h3 {
+	margin: 0.25em 0;
+}
+
+h1, h2, h3, h4 {
+	color: #038EDF;
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: normal;
+	margin: 0;
+}
+
+a:link {
+	color: #038EDF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ff6f06;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #2A6283
+}
+
+.picture {
+	max-width: 600px;
+}
+/* addition since the fork in the style road */
+.global-nav {
+/*	margin-bottom: -14px;*/
+}
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.global-nav {
+		margin-bottom: 1em;
+	}
+}
+/* end addition */
+
+.global-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.global-nav ul li {
+	border: 1px solid #038EDF;
+	display: inline-block;
+	font-size: .8em;
+	padding: 0.25em;
+}
+
+section.wrapper {
+	margin-top: 160px;
+}
+
+nav.moment-nav {/* for mini-nav */
+	margin-left: -1em;
+	overflow-x: scroll;
+	width: 100%;
+}
+
+nav.moment-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+nav.moment-nav ul li {
+	background-color: #f2f2f2;
+	display: inline-block;
+	font-size: .8em;
+	padding: 0.25em;
+	width: 80px;
+	height: 50px;
+	text-align: center;
+	text-wrap: wrap;
+	vertical-align: text-top;
+}
+
+/* -------------------- */
+/* ----  MOMENTS   ---- */
+/* -------------------- */
+.moment-header {
+	padding: 0 1em;
+}
+
+/* --------------------------------- */
+/* ------  Moment Title Frames ----- */
+/* --------------------------------- */
+
+.moment-title {
+	height: 100vh;
+	margin-top: 138px;
+	position: relative;
+	text-align: center;
+}
+
+.title-community {
+	background-image: url('http://lucy-proto.deerfield-ma.org/assets/moments/images/community/02-dawn-house-color.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.moment-title h1 {
+	color: white;
+	margin: 0 0 1em 0;
+	text-shadow: 2px 2px 2px #333;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.moment-title h1 {
+		margin: 0 0 1em 0;
+		padding-top: 10%;
+	}
+}
+
+.moment-title-intro {
+	background-color: white;
+	border: 1px solid lightgrey;
+	box-shadow: 2px 2px 2px #333;
+	font-size: 1.2em;
+	margin: auto;
+	opacity: 0.8;
+	padding: 2em;
+	width: 40vw;
+}
+
+.moment-title-intro p.story {
+	font-style: italic;
+}
+
+nav.moment-options ul {
+	list-style: none;
+}
+
+nav.moment-options ul li a:link {
+	color: white;
+}
+
+nav.moment-options ul li a:visited {
+	color: lightgrey;
+}
+
+nav.moment-options ul li a:hover {
+	color: orange;
+}
+
+nav.moment-options ul li.prev-moment {
+	left: 6px;
+	position: absolute;
+	top: 30%;
+}
+
+nav.moment-options ul li.next-moment {
+	right: 6px;
+	position: absolute;
+	top: 30%;
+}
+
+nav.moment-options ul li.this-moment {
+	position: absolute;
+	bottom: 30vh;
+	left: 50%;
+}
+
+/* ----------------------------------- */
+/* -- Scrolling Moment Story Frames -- */
+/* ----------------------------------- */
+.moment-scroll {/* displays less than 800px */
+	background-color: black;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: fit-content auto;
+	grid-gap: 0;
+	margin-top: 138px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.moment-scroll {
+		grid-template-columns: 75% 25%;
+		grid-template-rows: auto auto;
+	}
+}
+
+/* -------- */
+/*  IMAGES  */
+/* -------- */
+
+/* for MOBILE: displays smaller than 800px */
+@media screen and (max-width: 799px) {
+	.image-panel {
+	/* put the images in the only column */
+		grid-column: 1;
+		grid-row: 1;
+	}
+	/* fixed container to keep image from scrolling */
+	.image-panel div.image-panel-fixed {
+		height: 60vh;
+		width: 100%;
+		position: fixed;
+	}
+	/* no inner div version */
+	.image-panel-image { /* displays smaller than 800px */
+		height: 60vh;
+		width: 100%;
+ 		position: absolute;
+	}
+	/* the size has to be declared this third time! */
+	/* .image-panel-image img {
+		height: 60vh;
+		width: 100%;
+		object-fit: cover;      
+	} */
+	/* the size has to be declared this fourth time! */
+	.image-panel svg {
+		height: 60vh;
+		width: 100%;
+	}
+}
+
+/* for DESKTOP: displays larger than 800px */
+@media screen and (min-width: 800px) {
+	/* put the images in the left column */
+	.image-panel {
+		grid-column: 1;
+	}
+	/* fixed container to keep image from scrolling */
+	.image-panel div.image-panel-fixed {
+		width: 75%;
+		height: calc(100vh - 138px);
+		position: fixed;
+    }
+	/* no inner div version */
+	.image-panel-image {
+		width: 100%;
+		height: calc(100vh - 138px); 
+		position: absolute;
+	}
+	/* the size has to be declared this third time!
+	.image-panel-image img {
+		width: 100%;
+		height: calc(100vh - 138px); 
+		object-fit: cover;      
+	} */
+	/* the size has to be declared this third time! */
+	.image-panel-image svg {
+		width: 100%;
+		height: calc(100vh - 138px);    
+	}	
+}
+
+/* More panel */
+.more-container {
+  border-radius: 0 3px 3px 0;
+	background-color: white;
+	left: -285px;
+	top: 20vh;
+	height: 300px;
+	width: 250px;
+	padding: 1em;
+	z-index: 120;
+	position: absolute;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+.more-container:hover {
+  /* opacity: 1; */
+  left: 0px;
+}
+
+.more-tab {
+  background-color: #146cc1;
+  border-radius: 0 0 3px 3px;
+	color: #fff;
+  padding: 1.25em 1em 0.25em 1em;
+  position: absolute;
+  top: 60%;
+  /*top: 318px;*/
+  left: 265px;
+  margin: 0;
+  /*width: 318px;*/
+  text-align: center;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+}
+
+.more-container ul {
+	list-style-type: none;
+	padding-left: 15px;
+}
+
+/* -------------- */
+/*   STORY TEXT   */
+/* -------------- */
+/* for MOBILE: displays smaller than 800px */
+.story-frames { 
+	grid-column: 1;
+	grid-row: 1;
+	margin: 30vh auto 30vh auto;
+	width: 60vw;
+	z-index: 10;
+}
+
+/* for DESKTOP: displays larger than 800px */
+@media screen and (min-width: 800px) {
+	.story-frames {
+		background-color: white;
+		grid-column: 2;		
+		height: 100%;
+		margin: auto;
+		max-width: 100%;
+/*	overflow: auto;*/
+	}
+}
+
+.story-frames article.story {/* displays smaller than 800px */
+	/* margin-bottom: 200px; */
+	margin-bottom: calc(100vh - 250px);
+	background: rgba(256, 256, 256, .8);
+	padding: 1em;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.story-frames article.story {
+	  /* margin-bottom: 200px; */
+	  margin-bottom: calc(100vh - 250px);
+	  background-color: transparent;
+	  padding: 1em;
+	  z-index: 1;
+	}
+}
+
+/* -------------- */
+/*   TOTAL MORE   */
+/* -------------- */
+.total-more {
+	background-color: white;
+	grid-column: 1 / 3;
+	grid-row: 2;
+	padding: 1em;
+	z-index: 11;
+}
+
+/* ---------------------- */
+/*   MODAL MORE WINDOWS   */
+/* ---------------------- */
+.hidden {
+  display: none;
+}
+
+.unhidden {
+  display: block;
+}
+
+#modal-overlay {
+  background: url(./assets/overlay.png) repeat;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 99;
+}
+
+#modal-wrapper {
+  background-color: white;
+  border: 1px solid lightgrey;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+  overflow: auto;
+  padding: 1em;
+  position: relative;
+}
+
+/* JavaScript assigns this (or .hidden) to modal container */
+.modal-basic {
+  bottom: 0;
+  display: block;
+  left: 0;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: fixed;/* this positions the modal window relative to viewport, it won't scroll with the page */  
+  right: 0;
+  top: 10vh;
+  z-index: 100;
+  max-height: 75vh;
+  width: 70vw;
+}
+
+.modal-close {
+	position: absolute;
+	top: 10px;
+	right:20px;
+}
+
+.close { 
+  cursor:pointer;
+}
+
+.close:after, .close:before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-top: 1px solid #000;
+  position: absolute;
+  top: 10px;
+  right: -8px;
+  rotate: -45deg;
+}
+      
+.close:before {
+  right: 6px;
+  rotate: 45deg;
+}
+  
+.close:hover {	
+  opacity: 0.3;
+}
+
+.more-content h2, .more-content h4 {
+	margin: 0;
+}
+
+.more-content figure {
+	float: left;
+	margin: 1em 1em 0 0;
+	width: 50%;
+}
+
+.more-content figure img {
+	max-width: 100%;
+}
+.more-content figure figcaption {
+	color: gray;
+	font-size: .8em;
+}

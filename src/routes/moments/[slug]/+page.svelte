@@ -1,0 +1,174 @@
+<script>
+    import Modal from '../../../temp-modal.svelte'
+    let link01 = 'Carol Shelby';
+    const images = [
+      '02-dawn-house-color',
+      '03-candle-color',
+      '04-house-cutaway-color',
+      '05-lucy-hearth'
+    ];
+    let imageIndex = 0;
+    let panelHeight = window.innerHeight - 138;
+    let winy = 0;
+    let isModalShowing = false;
+    function showModal(event) {
+        event.preventDefault();
+        isModalShowing = true;
+    };
+    const handleMove = (event) => {
+        m.x = event.clientX;
+        m.y = event.clientY;
+    }
+    const closeModal = () => {
+        isModalShowing = false;
+    };
+
+    $: imageIndex = Math.trunc((winy + panelHeight - 125)/(panelHeight))
+
+    $: if (isModalShowing) {
+        console.log("modal is now showing")
+    }
+
+</script>
+
+<header id="header" class="moment-header">
+    <h3><a href="/">Lucy Terry Prince</a></h3>
+    <nav class="global-nav">
+    <ul>
+        <li><a href="/moments/">Moments</a></li>
+        <li><a href="/people/">Who Else?</a></li>
+        <li><a href="/evidence/">How Do We Know?</a></li>
+        <li><a href="#">Topics &amp; Ideas</a></li>
+        <li><a href="#">Where in the World?</a></li>
+        <li><a href="#">Myths &amp; Assumptions</a></li>
+    </ul>
+</nav>
+
+
+    <nav class="moment-nav">
+        <ul>
+            <li><a href="#">Sold Out of Africa</a></li>
+            <li><a href="#">For Sale Again</a></li>
+            <li><a href="#">A Strange New Life</a></li>
+            <li><a href="#">Enslaved at the Wells’ House</a></li>
+            <li><a href="#">Joining the Church</a></li>
+            <li><a href="#">Singer of History</a></li>
+            <li><a href="#">Engaging With the Community</a></li>
+            <li><a href="/moments/community">Community Within Community</a></li>
+            <li><a href="#">A Fruitful Union</a></li>
+            <li><a href="#">Sons of the Revolution</a></li>
+            <li><a href="#">Living on the Frontier</a></li>
+            <li><a href="#">Fighting in Court</a></li>
+            <li><a href="#">Returning to Deerfield</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--
+    <div class="title-panel">
+    <h1>Community Within Community</h1>
+    <p>Scroll down to begin...</p>
+    </div>
+-->
+<svelte:window bind:scrollY={winy} />
+
+<section class="moment-scroll" >
+    <div class="image-panel"> 
+    <div class="image-panel-fixed" hx-target="#modal-container" hx-swap="outerHTML">
+
+    <div class="image-panel-image">
+
+        <svg viewBox="0 0 2000 1286" preserveAspectRatio="xMidYMid slice">
+
+        <image href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/{images[imageIndex]}.jpg"
+        alt="svg house" 
+        width="100%" height="100%"></image>
+
+
+        </svg>
+    </div> <!-- end image panel image -->
+
+        <!-- Single dynamic more box -->
+        <div class="more-container">
+            <h4 class="more-tab">More</h4>
+            
+            <h4>More</h4>
+            <div>
+                <p>the y is at: {winy} </p>
+                <p>Who Else?</p>
+                <ul>
+                    <li>
+                        <a on:click={showModal} href="/">{link01}</a>
+                    </li>
+                </ul>            
+            </div>
+        </div>
+
+    </div> <!-- /image-panel-fixed -->
+    </div><!-- /image-panel -->
+
+    <div class="story-frames">
+
+    <article class="story" hx-target="#modal-container" hx-swap="outerHTML">
+        <p>Enter=0 Dark. In colonial New England, work days for enslaved people began long before daybreak — long before their enslavers
+        got up to begin their own work days.
+    </p>      
+    </article><!-- Frame1 : END -->
+
+    <article class="story">
+        <p>Enter=1 Candle. While Ebenezer and Abigail Wells continue to sleep in their comfortable bed downstairs, Lucy arises from her straw-filled mattress in the garret and lights a candle so that she can see to dress for the day.</p>
+    </article><!-- Frame2 : END -->
+
+    <article class="story">
+        <p>Enter= 3 Cutaway. Cesar, sleeping on another garret mattress, also awakens and dresses. Lucy and Cesar slip quietly down the stairs to the kitchen.</p>
+    </article><!-- Frame3 : END -->
+
+    <article class="story">
+        <p>Enter=3 B&amp;W Hearth. There, Cesar builds a new fire on the embers remaining from the night before, while Lucy begins to prepare breakfast for the Wells. She and Cesar will eat later.</p>
+    </article><!-- Frame4 : END -->
+
+    <article class="story">
+        <p>Lucy cracks several eggs and places a pot of baked beans at the front of the fire to reheat. She also hangs a pot of water over the fire to boil for tea and puts a jug of apple cider on the table. Finally, she sets out plates, cups, and tableware for the Wells.</p>
+    </article><!-- Frame5 : END -->
+
+    <article class="story">
+        <p>Having renewed the fire, Cesar goes outside with a bucket of cracked corn to feed the chickens.</p>
+    </article><!-- Frame6 : END -->
+
+    <article class="story">
+        <p>Night has fallen and Lucy continues to work, cleaning up the dinner dishes by candlelight. Cesar has returned from a day of work harvesting crops for a neighbor of the Wells — Ebenezer has rented out Cesar’s labor for cash.</p>
+    </article><!-- Frame7 : END -->
+
+    <article class="story">
+        <p>Cesar stokes and banks the fire for the night and then prepares to go out, this time on an errand of his own. He plans to meet one of his friends for a walk — she is waiting for him in the yard behind the Wells house.</p>
+    </article><!-- Frame8 : END -->
+    
+    </div><!--/story-frames-->
+
+    <article class="total-more">
+    <h2>The Necessity for Community</h2>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+    <h3>Who Else?</h3>
+    <ul>
+        <li>This person</li>
+        <li>That person</li>
+        <li>Another person</li>
+        <li>A fourth person</li>
+    </ul>
+    <h3>How Do We Know?</h3>
+    <ul>
+        <li>an artifact</li>
+        <li>a document</li>
+        <li>an artifact</li>
+        <li>a document</li>
+    </ul>
+    </article> <!--/total-more -->
+
+</section> <!--/moment-scroll-->
+
+{#if isModalShowing}
+    <Modal 
+        title={'jen cole'}
+    />
+{/if}
+
