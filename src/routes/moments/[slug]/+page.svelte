@@ -22,12 +22,13 @@
 
     // For house parallax
     let isCaptured = false;
-    let houseStartY = 800;
-    let houseTransY = -20;
-    let houseScale = 1.2;
+    let houseScrollStartY = 800;
+    let houseTransY = 0;
+    let houseScale = 1;
     let houseBgTransY = 0;
     let houseBgTransX = 0;
     let houseBgScale = 1;
+    const zoomDelay = 100;
 
     function showModal(event) {
         event.preventDefault();
@@ -44,17 +45,18 @@
         console.log("modal is now showing")
     }
     // House parallax
-    $:   if (imageIndex === 2 && !isCaptured) {
-        houseStartY = currScrollY;
+    $: if (imageIndex === 2 && !isCaptured) {
+        houseScrollStartY = currScrollY;
         isCaptured = true;
         // count += 1;
     }
-    $:   if (houseStartY - currScrollY < 0) {
-        houseTransY = ((houseStartY - currScrollY)/2);
-        houseBgTransY = ((houseStartY - currScrollY)/6);
-        houseBgTransX = 0 + ((houseStartY - currScrollY)/1);
-        houseScale = 1 - ((houseStartY - currScrollY)/2000);
-        houseBgScale = 1 - ((houseStartY - currScrollY)/5000)
+    // Allow time for fade before starting zoom, hence the - ~ 150
+    $: if ((houseScrollStartY) - (currScrollY - zoomDelay) < 0) {
+        // houseTransY = Math.min(((houseScrollStartY - (currScrollY - zoomDelay))/2), 0);
+        houseTransY = ((houseScrollStartY - (currScrollY - zoomDelay))/2);
+        houseScale = 1 - ((houseScrollStartY - (currScrollY - zoomDelay))/2000);
+        houseBgTransY = ((houseScrollStartY - (currScrollY - zoomDelay))/6);
+        houseBgScale = 1 - ((houseScrollStartY - (currScrollY - zoomDelay))/5000)
     }
     
 
@@ -121,21 +123,22 @@
             width="100%" height="100%"></image>
         {/if}
         {#if imageIndex === 2}
-            <image transition:fade={{ duration: 1500}}
-            href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/04-house-cutaway-color.jpg"
-            alt="svg house" 
-            width="100%" height="100%"></image>
+            <g transition:fade={{ duration: 1000}}>
+                <image 
+                transform="translate({houseBgTransX} {houseBgTransY}) scale({houseBgScale})"
+                href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/04-house-cutaway-color.jpg"
+                alt="svg house" 
+                width="100%" height="100%"></image>
+
+                <image 
+                class="image-layer" width="100%" height="100%" 
+                transform="translate(0 {houseTransY}) scale({houseScale})"
+                href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/1-dark-house-proto.png" /> 
+    
+
+            </g>
+
         {/if}
-
-
-        <!-- house parallax -->
-        {#if imageIndex === 2 || imageIndex === 3}
-        <image 
-            transition:fade={{ duration: 1500}}
-            class="image-layer" width="100%" height="100%" 
-            transform="translate(0 {houseTransY}) scale({houseScale})"
-            href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/1-dark-house-proto.png" /> 
-        {/if}       
 
 
         {#if imageIndex === 3}
