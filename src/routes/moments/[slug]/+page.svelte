@@ -17,25 +17,46 @@
       'lucy-hearth'
     ];
     let imageIndex = 0;
-    let winy = 0;
+    let currScrollY = 0;
     let isModalShowing = false;
+
+    // For house parallax
+    let isCaptured = false;
+    let houseStartY = 800;
+    let houseTransY = -20;
+    let houseScale = 1.2;
+    let houseBgTransY = 0;
+    let houseBgTransX = 0;
+    let houseBgScale = 1;
+
     function showModal(event) {
         event.preventDefault();
         isModalShowing = true;
     };
-    const handleMove = (event) => {
-        m.x = event.clientX;
-        m.y = event.clientY;
-    }
+
     const closeModal = () => {
         isModalShowing = false;
     };
 
-    $: imageIndex = Math.trunc((winy + panelHeight - 125)/(panelHeight))
+    $: imageIndex = Math.trunc((currScrollY + panelHeight - 125)/(panelHeight))
 
     $: if (isModalShowing) {
         console.log("modal is now showing")
     }
+    // House parallax
+    $:   if (imageIndex === 2 && !isCaptured) {
+        houseStartY = currScrollY;
+        isCaptured = true;
+        // count += 1;
+    }
+    $:   if (houseStartY - currScrollY < 0) {
+        houseTransY = ((houseStartY - currScrollY)/2);
+        houseBgTransY = ((houseStartY - currScrollY)/6);
+        houseBgTransX = 0 + ((houseStartY - currScrollY)/1);
+        houseScale = 1 - ((houseStartY - currScrollY)/2000);
+        houseBgScale = 1 - ((houseStartY - currScrollY)/5000)
+    }
+    
 
 </script>
 
@@ -78,7 +99,7 @@
     <p>Scroll down to begin...</p>
     </div>
 -->
-<svelte:window bind:scrollY={winy} />
+<svelte:window bind:scrollY={currScrollY} />
 
 <section class="moment-scroll" >
     <div class="image-panel"> 
@@ -105,6 +126,18 @@
             alt="svg house" 
             width="100%" height="100%"></image>
         {/if}
+
+
+        <!-- house parallax -->
+        {#if imageIndex === 2 || imageIndex === 3}
+        <image 
+            transition:fade={{ duration: 1500}}
+            class="image-layer" width="100%" height="100%" 
+            transform="translate(0 {houseTransY}) scale({houseScale})"
+            href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/1-dark-house-proto.png" /> 
+        {/if}       
+
+
         {#if imageIndex === 3}
             <image transition:fade={{ duration: 1500}}
             href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-hearth.jpg"
@@ -122,7 +155,7 @@
             
             <h4>More</h4>
             <div>
-                <p>the y is at: {winy} </p>
+                <p>the y is at: {currScrollY} </p>
                 <p>Who Else?</p>
                 <ul>
                     <li>
