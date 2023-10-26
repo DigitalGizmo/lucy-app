@@ -1,14 +1,22 @@
 <script>
-    import Modal from '../../../temp-modal.svelte'
+    import { onMount } from 'svelte';
+    import { fade } from 'svelte/transition';
+    import Modal from '../../../temp-modal.svelte';
+
+
+    let panelHeight = 800;
+    onMount(() => {
+        panelHeight = window.innerHeight - 138;
+    })
+
     let link01 = 'Carol Shelby';
     const images = [
       '02-dawn-house-color',
       '03-candle-color',
       '04-house-cutaway-color',
-      '05-lucy-hearth'
+      'lucy-hearth'
     ];
     let imageIndex = 0;
-    let panelHeight = window.innerHeight - 138;
     let winy = 0;
     let isModalShowing = false;
     function showModal(event) {
@@ -38,28 +46,28 @@
         <li><a href="/moments/">Moments</a></li>
         <li><a href="/people/">Who Else?</a></li>
         <li><a href="/evidence/">How Do We Know?</a></li>
-        <li><a href="#">Topics &amp; Ideas</a></li>
-        <li><a href="#">Where in the World?</a></li>
-        <li><a href="#">Myths &amp; Assumptions</a></li>
+        <li><a href="/">Topics &amp; Ideas</a></li>
+        <li><a href="/">Where in the World?</a></li>
+        <li><a href="/">Myths &amp; Assumptions</a></li>
     </ul>
 </nav>
 
 
     <nav class="moment-nav">
         <ul>
-            <li><a href="#">Sold Out of Africa</a></li>
-            <li><a href="#">For Sale Again</a></li>
-            <li><a href="#">A Strange New Life</a></li>
-            <li><a href="#">Enslaved at the Wells’ House</a></li>
-            <li><a href="#">Joining the Church</a></li>
-            <li><a href="#">Singer of History</a></li>
-            <li><a href="#">Engaging With the Community</a></li>
+            <li><a href="/">Sold Out of Africa</a></li>
+            <li><a href="/">For Sale Again</a></li>
+            <li><a href="/">A Strange New Life</a></li>
+            <li><a href="/">Enslaved at the Wells’ House</a></li>
+            <li><a href="/">Joining the Church</a></li>
+            <li><a href="/">Singer of History</a></li>
+            <li><a href="/">Engaging With the Community</a></li>
             <li><a href="/moments/community">Community Within Community</a></li>
-            <li><a href="#">A Fruitful Union</a></li>
-            <li><a href="#">Sons of the Revolution</a></li>
-            <li><a href="#">Living on the Frontier</a></li>
-            <li><a href="#">Fighting in Court</a></li>
-            <li><a href="#">Returning to Deerfield</a></li>
+            <li><a href="/">A Fruitful Union</a></li>
+            <li><a href="/">Sons of the Revolution</a></li>
+            <li><a href="/">Living on the Frontier</a></li>
+            <li><a href="/">Fighting in Court</a></li>
+            <li><a href="/">Returning to Deerfield</a></li>
         </ul>
     </nav>
 </header>
@@ -77,12 +85,32 @@
     <div class="image-panel-fixed" hx-target="#modal-container" hx-swap="outerHTML">
 
     <div class="image-panel-image">
-
         <svg viewBox="0 0 2000 1286" preserveAspectRatio="xMidYMid slice">
 
-        <image href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/{images[imageIndex]}.jpg"
-        alt="svg house" 
-        width="100%" height="100%"></image>
+        {#if imageIndex === 0}
+            <image transition:fade={{ duration: 1500}}
+            href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/02-dawn-house-color.jpg"
+            alt="svg house" 
+            width="100%" height="100%"></image>
+        {/if}
+        {#if imageIndex === 1}
+            <image transition:fade={{ duration: 1500}}
+            href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/03-candle-color.jpg"
+            alt="svg house" 
+            width="100%" height="100%"></image>
+        {/if}
+        {#if imageIndex === 2}
+            <image transition:fade={{ duration: 1500}}
+            href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/04-house-cutaway-color.jpg"
+            alt="svg house" 
+            width="100%" height="100%"></image>
+        {/if}
+        {#if imageIndex === 3}
+            <image transition:fade={{ duration: 1500}}
+            href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-hearth.jpg"
+            alt="svg house" 
+            width="100%" height="100%"></image>
+        {/if}
 
 
         </svg>
