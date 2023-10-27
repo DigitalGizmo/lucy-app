@@ -13,7 +13,7 @@
     const images = [
       '02-dawn-house-color',
       '03-candle-color',
-      '04-house-cutaway-color',
+      '04-house-cutaway-color-nochim',
       'lucy-hearth'
     ];
     let imageIndex = 0;
@@ -28,7 +28,7 @@
     let houseBgTransY = 0;
     let houseBgTransX = 0;
     let houseBgScale = 1;
-    const zoomDelay = 100;
+    const zoomDelay = 130;
 
     function showModal(event) {
         event.preventDefault();
@@ -56,44 +56,14 @@
         houseTransY = ((houseScrollStartY - (currScrollY - zoomDelay))/2);
         houseScale = 1 - ((houseScrollStartY - (currScrollY - zoomDelay))/2000);
         houseBgTransY = ((houseScrollStartY - (currScrollY - zoomDelay))/6);
+        // houseBgTransX = ((houseScrollStartY - (currScrollY - zoomDelay))/6);
         houseBgScale = 1 - ((houseScrollStartY - (currScrollY - zoomDelay))/5000)
     }
     
 
 </script>
 
-<header id="header" class="moment-header">
-    <h3><a href="/">Lucy Terry Prince</a></h3>
-    <nav class="global-nav">
-    <ul>
-        <li><a href="/moments/">Moments</a></li>
-        <li><a href="/people/">Who Else?</a></li>
-        <li><a href="/evidence/">How Do We Know?</a></li>
-        <li><a href="/">Topics &amp; Ideas</a></li>
-        <li><a href="/">Where in the World?</a></li>
-        <li><a href="/">Myths &amp; Assumptions</a></li>
-    </ul>
-</nav>
 
-
-    <nav class="moment-nav">
-        <ul>
-            <li><a href="/">Sold Out of Africa</a></li>
-            <li><a href="/">For Sale Again</a></li>
-            <li><a href="/">A Strange New Life</a></li>
-            <li><a href="/">Enslaved at the Wells’ House</a></li>
-            <li><a href="/">Joining the Church</a></li>
-            <li><a href="/">Singer of History</a></li>
-            <li><a href="/">Engaging With the Community</a></li>
-            <li><a href="/moments/community">Community Within Community</a></li>
-            <li><a href="/">A Fruitful Union</a></li>
-            <li><a href="/">Sons of the Revolution</a></li>
-            <li><a href="/">Living on the Frontier</a></li>
-            <li><a href="/">Fighting in Court</a></li>
-            <li><a href="/">Returning to Deerfield</a></li>
-        </ul>
-    </nav>
-</header>
 
 <!--
     <div class="title-panel">
@@ -126,7 +96,7 @@
             <g transition:fade={{ duration: 1000}}>
                 <image 
                 transform="translate({houseBgTransX} {houseBgTransY}) scale({houseBgScale})"
-                href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/04-house-cutaway-color.jpg"
+                href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/04-house-cutaway-color-nochim.jpg"
                 alt="svg house" 
                 width="100%" height="100%"></image>
 
