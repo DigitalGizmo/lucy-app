@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "vite preview --host"
+		"preview": "HOST=0.0.0.0 vite preview --host"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
