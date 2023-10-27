@@ -82,13 +82,13 @@
 
         {#if imageIndex === 0}
             <image transition:fade={{ duration: 1500}}
-            href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/02-dawn-house-color.jpg"
+            href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/02-dawn-house-color.jpg"
             alt="svg house" 
             width="100%" height="100%"></image>
         {/if}
         {#if imageIndex === 1}
             <image transition:fade={{ duration: 1500}}
-            href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/03-candle-color.jpg"
+            href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/03-candle-color.jpg"
             alt="svg house" 
             width="100%" height="100%"></image>
         {/if}
@@ -96,14 +96,14 @@
             <g transition:fade={{ duration: 1000}}>
                 <image 
                 transform="translate({houseBgTransX} {houseBgTransY}) scale({houseBgScale})"
-                href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/04-house-cutaway-color-nochim.jpg"
+                href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/04-house-cutaway-color-nochim.jpg"
                 alt="svg house" 
                 width="100%" height="100%"></image>
 
                 <image 
                 class="image-layer" width="100%" height="100%" 
                 transform="translate(0 {houseTransY}) scale({houseScale})"
-                href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/1-dark-house-proto.png" /> 
+                href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/1-dark-house-proto.png" /> 
     
 
             </g>
@@ -113,7 +113,7 @@
 
         {#if imageIndex === 3}
             <image transition:fade={{ duration: 1500}}
-            href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-hearth.jpg"
+            href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-hearth.jpg"
             alt="svg house" 
             width="100%" height="100%"></image>
         {/if}
