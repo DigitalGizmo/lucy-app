@@ -1,4 +1,12 @@
+<script>
+  import MainNav from "../../../lib/MainNav.svelte";
+  import MomentNav from "../../../lib/MomentNav.svelte";
+</script>
 
+<header id="header" class="moment-header">
+  <MainNav />
+  <MomentNav />
+</header>
 
 <section class="moment-title title-community">
 
@@ -11,9 +19,9 @@
 
   <nav class="moment-options">
     <ul>
-      <li class="prev-moment"><a href="#">Previous moment</a></li>
+      <li class="prev-moment"><a href="/">Previous moment</a></li>
       <li class="this-moment"><a href="/moments/community">Explore this moment</a></li>
-      <li class="next-moment"><a href="#">Next moment</a></li>
+      <li class="next-moment"><a href="/">Next moment</a></li>
     </ul>
   </nav>
 

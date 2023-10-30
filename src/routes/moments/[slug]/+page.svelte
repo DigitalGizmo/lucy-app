@@ -3,8 +3,11 @@
     import { fade } from 'svelte/transition';
     import Modal from '../../../temp-modal.svelte';
 
+    import MainNav from "../../../lib/MainNav.svelte";
+    import MomentNav from "../../../lib/MomentNav.svelte";
 
     let panelHeight = 800;
+
     onMount(() => {
         panelHeight = window.innerHeight - 138;
     })
@@ -35,10 +38,6 @@
         isModalShowing = true;
     };
 
-    const closeModal = () => {
-        isModalShowing = false;
-    };
-
     $: imageIndex = Math.trunc((currScrollY + panelHeight - 125)/(panelHeight))
 
     $: if (isModalShowing) {
@@ -63,14 +62,17 @@
 
 </script>
 
-
-
 <!--
     <div class="title-panel">
     <h1>Community Within Community</h1>
     <p>Scroll down to begin...</p>
     </div>
 -->
+<header id="header" class="moment-header">
+    <MainNav />
+    <MomentNav />
+</header>
+
 <svelte:window bind:scrollY={currScrollY} />
 
 <section class="moment-scroll" >
@@ -202,7 +204,9 @@
 
 {#if isModalShowing}
     <Modal 
-        title={'jen cole'}
+        title={'Carol Shelby'}
+        bind:isModalShowing
     />
+
 {/if}
 
