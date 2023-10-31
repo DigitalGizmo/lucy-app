@@ -2,6 +2,7 @@
     // import { createEventDispatcher } from "svelte";
     // const dispatch = createEventDispatcher();
     export let title = 'title from param';
+    export let modalType = 'tbd';
     export let isModalShowing;
     // Send function to parent;
     // function closeModal() {
@@ -23,7 +24,7 @@
     </div><!-- / -->
             
     <article class="more-content">
-      <h4>More: Who Else?</h4>
+      <h4>More: {modalType}</h4>
       <h2>{title}</h2>
       <figure>
         <img src="https://placehold.co/600x400"
