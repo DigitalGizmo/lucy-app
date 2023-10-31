@@ -33,6 +33,10 @@
     let houseBgScale = 1;
     const zoomDelay = 130;
 
+    // Leaves
+    let leavesTransX = 0;
+    let leavesTransY = 0;    
+
     function showModal(event) {
         event.preventDefault();
         isModalShowing = true;
@@ -57,6 +61,11 @@
         houseBgTransY = ((houseScrollStartY - (currScrollY - zoomDelay))/6);
         // houseBgTransX = ((houseScrollStartY - (currScrollY - zoomDelay))/6);
         houseBgScale = 1 - ((houseScrollStartY - (currScrollY - zoomDelay))/5000)
+    }
+    // Leaves
+    $: if (imageIndex < 4 ) {
+        leavesTransX = currScrollY/4
+        leavesTransY = -currScrollY/7    
     }
     
 
@@ -106,10 +115,15 @@
                 class="image-layer" width="100%" height="100%" 
                 transform="translate(0 {houseTransY}) scale({houseScale})"
                 href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/1-dark-house-proto.png" /> 
-    
-
             </g>
+        {/if}
 
+        <!-- leaves -->
+        {#if imageIndex < 4}
+            <image transition:fade={{ duration: 500}} 
+            class="image-layer" width="100%" height="100%" 
+            transform="translate({leavesTransX} {leavesTransY})"
+            href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/leaves-only.png" />
         {/if}
 
 
@@ -120,6 +134,28 @@
             width="100%" height="100%"></image>
         {/if}
 
+        <!-- Begin hotspots - needs to be after (on top of) animation full frame pngs -->
+
+        {#if imageIndex === 0}
+            <g transition:fade={{ duration: 1500}}>
+                <!-- <a hx-get="/moments/more"> -->
+                <a on:click={showModal} href="/">
+                    <rect x="925" y="810" width="175px" height="160px" 
+                    fill="#FEDA00" opacity=".3"></rect>
+                </a>
+            </g>
+        {/if}
+        {#if imageIndex === 1}
+            <g transition:fade={{ duration: 1500}}>
+                <!-- <a hx-get="/moments/more"> -->
+                <a on:click={showModal} href="/">
+                    <rect x="620" y="700" width="50px" height="120px" 
+                    fill="#FEDA00" opacity=".3"></rect>
+                </a>
+            </g>
+        {/if}
+
+   
 
         </svg>
     </div> <!-- end image panel image -->
