@@ -79,6 +79,10 @@
   }
     
 
+  function beenClicked(event) {
+    console.log("target clicked: " + event.target.className)
+  }
+
 </script>
 
 <!--
@@ -95,122 +99,125 @@
 <svelte:window bind:scrollY={currScrollY} />
 
 <section class="moment-scroll" >
-    <div class="image-panel"> 
+  <div class="image-panel"> 
     <div class="image-panel-fixed">
 
-    <div class="image-panel-image">
+      <div class="image-panel-image">
         <svg viewBox="0 0 2000 1286" preserveAspectRatio="xMidYMid slice">
 
-        {#if imageIndex === 0}
-            <image transition:fade={{ duration: 1500}}
-            href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/02-dawn-house-color.jpg"
-            alt="svg house" 
-            width="100%" height="100%"></image>
-        {/if}
-        {#if imageIndex === 1}
-            <image transition:fade={{ duration: 1500}}
-            href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/03-candle-color.jpg"
-            alt="svg house" 
-            width="100%" height="100%"></image>
-        {/if}
-        {#if imageIndex === 2}
-            <g transition:fade={{ duration: 1000}}>
-                <image 
-                transform="translate({houseBgTransX} {houseBgTransY}) scale({houseBgScale})"
-                href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/04-house-cutaway-color-nochim.jpg"
-                alt="svg house" 
-                width="100%" height="100%"></image>
+          {#if imageIndex === 0}
+              <image transition:fade={{ duration: 1500}}
+              href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/02-dawn-house-color.jpg"
+              alt="svg house" 
+              width="100%" height="100%"></image>
+          {/if}
+          {#if imageIndex === 1}
+              <image transition:fade={{ duration: 1500}}
+              href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/03-candle-color.jpg"
+              alt="svg house" 
+              width="100%" height="100%"></image>
+          {/if}
+          {#if imageIndex === 2}
+              <g transition:fade={{ duration: 1000}}>
+                  <image 
+                  transform="translate({houseBgTransX} {houseBgTransY}) scale({houseBgScale})"
+                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/04-house-cutaway-color-nochim.jpg"
+                  alt="svg house" 
+                  width="100%" height="100%"></image>
 
-                <image 
-                class="image-layer" width="100%" height="100%" 
-                transform="translate(0 {houseTransY}) scale({houseScale})"
-                href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/1-dark-house-proto.png" /> 
-            </g>
-        {/if}
+                  <image 
+                  class="image-layer" width="100%" height="100%" 
+                  transform="translate(0 {houseTransY}) scale({houseScale})"
+                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/1-dark-house-proto.png" /> 
+              </g>
+          {/if}
 
-        <!-- leaves -->
-        {#if imageIndex < 4}
-            <image transition:fade={{ duration: 500}} 
-            class="image-layer" width="100%" height="100%" 
-            transform="translate({leavesTransX} {leavesTransY})"
-            href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/leaves-only.png" />
-        {/if}
+          <!-- leaves -->
+          {#if imageIndex < 4}
+              <image transition:fade={{ duration: 500}} 
+              class="image-layer" width="100%" height="100%" 
+              transform="translate({leavesTransX} {leavesTransY})"
+              href="http://lucy-proto.deerfield-ma.org/assets/moments/images/community/leaves-only.png" />
+          {/if}
 
 
-        {#if imageIndex === 3}
-            <image transition:fade={{ duration: 1500}}
-            href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-hearth.jpg"
-            alt="svg house" 
-            width="100%" height="100%"></image>
-        {/if}
+          {#if imageIndex === 3}
+              <image transition:fade={{ duration: 1500}}
+              href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-hearth.jpg"
+              alt="svg house" 
+              width="100%" height="100%"></image>
+          {/if}
 
-        <!-- Begin hotspots - needs to be after (on top of) animation full frame pngs -->
+          <!-- Begin hotspots - needs to be after (on top of) animation full frame pngs -->
 
-        {#if imageIndex === 0}
-            <g transition:fade={{ duration: 1500}}>
-                <!-- <a hx-get="/moments/more"> -->
-                <a on:click={showModal} href="/">
-                    <rect x="925" y="810" width="175px" height="160px" 
-                    fill="#FEDA00" opacity=".3"></rect>
-                </a>
-            </g>
-        {/if}
-        {#if imageIndex === 1}
-            <g transition:fade={{ duration: 1500}}>
-                <!-- <a hx-get="/moments/more"> -->
-                <a on:click={showModal} href="/">
-                    <rect x="620" y="700" width="50px" height="120px" 
-                    fill="#FEDA00" opacity=".3"></rect>
-                </a>
-            </g>
-        {/if}
+          {#if imageIndex === 0}
+              <g transition:fade={{ duration: 1500}}>
+                  <!-- <a hx-get="/moments/more"> -->
+                  <a on:click={showModal} href="/">
+                      <rect x="925" y="810" width="175px" height="160px" 
+                      fill="#FEDA00" opacity=".3"></rect>
+                  </a>
+              </g>
+          {/if}
+          {#if imageIndex === 1}
+              <g transition:fade={{ duration: 1500}}>
+                  <!-- <a hx-get="/moments/more"> -->
+                  <a on:click={showModal} href="/">
+                      <rect x="620" y="700" width="50px" height="120px" 
+                      fill="#FEDA00" opacity=".3"></rect>
+                  </a>
+              </g>
+          {/if}
 
-   
+    
 
         </svg>
-    </div> <!-- end image panel image -->
+      </div> <!-- end image panel image -->
 
-    <!-- Single dynamic more box -->
-    <div class="more-container">
-      <h4 class="more-tab">More</h4>
-      <p>the y is at: {currScrollY} </p>
-      
-      <h4>More</h4>
+      <!-- Single dynamic more box -->
+      <div class="more-container">
+        <h4 class="more-tab">More</h4>
+        <p>the y is at: {currScrollY} </p>
+        
+        <h4>More</h4>
 
-      <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
-      {#if imageIndex > 3}
-        <script>console.log('Past where Mores are defined')</script>
-      {:else}
-        {#if (frames.community[imageIndex].moreWhoLinks.length > 0)}
-        <p>Who Else?</p>
-        <ul >
-          {#each frames.community[imageIndex].moreWhoLinks as link }
-            <li><a href="/" 
-                on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
-                {link.title}</a></li>
-          {/each}
-        </ul>     
-        {/if}
-
-        {#if (frames.community[imageIndex].moreTopicLinks.length > 0)}
-          <p>Topics and Ideas</p>
+        <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
+        {#if imageIndex > 3}
+          <script>console.log('Past where Mores are defined')</script>
+        {:else}
+          {#if (frames.community[imageIndex].moreWhoLinks.length > 0)}
+          <p>Who Else?</p>
           <ul >
-            {#each frames.community[imageIndex].moreTopicLinks as link }
-            <li><a href="/" 
-              on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
-              {link.title}</a></li>
+            {#each frames.community[imageIndex].moreWhoLinks as link }
+              <li><a href="/" 
+                  on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
+                  {link.title}</a></li>
             {/each}
-          </ul>            
+          </ul>     
+          {/if}
+
+          {#if (frames.community[imageIndex].moreTopicLinks.length > 0)}
+            <p>Topics and Ideas</p>
+            <ul >
+              {#each frames.community[imageIndex].moreTopicLinks as link }
+              <li><a href="/" 
+                on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
+                {link.title}</a></li>
+              {/each}
+            </ul>            
+          {/if}
+
         {/if}
 
-      {/if}
-
-    </div>
-
+      </div> <!-- /more-container -->
     </div> <!-- /image-panel-fixed -->
-    </div><!-- /image-panel -->
+  </div><!-- /image-panel -->
 
-    <div class="story-frames">
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <div class="story-frames"
+    on:click={beenClicked}
+  >
 
     <article class="story center">
         <p>In colonial New England, work days for enslaved people began long before daybreak — long before their enslavers got up to begin their own work days.</p>      
@@ -229,47 +236,47 @@
     </article><!-- Frame4 : END -->
 
     
-    </div><!--/story-frames-->
+  </div><!--/story-frames-->
 
-    <article class="total-more">
-      <h2>The Necessity for Community</h2>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-      <h3>Who Else?</h3>
-      <ul>
-          <li>This person</li>
-          <li>That person</li>
-          <li>Another person</li>
-          <li>A fourth person</li>
-      </ul>
-      <h3>How Do We Know?</h3>
-      <ul>
-          <li>an artifact</li>
-          <li>a document</li>
-          <li>an artifact</li>
-          <li>a document</li>
-      </ul>
-      <h3>Topics and Ideas</h3>
-      <ul>
-          <li>an idea</li>
-          <li>a topic</li>
-          <li>an artifact</li>
-          <li>a document</li>
-      </ul>
-      <h3>Where in the World</h3>
-      <ul>
-          <li>an idea</li>
-          <li>a topic</li>
-          <li>an artifact</li>
-          <li>a document</li>
-      </ul>
-      <h3>Myths and Assumptions</h3>
-      <ul>
-          <li>an idea</li>
-          <li>a topic</li>
-          <li>an artifact</li>
-          <li>a document</li>
-      </ul>
-    </article> <!--/total-more -->
+  <article class="total-more">
+    <h2>The Necessity for Community</h2>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+    <h3>Who Else?</h3>
+    <ul>
+        <li>This person</li>
+        <li>That person</li>
+        <li>Another person</li>
+        <li>A fourth person</li>
+    </ul>
+    <h3>How Do We Know?</h3>
+    <ul>
+        <li>an artifact</li>
+        <li>a document</li>
+        <li>an artifact</li>
+        <li>a document</li>
+    </ul>
+    <h3>Topics and Ideas</h3>
+    <ul>
+        <li>an idea</li>
+        <li>a topic</li>
+        <li>an artifact</li>
+        <li>a document</li>
+    </ul>
+    <h3>Where in the World</h3>
+    <ul>
+        <li>an idea</li>
+        <li>a topic</li>
+        <li>an artifact</li>
+        <li>a document</li>
+    </ul>
+    <h3>Myths and Assumptions</h3>
+    <ul>
+        <li>an idea</li>
+        <li>a topic</li>
+        <li>an artifact</li>
+        <li>a document</li>
+    </ul>
+  </article> <!--/total-more -->
 
 </section> <!--/moment-scroll-->
 
