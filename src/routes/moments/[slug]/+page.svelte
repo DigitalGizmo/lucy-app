@@ -153,7 +153,8 @@
           {#if imageIndex === 0}
               <g transition:fade={{ duration: 1500}}>
                   <!-- <a hx-get="/moments/more"> -->
-                  <a on:click={showModal} href="/">
+                  <a href="/"
+                    on:click={(e) => { e.preventDefault(); showModal("Barn Door", "topic");}}>
                       <rect x="925" y="810" width="175px" height="160px" 
                       fill="#FEDA00" opacity=".3"></rect>
                   </a>
@@ -162,7 +163,8 @@
           {#if imageIndex === 1}
               <g transition:fade={{ duration: 1500}}>
                   <!-- <a hx-get="/moments/more"> -->
-                  <a on:click={showModal} href="/">
+                  <a href="/"
+                    on:click={(e) => { e.preventDefault(); showModal("Window", "topic");}}>
                       <rect x="620" y="700" width="50px" height="120px" 
                       fill="#FEDA00" opacity=".3"></rect>
                   </a>

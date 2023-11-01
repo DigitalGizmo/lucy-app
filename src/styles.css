@@ -309,6 +309,7 @@ nav.moment-options ul li.this-moment {
 	grid-row: 1;
 /*margin: 30vh auto 30vh auto;
 	width: 60vw;*/
+	pointer-events: none;
 	z-index: 10;
 }
 
