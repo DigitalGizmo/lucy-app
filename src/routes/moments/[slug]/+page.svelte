@@ -96,7 +96,7 @@
 
 <section class="moment-scroll" >
     <div class="image-panel"> 
-    <div class="image-panel-fixed" hx-target="#modal-container" hx-swap="outerHTML">
+    <div class="image-panel-fixed">
 
     <div class="image-panel-image">
         <svg viewBox="0 0 2000 1286" preserveAspectRatio="xMidYMid slice">
@@ -212,20 +212,19 @@
 
     <div class="story-frames">
 
-    <article class="story" hx-target="#modal-container" hx-swap="outerHTML">
-        <p>In colonial New England, work days for enslaved people began long before daybreak — long before their enslavers
-        got up to begin their own work days.</p>      
+    <article class="story center">
+        <p>In colonial New England, work days for enslaved people began long before daybreak — long before their enslavers got up to begin their own work days.</p>      
     </article><!-- Frame1 : END -->
 
-    <article class="story">
+    <article class="story left">
         <p>While Ebenezer and Abigail Wells continue to sleep in their comfortable bed downstairs, Lucy arises from her straw-filled mattress in the garret and lights a candle so that she can see to dress for the day.</p>
     </article><!-- Frame2 : END -->
 
-    <article class="story">
+    <article class="story right">
         <p>Cesar, sleeping on another garret mattress, also awakens and dresses. Lucy and Cesar slip quietly down the stairs to the kitchen.</p>
     </article><!-- Frame3 : END -->
 
-    <article class="story">
+    <article class="story left">
         <p>There, Cesar builds a new fire on the embers remaining from the night before, while Lucy begins to prepare breakfast for the Wells. She and Cesar will eat later.</p>
     </article><!-- Frame4 : END -->
 

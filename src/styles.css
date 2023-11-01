@@ -205,25 +205,20 @@ nav.moment-options ul li.this-moment {
 	z-index: 1;
 }
 
-@media screen and (min-width: 800px) { /* displays larger than 800px */
-	.moment-scroll {
-		grid-template-columns: 75% 25%;
-		grid-template-rows: auto auto;
-	}
-}
-
 /* -------- */
 /*  IMAGES  */
 /* -------- */
 
-/* for MOBILE: displays smaller than 800px */
+
+/* put the images in the only column */
+.image-panel {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+/* make the image shorter for MOBILE: displays smaller than 800px */
+/* fixed container to keep image from scrolling */
 @media screen and (max-width: 799px) {
-	.image-panel {
-	/* put the images in the only column */
-		grid-column: 1;
-		grid-row: 1;
-	}
-	/* fixed container to keep image from scrolling */
 	.image-panel div.image-panel-fixed {
 		height: 60vh;
 		width: 100%;
@@ -236,42 +231,26 @@ nav.moment-options ul li.this-moment {
  		position: absolute;
 	}
 	/* the size has to be declared this third time! */
-	/* .image-panel-image img {
-		height: 60vh;
-		width: 100%;
-		object-fit: cover;      
-	} */
-	/* the size has to be declared this fourth time! */
-	.image-panel svg {
+	.image-panel-image svg {
 		height: 60vh;
 		width: 100%;
 	}
 }
 
-/* for DESKTOP: displays larger than 800px */
+/* make the image full height for DESKTOP: displays larger than 800px */
+/* fixed container to keep image from scrolling */
 @media screen and (min-width: 800px) {
-	/* put the images in the left column */
-	.image-panel {
-		grid-column: 1;
-	}
-	/* fixed container to keep image from scrolling */
 	.image-panel div.image-panel-fixed {
-		width: 75%;
 		height: calc(100vh - 138px);
+		width: 100%;
 		position: fixed;
-    }
+	}
 	/* no inner div version */
 	.image-panel-image {
 		width: 100%;
 		height: calc(100vh - 138px); 
 		position: absolute;
 	}
-	/* the size has to be declared this third time!
-	.image-panel-image img {
-		width: 100%;
-		height: calc(100vh - 138px); 
-		object-fit: cover;      
-	} */
 	/* the size has to be declared this third time! */
 	.image-panel-image svg {
 		width: 100%;
@@ -328,38 +307,34 @@ nav.moment-options ul li.this-moment {
 .story-frames { 
 	grid-column: 1;
 	grid-row: 1;
-	margin: 30vh auto 30vh auto;
-	width: 60vw;
+/*margin: 30vh auto 30vh auto;
+	width: 60vw;*/
 	z-index: 10;
 }
 
-/* for DESKTOP: displays larger than 800px */
-@media screen and (min-width: 800px) {
-	.story-frames {
-		background-color: white;
-		grid-column: 2;		
-		height: 100%;
-		margin: auto;
-		max-width: 100%;
-/*	overflow: auto;*/
-	}
-}
-
 .story-frames article.story {/* displays smaller than 800px */
-	/* margin-bottom: 200px; */
 	margin-bottom: calc(100vh - 250px);
-	background: rgba(256, 256, 256, .8);
-	padding: 1em;
+	color: white;
+	font-size: 1.5rem;
+	text-align: center;
+	text-shadow: 1px 1px black;
+	width: 60vw;
 }
 
 @media screen and (min-width: 800px) { /* displays larger than 800px */
 	.story-frames article.story {
-	  /* margin-bottom: 200px; */
-	  margin-bottom: calc(100vh - 250px);
-	  background-color: transparent;
-	  padding: 1em;
-	  z-index: 1;
+		font-size: 1.75rem;
 	}
+}
+
+.story-frames article.story.left {
+	margin: 40vh 5vw 40vh 35vw;
+}
+.story-frames article.story.center {
+	margin: 40vh 20vw 40vh 20vw;
+}
+.story-frames article.story.right {
+	margin: 40vh 35vw 40vh 5vw;
 }
 
 /* -------------- */
