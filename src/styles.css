@@ -328,13 +328,13 @@ nav.moment-options ul li.this-moment {
 }
 
 .story-frames article.story.left {
-	margin: 40vh 5vw 40vh 35vw;
+	margin: 40vh 5vw 70vh 35vw;
 }
 .story-frames article.story.center {
-	margin: 40vh 20vw 40vh 20vw;
+	margin: 40vh 20vw 70vh 20vw;
 }
 .story-frames article.story.right {
-	margin: 40vh 35vw 40vh 5vw;
+	margin: 40vh 35vw 70vh 5vw;
 }
 
 /* -------------- */
