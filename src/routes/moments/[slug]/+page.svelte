@@ -36,6 +36,17 @@
   // Leaves
   let leavesTransX = 0;
   let leavesTransY = 0;    
+  // Smoke
+  let animationIndex = 0;
+  let animationInterval;
+  function advance() {
+    if (animationIndex < 2) {
+      animationIndex += 1;
+    } else {
+      animationIndex = 0;
+    }
+    // console.log('ani idx: ' + animationIndex);
+  }
 
   let isModalShowing = false;
   let modalTitle = "title tbd";
@@ -79,7 +90,12 @@
       leavesTransX = currScrollY/4
       leavesTransY = -currScrollY/7    
   }
-    
+  // Smoke
+  $: if (imageIndex === 2) {
+      animationInterval = setInterval(advance, 1200);
+  } else {
+    clearInterval(animationInterval);
+  }
 
   function beenClicked(event) {
     console.log("target clicked: " + event.target.className)
@@ -127,10 +143,34 @@
                   alt="svg house" 
                   width="100%" height="100%"></image>
 
-                  <image 
-                  class="image-layer" width="100%" height="100%" 
-                  transform="translate(0 {houseTransY}) scale({houseScale})"
-                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/1-dark-house-proto.png" /> 
+                  <g transform="translate(0 {houseTransY}) scale({houseScale})">
+                    <image 
+                    class="image-layer" width="100%" height="100%" 
+                    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/1-dark-house-proto.png" /> 
+
+                    {#if animationIndex === 0}
+                      <image transition:fade={{ duration: 1200}} 
+                      width="257px" height="235px" opacity=".7"
+                      transform="translate(570 185)"
+                      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/smoke1.png" />
+                    {/if}
+        
+                    {#if animationIndex === 1}
+                      <image transition:fade={{ duration: 1200}} 
+                      width="312px" height="273px"  opacity=".7"
+                      transform="translate(600 100)"
+                      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/smoke1.png" />
+                    {/if}
+
+                    {#if animationIndex === 2}
+                      <image transition:fade={{ duration: 1200}} 
+                      width="454px" height="267px"  opacity=".7"
+                      transform="translate(600 50)"
+                      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/smoke1.png" />
+                    {/if}
+
+
+                  </g>
               </g>
           {/if}
 
