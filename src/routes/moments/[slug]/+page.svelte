@@ -39,8 +39,10 @@
 
   let isModalShowing = false;
   let modalTitle = "title tbd";
-  const modalTypes = {"who": "Who Else?",
-    "topic": "Topics & Ideas"
+  const modalTypes = {
+    "who": "Who Else?",
+    "topic": "Topics & Ideas",
+    "how": "How Do We Know?"
     }
   let modalType = "type tbd";
 
@@ -150,27 +152,27 @@
 
           <!-- Begin hotspots - needs to be after (on top of) animation full frame pngs -->
 
-          {#if imageIndex === 0}
-              <g transition:fade={{ duration: 1500}}>
-                  <!-- <a hx-get="/moments/more"> -->
-                  <a href="/"
-                    on:click={(e) => { e.preventDefault(); showModal("Barn Door", "topic");}}>
-                      <rect x="925" y="810" width="175px" height="160px" 
-                      fill="#FEDA00" opacity=".3"></rect>
-                  </a>
-              </g>
-          {/if}
+
           {#if imageIndex === 1}
               <g transition:fade={{ duration: 1500}}>
                   <!-- <a hx-get="/moments/more"> -->
                   <a href="/"
-                    on:click={(e) => { e.preventDefault(); showModal("Window", "topic");}}>
+                    on:click={(e) => { e.preventDefault(); showModal("Casement Window", "how");}}>
                       <rect x="620" y="700" width="50px" height="120px" 
-                      fill="#FEDA00" opacity=".3"></rect>
+                      class="hotspot"></rect>
                   </a>
               </g>
           {/if}
-
+          {#if imageIndex === 3}
+              <g transition:fade={{ duration: 1500}}>
+                  <!-- <a hx-get="/moments/more"> -->
+                  <a href="/"
+                    on:click={(e) => { e.preventDefault(); showModal("Lidded Hanging Pot", "how");}}>
+                      <rect x="727" y="745" width="240px" height="130px" 
+                      class="hotspot"></rect>
+                  </a>
+              </g>
+          {/if}
     
 
         </svg>
@@ -179,10 +181,7 @@
       <!-- Single dynamic more box -->
       <div class="more-container">
         <h4 class="more-tab">More</h4>
-        <p>the y is at: {currScrollY} </p>
-        
         <h4>More</h4>
-
         <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
         {#if imageIndex > 3}
           <script>console.log('Past where Mores are defined')</script>
@@ -204,6 +203,17 @@
               {#each frames.community[imageIndex].moreTopicLinks as link }
               <li><a href="/" 
                 on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
+                {link.title}</a></li>
+              {/each}
+            </ul>            
+          {/if}
+
+          {#if (frames.community[imageIndex].moreHowLinks.length > 0)}
+            <p>How Do We Know?</p>
+            <ul >
+              {#each frames.community[imageIndex].moreHowLinks as link }
+              <li><a href="/" 
+                on:click={(e) => { e.preventDefault(); showModal(link.title, "how");}}>
                 {link.title}</a></li>
               {/each}
             </ul>            
@@ -243,44 +253,56 @@
   <article class="total-more">
     <h2>The Necessity for Community</h2>
     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+
     <h3>Who Else?</h3>
-    <ul>
-        <li><a href="/"
-          on:click={(e) => { e.preventDefault(); showModal("Lucy Terry", "who");}}>Lucy Terry</a>
-        </li>
-        <li><a href="/"
-          on:click={(e) => { e.preventDefault(); showModal("Cesar", "who");}}>Cesar</a>
-        </li>
-        <li>Another person</li>
-        <li>A fourth person</li>
-    </ul>
-    <h3>How Do We Know?</h3>
-    <ul>
-        <li>an artifact</li>
-        <li>a document</li>
-        <li>an artifact</li>
-        <li>a document</li>
-    </ul>
+    <ul >
+      {#each {length: 4} as _, i}
+        {#if (frames.community[i].moreWhoLinks.length > 0)}
+          {#each frames.community[i].moreWhoLinks as link }
+            <li><a href="/" 
+                on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
+                {link.title}</a></li>
+          {/each}
+        {/if}
+      {/each}
+    </ul>   
+
     <h3>Topics and Ideas</h3>
-    <ul>
-        <li>an idea</li>
-        <li>a topic</li>
-        <li>an artifact</li>
-        <li>a document</li>
-    </ul>
+    <ul >
+      {#each {length: 4} as _, i}
+        {#if (frames.community[i].moreTopicLinks.length > 0)}
+          {#each frames.community[i].moreTopicLinks as link }
+            <li><a href="/" 
+                on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
+                {link.title}</a></li>
+          {/each}
+        {/if}
+      {/each}
+    </ul>     
+
+    <h3>How Do We Know?</h3>
+    <ul >
+      {#each {length: 4} as _, i}
+        {#if (frames.community[i].moreHowLinks.length > 0)}
+          {#each frames.community[i].moreHowLinks as link }
+            <li><a href="/" 
+                on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
+                {link.title}</a></li>
+          {/each}
+        {/if}
+      {/each}
+    </ul>     
+
     <h3>Where in the World</h3>
     <ul>
-        <li>an idea</li>
-        <li>a topic</li>
-        <li>an artifact</li>
-        <li>a document</li>
+        <li>Map of Deefield</li>
+        <li>Another map</li>
     </ul>
     <h3>Myths and Assumptions</h3>
     <ul>
-        <li>an idea</li>
-        <li>a topic</li>
-        <li>an artifact</li>
-        <li>a document</li>
+        <li>This is a myth</li>
+        <li>Another Myth</li>
+
     </ul>
   </article> <!--/total-more -->
 

@@ -296,9 +296,23 @@ nav.moment-options ul li.this-moment {
 }
 
 .more-container ul {
-	list-style-type: none;
+	/* list-style-type: none; */
 	padding-left: 15px;
 }
+
+.hotspot {
+	fill: #FEDA00;
+	opacity: 0.3;
+	/* stroke: #FEDA00;
+	stroke-opacity: 7;
+	stroke-width: "20"; */
+}
+
+.hotspot:hover {
+	opacity: 0.5;
+	/* stroke-opacity: 9; */
+}
+
 
 /* -------------- */
 /*   STORY TEXT   */
