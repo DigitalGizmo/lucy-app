@@ -7,7 +7,7 @@
       <li><a href="/">Joining the Church</a></li>
       <li><a href="/">Singer of History</a></li>
       <li><a href="/">Engaging With the Community</a></li>
-      <li><a href="/moments/temptitle">Community Within Community</a></li>
+      <li><a href="/moments/community">Community Within Community</a></li>
       <li><a href="/">A Fruitful Union</a></li>
       <li><a href="/">Sons of the Revolution</a></li>
       <li><a href="/">Living on the Frontier</a></li>
