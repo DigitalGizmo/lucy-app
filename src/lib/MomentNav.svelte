@@ -6,9 +6,9 @@
       <li><a href="/">Enslaved at the Wells’ House</a></li>
       <li><a href="/">Joining the Church</a></li>
       <li><a href="/">Singer of History</a></li>
-      <li><a href="/">Engaging With the Community</a></li>
+      <li><a href="/moments/engage">Engaging With the Community</a></li>
       <li><a href="/moments/community">Community Within Community</a></li>
-      <li><a href="/">A Fruitful Union</a></li>
+      <li><a href="/moments/union">A Fruitful Union</a></li>
       <li><a href="/">Sons of the Revolution</a></li>
       <li><a href="/">Living on the Frontier</a></li>
       <li><a href="/">Fighting in Court</a></li>

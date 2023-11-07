@@ -7,6 +7,8 @@
   import MomentNav from "../../../lib/MomentNav.svelte";
   import frames from "../../../lib/frames.json";
 
+  export let data;
+
   let panelHeight = 800;
 
   onMount(() => {
@@ -124,8 +126,8 @@
   {#if isScrollMode }
 
     <section class="moment-scroll" 
-      transition:slide={{ axis: 'y'}}
     >
+    <!-- transition:slide={{ axis: 'y'}} -->
       <div class="image-panel"> 
         <div class="image-panel-fixed">
 
@@ -367,10 +369,9 @@
 
   {:else}  
     <section class="moment-title title-community"
-      transition:slide={{ axis: 'y'}}
-    >
-      
-      <h1>Community Within Community</h1>
+      >
+      <!-- transition:slide={{ axis: 'x'}} -->
+      <h1>{data.moment.title}</h1>
 
       <article class="moment-title-intro">
         <p class="story">Lucy and Abijah walk down main street. This is the story intro.</p>
@@ -379,13 +380,15 @@
 
       <nav class="moment-options">
         <ul>
-          <li class="prev-moment"><a href="/">Previous moment</a></li>
-          <li class="this-moment">
-            <a href="/"
-              on:click={(e) => { e.preventDefault(); explore();}}
-            >Explore this moment</a>
-          </li>
-          <li class="next-moment"><a href="/moments/fruitful">Next moment</a></li>
+          <li class="prev-moment"><a href="/moments/community">Previous moment</a></li>
+          {#if (data.moment.slug === "community")}
+            <li class="this-moment">
+              <a href="/"
+                on:click={(e) => { e.preventDefault(); explore();}}
+              >Explore this moment</a>
+            </li>
+          {/if}
+          <li class="next-moment"><a href="/moments/union">Next moment</a></li>
         </ul>
       </nav>
 
