@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   export let isScrollMode;
 
   function clearScroll() {
@@ -6,7 +6,7 @@
     isScrollMode = false;
   }
 
-</script>
+</script> -->
 
 <nav class="moment-nav">
     <ul>
@@ -17,11 +17,10 @@
       <li><a href="/">Joining the Church</a></li>
       <li><a href="/">Singer of History</a></li>
       <li><a 
-        href="/moments/engage" on:click={clearScroll}
+        href="/moments/engaging" 
         >Engaging With the Community</a></li>
       <li><a 
         href="/moments/community"  
-        on:click={(e) => { e.preventDefault(); isScrollMode = false;}}
         >Community Within Community</a></li>
       <li><a href="/moments/union">A Fruitful Union</a></li>
       <li><a href="/">Sons of the Revolution</a></li>
