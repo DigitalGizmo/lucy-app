@@ -116,32 +116,36 @@ nav.moment-nav ul li {
 /* --------------------------------- */
 
 .moment-title {
-	/* height: 100vh; */
 	margin-top: 138px;
 	position: relative;
-	text-align: center;
 }
 
 .moment-title h1 {
-	color: white;
+	color: #038EDF;
 	margin: 0 0 1em 0;
 	text-shadow: 2px 2px 2px #333;
 }
 
 @media screen and (min-width: 800px) { /* displays larger than 800px */
 	.moment-title h1 {
-		margin: 0 0 1em 0;
 		padding-top: 10%;
 	}
 }
 
+.title-container {
+	padding: 1em;
+	position: absolute;
+	text-align: center;
+	width: 100vw;
+	z-index: 120;
+}
+
 .moment-title-intro {
-	background-color: white;
+	background-color: rgba(256, 256, 256, 0.8);
 	border: 1px solid lightgrey;
 	box-shadow: 2px 2px 2px #333;
 	font-size: 1.2em;
-	margin: auto;
-	opacity: 0.8;
+	margin: auto auto;
 	padding: 2em;
 	width: 40vw;
 }
@@ -150,38 +154,46 @@ nav.moment-nav ul li {
 	font-style: italic;
 }
 
+.moment-title-intro p.history {
+}
+
 nav.moment-options ul {
 	list-style: none;
+	text-transform: uppercase;
+	font-size: .8em;
+	font-weight: bold;
 }
 
 nav.moment-options ul li a:link {
-	color: white;
+	color: orangered;
 }
 
 nav.moment-options ul li a:visited {
-	color: lightgrey;
+	color: indianred;
 }
 
 nav.moment-options ul li a:hover {
 	color: orange;
+	text-decoration: underline;
+}
+
+nav.moment-options ul li.prev-moment, nav.moment-options ul li.next-moment {
+	position: absolute;
+	top: 35vh;
+}
+
+nav.moment-options ul li.next-moment {
+	right: 4vw;
 }
 
 nav.moment-options ul li.prev-moment {
 	left: 6px;
-	position: absolute;
-	top: 30%;
-}
-
-nav.moment-options ul li.next-moment {
-	right: 6px;
-	position: absolute;
-	top: 30%;
 }
 
 nav.moment-options ul li.this-moment {
 	position: absolute;
-	bottom: 30vh;
-	left: 50%;
+	top: 60vh;
+	left: 40%;
 }
 
 /* ----------------------------------- */
@@ -276,15 +288,6 @@ nav.moment-options ul li.this-moment {
 .more-container:hover {
   /* opacity: 1; */
   left: 0px;
-}
-
-.title-container {
-	/* top: 20vh; */
-	/* height: 300px; */
-	/* width: 250px; */
-	/* padding: 1em; */
-	z-index: 120;
-	position: absolute;
 }
 
 .more-tab {

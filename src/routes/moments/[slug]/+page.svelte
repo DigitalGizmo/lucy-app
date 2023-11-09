@@ -383,12 +383,10 @@
             src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{data.moment.slug}.jpg" 
             alt="intro sketch">
       
-          
-        </div>
+        </div><!-- /image-panel-image -->
 
         <div class="title-container">
           <h1>{data.moment.title}</h1>
-  
   
           <article class="moment-title-intro">
             <p class="story">{data.moment.storyIntro}</p>
@@ -397,15 +395,16 @@
   
           <nav class="moment-options">
             <ul>
-              <li class="prev-moment"><a href="/moments/community">Previous moment</a></li>
+              <li class="prev-moment"><a href="/moments/community">&larr; Previous moment</a></li>
               {#if (data.moment.slug === "community")}
-                <li class="this-moment">
+                
+              <li class="this-moment">
                   <a href="/"
                     on:click={(e) => { e.preventDefault(); explore();}}
-                  >Explore this moment</a>
-                </li>
+                  >Explore this moment &darr;</a></li>
               {/if}
-              <li class="next-moment"><a href="/moments/union">Next moment</a></li>
+              
+              <li class="next-moment"><a href="/moments/union">Next moment &rarr;</a></li>
             </ul>
           </nav>
 

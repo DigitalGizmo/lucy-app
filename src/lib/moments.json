@@ -1,9 +1,9 @@
 [
     {
         "slug": "engaging",
-        "title": "Engaging With Community",
-        "storyIntro": "very engaging",
-        "historyIntro": "engaging history",
+        "title": "Engaging With the Community",
+        "storyIntro": "Lucy shops at the Williams Store",
+        "historyIntro": "the local economic network of slavery; enslaved people are an active part of the community; relative freedom of movement and autonomy",
         "frames": [
             {
                 "imageName": "placeholder",
@@ -22,8 +22,8 @@
     {
         "slug": "community",
         "title": "Community Within Community",
-        "storyIntro": "quite a community",
-        "historyIntro": "it's been here a while",
+        "storyIntro": "Lucy has run into Abijah at the store; he walks her home along the Main Street of the town.",
+        "historyIntro": "the relationships among enslaved people and their ongoing connections with freed African American people; the importance of maintaining a social life and emotional connections; introduces the idea of emancipation",
         "frames": [
             {
                 "imageName": "02-dawn-house-color",
@@ -89,8 +89,8 @@
     {
         "slug": "union",
         "title": "A Fruitful Union",
-        "storyIntro": "come on people now..",
-        "historyIntro": "smile on your brother",
+        "storyIntro": "Lucy and Abijah get married",
+        "historyIntro": "marriage can change an enslaved person’s status and children inherit their freedom",
         "frames": [
             {
                 "imageName": "placeholder",
