@@ -1,3 +1,13 @@
+<script>
+  export let isScrollMode;
+
+  function clearScroll() {
+    console.log('got to clear scroll')
+    isScrollMode = false;
+  }
+
+</script>
+
 <nav class="moment-nav">
     <ul>
       <li><a href="/">Sold Out of Africa</a></li>
@@ -6,8 +16,13 @@
       <li><a href="/">Enslaved at the Wells’ House</a></li>
       <li><a href="/">Joining the Church</a></li>
       <li><a href="/">Singer of History</a></li>
-      <li><a href="/moments/engage">Engaging With the Community</a></li>
-      <li><a href="/moments/community">Community Within Community</a></li>
+      <li><a 
+        href="/moments/engage" on:click={clearScroll}
+        >Engaging With the Community</a></li>
+      <li><a 
+        href="/moments/community"  
+        on:click={(e) => { e.preventDefault(); isScrollMode = false;}}
+        >Community Within Community</a></li>
       <li><a href="/moments/union">A Fruitful Union</a></li>
       <li><a href="/">Sons of the Revolution</a></li>
       <li><a href="/">Living on the Frontier</a></li>

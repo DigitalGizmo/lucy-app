@@ -70,6 +70,9 @@
   function explore() {
     isScrollMode = true;
   }
+  function clearScroll() {
+    isScrollMode = false;
+  }
 
   $: imageIndex = Math.trunc((currScrollY + panelHeight - 125)/(panelHeight))
 
@@ -120,7 +123,9 @@
   
   <header id="header" class="moment-header">
     <MainNav />
-    <MomentNav />
+    <MomentNav 
+      isScrollMode = {isScrollMode}
+    />
   </header>
   
   {#if isScrollMode }
@@ -233,6 +238,7 @@
           <div class="more-container">
             <h4 class="more-tab">More</h4>
             <h4>More</h4>
+            <p>scrollmode: {isScrollMode}</p>
             <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
             {#if imageIndex > 3}
               <script>console.log('Past where Mores are defined')</script>
@@ -376,6 +382,9 @@
       <article class="moment-title-intro">
         <p class="story">Lucy and Abijah walk down main street. This is the story intro.</p>
         <p class="history">This is the historical intro</p>
+        <img width="500"
+        src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{data.moment.slug}.jpg" 
+        alt="intro sketch">
       </article>
 
       <nav class="moment-options">
