@@ -1,5 +1,47 @@
 [
     {
+        "slug": "sold",
+        "title": "sold",
+        "storyIntro": "",
+        "historyIntro": "",
+        "frames": []
+    },  
+    {
+        "slug": "forsale",
+        "title": "forsale",
+        "storyIntro": "",
+        "historyIntro": "",
+        "frames": []
+    },  
+    {
+        "slug": "newlife",
+        "title": "newlife",
+        "storyIntro": "",
+        "historyIntro": "",
+        "frames": []
+    },  
+    {
+        "slug": "wells",
+        "title": "wells",
+        "storyIntro": "",
+        "historyIntro": "",
+        "frames": []
+    },  
+    {
+        "slug": "church",
+        "title": "church",
+        "storyIntro": "",
+        "historyIntro": "",
+        "frames": []
+    },  
+    {
+        "slug": "singer",
+        "title": "singer",
+        "storyIntro": "",
+        "historyIntro": "",
+        "frames": []
+    },  
+    {
         "slug": "engaging",
         "title": "Engaging With the Community",
         "storyIntro": "Lucy shops at the Williams Store",
@@ -105,5 +147,34 @@
                 "moreHowLinks": []            
             }
         ]
-    }    
+    },
+    {
+        "slug": "revolution",
+        "title": "revolution",
+        "storyIntro": "",
+        "historyIntro": "",
+        "frames": []
+    },  
+    {
+        "slug": "frontier",
+        "title": "frontier",
+        "storyIntro": "",
+        "historyIntro": "",
+        "frames": []
+    },  
+    {
+        "slug": "court",
+        "title": "court",
+        "storyIntro": "",
+        "historyIntro": "",
+        "frames": []
+    },  
+    {
+        "slug": "returning",
+        "title": "returning",
+        "storyIntro": "",
+        "historyIntro": "",
+        "frames": []
+    }
+
 ]
