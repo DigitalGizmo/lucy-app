@@ -2,6 +2,8 @@
     {
         "slug": "engaging",
         "title": "Engaging With Community",
+        "storyIntro": "very engaging",
+        "historyIntro": "engaging history",
         "frames": [
             {
                 "imageName": "placeholder",
@@ -20,6 +22,8 @@
     {
         "slug": "community",
         "title": "Community Within Community",
+        "storyIntro": "quite a community",
+        "historyIntro": "it's been here a while",
         "frames": [
             {
                 "imageName": "02-dawn-house-color",
@@ -85,6 +89,8 @@
     {
         "slug": "union",
         "title": "A Fruitful Union",
+        "storyIntro": "come on people now..",
+        "historyIntro": "smile on your brother",
         "frames": [
             {
                 "imageName": "placeholder",

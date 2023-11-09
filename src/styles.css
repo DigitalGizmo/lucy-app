@@ -116,16 +116,10 @@ nav.moment-nav ul li {
 /* --------------------------------- */
 
 .moment-title {
-	height: 100vh;
+	/* height: 100vh; */
 	margin-top: 138px;
 	position: relative;
 	text-align: center;
-}
-
-.title-community {
-	background-image: url('https://lucy-proto.deerfield-ma.org/assets/moments/images/community/02-dawn-house-color.jpg');
-	background-size: cover;
-	background-position: center;
 }
 
 .moment-title h1 {
@@ -256,6 +250,11 @@ nav.moment-options ul li.this-moment {
 		width: 100%;
 		height: calc(100vh - 138px);    
 	}	
+	.image-panel-image img {
+		width: 100%;
+		height: calc(100vh - 138px);
+		object-fit: cover;    
+	}	
 }
 
 /* More panel */
@@ -277,6 +276,15 @@ nav.moment-options ul li.this-moment {
 .more-container:hover {
   /* opacity: 1; */
   left: 0px;
+}
+
+.title-container {
+	/* top: 20vh; */
+	/* height: 300px; */
+	/* width: 250px; */
+	/* padding: 1em; */
+	z-index: 120;
+	position: absolute;
 }
 
 .more-tab {

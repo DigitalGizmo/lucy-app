@@ -373,33 +373,44 @@
     {/if}
 
 
-  {:else}  
-    <section class="moment-title title-community"
-      >
+  {:else}  <!-- title mode -->
+    <section class="moment-title">
       <!-- transition:slide={{ axis: 'x'}} -->
-      <h1>{data.moment.title}</h1>
+      <div class="image-panel-fixed">
 
-      <article class="moment-title-intro">
-        <p class="story">Lucy and Abijah walk down main street. This is the story intro.</p>
-        <p class="history">This is the historical intro</p>
-        <img width="500"
-        src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{data.moment.slug}.jpg" 
-        alt="intro sketch">
-      </article>
+        <div class="image-panel-image">
+          <img 
+            src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{data.moment.slug}.jpg" 
+            alt="intro sketch">
+      
+          
+        </div>
 
-      <nav class="moment-options">
-        <ul>
-          <li class="prev-moment"><a href="/moments/community">Previous moment</a></li>
-          {#if (data.moment.slug === "community")}
-            <li class="this-moment">
-              <a href="/"
-                on:click={(e) => { e.preventDefault(); explore();}}
-              >Explore this moment</a>
-            </li>
-          {/if}
-          <li class="next-moment"><a href="/moments/union">Next moment</a></li>
-        </ul>
-      </nav>
+        <div class="title-container">
+          <h1>{data.moment.title}</h1>
+  
+  
+          <article class="moment-title-intro">
+            <p class="story">{data.moment.storyIntro}</p>
+            <p class="history">{data.moment.historyIntro}</p>
+          </article>
+  
+          <nav class="moment-options">
+            <ul>
+              <li class="prev-moment"><a href="/moments/community">Previous moment</a></li>
+              {#if (data.moment.slug === "community")}
+                <li class="this-moment">
+                  <a href="/"
+                    on:click={(e) => { e.preventDefault(); explore();}}
+                  >Explore this moment</a>
+                </li>
+              {/if}
+              <li class="next-moment"><a href="/moments/union">Next moment</a></li>
+            </ul>
+          </nav>
+
+        </div>
+      </div> <!--/image panel fixed-->
 
     </section><!--/moment-title-->
 
