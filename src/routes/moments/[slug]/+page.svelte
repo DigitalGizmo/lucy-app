@@ -1,7 +1,6 @@
 <script>
   import { onMount } from 'svelte';
   import { fade, slide } from 'svelte/transition';
-  import { get } from 'svelte/store';
   import { isScrollMode } from '$lib/stores.js';
 
   import Modal from '../../../temp-modal.svelte';
@@ -22,12 +21,6 @@
     isScrollModeValue = value;
   });
 
-  // const images = [
-  //   '02-dawn-house-color',
-  //   '03-candle-color',
-  //   '04-house-cutaway-color-nochim',
-  //   'lucy-hearth'
-  // ];
   let imageIndex = 0;
   let currScrollY = 0;
 
