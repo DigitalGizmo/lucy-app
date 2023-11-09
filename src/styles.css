@@ -80,7 +80,6 @@ section.wrapper {
 }
 
 nav.moment-nav {/* for mini-nav */
-	margin-left: -1em;
 	overflow-x: scroll;
 	width: 100%;
 }
@@ -94,14 +93,16 @@ nav.moment-nav ul {
 
 nav.moment-nav ul li {
 	background-color: #f2f2f2;
+	border: 1px solid lightgrey;
 	display: inline-block;
 	font-size: .8em;
-	padding: 0.25em;
-	width: 80px;
 	height: 50px;
+	margin: 0 2px;
+	padding: 0.25em;
 	text-align: center;
 	text-wrap: wrap;
-	vertical-align: text-top;
+	vertical-align: middle;
+	width: 80px;
 }
 
 /* -------------------- */
@@ -121,14 +122,14 @@ nav.moment-nav ul li {
 }
 
 .moment-title h1 {
-	color: #038EDF;
+	color: #ffc107;
 	margin: 0 0 1em 0;
 	text-shadow: 2px 2px 2px #333;
 }
 
 @media screen and (min-width: 800px) { /* displays larger than 800px */
 	.moment-title h1 {
-		padding-top: 10%;
+		padding-top: 5%;
 	}
 }
 
@@ -141,7 +142,7 @@ nav.moment-nav ul li {
 }
 
 .moment-title-intro {
-	background-color: rgba(256, 256, 256, 0.8);
+	background-color: rgba(256, 256, 256, 0.85);
 	border: 1px solid lightgrey;
 	box-shadow: 2px 2px 2px #333;
 	font-size: 1.2em;
@@ -165,7 +166,7 @@ nav.moment-options ul {
 }
 
 nav.moment-options ul li a:link {
-	color: orangered;
+	color: #ffc107;
 }
 
 nav.moment-options ul li a:visited {

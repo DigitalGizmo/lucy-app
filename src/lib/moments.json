@@ -1,51 +1,51 @@
 [
     {
         "slug": "sold",
-        "title": "title - sold",
-        "storyIntro": "",
-        "historyIntro": "",
+        "title": "Sold Out of Africa",
+        "storyIntro": "Lucy and many other Africans are captured and taken to the coast where they're loaded onto a ship bound for a strange new world.",
+        "historyIntro": "Commodification of humans; loss of family and loss of all that’s familiar; world economy",
         "frames": []
     },  
     {
         "slug": "forsale",
-        "title": "forsale",
-        "storyIntro": "",
-        "historyIntro": "",
+        "title": "For Sale Again",
+        "storyIntro": "As part of group of captured Africans, Lucy finds herself for sale in Bristol, Rhode Island.",
+        "historyIntro": "loss of autonomy; arbitrary power of enslavers",
         "frames": []
     },  
     {
         "slug": "newlife",
-        "title": "newlife",
-        "storyIntro": "",
-        "historyIntro": "",
+        "title": "A Strange New Life",
+        "storyIntro": "Lucy arrives in Deerfield and meets the Wells for the first time",
+        "historyIntro": "change from urban environment to rural one; how do enslaved people find connection?",
         "frames": []
     },  
     {
         "slug": "wells",
-        "title": "wells",
-        "storyIntro": "",
-        "historyIntro": "",
+        "title": "Enslaved at the Wells's House",
+        "storyIntro": "Lucy and Cesar undertake the many everyday tasks of enslaved people",
+        "historyIntro": "Everyday resistance; working for someone else’s benefit; autonomy and privacy",
         "frames": []
     },  
     {
         "slug": "church",
-        "title": "church",
-        "storyIntro": "",
-        "historyIntro": "",
+        "title": "Joining the Church",
+        "storyIntro": "Lucy becomes a member of the church by relating her personal conversion experiences",
+        "historyIntro": "acculturation; becoming part of the community; literacy and enslavement, social hierarchy",
         "frames": []
     },  
     {
         "slug": "singer",
-        "title": "singer",
-        "storyIntro": "",
-        "historyIntro": "",
+        "title": "Singer of History",
+        "storyIntro": "Lucy recites the Bars Fight to a group of townspeople",
+        "historyIntro": "story-telling and oral tradition; social status in community; enslaved people as creatives and what this gets them in the white community",
         "frames": []
     },  
     {
         "slug": "engaging",
         "title": "Engaging With the Community",
         "storyIntro": "Lucy shops at the Williams Store",
-        "historyIntro": "the local economic network of slavery; enslaved people are an active part of the community; relative freedom of movement and autonomy",
+        "historyIntro": "the local economic network of slavery; enslaved people are an active part of the economic community; relative freedom of movement and autonomy",
         "frames": [
             {
                 "imageName": "placeholder",
@@ -131,7 +131,7 @@
     {
         "slug": "union",
         "title": "A Fruitful Union",
-        "storyIntro": "Lucy and Abijah get married",
+        "storyIntro": "Lucy and Abijah get married and begin life as free people.",
         "historyIntro": "marriage can change an enslaved person’s status and children inherit their freedom",
         "frames": [
             {
@@ -150,30 +150,30 @@
     },
     {
         "slug": "revolution",
-        "title": "revolution",
-        "storyIntro": "",
-        "historyIntro": "",
+        "title": "Sons of the Revolution",
+        "storyIntro": "Like many Black mothers, Lucy sends her sons off to fight in the Revolution.",
+        "historyIntro": "the bitter irony of enslaved people fighting for colonist’s freedom",
         "frames": []
     },  
     {
         "slug": "frontier",
-        "title": "frontier",
-        "storyIntro": "",
-        "historyIntro": "",
+        "title": "Living on the Frontier",
+        "storyIntro": "Lucy, Abijah and their children struggle to make a life for themselves in Vermont.",
+        "historyIntro": "Blacks and property ownership; challenges of living as a free black person during this period",
         "frames": []
     },  
     {
         "slug": "court",
-        "title": "court",
-        "storyIntro": "",
-        "historyIntro": "",
+        "title": "Fighting in Court",
+        "storyIntro": "Lucy fights in court for her family's land and for fair treatment by their neighbors",
+        "historyIntro": "rule of law; what the law can and cannot do if you’re a Black person",
         "frames": []
     },  
     {
         "slug": "returning",
-        "title": "returning",
-        "storyIntro": "",
-        "historyIntro": "",
+        "title": "Returning to Deerfield",
+        "storyIntro": "at the end of her life, Lucy returns to Deerfield for a visit.",
+        "historyIntro": "emotional connection to a place and people even though those people and places were not positive experiences",
         "frames": []
     }
 
