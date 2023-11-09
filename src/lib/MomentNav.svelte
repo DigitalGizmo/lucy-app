@@ -1,14 +1,16 @@
-<!-- <script>
-  export let isScrollMode;
+<script>
+  import { isScrollMode } from '$lib/stores.js';
 
   function clearScroll() {
-    console.log('got to clear scroll')
-    isScrollMode = false;
+    isScrollMode.set(false);
   }
+</script>
 
-</script> -->
-
-<nav class="moment-nav">
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<nav class="moment-nav"
+  on:click={clearScroll}
+>
     <ul>
       <li><a href="/">Sold Out of Africa</a></li>
       <li><a href="/">For Sale Again</a></li>

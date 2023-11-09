@@ -1,19 +1,26 @@
 <script>
   import { onMount } from 'svelte';
   import { fade, slide } from 'svelte/transition';
-  import Modal from '../../../temp-modal.svelte';
+  import { get } from 'svelte/store';
+  import { isScrollMode } from '$lib/stores.js';
 
-  import MainNav from "../../../lib/MainNav.svelte";
-  import MomentNav from "../../../lib/MomentNav.svelte";
-  import frames from "../../../lib/frames.json";
+  import Modal from '../../../temp-modal.svelte';
+  import MainNav from "$lib/MainNav.svelte";
+  import MomentNav from "$lib/MomentNav.svelte";
+  import frames from "$lib/frames.json";
 
   export let data;
 
   let panelHeight = 800;
-
+  let isScrollModeValue;
   onMount(() => {
-      panelHeight = window.innerHeight - 138;
+    panelHeight = window.innerHeight - 138;
+    // isScrollModeValue = get(isScrollMode)
   })
+
+  isScrollMode.subscribe((value) => {
+    isScrollModeValue = value;
+  });
 
   // const images = [
   //   '02-dawn-house-color',
@@ -21,7 +28,6 @@
   //   '04-house-cutaway-color-nochim',
   //   'lucy-hearth'
   // ];
-  let isScrollMode = false;
   let imageIndex = 0;
   let currScrollY = 0;
 
@@ -68,11 +74,12 @@
   };
 
   function explore() {
-    isScrollMode = true;
+    isScrollMode.set(true);
   }
-  function clearScroll() {
-    isScrollMode = false;
-  }
+
+  // function clearScroll() {
+  //   isScrollMode.set(false);
+  // }
 
   $: imageIndex = Math.trunc((currScrollY + panelHeight - 125)/(panelHeight))
 
@@ -123,12 +130,10 @@
   
   <header id="header" class="moment-header">
     <MainNav />
-    <MomentNav 
-      isScrollMode = {isScrollMode}
-    />
+    <MomentNav  />
   </header>
   
-  {#if isScrollMode }
+  {#if isScrollModeValue }
 
     <section class="moment-scroll" 
     >
@@ -238,7 +243,7 @@
           <div class="more-container">
             <h4 class="more-tab">More</h4>
             <h4>More</h4>
-            <p>scrollmode: {isScrollMode}</p>
+            <p>scrollmode: {isScrollModeValue}</p>
             <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
             {#if imageIndex > 3}
               <script>console.log('Past where Mores are defined')</script>
