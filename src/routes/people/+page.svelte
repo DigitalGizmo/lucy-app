@@ -11,18 +11,15 @@
     <h1>Who Else?</h1>
   </header>
 
-
   <section class="wrapper">
-    <p class="breadcrumbs">    
-      home
-    </p>
-        
-    <p>Some people, as they say:</p>
+    <p>Sort by gender | Sort by date | Sort by name</p>
     <ul>
-      <li>
-        <a href="/people/lucy">Lucy Terry</a>
-        </li>
+      <li><a href="/people/lucy">Lucy Terry Prince</a></li>
       <li>Ebenezer Wells</li>
-    </ul>  
-  </section>
-</section>
+      <li>Abijah Prince</li>
+      <li>Phillis Wheatley</li>
+      <li>Elizabeth Freeman (Mum Bett)</li>
+    </ul>
+
+  </section><!-- /wrapper -->
+</section><!-- /wireframe-wrapper -->

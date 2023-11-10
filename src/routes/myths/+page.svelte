@@ -8,21 +8,18 @@
     <MainNav />
 
     <!-- Can this be outside of header -->
-    <h1>Myths & assumptions</h1>
+    <h1>Myths &amp; Assumptions</h1>
   </header>
 
-
   <section class="wrapper">
-    <p class="breadcrumbs">    
-    home
-    </p>
         
-    <p>Some Myths</p>
     <ul>
-    <li>
-        <a href="/myths/voodo">not true</a>
-        </li>
-    <li>the election was stolen</li>
-    </ul>  
-  </section>
-</section>
+      <li><a href="/myths/voodo">Enslaved People Were Usually Illiterate</a></li>
+      <li>Two hard-wired myth</li>
+      <li>Three hard-wired myth</li>
+      <li>Four hard-wired myth</li>
+      <li>Five hard-wired myth</li>
+    </ul>        
+
+  </section><!-- /wrapper -->
+</section><!-- /wireframe-wrapper -->

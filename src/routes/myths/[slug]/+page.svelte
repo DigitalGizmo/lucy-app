@@ -8,16 +8,13 @@
     <MainNav />
 
     <!-- Can this be outside of header -->
-    <h1>Myths & assumptions?</h1>
+    <h1>Myths &amp; Assumptions?</h1>
   </header>
 
+   <section class="wrapper">
 
-  <section class="wrapper">
-    <p class="breadcrumbs">    
-          <a href="/myths">Myths</a> 
-    </p>
-        
-    <p>One hard-wired myth</p>
+      <h2>Enslaved People Were Usually Illiterate</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-  </section>
-</section>
+  </section><!-- /wrapper -->
+</section><!-- /wireframe-wrapper -->

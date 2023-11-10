@@ -8,21 +8,17 @@
     <MainNav />
 
     <!-- Can this be outside of header -->
-    <h1>Topics & Ideas</h1>
+    <h1>Topics &amp; Ideas</h1>
   </header>
 
-
   <section class="wrapper">
-    <p class="breadcrumbs">    
-    home
-    </p>
-        
-    <p>Some Topics</p>
     <ul>
-    <li>
-        <a href="/topics/thought">a thought</a>
-        </li>
-    <li>a second thought</li>
-    </ul>  
-  </section>
-</section>
+      <li><a href="/topics/thought">Control and Resistance</a></li>
+      <li>Two hard-wired topic</li>
+      <li>Three hard-wired topic</li>
+      <li>Four hard-wired topic</li>
+      <li>Five hard-wired topic</li>
+    </ul>
+
+  </section><!-- /wrapper -->
+</section><!-- /wireframe-wrapper -->

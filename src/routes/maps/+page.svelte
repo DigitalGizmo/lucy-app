@@ -11,18 +11,15 @@
     <h1>Where in the World?</h1>
   </header>
 
-
   <section class="wrapper">
-    <p class="breadcrumbs">    
-    home
-    </p>
         
-    <p>Some Maps</p>
     <ul>
-    <li>
-        <a href="/maps/there">a map</a>
-        </li>
-    <li>somewhere else instead</li>
-    </ul>  
-  </section>
-</section>
+      <li><a href="/maps/there">African Americans Living in Deerfield</a></li>
+      <li>Two hard-wired map</li>
+      <li>Three hard-wired map</li>
+      <li>Four hard-wired map</li>
+      <li>Five hard-wired map</li>
+    </ul>
+
+  </section><!-- /wrapper -->
+</section><!-- /wireframe-wrapper -->
