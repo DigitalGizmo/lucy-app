@@ -1,6 +1,6 @@
 <script>
+  import { page } from '$app/stores';
   import moments from "$lib/moments.json";
-  // import { nextMoment } from '$lib/stores.js';
   import { isScrollMode, nextMoment, 
     prevMoment, currMomentIdx } from '$lib/stores.js';
   function setChoice(idx) {
@@ -16,9 +16,11 @@
 <nav class="moment-nav">
   <ul>
     {#each moments as moment, i}
-      <li>
+      <li class="{ moment.slug === $page.params.slug ? 'selected' : ''}">
         <a href="/moments/{moment.slug}"
-        on:click={(e) => { setChoice(i);}}>{moment.title}</a>
+          on:click={(e) => { setChoice(i);}}>
+          {moment.title}
+        </a>
       </li>
     {/each}
 

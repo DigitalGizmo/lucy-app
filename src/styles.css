@@ -59,6 +59,11 @@ a:visited {
 	.global-nav {
 		margin-bottom: 1em;
 	}
+
+	/* added by don */
+	.global-nav.selected {
+		background-color: bisque;
+	}
 }
 /* end addition */
 
@@ -103,6 +108,11 @@ nav.moment-nav ul li {
 	text-wrap: wrap;
 	vertical-align: middle;
 	width: 80px;
+}
+
+/* added by don */
+nav.moment-nav ul li.selected{
+	background-color: #fff;
 }
 
 /* -------------------- */
