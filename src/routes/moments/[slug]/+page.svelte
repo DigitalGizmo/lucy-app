@@ -1,25 +1,48 @@
 <script>
   import { onMount } from 'svelte';
   import { fade, slide } from 'svelte/transition';
-  import { isScrollMode } from '$lib/stores.js';
-
+  import { isScrollMode, nextMoment,
+    prevMoment, currMomentIdx } from '$lib/stores.js';
   import Modal from '../../../temp-modal.svelte';
   import MainNav from "$lib/MainNav.svelte";
   import MomentNav from "$lib/MomentNav.svelte";
   import frames from "$lib/frames.json";
 
+
+  import moments from "$lib/moments.json";
+
   export let data;
 
   let panelHeight = 800;
   let isScrollModeValue;
+  let nextMomentValue;
+  let prevMomentValue;
+  let currMomentIdxValue;
   onMount(() => {
     panelHeight = window.innerHeight - 138;
-    // isScrollModeValue = get(isScrollMode)
   })
 
   isScrollMode.subscribe((value) => {
     isScrollModeValue = value;
   });
+  nextMoment.subscribe((value) => {
+    nextMomentValue = value;
+  });
+  prevMoment.subscribe((value) => {
+    prevMomentValue = value;
+  });
+  currMomentIdx.subscribe((value) => {
+    currMomentIdxValue = value;
+  });
+
+  function setNextPrev(changeIdx) {
+    console.log('currMomentIdx: ' + currMomentIdxValue)
+    nextMoment.set(moments[currMomentIdxValue+1].slug);
+    prevMoment.set(moments[currMomentIdxValue-1].slug);
+    let newCurrIdx = currMomentIdxValue + changeIdx;
+    currMomentIdx.set(newCurrIdx)
+  }
+
 
   let imageIndex = 0;
   let currScrollY = 0;
@@ -69,10 +92,6 @@
   function explore() {
     isScrollMode.set(true);
   }
-
-  // function clearScroll() {
-  //   isScrollMode.set(false);
-  // }
 
   $: imageIndex = Math.trunc((currScrollY + panelHeight - 125)/(panelHeight))
 
@@ -393,16 +412,28 @@
   
           <nav class="moment-options">
             <ul>
-              <li class="prev-moment"><a href="/moments/community">&larr; Previous moment</a></li>
+              <li class="prev-moment">
+                <a href="/moments/{prevMomentValue}"
+                  on:click={(e) => { setNextPrev(-1);}}>
+                  &larr; Previous moment
+                </a>
+              </li>
               {#if (data.moment.slug === "community")}
                 
               <li class="this-moment">
-                  <a href="/"
-                    on:click={(e) => { e.preventDefault(); explore();}}
-                  >Explore this moment &darr;</a></li>
+                <a href="/"
+                  on:click={(e) => { e.preventDefault(); explore();}}>
+                  Explore this moment &darr;
+                </a>
+              </li>
               {/if}
               
-              <li class="next-moment"><a href="/moments/union">Next moment &rarr;</a></li>
+              <li class="next-moment">
+                <a href="/moments/{nextMomentValue}"
+                  on:click={(e) => { setNextPrev(1);}}>
+                  Next moment &rarr;
+                </a>
+              </li>
             </ul>
           </nav>
 
