@@ -1,7 +1,7 @@
 <script>
   import MainNav from "$lib/MainNav.svelte";
 </script>
-
+  
 <section class="wireframe-wrapper">
   <header id="header">
 
@@ -14,15 +14,10 @@
 
   <section class="wrapper">
     <p class="breadcrumbs">    
-      home
+          <a href="/people">People</a> 
     </p>
         
-    <p>Some people, as they say:</p>
-    <ul>
-      <li>
-        <a href="/people/lucy">Lucy Terry</a>
-        </li>
-      <li>Ebenezer Wells</li>
-    </ul>  
+    <p>One hard-wired person, let's say Lucy</p>
+
   </section>
 </section>

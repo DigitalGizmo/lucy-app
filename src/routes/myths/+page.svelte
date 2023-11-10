@@ -1,28 +1,28 @@
 <script>
-  import MainNav from "$lib/MainNav.svelte";
+    import MainNav from "$lib/MainNav.svelte";
 </script>
-
+  
 <section class="wireframe-wrapper">
   <header id="header">
 
     <MainNav />
 
     <!-- Can this be outside of header -->
-    <h1>Who Else?</h1>
+    <h1>Myths & assumptions</h1>
   </header>
 
 
   <section class="wrapper">
     <p class="breadcrumbs">    
-      home
+    home
     </p>
         
-    <p>Some people, as they say:</p>
+    <p>Some Myths</p>
     <ul>
-      <li>
-        <a href="/people/lucy">Lucy Terry</a>
+    <li>
+        <a href="/myths/voodo">not true</a>
         </li>
-      <li>Ebenezer Wells</li>
+    <li>the election was stolen</li>
     </ul>  
   </section>
 </section>
