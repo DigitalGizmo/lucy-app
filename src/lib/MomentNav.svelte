@@ -7,7 +7,12 @@
     isScrollMode.set(false);
     console.log('next: ' + moments[idx+1].slug)
     nextMoment.set(moments[idx+1].slug);
-    prevMoment.set(moments[idx-1].slug);
+    if( idx > 0) {
+      prevMoment.set(moments[idx-1].slug);
+    } else {
+      prevMoment.set( undefined );
+    }
+
     currMomentIdx.set(idx)
   }
 

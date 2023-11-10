@@ -38,7 +38,12 @@
   function setNextPrev(changeIdx) {
     console.log('currMomentIdx: ' + currMomentIdxValue)
     nextMoment.set(moments[currMomentIdxValue+1].slug);
-    prevMoment.set(moments[currMomentIdxValue-1].slug);
+    if( currMomentIdxValue > 0) {
+      prevMoment.set(moments[currMomentIdxValue-1].slug);
+    } else {
+      prevMoment.set( undefined );
+    }
+
     let newCurrIdx = currMomentIdxValue + changeIdx;
     currMomentIdx.set(newCurrIdx)
   }
@@ -412,12 +417,14 @@
   
           <nav class="moment-options">
             <ul>
-              <li class="prev-moment">
-                <a href="/moments/{prevMomentValue}"
-                  on:click={(e) => { setNextPrev(-1);}}>
-                  &larr; Previous moment
-                </a>
-              </li>
+              {#if prevMomentValue }
+                <li class="prev-moment">
+                  <a href="/moments/{prevMomentValue}"
+                    on:click={(e) => { setNextPrev(-1);}}>
+                    &larr; Previous moment
+                  </a>
+                </li>
+              {/if}
               {#if (data.moment.slug === "community")}
                 
               <li class="this-moment">
