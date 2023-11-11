@@ -1,13 +1,13 @@
 <script>
   import { onMount } from 'svelte';
   import { fade, slide } from 'svelte/transition';
-  import { isScrollMode, nextMoment,
-    prevMoment, currMomentIdx } from '$lib/stores.js';
+  import { isScrollMode } from '$lib/stores.js';
   import Modal from '../../../temp-modal.svelte';
   import MainNav from "$lib/MainNav.svelte";
   import MomentNav from "$lib/MomentNav.svelte";
   import frames from "$lib/frames.json";
 
+  import { page } from '$app/stores';
 
   import moments from "$lib/moments.json";
 
@@ -15,33 +15,91 @@
 
   let panelHeight = 800;
   let isScrollModeValue;
-  let nextMomentValue;
-  let prevMomentValue;
-  let currMomentIdxValue;
+  // let nextMomentValue;
+  // let prevMomentValue;
+  // let currMomentIdxValue;
+
+    const momentSlugs = ["sold", "forsale", "newlife", "wells", "church",
+      "singer", "engaging", "community", "union", "revolution",
+      "frontier", "court", "returning"
+    ]
+
   onMount(() => {
     panelHeight = window.innerHeight - 138;
+    // console.log('mount: ' + data.moment.slug)
+    // console.log('mount page: ' + $page.params.slug)
   })
 
   isScrollMode.subscribe((value) => {
     isScrollModeValue = value;
   });
-  nextMoment.subscribe((value) => {
-    nextMomentValue = value;
-  });
-  prevMoment.subscribe((value) => {
-    prevMomentValue = value;
-  });
-  currMomentIdx.subscribe((value) => {
-    currMomentIdxValue = value;
-  });
+  // nextMoment.subscribe((value) => {
+  //   nextMomentValue = value;
+  // });
+  // prevMoment.subscribe((value) => {
+  //   prevMomentValue = value;
+  // });
+  // currMomentIdx.subscribe((value) => {
+  //   currMomentIdxValue = value;
+  // });
 
-  function setNextPrev(changeIdx) {
-    console.log('currMomentIdx: ' + currMomentIdxValue)
-    nextMoment.set(moments[currMomentIdxValue+1].slug);
-    prevMoment.set(moments[currMomentIdxValue-1].slug);
-    let newCurrIdx = currMomentIdxValue + changeIdx;
-    currMomentIdx.set(newCurrIdx)
+  // function setNextPrev(changeIdx) {
+  //   console.log('currMomentIdx: ' + currMomentIdxValue)
+  //   nextMoment.set(moments[currMomentIdxValue+1].slug);
+  //   if (changeIdx < 0) { // decrimenting
+  //     if( currMomentIdxValue === 1) {
+  //       prevMoment.set( undefined );
+  //     } else {
+  //       prevMoment.set(moments[currMomentIdxValue-1].slug);
+  //     }
+
+  //   }
+
+  //   let newCurrIdx = currMomentIdxValue + changeIdx;
+  //   currMomentIdx.set(newCurrIdx)
+  // }
+
+  // const foundCurrIndex = (element) => element === "union";
+
+  function getPrevSlugIdx(currSlug) {
+    const foundCurrIndex = (element) => element === currSlug;
+    // console.log('currSlug: ' + currSlug);
+    let currSlugIndex = momentSlugs.findIndex(foundCurrIndex)
+    // console.log('currIndex: ' + currSlugIndex)
+    // return momentSlugs[currSlugIndex - 1]
+    return currSlugIndex - 1
   }
+  function getNextSlugIdx(currSlug) {
+    const foundCurrIndex = (element) => element === currSlug;
+    let currSlugIndex = momentSlugs.findIndex(foundCurrIndex)
+    return currSlugIndex + 1
+  }
+
+  // function setPrevNextDown() {
+  //   console.log('currMomentIdx: ' + currMomentIdxValue)
+  //   nextMoment.set(moments[currMomentIdxValue+1].slug);
+  //   if( currMomentIdxValue > 0) {
+  //     prevMoment.set(moments[currMomentIdxValue-1].slug);
+  //   } else {
+  //     prevMoment.set( undefined );
+  //   }
+  //   let newCurrIdx = currMomentIdxValue -1;
+  //   currMomentIdx.set(newCurrIdx)
+  //   console.log('currMomentIdx is now: ' + currMomentIdxValue)
+  // }
+
+  // function setPrevNextUp() {
+  //   console.log('currMomentIdx: ' + currMomentIdxValue)
+  //   prevMoment.set(moments[currMomentIdxValue-1].slug);
+  //   if( currMomentIdxValue < 11) {
+  //     nextMoment.set(moments[currMomentIdxValue+1].slug);
+  //   } else {
+  //     nextMoment.set( undefined );
+  //   }
+  //   let newCurrIdx = currMomentIdxValue + 1;
+  //   currMomentIdx.set(newCurrIdx)
+  //   console.log('currMomentIdx is now: ' + currMomentIdxValue)
+  // }
 
 
   let imageIndex = 0;
@@ -412,28 +470,29 @@
   
           <nav class="moment-options">
             <ul>
-              <li class="prev-moment">
-                <a href="/moments/{prevMomentValue}"
-                  on:click={(e) => { setNextPrev(-1);}}>
-                  &larr; Previous moment
-                </a>
-              </li>
+              {#if getPrevSlugIdx(data.moment.slug) >= 0 }
+                <li class="prev-moment">
+                  <a href="/moments/{momentSlugs[getPrevSlugIdx(data.moment.slug)]}">
+                    &larr; Previous moment
+                  </a>
+                </li>
+              {/if}
               {#if (data.moment.slug === "community")}
-                
-              <li class="this-moment">
-                <a href="/"
-                  on:click={(e) => { e.preventDefault(); explore();}}>
-                  Explore this moment &darr;
-                </a>
-              </li>
+                <li class="this-moment">
+                  <a href="/"
+                    on:click={(e) => { e.preventDefault(); explore();}}>
+                    Explore this moment &darr;
+                  </a>
+                </li>
               {/if}
               
-              <li class="next-moment">
-                <a href="/moments/{nextMomentValue}"
-                  on:click={(e) => { setNextPrev(1);}}>
-                  Next moment &rarr;
-                </a>
-              </li>
+              {#if getNextSlugIdx(data.moment.slug) <= 12 }
+                <li class="next-moment">
+                  <a href="/moments/{momentSlugs[getNextSlugIdx(data.moment.slug)]}">
+                    Next moment &rarr;
+                  </a>
+                </li>
+              {/if}
             </ul>
           </nav>
 
