@@ -7,17 +7,13 @@
   import MomentNav from "$lib/MomentNav.svelte";
   import frames from "$lib/frames.json";
 
-  import { page } from '$app/stores';
-
-  import moments from "$lib/moments.json";
+  // import { page } from '$app/stores';
+  // import moments from "$lib/moments.json";
 
   export let data;
 
   let panelHeight = 800;
   let isScrollModeValue;
-  // let nextMomentValue;
-  // let prevMomentValue;
-  // let currMomentIdxValue;
 
     const momentSlugs = ["sold", "forsale", "newlife", "wells", "church",
       "singer", "engaging", "community", "union", "revolution",
@@ -26,47 +22,17 @@
 
   onMount(() => {
     panelHeight = window.innerHeight - 138;
-    // console.log('mount: ' + data.moment.slug)
-    // console.log('mount page: ' + $page.params.slug)
   })
 
   isScrollMode.subscribe((value) => {
     isScrollModeValue = value;
   });
-  // nextMoment.subscribe((value) => {
-  //   nextMomentValue = value;
-  // });
-  // prevMoment.subscribe((value) => {
-  //   prevMomentValue = value;
-  // });
-  // currMomentIdx.subscribe((value) => {
-  //   currMomentIdxValue = value;
-  // });
-
-  // function setNextPrev(changeIdx) {
-  //   console.log('currMomentIdx: ' + currMomentIdxValue)
-  //   nextMoment.set(moments[currMomentIdxValue+1].slug);
-  //   if (changeIdx < 0) { // decrimenting
-  //     if( currMomentIdxValue === 1) {
-  //       prevMoment.set( undefined );
-  //     } else {
-  //       prevMoment.set(moments[currMomentIdxValue-1].slug);
-  //     }
-
-  //   }
-
-  //   let newCurrIdx = currMomentIdxValue + changeIdx;
-  //   currMomentIdx.set(newCurrIdx)
-  // }
-
-  // const foundCurrIndex = (element) => element === "union";
 
   function getPrevSlugIdx(currSlug) {
     const foundCurrIndex = (element) => element === currSlug;
     // console.log('currSlug: ' + currSlug);
     let currSlugIndex = momentSlugs.findIndex(foundCurrIndex)
     // console.log('currIndex: ' + currSlugIndex)
-    // return momentSlugs[currSlugIndex - 1]
     return currSlugIndex - 1
   }
   function getNextSlugIdx(currSlug) {
@@ -74,33 +40,6 @@
     let currSlugIndex = momentSlugs.findIndex(foundCurrIndex)
     return currSlugIndex + 1
   }
-
-  // function setPrevNextDown() {
-  //   console.log('currMomentIdx: ' + currMomentIdxValue)
-  //   nextMoment.set(moments[currMomentIdxValue+1].slug);
-  //   if( currMomentIdxValue > 0) {
-  //     prevMoment.set(moments[currMomentIdxValue-1].slug);
-  //   } else {
-  //     prevMoment.set( undefined );
-  //   }
-  //   let newCurrIdx = currMomentIdxValue -1;
-  //   currMomentIdx.set(newCurrIdx)
-  //   console.log('currMomentIdx is now: ' + currMomentIdxValue)
-  // }
-
-  // function setPrevNextUp() {
-  //   console.log('currMomentIdx: ' + currMomentIdxValue)
-  //   prevMoment.set(moments[currMomentIdxValue-1].slug);
-  //   if( currMomentIdxValue < 11) {
-  //     nextMoment.set(moments[currMomentIdxValue+1].slug);
-  //   } else {
-  //     nextMoment.set( undefined );
-  //   }
-  //   let newCurrIdx = currMomentIdxValue + 1;
-  //   currMomentIdx.set(newCurrIdx)
-  //   console.log('currMomentIdx is now: ' + currMomentIdxValue)
-  // }
-
 
   let imageIndex = 0;
   let currScrollY = 0;
@@ -190,12 +129,6 @@
 </script>
 <svelte:window bind:scrollY={currScrollY} />
 
-<!--
-  <div class="title-panel">
-    <h1>Community Within Community</h1>
-    <p>Scroll down to begin...</p>
-  </div>
--->
 <section class="style-wrapper-tbd">
   
   <header id="header" class="moment-header">
