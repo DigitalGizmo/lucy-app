@@ -16,7 +16,7 @@
     <p>Sort by date | Sort by type</p>
     <ul>
       <li><a href="/evidence/thing1">Lidded Hanging Pot</a></li>
-      <li>Two hard-wired evidence</li>
+      <li>Candlestick</li>
       <li>Three hard-wired evidence</li>
       <li>Four hard-wired evidence</li>
       <li>Five hard-wired evidence</li>
