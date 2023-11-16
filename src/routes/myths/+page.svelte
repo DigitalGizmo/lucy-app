@@ -13,7 +13,7 @@
 
   <section class="wrapper">
         
-    <ul>
+    <ul class="menu">
       <li><a href="/myths/voodo">Enslaved People Were Usually Illiterate</a></li>
       <li>Two hard-wired myth</li>
       <li>Three hard-wired myth</li>

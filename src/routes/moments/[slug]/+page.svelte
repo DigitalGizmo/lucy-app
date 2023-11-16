@@ -252,8 +252,8 @@
               <script>console.log('Past where Mores are defined')</script>
             {:else}
               {#if (frames.community[imageIndex].moreWhoLinks.length > 0)}
-              <p>Who Else?</p>
-              <ul >
+              <h5>Who Else?</h5>
+              <ul>
                 {#each frames.community[imageIndex].moreWhoLinks as link }
                   <li><a href="/" 
                       on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
@@ -263,8 +263,8 @@
               {/if}
 
               {#if (frames.community[imageIndex].moreTopicLinks.length > 0)}
-                <p>Topics and Ideas</p>
-                <ul >
+                <h5>Topics &amp; Ideas</h5>
+                <ul>
                   {#each frames.community[imageIndex].moreTopicLinks as link }
                   <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
@@ -274,8 +274,8 @@
               {/if}
 
               {#if (frames.community[imageIndex].moreHowLinks.length > 0)}
-                <p>How Do We Know?</p>
-                <ul >
+                <h5>How Do We Know?</h5>
+                <ul>
                   {#each frames.community[imageIndex].moreHowLinks as link }
                   <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.title, "how");}}>
@@ -332,8 +332,8 @@
           {/each}
         </ul>   
 
-        <h3>Topics and Ideas</h3>
-        <ul >
+        <h3>Topics &amp; Ideas</h3>
+        <ul>
           {#each {length: 4} as _, i}
             {#if (frames.community[i].moreTopicLinks.length > 0)}
               {#each frames.community[i].moreTopicLinks as link }
@@ -346,7 +346,7 @@
         </ul>     
 
         <h3>How Do We Know?</h3>
-        <ul >
+        <ul>
           {#each {length: 4} as _, i}
             {#if (frames.community[i].moreHowLinks.length > 0)}
               {#each frames.community[i].moreHowLinks as link }

@@ -10,7 +10,7 @@
         </li>
         <!-- <li class="{ $page.path === '/people/' ? 'selected' : ''}"> -->
         <li>
-        <a href="/people/">Whe Else?</a>
+        <a href="/people/">Who Else?</a>
         </li>
         <li><a href="/evidence/">How Do We Know?</a></li>
         <li><a href="/topics/">Topics &amp; Ideas</a></li>

@@ -15,7 +15,7 @@
 
 	<section class="wrapper">
 
-    <ul>
+    <ul class="menu">
       {#each moments as moment, i}
         <li>
           <a href="/moments/{moment.slug}"

@@ -6,6 +6,11 @@ body {
 	margin: 0;
 }
 
+ul, ol {
+	padding: 0;
+	margin: 0;
+}
+
 section.wireframe-wrapper {
 	padding: 0 1em;
 }
@@ -112,7 +117,27 @@ nav.moment-nav ul li {
 
 /* added by don */
 nav.moment-nav ul li.selected{
-	background-color: #fff;
+	background-color: lightgrey;
+}
+
+/* ------ MENUS ------- */
+.menu-tools {
+	background-color: lightgrey;
+	padding: .25em;
+}
+
+.menu {
+	list-style-type: none;
+	width: 50vw;
+}
+
+.menu li {
+	margin-bottom: 1em;
+}
+
+.menu li a {
+	display: block;
+	font-weight: bold;
 }
 
 /* -------------------- */
@@ -288,7 +313,7 @@ nav.moment-options ul li.this-moment {
 	top: 20vh;
 	height: 300px;
 	width: 250px;
-	padding: 1em;
+	padding: 0 1em 1em 1em;
 	z-index: 120;
 	position: absolute;
   -webkit-transition: all 0.6s ease;
@@ -318,8 +343,18 @@ nav.moment-options ul li.this-moment {
 }
 
 .more-container ul {
-	/* list-style-type: none; */
+	list-style-type: none;
 	padding-left: 15px;
+	font-size: .9em;
+}
+
+.more-container ul li{
+	line-height: 1em;
+	padding-bottom: .25em;
+}
+
+.more-container h5 {
+	margin: 1em 0 0 0;
 }
 
 .hotspot {
@@ -367,9 +402,11 @@ nav.moment-options ul li.this-moment {
 .story-frames article.story.left {
 	margin: 40vh 5vw 70vh 35vw;
 }
+
 .story-frames article.story.center {
 	margin: 40vh 20vw 70vh 20vw;
 }
+
 .story-frames article.story.right {
 	margin: 40vh 35vw 70vh 5vw;
 }
@@ -383,6 +420,10 @@ nav.moment-options ul li.this-moment {
 	grid-row: 2;
 	padding: 1em;
 	z-index: 11;
+}
+
+.total-more ul {
+	list-style-type: none;
 }
 
 /* ---------------------- */
@@ -475,6 +516,7 @@ nav.moment-options ul li.this-moment {
 .more-content figure img {
 	max-width: 100%;
 }
+
 .more-content figure figcaption {
 	color: gray;
 	font-size: .8em;

@@ -13,12 +13,10 @@
 
   <section class="wrapper">
         
-    <ul>
+    <ul class="menu">
       <li><a href="/maps/there">African Americans Living in Deerfield</a></li>
-      <li>Two hard-wired map</li>
-      <li>Three hard-wired map</li>
-      <li>Four hard-wired map</li>
-      <li>Five hard-wired map</li>
+      <li>The Atlantic Slave Trade</li>
+      <li>Slave Markets in New England</li>
     </ul>
 
   </section><!-- /wrapper -->
