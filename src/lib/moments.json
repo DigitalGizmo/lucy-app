@@ -2,50 +2,50 @@
     {
         "slug": "sold",
         "title": "Sold Out of Africa",
-        "storyIntro": "Lucy and many other Africans are captured and taken to the coast where they're loaded onto a ship bound for a strange new world.",
-        "historyIntro": "Commodification of humans; loss of family and loss of all that’s familiar; world economy",
+        "storyIntro": "Lucy with many other Africans are captured and taken away from all that is safe and familiar. Once she arrives at the coast she is imprisoned, sold, and taken onto a ship bound for a strange world thousands of miles from home.",
+        "historyIntro": "An endless demand among European colonizers for the essential labor to produce sugar and other lucrative commodities is destroying the lives of millions of African men, women, and children. Their captors and others eager to profit from the booming trade in human beings engage in a brutal winnowing process. Imprisoned in slave castles and other holding areas on the West Africa coast, survivors are forced into the ships that will transport them thousands of miles to the Americas in the infamous Middle Passage.",
         "frames": []
     },  
     {
         "slug": "forsale",
         "title": "For Sale Again",
-        "storyIntro": "As part of group of captured Africans, Lucy finds herself for sale in Bristol, Rhode Island.",
-        "historyIntro": "loss of autonomy; arbitrary power of enslavers",
+        "storyIntro": "Three-year old Lucy is among a group of captured Africans for sale in Bristol, Rhode Island.",
+        "historyIntro": "Africans who survive capture and the horrors of the Middle Passage encounter a new world where the loss of autonomy and the arbitrary power of their enslavers are the only constants.",
         "frames": []
     },  
     {
         "slug": "newlife",
         "title": "A Strange New Life",
-        "storyIntro": "Lucy arrives in Deerfield and meets the Wells for the first time",
-        "historyIntro": "change from urban environment to rural one; how do enslaved people find connection?",
+        "storyIntro": "Eight-year-old Lucy arrives in Deerfield and meets the couple who are purchasing her from Samuel Terry. Once again, her life is about to change but her status as an enslaved child does not.",
+        "historyIntro": "Enslaved people often experienced multiple captivities. They could be sold at a moment’s notice to new captors anytime, anywhere, upending in the process any relationships they may have been able to establish, including marriage, children and siblings. Dealing with the loss of old connections and forging new ones required resilience, courage, and persistence by young and old alike.",
         "frames": []
     },  
     {
         "slug": "wells",
         "title": "Enslaved at the Wells's House",
-        "storyIntro": "Lucy and Cesar undertake the many everyday tasks of enslaved people",
-        "historyIntro": "Everyday resistance; working for someone else’s benefit; autonomy and privacy",
+        "storyIntro": "Life in the Wells household is an unending cycle of labor, especially for Lucy and Cesar who are expected to undertake the most menial, demanding tasks on a rural farm.",
+        "historyIntro": "In the 18th century, keeping a rural New England house and farm running smoothly was extremely labor intensive. Enslaved people provided essential, often backbreaking agricultural labor but unlike free members of the household, they worked for someone else’s benefit.",
         "frames": []
     },  
     {
         "slug": "church",
         "title": "Joining the Church",
-        "storyIntro": "Lucy becomes a member of the church by relating her personal conversion experiences",
-        "historyIntro": "acculturation; becoming part of the community; literacy and enslavement, social hierarchy",
+        "storyIntro": "When Lucy experiences her own personal religious conversion, she becomes a member of the Church: a baptized body of Protestant believers, both free and enslaved, who believe they have experienced God’s saving grace.",
+        "historyIntro": "Enslaved people could and many did embrace Christianity. In Puritan New England, becoming a full member of the Church required sharing with a minister a verifiable conversion experience. Being welcomed into full communion in the Church did not affect a convert’s place in the social hierarchy. Enslaved people assured of freedom in salvation were thus expected to accept what their enslavers considered to be their God-ordained station in life: human property.",
         "frames": []
     },  
     {
         "slug": "singer",
         "title": "Singer of History",
-        "storyIntro": "Lucy recites the Bars Fight to a group of townspeople",
-        "historyIntro": "story-telling and oral tradition; social status in community; enslaved people as creatives and what this gets them in the white community",
+        "storyIntro": "Lucy sings her poem, the Bars Fight, to customers she is serving in Ebenezer Wells’s tavern.",
+        "historyIntro": "Many enslaved people brought their story-telling and oral traditions to the Americas. This talent could sometimes confer social status in the white community.",
         "frames": []
     },  
     {
         "slug": "engaging",
         "title": "Engaging With the Community",
-        "storyIntro": "Lucy shops at the Williams Store",
-        "historyIntro": "the local economic network of slavery; enslaved people are an active part of the economic community; relative freedom of movement and autonomy",
+        "storyIntro": "Lucy goes to the Williams Store to buy chocolate where she encounters Abijah Prince, the free African American man she will marry.",
+        "historyIntro": "In colonial Massachusetts, some enslaved people had limited autonomy that included earning a bit of money to make small purchases that included rum, tobacco, and textiles, making them part of a larger Atlantic economy fueled by slavery.",
         "frames": [
             {
                 "imageName": "placeholder",
@@ -64,8 +64,8 @@
     {
         "slug": "community",
         "title": "Community Within Community",
-        "storyIntro": "Lucy has run into Abijah at the store; he walks her home along the Main Street of the town.",
-        "historyIntro": "the relationships among enslaved people and their ongoing connections with freed African American people; the importance of maintaining a social life and emotional connections; introduces the idea of emancipation",
+        "storyIntro": "After seeing Lucy at the store, Abijah offers to walk her home along the main street of the village where they encounter several Black residents of Deerfield and surrounding towns.",
+        "historyIntro": "Like other Massachusetts communities, Deerfield’s enslaved and free residents crossed paths on a daily basis. Within that community were the relationships among enslaved people and their ongoing connections with freed African American people.This interior, “community within community” highlights the effort people of color, free and enslaved, invested in maintaining a social life and emotional connections against often overwhelming odds.",
         "frames": [
             {
                 "imageName": "02-dawn-house-color",
@@ -132,7 +132,7 @@
         "slug": "union",
         "title": "A Fruitful Union",
         "storyIntro": "Lucy and Abijah get married and begin life as free people.",
-        "historyIntro": "marriage can change an enslaved person’s status and children inherit their freedom",
+        "historyIntro": "Marriage could change an enslaved person’s status; once free, all of a woman's children would be born free.",
         "frames": [
             {
                 "imageName": "placeholder",
@@ -152,28 +152,28 @@
         "slug": "revolution",
         "title": "Sons of the Revolution",
         "storyIntro": "Like many Black mothers, Lucy sends her sons off to fight in the Revolution.",
-        "historyIntro": "the bitter irony of enslaved people fighting for colonist’s freedom",
+        "historyIntro": "Even as they embrace the promises of the American Revolution, African American and Indigenous people know the bitter irony of enslaved people fighting for freedom alongside colonial enslavers.",
         "frames": []
     },  
     {
         "slug": "frontier",
         "title": "Living on the Frontier",
-        "storyIntro": "Lucy, Abijah and their children struggle to make a life for themselves in Vermont.",
-        "historyIntro": "Blacks and property ownership; challenges of living as a free black person during this period",
+        "storyIntro": "Lucy, Abijah and their children struggle to make a life for themselves in Vermont–a struggle that includes intimidation and violence by hostile neighbors.",
+        "historyIntro": " Although the new state constitution put slavery on the defensive and free people of color could and did hold property in Vermont as well as Massachusetts, they often encountered challenges as they endeavored to live and prosper as free citizens in the new nation.",
         "frames": []
     },  
     {
         "slug": "court",
         "title": "Fighting in Court",
-        "storyIntro": "Lucy fights in court for her family's land and for fair treatment by their neighbors",
-        "historyIntro": "rule of law; what the law can and cannot do if you’re a Black person",
+        "storyIntro": "Lucy travels to Windsor, Vermont, to fight in court to protect her family's legal claim to their land and for fair treatment by their neighbors.",
+        "historyIntro": "The laws of Vermont and other New England states protected the property and the rights of citizens while simultaneously posing challenges to those rights for free people of color.",
         "frames": []
     },  
     {
         "slug": "returning",
         "title": "Returning to Deerfield",
-        "storyIntro": "at the end of her life, Lucy returns to Deerfield for a visit.",
-        "historyIntro": "emotional connection to a place and people even though those people and places were not positive experiences",
+        "storyIntro": "Her children are grown and her husband Abijah has passed away when Lucy decides to return to Deerfield for a visit.",
+        "historyIntro": "Histories of continued connections between formerly enslaved people and the people and places where they were enslaved suggests a powerful connection to people and place, both positive and negative.",
         "frames": []
     }
 
