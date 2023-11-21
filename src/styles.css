@@ -92,7 +92,7 @@ Show the icon/link that opens and closes the global nav */
 
 	.global-nav a.hamburger {
 		position: absolute;
-		top: 0;
+		top: -27px;
 		right: 30px;
 		display: block;
 	}
@@ -105,10 +105,10 @@ display the links vertically instead of horizontally */
 	.global-nav.responsive ul {
 		background-color: #fff;
 		display: block;
-    position: absolute;
-    right: 30px;
-    text-align: right;
-    top: 20px;
+		position: absolute;
+		right: 30px;
+		text-align: right;
+		top: 0px;
 	}
 
 	.global-nav.responsive ul li {
