@@ -57,8 +57,10 @@ a:visited {
 	max-width: 600px;
 }
 
+/* GLOBAL NAVIGATION */
 .global-nav {
 /*	margin-bottom: -14px;*/
+	position: relative;
 }
 
 .global-nav ul {
@@ -69,69 +71,56 @@ a:visited {
 }
 
 .global-nav ul li {
-	border: 1px solid #038EDF;
+	border: 1px solid lightgrey;
 	display: inline-block;
 	font-size: .8em;
 	padding: 0.25em;
 }
 
-
 .global-nav a.hamburger {
 	display: none;
 }
 
-/* The following from the W3Schools page -- seems that it's not mobile first */
+/* The following from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 
-/* When the screen is less than 800 pixels wide, hide all links 
-Show the link that opens and close the global nav (.hamburger) */
+/* When the screen is less than 800 pixels wide, hide all global nav links 
+Show the icon/link that opens and closes the global nav */
 @media screen and (max-width: 800px) {
-	.global-nav ul { display: none; }
+	.global-nav ul { 
+		display: none;
+	}
+
 	.global-nav a.hamburger {
-		/* float: right; */
+		position: absolute;
+		top: 0;
+		right: 30px;
 		display: block;
 	}
 }
 
 /* The "responsive" class is added to global-nav with JavaScript 
-when the user clicks on the icon. This class makes global-nav 
-look good on small screens (display the links vertically 
-instead of horizontally) */
+when the user clicks the icon. This class makes global-nav 
+display the links vertically instead of horizontally */
 @media screen and (max-width: 800px) {
-	.global-nav.responsive {position: relative;}
-	.global-nav.responsive a.hamburger {
-	  /* position: absolute;
-	  right: 0;
-	  top: 0; */
-	}
 	.global-nav.responsive ul {
-	  float: none;
-	  display: block;
-	  text-align: left;
+		background-color: #fff;
+		display: block;
+    position: absolute;
+    right: 30px;
+    text-align: right;
+    top: 20px;
 	}
+
 	.global-nav.responsive ul li {
-		border: none;
 		display: block;
 		font-size: .8em;
 		padding: 0.25em;
 	}
-  }
-
-/* addition since the fork in the style road */
-@media screen and (max-width: 800px) { /* displays larger than 800px */
-	.global-nav-XXX {
-		margin-bottom: 1em;
-	}
-
-	/* added by don */
-	/* .global-nav.selected {
-		background-color: bisque;
-	} */
-
 }
-/* end addition */
 
-
-
+.fa {
+	font-size: 1.5em;
+}
 
 section.wrapper {
 	margin-top: 160px;
@@ -163,7 +152,6 @@ nav.moment-nav ul li {
 	width: 80px;
 }
 
-/* added by don */
 nav.moment-nav ul li.selected{
 	background-color: lightgrey;
 }
