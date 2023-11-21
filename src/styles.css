@@ -92,8 +92,8 @@ Show the link that opens and close the global nav (.hamburger) */
 	}
 }
 
-/* The "responsive" class is added to the topnav with JavaScript 
-when the user clicks on the icon. This class makes the topnav 
+/* The "responsive" class is added to global-nav with JavaScript 
+when the user clicks on the icon. This class makes global-nav 
 look good on small screens (display the links vertically 
 instead of horizontally) */
 @media screen and (max-width: 800px) {
