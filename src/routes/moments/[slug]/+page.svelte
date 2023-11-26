@@ -28,17 +28,19 @@
     isScrollModeValue = value;
   });
 
+  let currMomentIndex = 0;
+
+  // Temporarily let this function set currMomentIndex -- 
+  // should be more global/automatic
   function getPrevSlugIdx(currSlug) {
     const foundCurrIndex = (element) => element === currSlug;
     // console.log('currSlug: ' + currSlug);
-    let currSlugIndex = momentSlugs.findIndex(foundCurrIndex)
-    // console.log('currIndex: ' + currSlugIndex)
-    return currSlugIndex - 1
+    currMomentIndex = momentSlugs.findIndex(foundCurrIndex)
+    // console.log('currIndex: ' + currMomentIndex)
+    return currMomentIndex - 1
   }
   function getNextSlugIdx(currSlug) {
-    const foundCurrIndex = (element) => element === currSlug;
-    let currSlugIndex = momentSlugs.findIndex(foundCurrIndex)
-    return currSlugIndex + 1
+    return currMomentIndex + 1
   }
 
   let imageIndex = 0;
