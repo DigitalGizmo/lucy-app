@@ -1,5 +1,8 @@
 <script>
   import MainNav from "$lib/MainNav.svelte";
+
+  /** @type {import('./$types').PageData} */
+  export let data;
 </script>
   
 <section class="wireframe-wrapper">
@@ -13,7 +16,7 @@
 
   <section class="wrapper">
         
-    <h2>Lucy Terry Prince</h2>
+    <h2>title: {data.post.title}</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

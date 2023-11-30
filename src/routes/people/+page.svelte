@@ -1,5 +1,7 @@
 <script>
   import MainNav from "$lib/MainNav.svelte";
+  /** @type {import('./$types').PageData} */
+  export let data;
 </script>
 
 <section class="wireframe-wrapper">
@@ -14,6 +16,9 @@
   <section class="wrapper">
     <p class="menu-tools">Sort by gender | Sort by date | Sort by name</p>
     <ul class="menu">
+      {#each data.people as person (person.first_name)}
+        <li>from admin: {person.first_name} {person.last_name}</li>
+      {/each}
       <li><a href="/people/lucy">Lucy Terry Prince</a></li>
       <li>Ebenezer Wells</li>
       <li>Abijah Prince</li>
