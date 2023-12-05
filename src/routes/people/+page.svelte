@@ -17,12 +17,13 @@
     <p class="menu-tools">Sort by gender | Sort by date | Sort by name</p>
     <ul class="menu">
       {#each data.people as person (person.first_name)}
-        <li>from admin: {person.first_name} {person.last_name}</li>
+          <a href='/people/{person.slug}'>
+            {person.first_name} {person.last_name}
+          </a> -- 
+          {person.birth_year} {person.death_year} {person.menu_blurb} 
+        </li>
       {/each}
-      <li><a href="/people/lucy">Lucy Terry Prince</a></li>
-      <li>Ebenezer Wells</li>
-      <li>Abijah Prince</li>
-      <li>Phillis Wheatley</li>
+
       <li>Elizabeth Freeman (Mum Bett)</li>
       <li>Peter Wells</li>
       <li>Susan Wells</li>
