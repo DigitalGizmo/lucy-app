@@ -176,6 +176,28 @@ nav.moment-nav ul li.selected{
 	font-weight: bold;
 }
 
+.people-menu {
+}
+
+.people-menu tr th {
+	text-align: left;
+}
+
+.people-menu tr td {
+	border-bottom: 1px solid lightgrey;
+}
+
+.people-menu tr th.col1 {
+	width: 15%;
+}
+
+.people-menu tr th.col2 {
+	width: 15%;
+}
+
+.people-menu a {
+	font-weight: bold;
+}
 /* -------------------- */
 /* ----  MOMENTS   ---- */
 /* -------------------- */
@@ -563,3 +585,24 @@ nav.moment-options ul li.this-moment {
 	color: gray;
 	font-size: .8em;
 }
+
+/* --------------------------------- */
+/* ---------  People Pages --------- */
+/* --------------------------------- */
+.person h2 {
+	margin: 0;
+}
+
+.person p.dates {
+	margin: 0.25em 0;
+}
+
+.person-about {
+	margin-top: 1em;
+	max-width: 75%;
+}
+
+.person-about h3, .person-about p {
+	margin: 0;
+}
+

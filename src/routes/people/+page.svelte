@@ -14,37 +14,29 @@
   </header>
 
   <section class="wrapper">
-    <p class="menu-tools">Sort by gender | Sort by date | Sort by name</p>
-    <ul class="menu">
+    <p class="menu-tools">Sort by: <a href="#">name</a> | <a href="#">date</a> | <a href="#">gender</a></p>
+
+    <table class="people-menu">
+      <tr>
+        <th class="col1">Name</th>
+        <th class="col2">Dates</th>
+        <th>About</th>
+      </tr>
+
       {#each data.people as person (person.first_name)}
-        <li>
+      <tr>
+
+        <td>
           <a href='/people/{person.slug}'>
-            {person.first_name} {person.last_name}
-          </a> -- 
-          {person.birth_year} {person.death_year} {person.menu_blurb} 
-        </li>
+              {person.first_name} {person.last_name}
+          </a>          
+        </td>
+        <td>{person.birth_year} - {person.death_year}</td>
+        <td>{person.menu_blurb}</td>
+      </tr>
       {/each}
 
-      <li>Elizabeth Freeman (Mum Bett)</li>
-      <li>Peter Wells</li>
-      <li>Susan Wells</li>
-      <li>Ishmael Turner</li>
-      <li>Quash Gomer</li>
-      <li>Caleb Sharp</li>
-      <li>Heber Honest Man</li>
-      <li>Crispus Attucks</li>
-      <li>Chloe Silliman</li>
-      <li>Caesar Freeman</li>
-      <li>Peter Green</li>
-      <li>Valentine Harris</li>
-      <li>Agrippa Hull</li>
-      <li>Amos Hull</li>
-      <li>Moses Sash</li>
-      <li>Ishmael Turner</li>
-      <li>Jeffrey Brace</li>
-      <li>Jin (Jenny) Cole</li>
-      <li>Cato Cole</li>
-    </ul>
+    </table>
 
   </section><!-- /wrapper -->
 </section><!-- /wireframe-wrapper -->
