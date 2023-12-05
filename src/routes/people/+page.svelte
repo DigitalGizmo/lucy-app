@@ -17,6 +17,7 @@
     <p class="menu-tools">Sort by gender | Sort by date | Sort by name</p>
     <ul class="menu">
       {#each data.people as person (person.first_name)}
+        <li>
           <a href='/people/{person.slug}'>
             {person.first_name} {person.last_name}
           </a> -- 
