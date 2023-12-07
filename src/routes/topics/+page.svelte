@@ -1,5 +1,6 @@
 <script>
     import MainNav from "$lib/MainNav.svelte";
+    export let data;
 </script>
   
 <section class="wireframe-wrapper">
@@ -12,6 +13,28 @@
   </header>
 
   <section class="wrapper">
+
+    <table class="people-menu">
+      <tr>
+        <th class="col1">Topic</th>
+        <th>About</th>
+      </tr>
+
+      {#each data.topics as topic (topic.slug)}
+      <tr>
+
+        <td>
+          <a href='/topics/{topic.slug}'>
+              {topic.title}
+          </a>          
+        </td>
+        <td>{topic.menu_blurb}</td>
+      </tr>
+      {/each}
+
+    </table>
+
+
     <ul class="menu">
       <li><a href="/topics/thought">Control and Resistance</a>Despite coercive efforts, enslaved people found a variety of ways to exercise a degree of personal control over their lives.</li>
 

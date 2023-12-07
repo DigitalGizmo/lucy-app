@@ -1,5 +1,6 @@
 <script>
   import MainNav from "$lib/MainNav.svelte";
+  export let data;
 </script>
   
 <section class="wireframe-wrapper">
@@ -13,13 +14,17 @@
 
   <section class="wrapper">
     
-    <h2>Lidded Hanging Pot</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h2>{data.item.title}</h2>
+    <p>{ data.item.year} { data.item.item_type}</p>
+
+    <img 
+      src="https://lucy-proto.deerfield-ma.org/assets/evidence/images/fullpics/{data.item.slug}.jpg"
+      alt="{data.item.title}" height="200" width="300"
+    >
+
+    <div class="person-about">
+      {@html data.item.full_text.html}
+    </div>
 
   </section><!-- /wrapper -->
 </section><!-- /wireframe-wrapper -->

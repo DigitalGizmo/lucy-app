@@ -1,5 +1,6 @@
 <script>
   import MainNav from "$lib/MainNav.svelte";
+  export let data;
 </script>
 
 <section class="wireframe-wrapper">
@@ -11,9 +12,40 @@
     <h1>How Do We Know?</h1>
   </header>
 
-  <section class="wrapper">
-        
+  <section class="wrapper">    
     <p class="menu-tools">Sort by date | Sort by type</p>
+
+    <table class="people-menu">
+      <tr>
+        <th class="col1">image</th>
+        <th class="col2">Title</th>
+        <th class="col1">Year</th>
+        <th class="col1">Type</th>
+        <th>About</th>
+      </tr>
+
+      {#each data.items as item (item.slug)}
+      <tr>
+
+        <td>
+          <img 
+            src="https://lucy-proto.deerfield-ma.org/assets/evidence/images/thumbpics/{item.slug}.jpg"
+            alt="{item.title}" height="75" width="75"
+          >
+        </td>
+        <td>
+          <a href='/evidence/{item.slug}'>
+              {item.title}
+          </a>          
+        </td>
+        <td>{item.year}</td>
+        <td>{item.item_type}</td>
+        <td>{item.menu_blurb}</td>
+      </tr>
+      {/each}
+
+    </table>
+
     <ul class="menu">
       <li><a href="/evidence/thing1">Lidded Hanging Pot</a></li>
       <li>Candlestick</li>
