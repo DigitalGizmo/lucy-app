@@ -12,11 +12,11 @@
     <h1>Topics &amp; Ideas</h1>
   </header>
 
-  <section class="wrapper">
+  <section class="wrapper detail">
 
     <h2>{data.topic.title}</h2>
 
-    <div class="person-about">
+    <div class="about">
       {@html data.topic.full_text.html}
     </div>
     

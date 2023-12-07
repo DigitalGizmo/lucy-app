@@ -13,19 +13,18 @@
   </header>
 
 
-  <section class="wrapper">
+  <section class="wrapper detail">
         
     <h2>{data.map.title}</h2>
 
     <img 
       src="https://lucy-proto.deerfield-ma.org/assets/maps/images/fullpics/{data.map.slug}.jpg"
-      alt="{data.map.title}" height="200" width="300"
+      alt="{data.map.title}"
     >
 
-    <div class="person-about">
+    <div class="about">
       {@html data.map.full_text.html}
     </div>
-
 
   </section><!-- /wrapper -->
 </section><!-- /wireframe-wrapper -->

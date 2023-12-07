@@ -9,14 +9,14 @@
     <MainNav />
 
     <!-- Can this be outside of header -->
-    <h1>Myths &amp; Assumptions?</h1>
+    <h1>Myths &amp; Assumptions</h1>
   </header>
 
-  <section class="wrapper">
+  <section class="wrapper detail">
 
     <h2>{data.myth.title}</h2>
 
-    <div class="person-about">
+    <div class="about">
       {@html data.myth.full_text.html}
     </div>
 

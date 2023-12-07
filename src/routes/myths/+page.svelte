@@ -32,15 +32,7 @@
       </tr>
       {/each}
 
-    </table>
-    
-    <ul class="menu">
-      <li><a href="/myths/voodo">Enslaved People Were Usually Illiterate</a></li>
-      <li>Two hard-wired myth</li>
-      <li>Three hard-wired myth</li>
-      <li>Four hard-wired myth</li>
-      <li>Five hard-wired myth</li>
-    </ul>        
+    </table>       
 
   </section><!-- /wrapper -->
 </section><!-- /wireframe-wrapper -->

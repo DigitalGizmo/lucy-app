@@ -59,7 +59,6 @@ a:visited {
 
 /* GLOBAL NAVIGATION */
 .global-nav {
-/*	margin-bottom: -14px;*/
 	position: relative;
 }
 
@@ -156,48 +155,6 @@ nav.moment-nav ul li.selected{
 	background-color: lightgrey;
 }
 
-/* ------ MENUS ------- */
-.menu-tools {
-	background-color: lightgrey;
-	padding: .25em;
-}
-
-.menu {
-	list-style-type: none;
-	width: 50vw;
-}
-
-.menu li {
-	margin-bottom: 1em;
-}
-
-.menu li a {
-	display: block;
-	font-weight: bold;
-}
-
-.people-menu {
-}
-
-.people-menu tr th {
-	text-align: left;
-}
-
-.people-menu tr td {
-	border-bottom: 1px solid lightgrey;
-}
-
-.people-menu tr th.col1 {
-	width: 15%;
-}
-
-.people-menu tr th.col2 {
-	width: 15%;
-}
-
-.people-menu a {
-	font-weight: bold;
-}
 /* -------------------- */
 /* ----  MOMENTS   ---- */
 /* -------------------- */
@@ -585,24 +542,77 @@ nav.moment-options ul li.this-moment {
 	color: gray;
 	font-size: .8em;
 }
+/* -------------------- */
+/* ------ MENUS ------- */
+/* -------------------- */
+
+.menu-tools {
+	background-color: lightgrey;
+	padding: .25em;
+}
+
+.menu {
+	list-style-type: none;
+	width: 50vw;
+}
+
+.menu li {
+	margin-bottom: 1em;
+}
+
+.menu li a {
+	display: block;
+	font-weight: bold;
+}
+
+.people-menu tr {
+	height: 3em;
+}
+
+.people-menu tr th {
+	text-align: left;
+}
+
+.people-menu tr td {
+	border-bottom: 1px solid lightgrey;
+}
+
+.people-menu tr th.col1 {
+	width: 15%;
+}
+
+.people-menu tr th.col2 {
+	width: 15%;
+}
+
+.people-menu a {
+	font-weight: bold;
+}
 
 /* --------------------------------- */
-/* ---------  People Pages --------- */
+/* ---------  Detail Pages --------- */
 /* --------------------------------- */
-.person h2 {
+.detail h2 {
 	margin: 0;
 }
 
-.person p.dates {
+.detail p.dates {
 	margin: 0.25em 0;
 }
 
-.person-about {
+.detail img {
+	max-height: 75vh;
+}
+
+.about {
 	margin-top: 1em;
 	max-width: 75%;
 }
 
-.person-about h3, .person-about p {
+.about h3 {
 	margin: 0;
 }
 
+.about p {
+	margin: 0 0 1em 0;
+}

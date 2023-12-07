@@ -27,7 +27,7 @@
         <td>
           <img 
             src="https://lucy-proto.deerfield-ma.org/assets/maps/images/thumbpics/{map.slug}.jpg"
-            alt="{map.title}" height="75" width="75"
+            alt="{map.title}"
           >
         </td>
         <td>
@@ -40,12 +40,6 @@
       {/each}
 
     </table>
-
-    <ul class="menu">
-      <li><a href="/maps/there">African Americans Living in Deerfield</a></li>
-      <li>The Atlantic Slave Trade</li>
-      <li>Slave Markets in New England</li>
-    </ul>
 
   </section><!-- /wrapper -->
 </section><!-- /wireframe-wrapper -->

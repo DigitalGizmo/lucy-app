@@ -12,17 +12,17 @@
     <h1>How Do We Know?</h1>
   </header>
 
-  <section class="wrapper">
+  <section class="wrapper detail">
     
     <h2>{data.item.title}</h2>
     <p>{ data.item.year} { data.item.item_type}</p>
 
     <img 
       src="https://lucy-proto.deerfield-ma.org/assets/evidence/images/fullpics/{data.item.slug}.jpg"
-      alt="{data.item.title}" height="200" width="300"
+      alt="{data.item.title}"
     >
 
-    <div class="person-about">
+    <div class="about">
       {@html data.item.full_text.html}
     </div>
 
