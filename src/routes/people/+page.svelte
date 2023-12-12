@@ -23,7 +23,7 @@
         <th>About</th>
       </tr>
 
-      {#each data.people as person (person.first_name)}
+      {#each data.people as person (person.slug)}
       <tr>
 
         <td>
