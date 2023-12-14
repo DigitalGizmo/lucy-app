@@ -25,11 +25,14 @@
 
       {#each data.people as person (person.slug)}
       <tr>
-
         <td>
-          <a href='/people/{person.slug}'>
+          {#if person.prod_status > 1}
+            <a href='/people/{person.slug}'>
               {person.first_name} {person.last_name}
-          </a>          
+            </a> 
+          {:else}
+            {person.first_name} {person.last_name}
+          {/if}         
         </td>
         <td>{person.birth_year} - {person.death_year}</td>
         <td>{person.menu_blurb}</td>
