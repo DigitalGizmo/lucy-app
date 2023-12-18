@@ -26,5 +26,16 @@
       {@html data.map.full_text.html}
     </div>
 
+    <div>
+      {#if data.map.relateds.length > 0}
+        <h3>Related</h3>
+        <ul style="margin:20px">
+          {#each data.map.relateds as related (related.title)}
+          <li><a href="{related.link}">{related.title}</a></li>
+          {/each}
+        </ul>
+      {/if}
+    </div>
+
   </section><!-- /wrapper -->
 </section><!-- /wireframe-wrapper -->

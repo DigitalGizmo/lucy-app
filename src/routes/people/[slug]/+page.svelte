@@ -33,7 +33,6 @@
           {/each}
         </ul>
       {/if}
-
     </div>
 
   </section><!-- /wrapper -->
