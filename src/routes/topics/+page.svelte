@@ -22,11 +22,15 @@
 
       {#each data.topics as topic (topic.slug)}
       <tr>
-
         <td>
-          <a href='/topics/{topic.slug}'>
-              {topic.title}
-          </a>          
+          {#if topic.prod_status > 1}
+            <a href='/topics/{topic.slug}'>
+                {topic.title}
+            </a>          
+          {:else}
+            {topic.title}
+          {/if}                   
+
         </td>
         <td>{topic.menu_blurb}</td>
       </tr>

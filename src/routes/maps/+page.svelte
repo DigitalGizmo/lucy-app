@@ -31,9 +31,13 @@
           >
         </td>
         <td>
-          <a href='/maps/{map.slug}'>
-              {map.title}
-          </a>          
+          {#if map.prod_status > 1}
+            <a href='/maps/{map.slug}'>
+                {map.title}
+            </a>          
+          {:else}
+            {map.title}
+          {/if}                   
         </td>
         <td>{map.menu_blurb}</td>
       </tr>

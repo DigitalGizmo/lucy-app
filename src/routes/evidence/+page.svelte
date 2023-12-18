@@ -34,9 +34,13 @@
           >
         </td>
         <td>
-          <a href='/evidence/{item.slug}'>
+          {#if item.prod_status > 1}
+            <a href='/evidence/{item.slug}'>
               {item.title}
-          </a>          
+            </a> 
+          {:else}
+            {item.title}
+          {/if}                   
         </td>
         <td>{item.year}</td>
         <td>{item.item_type}</td>
