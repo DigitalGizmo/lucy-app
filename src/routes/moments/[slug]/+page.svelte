@@ -391,23 +391,12 @@
         but it isn't/wasn't inside of .image-panel so was not valid
       -->
       <div >
-        <!-- data.moment.slug -->
-        {#if data.moment.slug === 'sold'}
-        <div class="image-panel-image"
-        transition:slide={{ axis: 'x'}}>
+
+        <div class="image-panel-image">
           <img 
-            src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/sold.jpg" 
+            src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{data.moment.slug}.jpg" 
             alt="intro sketch">
         </div><!-- /image-panel-image -->
-        {/if}
-        {#if data.moment.slug === 'forsale'}
-        <div class="image-panel-image"
-        transition:slide={{ axis: 'x'}}>
-          <img 
-            src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/forsale.jpg" 
-            alt="intro sketch">
-        </div><!-- /image-panel-image -->
-        {/if}
 
         <div class="title-container">
           <h1>{data.moment.title}</h1>
