@@ -187,6 +187,8 @@ nav.moment-nav ul li.selected{
 	position: absolute;
 	width: 100vw;
 	z-index: 120;
+
+	pointer-events: none;	
 }
 
 .horizontal-titles {
