@@ -173,7 +173,6 @@ nav.moment-nav ul li.selected{
 
 .moment-title h1 {
 	color: #ffc107;
-	margin: 0 0 1em 0;
 	text-shadow: 2px 2px 2px #333;
 }
 
@@ -184,28 +183,34 @@ nav.moment-nav ul li.selected{
 }
 
 .title-container {
-	padding: 1em;
+	padding: 2em 0 0 30vw;
 	position: absolute;
-	text-align: center;
 	width: 100vw;
 	z-index: 120;
 }
 
-.moment-title-intro {
-	background-color: rgba(256, 256, 256, 0.85);
-	border: 1px solid lightgrey;
-	box-shadow: 2px 2px 2px #333;
-	font-size: 1.2em;
-	margin: auto auto;
-	padding: 2em;
-	width: 40vw;
+.horizontal-titles {
+  width: 500vw;
 }
 
-.moment-title-intro p.story {
+.horizontal-title {
+	text-align: center;
+	display: inline-block;
+/*background-color: rgba(256, 256, 256, 0.85);
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 2px #333;*/
+  font-size: 1.2em;
+  margin-right: 50vw;
+  vertical-align: top;
+  width: 40vw;
+}
+
+
+article.horizontal-title p.story {
 	font-style: italic;
 }
 
-.moment-title-intro p.history {
+article.horizontal-title p.history {
 }
 
 nav.moment-options ul {
