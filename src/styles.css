@@ -276,7 +276,9 @@ nav.moment-options ul li.this-moment {
 /* make the image shorter for MOBILE: displays smaller than 800px */
 /* fixed container to keep image from scrolling */
 @media screen and (max-width: 799px) {
-	.image-panel div.image-panel-fixed {
+	/* .image-panel div.image-panel-fixed {
+		Removing image-panel so it will also apply to moment-title  */
+	.image-panel-fixed {
 		height: 60vh;
 		width: 100%;
 		position: fixed;
@@ -303,7 +305,9 @@ nav.moment-options ul li.this-moment {
 /* make the image full height for DESKTOP: displays larger than 800px */
 /* fixed container to keep image from scrolling */
 @media screen and (min-width: 800px) {
-	.image-panel div.image-panel-fixed {
+	/* .image-panel div.image-panel-fixed {
+		Removing image-panel so it will also apply to moment-title  */
+	.image-panel-fixed {
 		height: calc(100vh - 138px);
 		width: 100%;
 		position: fixed;
