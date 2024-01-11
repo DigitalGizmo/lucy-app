@@ -13,7 +13,7 @@
   export let data;
 
   let panelHeight = 800;
-  let isScrollModeValue;
+  // let isScrollModeValue;
 
   const momentSlugs = ["sold", "forsale", "newlife", "wells", "church",
     "singer", "engaging", "community", "union", "revolution",
@@ -24,9 +24,9 @@
     panelHeight = window.innerHeight - 138;
   })
 
-  isScrollMode.subscribe((value) => {
-    isScrollModeValue = value;
-  });
+  // isScrollMode.subscribe((value) => {
+  //   isScrollModeValue = value;
+  // });
 
   let currMomentIndex = 0;
 
@@ -143,7 +143,7 @@
     <MomentNav  />
   </header>
   
-  {#if isScrollModeValue }
+  {#if $isScrollMode }
 
     <section class="moment-scroll" 
     >
@@ -253,7 +253,7 @@
           <div class="more-container">
             <h4 class="more-tab">More</h4>
             <h4>More</h4>
-            <p>scrollmode: {isScrollModeValue}</p>
+            <p>scrollmode: {$isScrollMode}</p>
             <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
             {#if imageIndex > 3}
               <script>console.log('Past where Mores are defined')</script>
