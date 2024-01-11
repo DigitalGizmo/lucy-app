@@ -15,10 +15,10 @@
   let panelHeight = 800;
   let isScrollModeValue;
 
-    const momentSlugs = ["sold", "forsale", "newlife", "wells", "church",
-      "singer", "engaging", "community", "union", "revolution",
-      "frontier", "court", "returning"
-    ]
+  const momentSlugs = ["sold", "forsale", "newlife", "wells", "church",
+    "singer", "engaging", "community", "union", "revolution",
+    "frontier", "court", "returning"
+  ]
 
   onMount(() => {
     panelHeight = window.innerHeight - 138;
@@ -30,6 +30,9 @@
 
   let currMomentIndex = 0;
 
+  // Will be for binding
+  let horizontalTitles;
+
   // Temporarily let this function set currMomentIndex -- 
   // should be more global/automatic
   function getPrevSlugIdx(currSlug) {
@@ -37,6 +40,8 @@
     // console.log('currSlug: ' + currSlug);
     currMomentIndex = momentSlugs.findIndex(foundCurrIndex)
     // console.log('currIndex: ' + currMomentIndex)
+    // Set scroll x
+    // window.scrollTo(400, 0);
     return currMomentIndex - 1
   }
   function getNextSlugIdx(currSlug) {
@@ -425,7 +430,8 @@
       </div><!-- end image-panel-fixed -->   
     
       <div class="title-container">
-        <div class="horizontal-titles">
+        <div id="horizontal-titles"
+        bind:this={horizontalTitles}>
     
           <div class="horizontal-title">
             <article>

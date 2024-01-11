@@ -191,7 +191,7 @@ nav.moment-nav ul li.selected{
 	pointer-events: none;	
 }
 
-.horizontal-titles {
+#horizontal-titles {
   width: 500vw;
 }
 
