@@ -28,7 +28,10 @@
 	onMount(()=>parseScroll())
 </script>
 <h2>Binding scrollLeft (horizontal) & scrollTop (vertical) of scrollable elements to variables in Svelte</h2>
-<div class="box-titles" bind:this={box} on:scroll={parseScroll} on:mouseMove={parseScroll}>
+<div class="box-titles" 
+	bind:this={box} 
+	on:scroll={(e)=> console.log('left :' + e.target.scrollLeft)}  
+	>
 	{#each loremArray as paragraph}
 	{@html paragraph}
 	{/each}

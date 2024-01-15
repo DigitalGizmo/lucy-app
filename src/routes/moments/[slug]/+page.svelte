@@ -437,8 +437,8 @@
       <div class="title-container">
         <div id="horizontal-titles"
           bind:this={horizontalTitles}
-          on:scroll={()=>sLeft=horizontalTitles.scrollLeft}
-          on:scroll={(e)=>sLeft=e.target.scrollLeft}
+          on:scroll={(e)=> console.log('left :' + e.target.scrollLeft)}  
+
         >
     
           <div class="horizontal-title">

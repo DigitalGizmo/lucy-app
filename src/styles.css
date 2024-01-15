@@ -192,7 +192,8 @@ nav.moment-nav ul li.selected{
 }
 
 #horizontal-titles {
-  width: 500vw;
+  /* width: 500vw; */
+  width: 5000px;
 }
 
 .horizontal-title {
