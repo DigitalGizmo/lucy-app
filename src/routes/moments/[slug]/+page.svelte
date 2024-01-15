@@ -22,6 +22,9 @@
 
   onMount(() => {
     panelHeight = window.innerHeight - 138;
+
+    console.log('test bind: ' + testPara.className)
+
   })
 
   // isScrollMode.subscribe((value) => {
@@ -31,7 +34,8 @@
   let currMomentIndex = 0;
 
   // Will be for binding
-  let horizontalTitles;
+  let horizontalTitles, sLeft;
+  let testPara;
 
   // Temporarily let this function set currMomentIndex -- 
   // should be more global/automatic
@@ -50,6 +54,7 @@
 
   let imageIndex = 0;
   let currScrollY = 0;
+  let currScrollX = 0;
 
   // For house parallax
   let isCaptured = false;
@@ -431,16 +436,21 @@
     
       <div class="title-container">
         <div id="horizontal-titles"
-        bind:this={horizontalTitles}>
+          bind:this={horizontalTitles}
+          on:scroll={()=>sLeft=horizontalTitles.scrollLeft}
+          on:scroll={(e)=>sLeft=e.target.scrollLeft}
+        >
     
           <div class="horizontal-title">
             <article>
               <h1>Sold Out of Africa</h1>
-              <p class="story">
+              <p class="story"
+              bind:this={testPara}
+              > debug: {sLeft}
                 Lucy with many other Africans are captured and taken away from all
                 that is safe and familiar. Once she arrives at the coast she is
                 imprisoned, sold, and taken onto a ship bound for a strange world
-                thousands of miles from home.
+                thousands of miles from home. 
               </p>
               <p class="history">
                 An endless demand among European colonizers for the essential labor to

@@ -11,7 +11,7 @@
 
 
   <div class="title-container">
-    <div class="horizontal-titles">
+    <div id="horizontal-titles">
 
       <div class="horizontal-title">
         <article>
