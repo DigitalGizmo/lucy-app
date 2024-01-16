@@ -1,6 +1,8 @@
 <script>
   import { onMount } from 'svelte';
   import { fade, slide } from 'svelte/transition';
+  import { goto } from '$app/navigation';
+
   import { isScrollMode } from '$lib/stores.js';
   import Modal from '../../../temp-modal.svelte';
   import MainNav from "$lib/MainNav.svelte";
@@ -26,6 +28,8 @@
     // console.log('test bind: ' + testPara.className)
   })
 
+  let currMomentIndex = 0;
+
   // Temporarily let this function set currMomentIndex -- 
   // should be more global/automatic
   function getPrevSlugIdx(currSlug) {
@@ -44,9 +48,9 @@
   let imageIndex = 0;
   let currScrollY = 0;
 
-  // Will be for binding
+  // Horizontal scrolling
   let horizontalTitles;
-  let currMomentIndex = 0;
+  let scrolledXIndex = 0;
   let currScrollX = 0;
 
   // For house parallax
@@ -95,8 +99,30 @@
     isScrollMode.set(true);
   }
 
+  function tryScroll() {
+    horizontalTitles.scrollLeft += panelWidth;
+  }
+
+  function scrollToNext(chosenIndex) {
+    console.log('go to index: ' + chosenIndex)
+    horizontalTitles.scrollLeft += panelWidth;
+  }
+
+  function scrollToPrev(chosenIndex) {
+    console.log('go to index: ' + chosenIndex)
+    horizontalTitles.scrollLeft -= panelWidth;
+  }
+
   $: imageIndex = Math.trunc((currScrollY + panelHeight - 125)/(panelHeight))
-  $: currMomentIndex = Math.trunc((currScrollX + panelWidth)/panelWidth)
+
+  $: scrolledXIndex = Math.trunc(currScrollX/panelWidth)
+  $: if (currMomentIndex != scrolledXIndex) {
+    currMomentIndex = scrolledXIndex;
+    console.log('scrolledX ' + scrolledXIndex + ' currMomentIndex: ' + currMomentIndex);
+    goto(`/moments/${momentSlugs[currMomentIndex]}`)
+    // window.location.href = "/moments/forsale"
+    // set next & prev links? maybe auto on loae
+  }
 
   $: if (isModalShowing) {
       console.log("modal is now showing")
@@ -457,7 +483,9 @@
         <ul>
           {#if getPrevSlugIdx(data.moment.slug) >= 0 }
             <li class="prev-moment">
-              <a href="/moments/{momentSlugs[getPrevSlugIdx(data.moment.slug)]}">
+              <a href="/moments/{momentSlugs[getPrevSlugIdx(data.moment.slug)]}"
+              on:click={() => { scrollToPrev(getNextSlugIdx(data.moment.slug));}}
+              >
                 &larr; Previous moment 
               </a>
             </li>
@@ -473,8 +501,11 @@
           
           {#if getNextSlugIdx(data.moment.slug) <= 12 }
             <li class="next-moment">
-              <a href="/moments/{momentSlugs[getNextSlugIdx(data.moment.slug)]}">
-                currScrollX: { currScrollX } currMomentIndex: { currMomentIndex } Next moment &rarr;
+              <button on:click={tryScroll}>set x</button>
+              <a href="/moments/{momentSlugs[getNextSlugIdx(data.moment.slug)]}"
+              on:click={() => { scrollToNext(getNextSlugIdx(data.moment.slug));}}
+              >
+                currScrollX: { currScrollX } scrolledXIndex: { scrolledXIndex } Next moment &rarr;
               </a>
             </li>
           {/if}
