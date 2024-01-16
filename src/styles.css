@@ -183,17 +183,26 @@ nav.moment-nav ul li.selected{
 }
 
 .title-container {
-	padding: 2em 0 0 30vw;
-	position: absolute;
-	width: 100vw;
+/*	padding: 2em 0 0 30vw;
+
+	width: 400px;
+
+	pointer-events: none;
+  overflow: unset;
+  display: flex;
+  flex-direction: column;*/
+	position: relative;
 	z-index: 120;
 
-	pointer-events: none;	
 }
-
 #horizontal-titles {
   /* width: 500vw; */
-  width: 5000px;
+  display: flex;
+  flex-direction: column;
+	width: 400px;
+  overflow: auto;
+  resize: both;
+  white-space: nowrap;
 }
 
 .horizontal-title {
