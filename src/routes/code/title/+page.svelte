@@ -47,20 +47,6 @@
           />
         </div>
 
-        <nav class="moment-options">
-          <ul>
-              <li class="prev-moment">
-                <a href="/code/title">&larr; Previous moment</a>
-              </li>
-              <li class="this-moment">
-                <a href="/code/title">Inactive &darr;</a>
-              </li>
-              <li class="next-moment">
-                <a href="/code/title">Next moment &rarr;</a>
-              </li>
-          </ul>
-        </nav>
-
       </div><!-- end image-panel-fixed -->   
     
       <div class="title-container">
@@ -68,7 +54,7 @@
           bind:this={horizontalTitles}
           on:scroll={(e)=> console.log('left :' + e.target.scrollLeft)} >
            
-           <section>
+          <section>
             <div>
               <h2>Sold Out of Africa</h2>
               <p>
@@ -110,5 +96,20 @@
     
         </div><!-- /horizontal-titles -->
       </div><!-- /title-container -->
+
+      <nav class="moment-options">
+        <ul>
+            <li class="prev-moment">
+              <a href="/code/title">&larr; Previous moment</a>
+            </li>
+            <li class="this-moment">
+              <a href="/code/title">Inactive &darr;</a>
+            </li>
+            <li class="next-moment">
+              <a href="/code/title">Next moment &rarr;</a>
+            </li>
+        </ul>
+      </nav>
+      
     </section><!--/moment-title-->
 </section> <!--/style wrapper-->

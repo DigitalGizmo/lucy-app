@@ -183,18 +183,13 @@ nav.moment-nav ul li.selected{
 }
 
 .title-container {
-/*	padding: 2em 0 0 30vw;
-	width: 400px;
-	pointer-events: none;
-  overflow: unset;
-  display: flex;
-  flex-direction: column;*/
+	/*pointer-events: none; */
 	position: relative;
-	z-index: 120;
+/*	z-index: 120;*/
+	padding-top: 12vh;
 }
 
 #horizontal-titles {
-  /* width: 500vw; */
   display: flex;
   flex-direction: column;
 	width: 100vw;
@@ -203,34 +198,26 @@ nav.moment-nav ul li.selected{
   white-space: nowrap;
 }
 
-
 #horizontal-titles section div {
 	display: inline-block;
-  margin-right: 3em;
-  width: 400px;
+  margin-right: 40vw;
+  width: 40vw;
   height: 200px;
   vertical-align: top;
   white-space: normal;
 }
 
-.horizontal-title {
+/*.horizontal-title {
 	text-align: center;
 	display: inline-block;
-/*background-color: rgba(256, 256, 256, 0.85);
+	background-color: rgba(256, 256, 256, 0.85);
   border: 1px solid lightgrey;
-  box-shadow: 2px 2px 2px #333;*/
+  box-shadow: 2px 2px 2px #333;
   font-size: 1.2em;
   margin-right: 50vw;
   vertical-align: top;
   width: 40vw;
-}
-
-article.horizontal-title p.story {
-	font-style: italic;
-}
-
-article.horizontal-title p.history {
-}
+}*/
 
 nav.moment-options ul {
 	list-style: none;
@@ -254,7 +241,7 @@ nav.moment-options ul li a:hover {
 
 nav.moment-options ul li.prev-moment, nav.moment-options ul li.next-moment {
 	position: absolute;
-	top: 35vh;
+	top: 3vh;
 }
 
 nav.moment-options ul li.next-moment {
