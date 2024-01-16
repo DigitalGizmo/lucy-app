@@ -200,7 +200,8 @@ nav.moment-nav ul li.selected{
 
 #horizontal-titles section div {
 	display: inline-block;
-  margin-right: 40vw;
+  margin-left: 30vw;
+  margin-right: 30vw;
   width: 40vw;
   height: 200px;
   vertical-align: top;

@@ -13,7 +13,7 @@
   export let data;
 
   let panelHeight = 800;
-  // let isScrollModeValue;
+  let panelWidth = 1200;
 
   const momentSlugs = ["sold", "forsale", "newlife", "wells", "church",
     "singer", "engaging", "community", "union", "revolution",
@@ -22,20 +22,9 @@
 
   onMount(() => {
     panelHeight = window.innerHeight - 138;
-
-    console.log('test bind: ' + testPara.className)
-
+    panelWidth = window.innerWidth;
+    // console.log('test bind: ' + testPara.className)
   })
-
-  // isScrollMode.subscribe((value) => {
-  //   isScrollModeValue = value;
-  // });
-
-  let currMomentIndex = 0;
-
-  // Will be for binding
-  let horizontalTitles, sLeft;
-  let testPara;
 
   // Temporarily let this function set currMomentIndex -- 
   // should be more global/automatic
@@ -54,6 +43,10 @@
 
   let imageIndex = 0;
   let currScrollY = 0;
+
+  // Will be for binding
+  let horizontalTitles;
+  let currMomentIndex = 0;
   let currScrollX = 0;
 
   // For house parallax
@@ -103,6 +96,7 @@
   }
 
   $: imageIndex = Math.trunc((currScrollY + panelHeight - 125)/(panelHeight))
+  $: currMomentIndex = Math.trunc((currScrollX + panelWidth)/panelWidth)
 
   $: if (isModalShowing) {
       console.log("modal is now showing")
@@ -404,105 +398,88 @@
           />
         </div>
 
-        <nav class="moment-options">
-          <ul>
-            {#if getPrevSlugIdx(data.moment.slug) >= 0 }
-              <li class="prev-moment">
-                <a href="/moments/{momentSlugs[getPrevSlugIdx(data.moment.slug)]}">
-                  &larr; Previous moment
-                </a>
-              </li>
-            {/if}
-            {#if (data.moment.slug === "community")}
-              <li class="this-moment">
-                <a href="/"
-                  on:click={(e) => { e.preventDefault(); explore();}}>
-                  Explore this moment &darr;
-                </a>
-              </li>
-            {/if}
-            
-            {#if getNextSlugIdx(data.moment.slug) <= 12 }
-              <li class="next-moment">
-                <a href="/moments/{momentSlugs[getNextSlugIdx(data.moment.slug)]}">
-                  Next moment &rarr;
-                </a>
-              </li>
-            {/if}
-          </ul>
-        </nav>
-
+  
       </div><!-- end image-panel-fixed -->   
     
       <div class="title-container">
         <div id="horizontal-titles"
           bind:this={horizontalTitles}
-          on:scroll={(e)=> console.log('left :' + e.target.scrollLeft)}  
+          
+          on:scroll={()=>currScrollX=horizontalTitles.scrollLeft}  
+      >
+        <section>
 
-        >
-    
-          <div class="horizontal-title">
-            <article>
-              <h1>Sold Out of Africa</h1>
-              <p class="story"
-              bind:this={testPara}
-              > debug: {sLeft}
-                Lucy with many other Africans are captured and taken away from all
-                that is safe and familiar. Once she arrives at the coast she is
-                imprisoned, sold, and taken onto a ship bound for a strange world
-                thousands of miles from home. 
-              </p>
-              <p class="history">
-                An endless demand among European colonizers for the essential labor to
-                produce sugar and other lucrative commodities is destroying the lives
-                of millions of African men, women, and children. Their captors and
-                others eager to profit from the booming trade in human beings engage
-                in a brutal winnowing process. Imprisoned in slave castles and other
-                holding areas on the West Africa coast, survivors are forced into the
-                ships that will transport them thousands of miles to the Americas in
-                the infamous Middle Passage.
-              </p>
-            </article>
-          </div><!-- /horizontal-title -->
-    
-          <div class="horizontal-title">
-            <article>
-              <h1>For Sale Again</h1>
-              <p class="story">
-                Three-year old Lucy is among a group of captured Africans for sale in
-                Bristol, Rhode Island.
-              </p>
-              <p class="history">
-                Africans who survive capture and the horrors of the Middle Passage
-                encounter a new world where the loss of autonomy and the arbitrary
-                power of their enslavers are the only constants.
-              </p>
-            </article>
-          </div><!-- /horizontal-title -->
-    
-          <div class="horizontal-title">
-            <article>
-              <h1>A Strange New Life</h1>
-              <p class="story">
-                Eight-year-old Lucy arrives in Deerfield and meets the couple who are
-                purchasing her from Samuel Terry. Once again, her life is about to
-                change but her status as an enslaved child does not.
-              </p>
-              <p class="history">
-                Enslaved people often experienced multiple captivities. They could be
-                sold at a moment’s notice to new captors anytime, anywhere, upending
-                in the process any relationships they may have been able to establish,
-                including marriage, children and siblings. Dealing with the loss of
-                old connections and forging new ones required resilience, courage, and
-                persistence by young and old alike.
-              </p>
-            </article>
-          </div><!-- /horizontal-title -->
-    
-        </div><!-- /horizontal-titles -->
+
+          <div>
+            <h2>Sold Out of Africa</h2>
+            <p>
+              Three-year old Lucy is among a group of captured Africans for sale in
+              Bristol, Rhode Island.
+            </p>
+          </div>
+
+          <div>
+            <h2>Sold Again</h2>
+            <p>
+              Africans who survive capture and the horrors of the Middle Passage
+              encounter a new world where the loss of autonomy and the arbitrary
+              power of their enslavers are the only constants.
+            </p>
+          </div>
+
+          <div>
+            <h2>Strange New Life</h2>
+            <p>
+              Eight-year-old Lucy arrives in Deerfield and meets the couple who are
+              purchasing her from Samuel Terry. Once again, her life is about to
+              change but her status as an enslaved child does not.
+            </p>
+          </div>
+
+          <div>
+            <h2>Another Title</h2>
+            <p>
+              Enslaved people often experienced multiple captivities. They could be
+              sold at a moment’s notice to new captors anytime, anywhere, upending
+              in the process any relationships they may have been able to establish,
+              including marriage, children and siblings. Dealing with the loss of
+              old connections and forging new ones required resilience, courage, and
+              persistence by young and old alike.
+            </p>
+          </div>
+
+
+        </section>
+
       </div><!-- /title-container -->
     
-
+      <nav class="moment-options">
+        <ul>
+          {#if getPrevSlugIdx(data.moment.slug) >= 0 }
+            <li class="prev-moment">
+              <a href="/moments/{momentSlugs[getPrevSlugIdx(data.moment.slug)]}">
+                &larr; Previous moment 
+              </a>
+            </li>
+          {/if}
+          {#if (data.moment.slug === "community")}
+            <li class="this-moment">
+              <a href="/"
+                on:click={(e) => { e.preventDefault(); explore();}}>
+                Explore this moment &darr;
+              </a>
+            </li>
+          {/if}
+          
+          {#if getNextSlugIdx(data.moment.slug) <= 12 }
+            <li class="next-moment">
+              <a href="/moments/{momentSlugs[getNextSlugIdx(data.moment.slug)]}">
+                currScrollX: { currScrollX } currMomentIndex: { currMomentIndex } Next moment &rarr;
+              </a>
+            </li>
+          {/if}
+        </ul>
+      </nav>
 
     </section><!--/moment-title-->
 
