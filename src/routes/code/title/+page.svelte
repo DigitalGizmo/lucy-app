@@ -67,21 +67,36 @@
         <div id="horizontal-titles"
           bind:this={horizontalTitles}
           on:scroll={(e)=> console.log('left :' + e.target.scrollLeft)} >
-             
+           
+           <section>
+            <div>
+              <h2>Sold Out of Africa</h2>
               <p>
                 Three-year old Lucy is among a group of captured Africans for sale in
                 Bristol, Rhode Island.
               </p>
+            </div>
+
+            <div>
+              <h2>Sold Again</h2>
               <p>
                 Africans who survive capture and the horrors of the Middle Passage
                 encounter a new world where the loss of autonomy and the arbitrary
                 power of their enslavers are the only constants.
               </p>
+            </div>
+
+            <div>
+              <h2>Strange New Life</h2>
               <p>
                 Eight-year-old Lucy arrives in Deerfield and meets the couple who are
                 purchasing her from Samuel Terry. Once again, her life is about to
                 change but her status as an enslaved child does not.
               </p>
+            </div>
+
+            <div>
+              <h2>Another Title</h2>
               <p>
                 Enslaved people often experienced multiple captivities. They could be
                 sold at a moment’s notice to new captors anytime, anywhere, upending
@@ -89,8 +104,9 @@
                 including marriage, children and siblings. Dealing with the loss of
                 old connections and forging new ones required resilience, courage, and
                 persistence by young and old alike.
-              </p>    
-
+              </p>
+            </div>
+          </section>
     
         </div><!-- /horizontal-titles -->
       </div><!-- /title-container -->

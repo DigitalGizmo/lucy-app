@@ -184,25 +184,33 @@ nav.moment-nav ul li.selected{
 
 .title-container {
 /*	padding: 2em 0 0 30vw;
-
 	width: 400px;
-
 	pointer-events: none;
   overflow: unset;
   display: flex;
   flex-direction: column;*/
 	position: relative;
 	z-index: 120;
-
 }
+
 #horizontal-titles {
   /* width: 500vw; */
   display: flex;
   flex-direction: column;
-	width: 400px;
+	width: 100vw;
   overflow: auto;
   resize: both;
   white-space: nowrap;
+}
+
+
+#horizontal-titles section div {
+	display: inline-block;
+  margin-right: 3em;
+  width: 400px;
+  height: 200px;
+  vertical-align: top;
+  white-space: normal;
 }
 
 .horizontal-title {
@@ -216,7 +224,6 @@ nav.moment-nav ul li.selected{
   vertical-align: top;
   width: 40vw;
 }
-
 
 article.horizontal-title p.story {
 	font-style: italic;
