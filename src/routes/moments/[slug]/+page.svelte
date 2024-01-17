@@ -183,7 +183,9 @@
   
   <header id="header" class="moment-header">
     <MainNav />
-    <MomentNav  />
+    <MomentNav  
+    scrollToChosenIdx={scrollToChosen}
+    />
   </header>
   
   {#if $isScrollMode }

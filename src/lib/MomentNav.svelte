@@ -2,7 +2,9 @@
   import { page } from '$app/stores';
   import moments from "$lib/moments.json";
   import { isScrollMode } from '$lib/stores.js';
-  function setScrollMode(idx) {
+  export let scrollToChosenIdx = () => {}; // no-operation function
+  function gotToChosen(idx) {
+    scrollToChosenIdx(idx);
     isScrollMode.set(false);
   }
 
@@ -13,7 +15,7 @@
     {#each moments as moment, i}
       <li class="{ moment.slug === $page.params.slug ? 'selected' : ''}">
         <a href="/moments/{moment.slug}"
-          on:click={(e) => { setScrollMode(i);}}>
+          on:click={(e) => { gotToChosen(i);}}>
           {moment.title}
         </a>
       </li>
