@@ -455,42 +455,57 @@
       >
         <section>
 
-
-          <div>
-            <h2>Sold Out of Africa</h2>
-            <p>
+          <div class="moment-title-block">
+            <h1>Sold Out of Africa</h1>
+            <p class="story-intro">
+              Three-year old Lucy is among a group of captured Africans for sale in
+              Bristol, Rhode Island.
+            </p>
+            <p class="history-intro">
               Three-year old Lucy is among a group of captured Africans for sale in
               Bristol, Rhode Island.
             </p>
           </div>
 
-          <div>
-            <h2>Sold Again</h2>
-            <p>
+          <div class="moment-title-block">
+            <h1>Sold Again</h1>
+            <p class="story-intro">
               Africans who survive capture and the horrors of the Middle Passage
               encounter a new world where the loss of autonomy and the arbitrary
               power of their enslavers are the only constants.
             </p>
+            <p class="history-intro">
+              Three-year old Lucy is among a group of captured Africans for sale in
+              Bristol, Rhode Island.
+            </p>
           </div>
 
-          <div>
-            <h2>Strange New Life</h2>
-            <p>
+          <div class="moment-title-block">
+            <h1>Strange New Life</h1>
+            <p class="story-intro">
               Eight-year-old Lucy arrives in Deerfield and meets the couple who are
               purchasing her from Samuel Terry. Once again, her life is about to
               change but her status as an enslaved child does not.
             </p>
+            <p class="history-intro">
+              Three-year old Lucy is among a group of captured Africans for sale in
+              Bristol, Rhode Island.
+            </p>
           </div>
 
-          <div>
-            <h2>Another Title</h2>
-            <p>
+          <div class="moment-title-block">
+            <h1>Another Title</h1>
+            <p class="story-intro">
               Enslaved people often experienced multiple captivities. They could be
               sold at a moment’s notice to new captors anytime, anywhere, upending
               in the process any relationships they may have been able to establish,
               including marriage, children and siblings. Dealing with the loss of
               old connections and forging new ones required resilience, courage, and
               persistence by young and old alike.
+            </p>
+            <p class="history-intro">
+              Three-year old Lucy is among a group of captured Africans for sale in
+              Bristol, Rhode Island.
             </p>
           </div>
 

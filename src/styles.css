@@ -15,10 +15,10 @@ section.wireframe-wrapper {
 	padding: 0 1em;
 }
 
-header#header {
+header#header {/* need to add media query to make height=100px for mobile */
   background-color: white;
-	border-bottom: 1px solid lightgrey;
-  height: 137px;
+	border-bottom: 1px solid #eaeaea;
+  height: 124px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -64,13 +64,13 @@ a:visited {
 
 .global-nav ul {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 .5em 0;
 	padding: 0;
 	display: block; /* don */
 }
 
 .global-nav ul li {
-	border: 1px solid lightgrey;
+	background-color: #f6f6f6;
 	display: inline-block;
 	font-size: .8em;
 	padding: 0.25em;
@@ -139,7 +139,7 @@ nav.moment-nav ul {
 
 nav.moment-nav ul li {
 	background-color: #f2f2f2;
-	border: 1px solid lightgrey;
+	border: 1px solid #eaeaea;
 	display: inline-block;
 	font-size: .8em;
 	height: 50px;
@@ -167,7 +167,7 @@ nav.moment-nav ul li.selected{
 /* --------------------------------- */
 
 .moment-title {
-	margin-top: 138px;
+	margin-top: 125px;
 	position: relative;
 }
 
@@ -186,7 +186,7 @@ nav.moment-nav ul li.selected{
 	/*pointer-events: none; */
 	position: relative;
 /*	z-index: 120;*/
-	padding-top: 12vh;
+	padding-top: 12vh;/* to make room for the moment options nav */
 }
 
 #horizontal-titles {
@@ -198,14 +198,23 @@ nav.moment-nav ul li.selected{
   white-space: nowrap;
 }
 
-#horizontal-titles section div {
+#horizontal-titles section div.moment-title-block {
 	display: inline-block;
-  margin-left: 30vw;
-  margin-right: 30vw;
-  width: 40vw;
-  height: 200px;
+  margin-left: 25;
+  margin-right: 25vw;
+  width: 50vw;
+  padding: 0 1em;
+	text-align: center;
   vertical-align: top;
   white-space: normal;
+	background-color: rgba(256, 256, 256, 0.85);
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 2px #333;
+  font-size: 1.2em;
+}
+
+.moment-title-block p.story-intro {
+	font-style: italic;
 }
 
 /*.horizontal-title {
@@ -269,7 +278,7 @@ nav.moment-options ul li.this-moment {
 	grid-template-columns: 1fr;
 	grid-template-rows: fit-content auto;
 	grid-gap: 0;
-	margin-top: 138px;
+	margin-top: 125px;
 	overflow: hidden;
 	z-index: 1;
 }
@@ -320,24 +329,24 @@ nav.moment-options ul li.this-moment {
 	/* .image-panel div.image-panel-fixed {
 		Removing image-panel so it will also apply to moment-title  */
 	.image-panel-fixed {
-		height: calc(100vh - 138px);
+		height: calc(100vh - 125px);
 		width: 100%;
 		position: fixed;
 	}
 	/* no inner div version */
 	.image-panel-image {
 		width: 100%;
-		height: calc(100vh - 138px); 
+		height: calc(100vh - 125px); 
 		position: absolute;
 	}
 	/* the size has to be declared this third time! */
 	.image-panel-image svg {
 		width: 100%;
-		height: calc(100vh - 138px);    
+		height: calc(100vh - 125px);    
 	}	
 	.image-panel-image img {
 		width: 100%;
-		height: calc(100vh - 138px);
+		height: calc(100vh - 125px);
 		object-fit: cover;    
 	}	
 }
