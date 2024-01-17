@@ -133,7 +133,8 @@
 
   $: imageIndex = Math.trunc((currScrollY + panelHeight - 125)/(panelHeight))
 
-  $: scrolledXIndex = Math.trunc(currScrollX/panelWidth)
+  $: scrolledXIndex = Math.trunc((currScrollX + (panelWidth/2.5))/panelWidth)
+  
   $: if (currMomentIndex != scrolledXIndex) {
     currMomentIndex = scrolledXIndex;
     console.log('scrolledX ' + scrolledXIndex + ' currMomentIndex: ' + currMomentIndex);
