@@ -22,10 +22,21 @@
     "frontier", "court", "returning"
   ]
 
+  // Mount is triggered 
   onMount(() => {
     panelHeight = window.innerHeight - 138;
     panelWidth = window.innerWidth;
-    // console.log('test bind: ' + testPara.className)
+    console.log('mount - slug: ' + data.moment.slug + ' currMomIdx: ' + currMomentIndex);
+    const getIndexOfSlug = (element) => element === data.moment.slug;
+    currMomentIndex = momentSlugs.findIndex(getIndexOfSlug);
+    // set index
+    scrolledXIndex = currMomentIndex;
+    // scroll to text 
+    scrollToChosen(currMomentIndex);
+
+    // console.log('scrolledX ' + scrolledXIndex + ' currMomentIndex: ' + currMomentIndex);
+    // goto(`/moments/${momentSlugs[currMomentIndex]}`)    
+
   })
 
   let currMomentIndex = 0;
@@ -101,6 +112,13 @@
 
   function tryScroll() {
     horizontalTitles.scrollLeft += panelWidth;
+  }
+
+  function scrollToChosen(chosenIndex) {
+    console.log('scroll to chosen: ' + chosenIndex)
+
+    horizontalTitles.scrollLeft = 0;
+    horizontalTitles.scrollLeft += (panelWidth * chosenIndex);
   }
 
   function scrollToNext(chosenIndex) {
