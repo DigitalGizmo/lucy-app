@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
   import { fade, slide } from 'svelte/transition';
   import { goto } from '$app/navigation';
 
@@ -7,7 +7,7 @@
   import Modal from '../../../temp-modal.svelte';
   import MainNav from "$lib/MainNav.svelte";
   import MomentNav from "$lib/MomentNav.svelte";
-  import frames from "$lib/frames.json";
+  // import frames from "$lib/frames.json";
 
   // import { page } from '$app/stores';
   // import moments from "$lib/moments.json";
@@ -36,6 +36,8 @@
 
     // console.log('scrolledX ' + scrolledXIndex + ' currMomentIndex: ' + currMomentIndex);
     // goto(`/moments/${momentSlugs[currMomentIndex]}`)    
+    // console.log('data.moment.frames[0].imageName: ' +
+    //  data.moment.frames[0].moreWhoLinks[0].title);
 
   })
 
@@ -110,15 +112,23 @@
     isScrollMode.set(true);
   }
 
-  function tryScroll() {
-    horizontalTitles.scrollLeft += panelWidth;
-  }
-
   function scrollToChosen(chosenIndex) {
     console.log('scroll to chosen: ' + chosenIndex)
 
     horizontalTitles.scrollLeft = 0;
     horizontalTitles.scrollLeft += (panelWidth * chosenIndex);
+  }
+
+  async function scrollToChosenSlug(chosenIndex, slug) {
+    console.log('scrollToChosenSlug, idx: ' + chosenIndex + ' slug: ' + slug) 
+    // Prevent $: if not equal from duplicating
+    currMomentIndex = chosenIndex;
+    goto(`/moments/${slug}`)    
+    // Wait for horizontalTitle to resolve (it wasn't present in scrollMode)
+    await tick();
+    horizontalTitles.scrollLeft = 0;
+    horizontalTitles.scrollLeft += (panelWidth * chosenIndex);
+
   }
 
   function scrollToNext(chosenIndex) {
@@ -185,7 +195,7 @@
   <header id="header" class="moment-header">
     <MainNav />
     <MomentNav  
-    scrollToChosenIdx={scrollToChosen}
+    scrollToChosenIdx={scrollToChosenSlug}
     />
   </header>
   
@@ -304,10 +314,10 @@
             {#if imageIndex > 3}
               <script>console.log('Past where Mores are defined')</script>
             {:else}
-              {#if (frames.community[imageIndex].moreWhoLinks.length > 0)}
+              {#if (data.moment.frames[imageIndex].moreWhoLinks.length > 0)}
               <h5>Who Else?</h5>
               <ul>
-                {#each frames.community[imageIndex].moreWhoLinks as link }
+                {#each data.moment.frames[imageIndex].moreWhoLinks as link }
                   <li><a href="/" 
                       on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
                       {link.title}</a></li>
@@ -315,10 +325,10 @@
               </ul>     
               {/if}
 
-              {#if (frames.community[imageIndex].moreTopicLinks.length > 0)}
+              {#if (data.moment.frames[imageIndex].moreTopicLinks.length > 0)}
                 <h5>Topics &amp; Ideas</h5>
                 <ul>
-                  {#each frames.community[imageIndex].moreTopicLinks as link }
+                  {#each data.moment.frames[imageIndex].moreTopicLinks as link }
                   <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
                     {link.title}</a></li>
@@ -326,10 +336,10 @@
                 </ul>            
               {/if}
 
-              {#if (frames.community[imageIndex].moreHowLinks.length > 0)}
+              {#if (data.moment.frames[imageIndex].moreHowLinks.length > 0)}
                 <h5>How Do We Know?</h5>
                 <ul>
-                  {#each frames.community[imageIndex].moreHowLinks as link }
+                  {#each data.moment.frames[imageIndex].moreHowLinks as link }
                   <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.title, "how");}}>
                     {link.title}</a></li>
@@ -375,8 +385,8 @@
         <h3>Who Else?</h3>
         <ul >
           {#each {length: 4} as _, i}
-            {#if (frames.community[i].moreWhoLinks.length > 0)}
-              {#each frames.community[i].moreWhoLinks as link }
+            {#if (data.moment.frames[i].moreWhoLinks.length > 0)}
+              {#each data.moment.frames[i].moreWhoLinks as link }
                 <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
                     {link.title}</a></li>
@@ -388,8 +398,8 @@
         <h3>Topics &amp; Ideas</h3>
         <ul>
           {#each {length: 4} as _, i}
-            {#if (frames.community[i].moreTopicLinks.length > 0)}
-              {#each frames.community[i].moreTopicLinks as link }
+            {#if (data.moment.frames[i].moreTopicLinks.length > 0)}
+              {#each data.moment.frames[i].moreTopicLinks as link }
                 <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
                     {link.title}</a></li>
@@ -401,8 +411,8 @@
         <h3>How Do We Know?</h3>
         <ul>
           {#each {length: 4} as _, i}
-            {#if (frames.community[i].moreHowLinks.length > 0)}
-              {#each frames.community[i].moreHowLinks as link }
+            {#if (data.moment.frames[i].moreHowLinks.length > 0)}
+              {#each data.moment.frames[i].moreHowLinks as link }
                 <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
                     {link.title}</a></li>
@@ -495,18 +505,102 @@
           </div>
 
           <div class="moment-title-block">
-            <h1>Another Title</h1>
+            <h1>Wells</h1>
             <p class="story-intro">
-              Enslaved people often experienced multiple captivities. They could be
-              sold at a moment’s notice to new captors anytime, anywhere, upending
-              in the process any relationships they may have been able to establish,
-              including marriage, children and siblings. Dealing with the loss of
-              old connections and forging new ones required resilience, courage, and
-              persistence by young and old alike.
+              lorem ipsum
             </p>
             <p class="history-intro">
-              Three-year old Lucy is among a group of captured Africans for sale in
-              Bristol, Rhode Island.
+              ad nauseum
+            </p>
+          </div>
+
+          <div class="moment-title-block">
+            <h1>Church</h1>
+            <p class="story-intro">
+              lorem ipsum
+            </p>
+            <p class="history-intro">
+              ad nauseum
+            </p>
+          </div>
+
+          <div class="moment-title-block">
+            <h1>Singer</h1>
+            <p class="story-intro">
+              lorem ipsum
+            </p>
+            <p class="history-intro">
+              ad nauseum
+            </p>
+          </div>
+
+          <div class="moment-title-block">
+            <h1>Engaging</h1>
+            <p class="story-intro">
+              lorem ipsum
+            </p>
+            <p class="history-intro">
+              ad nauseum
+            </p>
+          </div>
+
+          <div class="moment-title-block">
+            <h1>Community</h1>
+            <p class="story-intro">
+              lorem ipsum
+            </p>
+            <p class="history-intro">
+              ad nauseum
+            </p>
+          </div>
+
+          <div class="moment-title-block">
+            <h1>WElls</h1>
+            <p class="story-intro">
+              lorem ipsum
+            </p>
+            <p class="history-intro">
+              ad nauseum
+            </p>
+          </div>
+
+          <div class="moment-title-block">
+            <h1>WElls</h1>
+            <p class="story-intro">
+              lorem ipsum
+            </p>
+            <p class="history-intro">
+              ad nauseum
+            </p>
+          </div>
+
+          <div class="moment-title-block">
+            <h1>WElls</h1>
+            <p class="story-intro">
+              lorem ipsum
+            </p>
+            <p class="history-intro">
+              ad nauseum
+            </p>
+          </div>
+
+          <div class="moment-title-block">
+            <h1>WElls</h1>
+            <p class="story-intro">
+              lorem ipsum
+            </p>
+            <p class="history-intro">
+              ad nauseum
+            </p>
+          </div>
+
+          <div class="moment-title-block">
+            <h1>WElls</h1>
+            <p class="story-intro">
+              lorem ipsum
+            </p>
+            <p class="history-intro">
+              ad nauseum
             </p>
           </div>
 
@@ -537,11 +631,10 @@
           
           {#if getNextSlugIdx(data.moment.slug) <= 12 }
             <li class="next-moment">
-              <button on:click={tryScroll}>set x</button>
               <a href="/moments/{momentSlugs[getNextSlugIdx(data.moment.slug)]}"
               on:click={() => { scrollToNext(getNextSlugIdx(data.moment.slug));}}
               >
-                currScrollX: { currScrollX } scrolledXIndex: { scrolledXIndex } Next moment &rarr;
+                X: { currScrollX } Idx: { scrolledXIndex } Next moment &rarr;
               </a>
             </li>
           {/if}
