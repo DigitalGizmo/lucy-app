@@ -2,6 +2,7 @@
   import { onMount, tick } from 'svelte';
   import { fade, slide } from 'svelte/transition';
   import { goto } from '$app/navigation';
+  import { page } from '$app/stores';
 
   import { isScrollMode } from '$lib/stores.js';
   import Modal from '../../../temp-modal.svelte';
@@ -17,6 +18,8 @@
   let panelHeight = 800;
   let panelWidth = 1200;
 
+  const moment = data.moments.find((moment) => moment.slug === $page.params.slug); 
+
   const momentSlugs = ["sold", "forsale", "newlife", "wells", "church",
     "singer", "engaging", "community", "union", "revolution",
     "frontier", "court", "returning"
@@ -26,8 +29,9 @@
   onMount(() => {
     panelHeight = window.innerHeight - 138;
     panelWidth = window.innerWidth;
-    console.log('mount - slug: ' + data.moment.slug + ' currMomIdx: ' + currMomentIndex);
-    const getIndexOfSlug = (element) => element === data.moment.slug;
+    // console.log('mount - slug: ' + data.moment.slug + ' currMomIdx: ' + currMomentIndex);
+    console.log('page param slug: ' + $page.params.slug);
+    const getIndexOfSlug = (element) => element === moment.slug;
     currMomentIndex = momentSlugs.findIndex(getIndexOfSlug);
     // set index
     scrolledXIndex = currMomentIndex;
@@ -314,10 +318,10 @@
             {#if imageIndex > 3}
               <script>console.log('Past where Mores are defined')</script>
             {:else}
-              {#if (data.moment.frames[imageIndex].moreWhoLinks.length > 0)}
+              {#if (moment.frames[imageIndex].moreWhoLinks.length > 0)}
               <h5>Who Else?</h5>
               <ul>
-                {#each data.moment.frames[imageIndex].moreWhoLinks as link }
+                {#each moment.frames[imageIndex].moreWhoLinks as link }
                   <li><a href="/" 
                       on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
                       {link.title}</a></li>
@@ -325,10 +329,10 @@
               </ul>     
               {/if}
 
-              {#if (data.moment.frames[imageIndex].moreTopicLinks.length > 0)}
+              {#if (moment.frames[imageIndex].moreTopicLinks.length > 0)}
                 <h5>Topics &amp; Ideas</h5>
                 <ul>
-                  {#each data.moment.frames[imageIndex].moreTopicLinks as link }
+                  {#each moment.frames[imageIndex].moreTopicLinks as link }
                   <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
                     {link.title}</a></li>
@@ -336,10 +340,10 @@
                 </ul>            
               {/if}
 
-              {#if (data.moment.frames[imageIndex].moreHowLinks.length > 0)}
+              {#if (moment.frames[imageIndex].moreHowLinks.length > 0)}
                 <h5>How Do We Know?</h5>
                 <ul>
-                  {#each data.moment.frames[imageIndex].moreHowLinks as link }
+                  {#each moment.frames[imageIndex].moreHowLinks as link }
                   <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.title, "how");}}>
                     {link.title}</a></li>
@@ -385,8 +389,8 @@
         <h3>Who Else?</h3>
         <ul >
           {#each {length: 4} as _, i}
-            {#if (data.moment.frames[i].moreWhoLinks.length > 0)}
-              {#each data.moment.frames[i].moreWhoLinks as link }
+            {#if (moment.frames[i].moreWhoLinks.length > 0)}
+              {#each moment.frames[i].moreWhoLinks as link }
                 <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
                     {link.title}</a></li>
@@ -398,8 +402,8 @@
         <h3>Topics &amp; Ideas</h3>
         <ul>
           {#each {length: 4} as _, i}
-            {#if (data.moment.frames[i].moreTopicLinks.length > 0)}
-              {#each data.moment.frames[i].moreTopicLinks as link }
+            {#if (moment.frames[i].moreTopicLinks.length > 0)}
+              {#each moment.frames[i].moreTopicLinks as link }
                 <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
                     {link.title}</a></li>
@@ -411,8 +415,8 @@
         <h3>How Do We Know?</h3>
         <ul>
           {#each {length: 4} as _, i}
-            {#if (data.moment.frames[i].moreHowLinks.length > 0)}
-              {#each data.moment.frames[i].moreHowLinks as link }
+            {#if (moment.frames[i].moreHowLinks.length > 0)}
+              {#each moment.frames[i].moreHowLinks as link }
                 <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
                     {link.title}</a></li>
@@ -449,10 +453,24 @@
 
       <div class="image-panel-fixed">
         <div class="image-panel-image">
-          <img
-            src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{data.moment.slug}.jpg"
-            alt="intro sketch"
-          />
+          {#if currMomentIndex == 0}
+            <img transition:fade={{ duration: 700}}
+              src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{momentSlugs[0]}.jpg"
+              alt="intro sketch"
+            />
+          {/if}
+          {#if currMomentIndex == 1}
+            <img transition:fade={{ duration: 700}}
+              src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{momentSlugs[1]}.jpg"
+              alt="intro sketch"
+            />
+          {/if}
+          {#if currMomentIndex == 2}
+            <img transition:fade={{ duration: 700}}
+              src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/newlife.jpg"
+              alt="intro sketch"
+            />
+          {/if}
         </div>
 
   
@@ -611,16 +629,16 @@
     
       <nav class="moment-options">
         <ul>
-          {#if getPrevSlugIdx(data.moment.slug) >= 0 }
+          {#if getPrevSlugIdx(moment.slug) >= 0 }
             <li class="prev-moment">
-              <a href="/moments/{momentSlugs[getPrevSlugIdx(data.moment.slug)]}"
-              on:click={() => { scrollToPrev(getNextSlugIdx(data.moment.slug));}}
+              <a href="/moments/{momentSlugs[getPrevSlugIdx(moment.slug)]}"
+              on:click={() => { scrollToPrev(getNextSlugIdx(moment.slug));}}
               >
-                &larr; Previous moment 
+                &larr; Previous moment debug: { moment.slug }
               </a>
             </li>
           {/if}
-          {#if (data.moment.slug === "community")}
+          {#if (moment.slug === "community")}
             <li class="this-moment">
               <a href="/"
                 on:click={(e) => { e.preventDefault(); explore();}}>
@@ -629,10 +647,10 @@
             </li>
           {/if}
           
-          {#if getNextSlugIdx(data.moment.slug) <= 12 }
+          {#if getNextSlugIdx(moment.slug) <= 12 }
             <li class="next-moment">
-              <a href="/moments/{momentSlugs[getNextSlugIdx(data.moment.slug)]}"
-              on:click={() => { scrollToNext(getNextSlugIdx(data.moment.slug));}}
+              <a href="/moments/{momentSlugs[getNextSlugIdx(moment.slug)]}"
+              on:click={() => { scrollToNext(getNextSlugIdx(moment.slug));}}
               >
                 X: { currScrollX } Idx: { scrolledXIndex } Next moment &rarr;
               </a>
