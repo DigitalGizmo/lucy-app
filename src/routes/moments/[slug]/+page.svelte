@@ -18,7 +18,7 @@
   let panelHeight = 800;
   let panelWidth = 1200;
 
-  const moment = data.moments.find((moment) => moment.slug === $page.params.slug); 
+  let moment = data.moments.find((moment) => moment.slug === $page.params.slug); 
 
   const momentSlugs = ["sold", "forsale", "newlife", "wells", "church",
     "singer", "engaging", "community", "union", "revolution",
@@ -125,7 +125,7 @@
   }
 
   async function scrollToChosenSlug(chosenIndex, slug) {
-    console.log('scrollToChosenSlug, idx: ' + chosenIndex + ' slug: ' + slug) 
+    // console.log('scrollToChosenSlug, idx: ' + chosenIndex + ' slug: ' + slug) 
     // Prevent $: if not equal from duplicating
     currMomentIndex = chosenIndex;
     goto(`/moments/${slug}`)    
@@ -149,13 +149,14 @@
   $: imageIndex = Math.trunc((currScrollY + panelHeight - 125)/(panelHeight))
 
   $: scrolledXIndex = Math.trunc((currScrollX + (panelWidth/2.5))/panelWidth)
+
+  // update which moment we're looking at
+  $: moment = data.moments.find((moment) => moment.slug === momentSlugs[currMomentIndex]);
   
   $: if (currMomentIndex != scrolledXIndex) {
     currMomentIndex = scrolledXIndex;
-    console.log('scrolledX ' + scrolledXIndex + ' currMomentIndex: ' + currMomentIndex);
+    // console.log('scrolledX ' + scrolledXIndex + ' currMomentIndex: ' + currMomentIndex);
     goto(`/moments/${momentSlugs[currMomentIndex]}`)
-    // window.location.href = "/moments/forsale"
-    // set next & prev links? maybe auto on loae
   }
 
   $: if (isModalShowing) {
@@ -205,9 +206,7 @@
   </header>
   
   {#if $isScrollMode }
-
-    <section class="moment-scroll" 
-    >
+    <section class="moment-scroll" >
     <!-- transition:slide={{ axis: 'y'}} -->
       <div class="image-panel"> 
         <div class="image-panel-fixed">
@@ -310,7 +309,7 @@
             </svg>
           </div> <!-- end image panel image -->
 
-          <!-- Single dynamic more box -->
+          <!-- ---- Single dynamic more box ---- -->
           <div class="more-container">
             <h4 class="more-tab">More</h4>
             <h4>More</h4>
@@ -448,7 +447,6 @@
       />
     {/if}
 
-
   {:else}  <!-- title mode -->
     <section class="moment-title">
 
@@ -487,7 +485,7 @@
             <li class="prev-moment">
               <a href="/moments/{momentSlugs[getPrevSlugIdx(moment.slug)]}"
               on:click={() => { scrollToPrev(getNextSlugIdx(moment.slug));}}>
-                &larr; Previous moment 
+                &larr; Previous moment
               </a>
             </li>
           {/if}
@@ -510,8 +508,7 @@
           {/if}
         </ul>
       </nav>
-
     </section><!--/moment-title-->
 
-  {/if}
+  {/if} <!-- end if isScrollMode -->
 </section> <!--/style wrapper-->
