@@ -453,24 +453,14 @@
 
       <div class="image-panel-fixed">
         <div class="image-panel-image">
-          {#if currMomentIndex == 0}
-            <img transition:fade={{ duration: 700}}
-              src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{momentSlugs[0]}.jpg"
-              alt="intro sketch"
-            />
-          {/if}
-          {#if currMomentIndex == 1}
-            <img transition:fade={{ duration: 700}}
-              src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{momentSlugs[1]}.jpg"
-              alt="intro sketch"
-            />
-          {/if}
-          {#if currMomentIndex == 2}
-            <img transition:fade={{ duration: 700}}
-              src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/newlife.jpg"
-              alt="intro sketch"
-            />
-          {/if}
+          {#each data.moments as moment, i}
+            {#if currMomentIndex == i}
+              <img transition:fade={{ duration: 700}}
+                src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{moment.slug}.jpg"
+                alt="intro sketch"
+              />
+            {/if}
+          {/each}
         </div>
 
   
