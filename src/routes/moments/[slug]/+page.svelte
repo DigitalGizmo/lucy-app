@@ -49,9 +49,10 @@
 
   // Temporarily let this function set currMomentIndex -- 
   // should be more global/automatic
-  function getPrevSlugIdx(currSlug) {
-    const foundCurrIndex = (element) => element === currSlug;
+  function getPrevSlugIdx(_currSlug) {
+    const foundCurrIndex = (element) => element === _currSlug;
     // console.log('currSlug: ' + currSlug);
+    // Temp to make sure this is updated
     currMomentIndex = momentSlugs.findIndex(foundCurrIndex)
     // console.log('currIndex: ' + currMomentIndex)
     // Set scroll x
@@ -486,11 +487,11 @@
             <li class="prev-moment">
               <a href="/moments/{momentSlugs[getPrevSlugIdx(moment.slug)]}"
               on:click={() => { scrollToPrev(getNextSlugIdx(moment.slug));}}>
-                &larr; Previous moment
+                &larr; Previous moment 
               </a>
             </li>
           {/if}
-          {#if (moment.slug === "community")}
+          {#if (currMomentIndex == 7)}
             <li class="this-moment">
               <a href="/"
                 on:click={(e) => { e.preventDefault(); explore();}}>
