@@ -462,159 +462,22 @@
             {/if}
           {/each}
         </div>
-
-  
       </div><!-- end image-panel-fixed -->   
     
       <div class="title-container">
         <div id="horizontal-titles"
           bind:this={horizontalTitles}
-          
-          on:scroll={()=>currScrollX=horizontalTitles.scrollLeft}  
-      >
-        <section>
-
-          <div class="moment-title-block">
-            <h1>Sold Out of Africa</h1>
-            <p class="story-intro">
-              Three-year old Lucy is among a group of captured Africans for sale in
-              Bristol, Rhode Island.
-            </p>
-            <p class="history-intro">
-              Three-year old Lucy is among a group of captured Africans for sale in
-              Bristol, Rhode Island.
-            </p>
-          </div>
-
-          <div class="moment-title-block">
-            <h1>Sold Again</h1>
-            <p class="story-intro">
-              Africans who survive capture and the horrors of the Middle Passage
-              encounter a new world where the loss of autonomy and the arbitrary
-              power of their enslavers are the only constants.
-            </p>
-            <p class="history-intro">
-              Three-year old Lucy is among a group of captured Africans for sale in
-              Bristol, Rhode Island.
-            </p>
-          </div>
-
-          <div class="moment-title-block">
-            <h1>Strange New Life</h1>
-            <p class="story-intro">
-              Eight-year-old Lucy arrives in Deerfield and meets the couple who are
-              purchasing her from Samuel Terry. Once again, her life is about to
-              change but her status as an enslaved child does not.
-            </p>
-            <p class="history-intro">
-              Three-year old Lucy is among a group of captured Africans for sale in
-              Bristol, Rhode Island.
-            </p>
-          </div>
-
-          <div class="moment-title-block">
-            <h1>Wells</h1>
-            <p class="story-intro">
-              lorem ipsum
-            </p>
-            <p class="history-intro">
-              ad nauseum
-            </p>
-          </div>
-
-          <div class="moment-title-block">
-            <h1>Church</h1>
-            <p class="story-intro">
-              lorem ipsum
-            </p>
-            <p class="history-intro">
-              ad nauseum
-            </p>
-          </div>
-
-          <div class="moment-title-block">
-            <h1>Singer</h1>
-            <p class="story-intro">
-              lorem ipsum
-            </p>
-            <p class="history-intro">
-              ad nauseum
-            </p>
-          </div>
-
-          <div class="moment-title-block">
-            <h1>Engaging</h1>
-            <p class="story-intro">
-              lorem ipsum
-            </p>
-            <p class="history-intro">
-              ad nauseum
-            </p>
-          </div>
-
-          <div class="moment-title-block">
-            <h1>Community</h1>
-            <p class="story-intro">
-              lorem ipsum
-            </p>
-            <p class="history-intro">
-              ad nauseum
-            </p>
-          </div>
-
-          <div class="moment-title-block">
-            <h1>WElls</h1>
-            <p class="story-intro">
-              lorem ipsum
-            </p>
-            <p class="history-intro">
-              ad nauseum
-            </p>
-          </div>
-
-          <div class="moment-title-block">
-            <h1>WElls</h1>
-            <p class="story-intro">
-              lorem ipsum
-            </p>
-            <p class="history-intro">
-              ad nauseum
-            </p>
-          </div>
-
-          <div class="moment-title-block">
-            <h1>WElls</h1>
-            <p class="story-intro">
-              lorem ipsum
-            </p>
-            <p class="history-intro">
-              ad nauseum
-            </p>
-          </div>
-
-          <div class="moment-title-block">
-            <h1>WElls</h1>
-            <p class="story-intro">
-              lorem ipsum
-            </p>
-            <p class="history-intro">
-              ad nauseum
-            </p>
-          </div>
-
-          <div class="moment-title-block">
-            <h1>WElls</h1>
-            <p class="story-intro">
-              lorem ipsum
-            </p>
-            <p class="history-intro">
-              ad nauseum
-            </p>
-          </div>
-
-
-        </section>
-
+          on:scroll={()=>currScrollX=horizontalTitles.scrollLeft} >
+          <section>
+            {#each data.moments as moment, i}
+              <div class="moment-title-block">
+                <h1>{moment.title}</h1>
+                <p class="story-intro">{moment.storyIntro}</p>
+                <p class="history-intro">{moment.historyIntro}</p>
+              </div>
+            {/each}
+          </section>
+        </div>
       </div><!-- /title-container -->
     
       <nav class="moment-options">
@@ -622,9 +485,8 @@
           {#if getPrevSlugIdx(moment.slug) >= 0 }
             <li class="prev-moment">
               <a href="/moments/{momentSlugs[getPrevSlugIdx(moment.slug)]}"
-              on:click={() => { scrollToPrev(getNextSlugIdx(moment.slug));}}
-              >
-                &larr; Previous moment debug: { moment.slug }
+              on:click={() => { scrollToPrev(getNextSlugIdx(moment.slug));}}>
+                &larr; Previous moment
               </a>
             </li>
           {/if}
@@ -640,8 +502,7 @@
           {#if getNextSlugIdx(moment.slug) <= 12 }
             <li class="next-moment">
               <a href="/moments/{momentSlugs[getNextSlugIdx(moment.slug)]}"
-              on:click={() => { scrollToNext(getNextSlugIdx(moment.slug));}}
-              >
+              on:click={() => { scrollToNext(getNextSlugIdx(moment.slug));}}>
                 X: { currScrollX } Idx: { scrolledXIndex } Next moment &rarr;
               </a>
             </li>
