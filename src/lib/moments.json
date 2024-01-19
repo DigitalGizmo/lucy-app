@@ -25,7 +25,71 @@
         "title": "Enslaved at the Wells's House",
         "storyIntro": "Life in the Wells household is an unending cycle of labor, especially for Lucy and Cesar who are expected to undertake the most menial, demanding tasks on a rural farm.",
         "historyIntro": "In the 18th century, keeping a rural New England house and farm running smoothly was extremely labor intensive. Enslaved people provided essential, often backbreaking agricultural labor but unlike free members of the household, they worked for someone else’s benefit.",
-        "frames": []
+        "frames": [
+            {
+                "imageName": "02-dawn-house-color",
+                "storyText": "In colonial New England, work days for enslaved people began long before daybreak — long before their enslavers got up to begin their own work days.",
+                "textAlign": "center",
+                "moreWhoLinks": [
+                    {"title": "Jenny (Jin) Cole", "url": "/people"},            
+                    {"title": "Cesar", "url": "/people"}            
+                ],
+                "moreTopicLinks": [
+                    {"title": "Everyday Work in Colonial Households",  "url": "/people"},
+                    {"title": "Who Did What? Work Roles", "url": "/people"}            
+                ],
+                "moreHowLinks": []            
+            },
+            {
+                "imageName": "03-candle-color",
+                "storyText": "While Ebenezer and Abigail Wells continue to sleep in their comfortable bed downstairs, Lucy arises from her straw-filled mattress in the garret and lights a candle so that she can see to dress for the day.",
+                "textAlign": "left",
+                "moreWhoLinks": [],
+                "moreTopicLinks": [
+                    {"title": "Sleeping Arrangements", "url": "/people"}
+                ],
+                "moreHowLinks": [
+                    {"title": "Casement Window", "url": "/people"},
+                    {"title": "Dress Up: Women's Clothing from 1750", "url": "/people"},
+                    {"title": "Floor Plans of the Wells House", "url": "/people"},
+                    {"title": "Candlestick", "url": "/people"}
+                ]   
+            },
+            {
+                "imageName": "04-house-cutaway-color-nochim",
+                "storyText": "Cesar, sleeping on another garret mattress, also awakens and dresses. Lucy and Cesar slip quietly down the stairs to the kitchen.",
+                "textAlign": "right",
+                "moreWhoLinks": [
+                    {"title": "Cesar", "url": "/people"}            
+                ],
+                "moreTopicLinks": [
+                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                ],
+                "moreHowLinks": [
+                    {"title": "Straw Mattress and Bedding", "url": "/people"},
+                    {"title": "Canopied Bed", "url": "/people"}
+                ]         
+            },
+            {
+                "imageName": "lucy-hearth",
+                "storyText": "There, Cesar builds a new fire on the embers remaining from the night before, while Lucy begins to prepare breakfast for the Wells. She and Cesar will eat later.",
+                "textAlign": "left",
+                "moreWhoLinks": [
+                    {"title": "Jenny (Jin) Cole", "url": "/people"},
+                    {"title": "Phillis Wheatley", "url": "/people"}
+                ],
+                "moreTopicLinks": [
+                    {"title": "18th Century Foodways in New England",  "url": "/people"},
+                    {"title": "Women's work and men's work", "url": "/people"}            
+                ],
+                "moreHowLinks": [
+                    {"title": "Lidded Hanging Pot", "url": "/people"},
+                    {"title": "Iron Bake Kettle", "url": "/people"},
+                    {"title": "Calico Pocket", "url": "/people"},
+                    {"title": "Video Demo: Churning Butter", "url": "/people"}
+                ]            
+            }
+        ]
     },  
     {
         "slug": "church",
@@ -50,6 +114,7 @@
             {
                 "imageName": "placeholder",
                 "storyText": "ya de da",
+                "textAlign": "center",
                 "moreWhoLinks": [
                     {"title": "whom", "url": "/people"},            
                     {"title": "ever", "url": "/people"}            
@@ -69,7 +134,8 @@
         "frames": [
             {
                 "imageName": "02-dawn-house-color",
-                "storyText": "Frame 1 index 0 -- To be used later, in a loop",
+                "storyText": "Frame 1 of community text",
+                "textAlign": "left",
                 "moreWhoLinks": [
                     {"title": "Jenny (Jin) Cole", "url": "/people"},            
                     {"title": "Cesar", "url": "/people"}            
@@ -82,7 +148,8 @@
             },
             {
                 "imageName": "03-candle-color",
-                "storyText": "Frame 2 idx 1 To be used later, in a loop",
+                "storyText": "Frame 2 of community text",
+                "textAlign": "center",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [
                     {"title": "Sleeping Arrangements", "url": "/people"}
@@ -96,7 +163,8 @@
             },
             {
                 "imageName": "04-house-cutaway-color-nochim",
-                "storyText": "Frame 3 index 2 -- To be used later, in a loop",
+                "storyText": "Frame 3 community",
+                "textAlign": "right",
                 "moreWhoLinks": [
                     {"title": "Cesar", "url": "/people"}            
                 ],
@@ -110,7 +178,8 @@
             },
             {
                 "imageName": "lucy-hearth",
-                "storyText": "Frame 4 index 3 -- To be used later, in a loop",
+                "storyText": "Frame 4 Last community frame text as of 2024-01-19",
+                "textAlign": "center",
                 "moreWhoLinks": [
                     {"title": "Jenny (Jin) Cole", "url": "/people"},
                     {"title": "Phillis Wheatley", "url": "/people"}
@@ -137,6 +206,7 @@
             {
                 "imageName": "placeholder",
                 "storyText": "ya de da",
+                "textAlign": "",
                 "moreWhoLinks": [
                     {"title": "whom", "url": "/people"},            
                     {"title": "ever", "url": "/people"}            

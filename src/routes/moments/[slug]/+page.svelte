@@ -363,21 +363,11 @@
         on:click={beenClicked}
       >
 
-        <article class="story center">
-            <p>In colonial New England, work days for enslaved people began long before daybreak — long before their enslavers got up to begin their own work days.</p>      
-        </article><!-- Frame1 : END -->
-
-        <article class="story left">
-            <p>While Ebenezer and Abigail Wells continue to sleep in their comfortable bed downstairs, Lucy arises from her straw-filled mattress in the garret and lights a candle so that she can see to dress for the day.</p>
-        </article><!-- Frame2 : END -->
-
-        <article class="story right">
-            <p>Cesar, sleeping on another garret mattress, also awakens and dresses. Lucy and Cesar slip quietly down the stairs to the kitchen.</p>
-        </article><!-- Frame3 : END -->
-
-        <article class="story left">
-            <p>There, Cesar builds a new fire on the embers remaining from the night before, while Lucy begins to prepare breakfast for the Wells. She and Cesar will eat later.</p>
-        </article><!-- Frame4 : END -->
+        {#each moment.frames as frame}
+          <article class="story {frame.textAlign}">
+              <p>{ frame.storyText}</p>      
+          </article>
+        {/each}
 
         
       </div><!--/story-frames-->
@@ -485,11 +475,11 @@
             <li class="prev-moment">
               <a href="/moments/{momentSlugs[getPrevSlugIdx(moment.slug)]}"
               on:click={() => { scrollToPrev(getNextSlugIdx(moment.slug));}}>
-                &larr; Previous moment
+                &larr; Previous moment {moment.slug}
               </a>
             </li>
           {/if}
-          {#if (currMomentIndex == 7)}
+          {#if (currMomentIndex == 7 || currMomentIndex == 3)}
             <li class="this-moment">
               <a href="/"
                 on:click={(e) => { e.preventDefault(); explore();}}>
