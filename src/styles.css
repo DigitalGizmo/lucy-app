@@ -190,27 +190,28 @@ nav.moment-nav ul li.selected{
 }
 
 #horizontal-titles {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	width: 100vw;
-  overflow: auto;
-  resize: both;
-  white-space: nowrap;
+	overflow: auto;
+	resize: both;
+	white-space: nowrap;
 }
 
 #horizontal-titles section div.moment-title-block {
 	display: inline-block;
-  margin-left: 25vw;
-  margin-right: 25vw;
-  width: 50vw;
-  padding: 0 1em;
+	margin-left: 25vw;
+	margin-right: 25vw;
+	width: 50vw;
+	/* this padding adds to 25+25+50 and throws later spacing off */
+	/* padding: 0 1em;  */
 	text-align: center;
-  vertical-align: top;
-  white-space: normal;
+	vertical-align: top;
+	white-space: normal;
 	background-color: rgba(256, 256, 256, 0.85);
-  border: 1px solid lightgrey;
-  box-shadow: 2px 2px 2px #333;
-  font-size: 1.2em;
+	border: 1px solid lightgrey;
+	box-shadow: 2px 2px 2px #333;
+	font-size: 1.2em;
 }
 
 .moment-title-block p.story-intro {

@@ -30,9 +30,10 @@
     panelHeight = window.innerHeight - 138;
     panelWidth = window.innerWidth;
     // console.log('mount - slug: ' + data.moment.slug + ' currMomIdx: ' + currMomentIndex);
-    console.log('page param slug: ' + $page.params.slug);
-    const getIndexOfSlug = (element) => element === moment.slug;
+    // console.log('mount page param slug: ' + $page.params.slug);
+    const getIndexOfSlug = (element) => element === $page.params.slug;
     currMomentIndex = momentSlugs.findIndex(getIndexOfSlug);
+    // console.log('mount currMomentIndex: ' + currMomentIndex)
     // set index
     scrolledXIndex = currMomentIndex;
     // scroll to text 
@@ -475,7 +476,7 @@
             <li class="prev-moment">
               <a href="/moments/{momentSlugs[getPrevSlugIdx(moment.slug)]}"
               on:click={() => { scrollToPrev(getNextSlugIdx(moment.slug));}}>
-                &larr; Previous moment {moment.slug}
+                &larr; {data.moments[getPrevSlugIdx(moment.slug)].title}
               </a>
             </li>
           {/if}
@@ -492,7 +493,8 @@
             <li class="next-moment">
               <a href="/moments/{momentSlugs[getNextSlugIdx(moment.slug)]}"
               on:click={() => { scrollToNext(getNextSlugIdx(moment.slug));}}>
-                X: { currScrollX } Idx: { scrolledXIndex } Next moment &rarr;
+                <!-- X: { currScrollX } Idx: { scrolledXIndex }  -->
+                {data.moments[getNextSlugIdx(moment.slug)].title} &rarr;
               </a>
             </li>
           {/if}
