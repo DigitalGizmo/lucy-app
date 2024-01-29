@@ -60,9 +60,9 @@
 <div class="slider">
 	{#each sections as section}
 		<section>
-            <img 
+            <!-- <img 
             src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/sold.jpg" 
-            alt="intro sketch" width="800px" >
+            alt="intro sketch" width="800px" > -->
 			<h1>{section}</h1>
 
 		</section>

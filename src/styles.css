@@ -193,9 +193,12 @@ nav.moment-nav ul li.selected{
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-	overflow: auto;
+	/* overflow: auto; */
 	resize: both;
 	white-space: nowrap;
+	
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
 }
 
 #horizontal-titles section div.moment-title-block {
@@ -212,6 +215,8 @@ nav.moment-nav ul li.selected{
 	border: 1px solid lightgrey;
 	box-shadow: 2px 2px 2px #333;
 	font-size: 1.2em;
+
+	scroll-snap-align: center;
 }
 
 .moment-title-block p.story-intro {
