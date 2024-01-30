@@ -185,7 +185,7 @@ nav.moment-nav ul li.selected{
 .title-container {
 	/*pointer-events: none; */
 	position: relative;
-/*	z-index: 120;*/
+	/*	z-index: 120;*/
 	padding-top: 12vh;/* to make room for the moment options nav */
 }
 
@@ -193,12 +193,12 @@ nav.moment-nav ul li.selected{
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-	/* overflow: auto; */
+	overflow: auto;
 	resize: both;
 	white-space: nowrap;
-	
-	overflow-x: scroll;
+	/* overflow-x: scroll; */
 	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
 }
 
 #horizontal-titles section div.moment-title-block {
@@ -222,18 +222,6 @@ nav.moment-nav ul li.selected{
 .moment-title-block p.story-intro {
 	font-style: italic;
 }
-
-/*.horizontal-title {
-	text-align: center;
-	display: inline-block;
-	background-color: rgba(256, 256, 256, 0.85);
-  border: 1px solid lightgrey;
-  box-shadow: 2px 2px 2px #333;
-  font-size: 1.2em;
-  margin-right: 50vw;
-  vertical-align: top;
-  width: 40vw;
-}*/
 
 nav.moment-options ul {
 	list-style: none;
