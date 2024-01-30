@@ -71,6 +71,7 @@
   let horizontalTitles;
   let scrolledXIndex = 0;
   let currScrollX = 0;
+  let horizScrollClass = ''; // smooth-scroll
 
   // For house parallax
   let isCaptured = false;
@@ -118,9 +119,11 @@
     isScrollMode.set(true);
   }
 
-  function scrollToChosen(chosenIndex) {
+  async function scrollToChosen(chosenIndex) {
     console.log('scroll to chosen: ' + chosenIndex)
-
+    // Jump, don't smooth scroll
+    horizScrollClass = '';
+    await tick();
     horizontalTitles.scrollLeft = 0;
     horizontalTitles.scrollLeft += (panelWidth * chosenIndex);
   }
@@ -130,6 +133,9 @@
     // Prevent $: if not equal from duplicating
     currMomentIndex = chosenIndex;
     goto(`/moments/${slug}`)    
+
+    horizScrollClass = '';
+
     // Wait for horizontalTitle to resolve (it wasn't present in scrollMode)
     await tick();
     horizontalTitles.scrollLeft = 0;
@@ -137,13 +143,17 @@
 
   }
 
-  function scrollToNext(chosenIndex) {
+  async function scrollToNext(chosenIndex) {
     console.log('go to index: ' + chosenIndex)
+    horizScrollClass = 'smooth-scroll';
+    await tick();
     horizontalTitles.scrollLeft += panelWidth;
   }
 
-  function scrollToPrev(chosenIndex) {
+  async function scrollToPrev(chosenIndex) {
     console.log('go to index: ' + chosenIndex)
+    horizScrollClass = 'smooth-scroll';
+    await tick();
     horizontalTitles.scrollLeft -= panelWidth;
   }
 
@@ -456,6 +466,7 @@
     
       <div class="title-container">
         <div id="horizontal-titles"
+          class="{ horizScrollClass }"
           bind:this={horizontalTitles}
           on:scroll={()=>currScrollX=horizontalTitles.scrollLeft} >
           <section>

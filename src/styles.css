@@ -198,6 +198,9 @@ nav.moment-nav ul li.selected{
 	white-space: nowrap;
 	/* overflow-x: scroll; */
 	scroll-snap-type: x mandatory;
+}
+
+.smooth-scroll {
 	scroll-behavior: smooth;
 }
 
