@@ -487,7 +487,7 @@
             <li class="prev-moment">
               <a href="/moments/{momentSlugs[getPrevSlugIdx(moment.slug)]}"
               on:click={() => { scrollToPrev(getNextSlugIdx(moment.slug));}}>
-                &larr; {data.moments[getPrevSlugIdx(moment.slug)].title}
+                <i class="fa-solid fa-chevron-left"></i> {data.moments[getPrevSlugIdx(moment.slug)].title}
               </a>
             </li>
           {/if}
@@ -495,7 +495,7 @@
             <li class="this-moment">
               <a href="/"
                 on:click={(e) => { e.preventDefault(); explore();}}>
-                Explore this moment &darr;
+                Explore this moment <i class="fa-solid fa-chevron-down"></i>
               </a>
             </li>
           {/if}
@@ -505,7 +505,7 @@
               <a href="/moments/{momentSlugs[getNextSlugIdx(moment.slug)]}"
               on:click={() => { scrollToNext(getNextSlugIdx(moment.slug));}}>
                 <!-- X: { currScrollX } Idx: { scrolledXIndex }  -->
-                {data.moments[getNextSlugIdx(moment.slug)].title} &rarr;
+                {data.moments[getNextSlugIdx(moment.slug)].title} <i class="fa-solid fa-chevron-right"></i>
               </a>
             </li>
           {/if}

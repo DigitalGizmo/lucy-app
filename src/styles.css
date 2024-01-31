@@ -4,6 +4,7 @@
 
 body {
 	margin: 0;
+	font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 ul, ol {
@@ -174,6 +175,8 @@ nav.moment-nav ul li.selected{
 .moment-title h1 {
 	color: #ffc107;
 	text-shadow: 2px 2px 2px #333;
+	font-weight: 600;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 800px) { /* displays larger than 800px */
@@ -186,7 +189,7 @@ nav.moment-nav ul li.selected{
 	/*pointer-events: none; */
 	position: relative;
 	/*	z-index: 120;*/
-	padding-top: 12vh;/* to make room for the moment options nav */
+	/* padding-top: 12vh;to make room for the moment options nav */
 }
 
 #horizontal-titles {
@@ -206,31 +209,56 @@ nav.moment-nav ul li.selected{
 
 #horizontal-titles section div.moment-title-block {
 	display: inline-block;
-	margin-left: 25vw;
-	margin-right: 25vw;
-	width: 50vw;
-	/* this padding adds to 25+25+50 and throws later spacing off */
-	/* padding: 0 1em;  */
+	margin-left: 5vw;
+	margin-right: 5vw;
+	width: 90vw;
+	height: 100vh;
 	text-align: center;
 	vertical-align: top;
 	white-space: normal;
-	background-color: rgba(256, 256, 256, 0.85);
+/*	background-color: rgba(256, 256, 256, 0.85);
 	border: 1px solid lightgrey;
-	box-shadow: 2px 2px 2px #333;
+	box-shadow: 2px 2px 2px #333;*/
 	font-size: 1.2em;
-
 	scroll-snap-align: center;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	#horizontal-titles section div.moment-title-block {
+		margin-left: 25vw;
+		margin-right: 25vw;
+		width: 50vw;
+	}
+}
+
+.moment-title-block h1 {
+	line-height: 1em;
 }
 
 .moment-title-block p.story-intro {
 	font-style: italic;
+	padding: 0 3%;
 }
 
+.moment-title-block p.history-intro {
+	font-family: 'Cormorant Garamond', serif;
+	padding: 0 3%;
+}
+
+/* links to next, previous, this moments */
+
 nav.moment-options ul {
-	list-style: none;
-	text-transform: uppercase;
-	font-size: .8em;
-	font-weight: bold;
+	display: none;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	nav.moment-options ul {
+		display: unset;
+		list-style: none;
+		text-transform: uppercase;
+		font-size: .8em;
+		font-weight: bold;
+	}
 }
 
 nav.moment-options ul li a:link {
