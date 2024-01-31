@@ -16,14 +16,20 @@ section.wireframe-wrapper {
 	padding: 0 1em;
 }
 
-header#header {/* need to add media query to make height=100px for mobile */
+header#header {
   background-color: white;
 	border-bottom: 1px solid #eaeaea;
-  height: 124px;
+  height: 100px;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;/* at the top of the stack */
+  z-index: 100;/* at the top of the stack?? */
+}
+
+@media screen and (min-width: 800px) {/* for large displays */
+	header#header {
+	  height: 124px;
+	}
 }
 
 header#header h3 {
@@ -104,6 +110,7 @@ display the links vertically instead of horizontally */
 @media screen and (max-width: 800px) {
 	.global-nav.responsive ul {
 		background-color: #fff;
+		border: 1px solid #eaeaea;
 		display: block;
 		position: absolute;
 		right: 30px;
@@ -112,17 +119,18 @@ display the links vertically instead of horizontally */
 	}
 
 	.global-nav.responsive ul li {
+		background-color: #fff;
 		display: block;
-		font-size: .8em;
-		padding: 0.25em;
+		font-size: .9em;
+		padding: 0.5em;
 	}
 }
 
 .fa {
-	font-size: 1.5em;
+	font-size: 1.5em;/* for hamburger icon */
 }
 
-section.wrapper {
+section.wrapper {/* is this being used??? */
 	margin-top: 160px;
 }
 
@@ -168,8 +176,15 @@ nav.moment-nav ul li.selected{
 /* --------------------------------- */
 
 .moment-title {
-	margin-top: 125px;
+	background-color: black;
+	margin-top: 101px; /* to accommodate header - works with #header */
 	position: relative;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.moment-title {
+		margin-top: 125px;
+	}
 }
 
 .moment-title h1 {
@@ -196,6 +211,7 @@ nav.moment-nav ul li.selected{
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
+	height: 85vh;
 	overflow: auto;
 	resize: both;
 	white-space: nowrap;
@@ -248,17 +264,10 @@ nav.moment-nav ul li.selected{
 /* links to next, previous, this moments */
 
 nav.moment-options ul {
-	display: none;
-}
-
-@media screen and (min-width: 800px) { /* displays larger than 800px */
-	nav.moment-options ul {
-		display: unset;
-		list-style: none;
-		text-transform: uppercase;
-		font-size: .8em;
-		font-weight: bold;
-	}
+	list-style: none;
+	text-transform: uppercase;
+	font-size: .8em;
+	font-weight: bold;
 }
 
 nav.moment-options ul li a:link {
@@ -274,23 +283,34 @@ nav.moment-options ul li a:hover {
 	text-decoration: underline;
 }
 
-nav.moment-options ul li.prev-moment, nav.moment-options ul li.next-moment {
+nav.moment-options ul li.this-moment {
 	position: absolute;
-	top: 3vh;
+	bottom: 5vh;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%)
+}
+/* hide next/previous links on mobile */
+nav.moment-options ul li.prev-moment, nav.moment-options ul li.next-moment {
+	display: none;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	nav.moment-options ul li.prev-moment, nav.moment-options ul li.next-moment {
+		display: unset;
+	}
 }
 
 nav.moment-options ul li.next-moment {
+	position: absolute;
+	top: 3vh;
 	right: 4vw;
 }
 
 nav.moment-options ul li.prev-moment {
-	left: 6px;
-}
-
-nav.moment-options ul li.this-moment {
 	position: absolute;
-	top: 65vh;
-	left: 40%;
+	top: 3vh;
+	left: 6px;
 }
 
 /* ----------------------------------- */
@@ -303,15 +323,20 @@ nav.moment-options ul li.this-moment {
 	grid-template-columns: 1fr;
 	grid-template-rows: fit-content auto;
 	grid-gap: 0;
-	margin-top: 125px;
+	margin-top: 101px;
 	overflow: hidden;
 	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {/* displays larger than 800px */
+	.moment-scroll {
+		margin-top: 125px;
+	}
 }
 
 /* -------- */
 /*  IMAGES  */
 /* -------- */
-
 
 /* put the images in the only column */
 .image-panel {
@@ -470,16 +495,22 @@ nav.moment-options ul li.this-moment {
 	}
 }
 
-.story-frames article.story.left {
-	margin: 40vh 5vw 70vh 35vw;
-}
-
-.story-frames article.story.center {
+.story-frames article.story.center, .story-frames article.story.right, .story-frames article.story.left {
 	margin: 40vh 20vw 70vh 20vw;
 }
 
-.story-frames article.story.right {
-	margin: 40vh 35vw 70vh 5vw;
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.story-frames article.story.right {
+		margin: 40vh 5vw 70vh 35vw;
+	}
+
+	.story-frames article.story.center {
+		margin: 40vh 20vw 70vh 20vw;
+	}
+
+	.story-frames article.story.left {
+		margin: 40vh 35vw 70vh 5vw;
+	}
 }
 
 /* -------------- */
