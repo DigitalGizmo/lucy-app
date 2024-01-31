@@ -189,7 +189,7 @@ nav.moment-nav ul li.selected{
 
 .moment-title h1 {
 	color: #ffc107;
-	text-shadow: 2px 2px 2px #333;
+	text-shadow: 2px 2px 4px black;
 	font-weight: 600;
   text-transform: uppercase;
 }
@@ -241,9 +241,9 @@ nav.moment-nav ul li.selected{
 
 @media screen and (min-width: 800px) { /* displays larger than 800px */
 	#horizontal-titles section div.moment-title-block {
-		margin-left: 25vw;
-		margin-right: 25vw;
-		width: 50vw;
+		margin-left: 15vw;
+		margin-right: 15vw;
+		width: 70vw;
 	}
 }
 
@@ -252,13 +252,17 @@ nav.moment-nav ul li.selected{
 }
 
 .moment-title-block p.story-intro {
-	font-style: italic;
+	color: #ffc107;
+	font-weight: bold;
+	margin-top: 0;
 	padding: 0 3%;
+	text-shadow: 2px 2px 4px black;
 }
 
 .moment-title-block p.history-intro {
-	font-family: 'Cormorant Garamond', serif;
-	padding: 0 3%;
+	display: none;
+/*	font-family: 'Cormorant Garamond', serif;
+	padding: 0 3%;*/
 }
 
 /* links to next, previous, this moments */
