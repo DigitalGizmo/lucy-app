@@ -472,9 +472,11 @@
           <section>
             {#each data.moments as moment, i}
               <div class="moment-title-block">
-                <h1>{moment.title}</h1>
-                <p class="story-intro">{moment.storyIntro}</p>
-                <p class="history-intro">{moment.historyIntro}</p>
+                <div>
+                  <h1>{moment.title}</h1>
+                  <p class="story-intro">{moment.storyIntro}</p>
+                  <p class="history-intro">{moment.historyIntro}</p>
+                </div>
               </div>
             {/each}
           </section>
