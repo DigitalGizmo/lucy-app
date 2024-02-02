@@ -452,16 +452,16 @@
     <section class="moment-title">
 
       <div class="image-panel-fixed">
-        <div class="image-panel-image">
-          {#each data.moments as moment, i}
-            {#if currMomentIndex == i}
-              <img transition:fade={{ duration: 700}}
-                src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{moment.slug}.jpg"
-                alt="intro sketch"
-              />
-            {/if}
-          {/each}
-        </div>
+        {#each data.moments as moment, i}
+          {#if currMomentIndex == i}
+            <div class="image-panel-image">
+                <img transition:fade={{ duration: 700}}
+                  src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{moment.slug}.jpg"
+                  alt="intro sketch"
+                />
+            </div>
+          {/if}
+        {/each}
       </div><!-- end image-panel-fixed -->   
     
       <div class="title-container">
