@@ -1,0 +1,65 @@
+[
+  {
+    "layerName": "default",
+    "intro": "This is the introduction to the whole map, before users have selected a decade.",
+    "popItems": [
+    ] 
+  }, 
+  {
+    "layerName": "1690",
+    "intro": "In the final decade of the 17th century, Deerfield was a struggling frontier town. The families who lived here were too poor to purchase enslaved people, with the exception of Reverend John Williams.",
+    "popItems": [
+      {
+        "slug": "tigo",
+        "title": "Robert Tigo",
+        "blurb": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      }
+    ]
+  },
+  {
+    "layerName": "1700",
+    "intro": "This decade was witness to the 1704 French and Indian raid on Deerfield which set the town back in many ways. Several families moved away but others began to be more well off and able to purchase enslaved people.",
+    "popItems": [
+      {
+        "slug": "parthena",
+        "title": "Parthena",
+        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "slug": "frank",
+        "title": "Frank",
+        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      }
+    ]
+  },
+  {
+    "layerName": "1710",
+    "intro": "intro 1710",
+    "popItems": [
+    ] 
+  }, 
+  {
+    "layerName": "1720",
+    "intro": "intro 1720",
+    "popItems": [
+    ] 
+  }, 
+  {
+    "layerName": "1730",
+    "intro": "intro 1730",
+    "popItems": [
+    ] 
+  }, 
+  {
+    "layerName": "1740",
+    "intro": "intro 1740",
+    "popItems": [
+    ] 
+  }, 
+  {
+    "layerName": "1750",
+    "intro": "intro 1750",
+    "popItems": [
+    ] 
+  }
+ ]
