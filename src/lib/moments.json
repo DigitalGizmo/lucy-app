@@ -133,7 +133,7 @@
         "historyIntro": "Like other Massachusetts communities, Deerfield’s enslaved and free residents crossed paths on a daily basis. Within that community were the relationships among enslaved people and their ongoing connections with freed African American people.This interior, “community within community” highlights the effort people of color, free and enslaved, invested in maintaining a social life and emotional connections against often overwhelming odds.",
         "frames": [
             {
-                "imageName": "02-dawn-house-color",
+                "imageName": "main-street-kids",
                 "storyText": "Frame 1 of community text",
                 "textAlign": "left",
                 "moreWhoLinks": [
@@ -147,7 +147,7 @@
                 "moreHowLinks": []            
             },
             {
-                "imageName": "03-candle-color",
+                "imageName": "main-street-horse",
                 "storyText": "Frame 2 of community text",
                 "textAlign": "center",
                 "moreWhoLinks": [],
@@ -162,7 +162,7 @@
                 ]   
             },
             {
-                "imageName": "04-house-cutaway-color-nochim",
+                "imageName": "main-street-ox-cart-base",
                 "storyText": "Frame 3 community",
                 "textAlign": "right",
                 "moreWhoLinks": [

@@ -227,67 +227,26 @@
 
               {#if imageIndex === 0}
                   <image transition:fade={{ duration: 1500}}
-                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/02-dawn-house-color.jpg"
+                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
                   alt="svg house" 
                   width="100%" height="100%"></image>
               {/if}
               {#if imageIndex === 1}
                   <image transition:fade={{ duration: 1500}}
-                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/03-candle-color.jpg"
+                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
                   alt="svg house" 
                   width="100%" height="100%"></image>
               {/if}
               {#if imageIndex === 2}
-                  <g transition:fade={{ duration: 1000}}>
-                      <image 
-                      transform="translate({houseBgTransX} {houseBgTransY}) scale({houseBgScale})"
-                      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/04-house-cutaway-color-nochim.jpg"
-                      alt="svg house" 
-                      width="100%" height="100%"></image>
-
-                      <g transform="translate(0 {houseTransY}) scale({houseScale})">
-                        <image 
-                        class="image-layer" width="100%" height="100%" 
-                        href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/1-dark-house-proto.png" /> 
-
-                        {#if animationIndex === 0}
-                          <image transition:fade={{ duration: 1200}} 
-                          width="257px" height="235px" opacity=".7"
-                          transform="translate(570 185)"
-                          href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/smoke1.png" />
-                        {/if}
-            
-                        {#if animationIndex === 1}
-                          <image transition:fade={{ duration: 1200}} 
-                          width="312px" height="273px"  opacity=".7"
-                          transform="translate(600 100)"
-                          href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/smoke1.png" />
-                        {/if}
-
-                        {#if animationIndex === 2}
-                          <image transition:fade={{ duration: 1200}} 
-                          width="454px" height="267px"  opacity=".7"
-                          transform="translate(600 50)"
-                          href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/smoke1.png" />
-                        {/if}
-
-
-                      </g>
-                  </g>
+                  <image transition:fade={{ duration: 1500}}
+                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
+                  alt="svg house" 
+                  width="100%" height="100%"></image>
               {/if}
-
-              <!-- leaves -->
-              {#if imageIndex < 4}
-                  <image transition:fade={{ duration: 500}} 
-                  class="image-layer" width="100%" height="100%" 
-                  transform="translate({leavesTransX} {leavesTransY})"
-                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/leaves-only.png" />
-              {/if}
-
 
               {#if imageIndex === 3}
                   <image transition:fade={{ duration: 1500}}
-                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-hearth.jpg"
+                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
                   alt="svg house" 
                   width="100%" height="100%"></image>
               {/if}

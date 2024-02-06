@@ -1,0 +1,520 @@
+<script>
+    import { onMount, tick } from 'svelte';
+    import { fade, slide } from 'svelte/transition';
+    import { goto } from '$app/navigation';
+    import { page } from '$app/stores';
+  
+    import { isScrollMode } from '$lib/stores.js';
+    import Modal from '../../../temp-modal.svelte';
+    import MainNav from "$lib/MainNav.svelte";
+    import MomentNav from "$lib/MomentNav.svelte";
+    // import frames from "$lib/frames.json";
+  
+    // import { page } from '$app/stores';
+    // import moments from "$lib/moments.json";
+  
+    export let data;
+  
+    let panelHeight = 800;
+    let panelWidth = 1200;
+  
+    let moment = data.moments.find((moment) => moment.slug === $page.params.slug); 
+  
+    const momentSlugs = ["sold", "forsale", "newlife", "wells", "church",
+      "singer", "engaging", "community", "union", "revolution",
+      "frontier", "court", "returning"
+    ]
+  
+    // Mount is triggered 
+    onMount(() => {
+      panelHeight = window.innerHeight - 138;
+      panelWidth = window.innerWidth;
+      // console.log('mount - slug: ' + data.moment.slug + ' currMomIdx: ' + currMomentIndex);
+      // console.log('mount page param slug: ' + $page.params.slug);
+      const getIndexOfSlug = (element) => element === $page.params.slug;
+      currMomentIndex = momentSlugs.findIndex(getIndexOfSlug);
+      // console.log('mount currMomentIndex: ' + currMomentIndex)
+      // set index
+      scrolledXIndex = currMomentIndex;
+      // scroll to text 
+      scrollToChosen(currMomentIndex);
+  
+      // console.log('scrolledX ' + scrolledXIndex + ' currMomentIndex: ' + currMomentIndex);
+      // goto(`/moments/${momentSlugs[currMomentIndex]}`)    
+      // console.log('data.moment.frames[0].imageName: ' +
+      //  data.moment.frames[0].moreWhoLinks[0].title);
+  
+    })
+  
+    let currMomentIndex = 0;
+  
+    // Temporarily let this function set currMomentIndex -- 
+    // should be more global/automatic
+    function getPrevSlugIdx(_currSlug) {
+      const foundCurrIndex = (element) => element === _currSlug;
+      // console.log('currSlug: ' + currSlug);
+      // Temp to make sure this is updated
+      currMomentIndex = momentSlugs.findIndex(foundCurrIndex)
+      // console.log('currIndex: ' + currMomentIndex)
+      // Set scroll x
+      // window.scrollTo(400, 0);
+      return currMomentIndex - 1
+    }
+    function getNextSlugIdx(currSlug) {
+      return currMomentIndex + 1
+    }
+  
+    let imageIndex = 0;
+    let currScrollY = 0;
+  
+    // Horizontal scrolling
+    let horizontalTitles;
+    let scrolledXIndex = 0;
+    let currScrollX = 0;
+    let horizScrollClass = ''; // smooth-scroll
+  
+    // For house parallax
+    let isCaptured = false;
+    let houseScrollStartY = 800;
+    let houseTransY = 0;
+    let houseScale = 1;
+    let houseBgTransY = 0;
+    let houseBgTransX = 0;
+    let houseBgScale = 1;
+    const zoomDelay = 130;
+  
+    // Leaves
+    let leavesTransX = 0;
+    let leavesTransY = 0;    
+    // Smoke
+    let animationIndex = 0;
+    let animationInterval;
+    function advance() {
+      if (animationIndex < 2) {
+        animationIndex += 1;
+      } else {
+        animationIndex = 0;
+      }
+      // console.log('ani idx: ' + animationIndex);
+    }
+  
+    let isModalShowing = false;
+    let modalTitle = "title tbd";
+    const modalTypes = {
+      "who": "Who Else?",
+      "topic": "Topics & Ideas",
+      "how": "How Do We Know?"
+      }
+    let modalType = "type tbd";
+  
+    function showModal(title, type) {
+        // event.preventDefault();
+        modalTitle = title;
+        modalType = modalTypes[type];
+        // console.log('modal type: ' + modalType)
+        isModalShowing = true;
+    };
+  
+    function explore() {
+      isScrollMode.set(true);
+    }
+  
+    async function scrollToChosen(chosenIndex) {
+      console.log('scroll to chosen: ' + chosenIndex)
+      // Jump, don't smooth scroll
+      horizScrollClass = '';
+      await tick();
+      horizontalTitles.scrollLeft = 0;
+      horizontalTitles.scrollLeft += (panelWidth * chosenIndex);
+    }
+  
+    async function scrollToChosenSlug(chosenIndex, slug) {
+      // console.log('scrollToChosenSlug, idx: ' + chosenIndex + ' slug: ' + slug) 
+      // Prevent $: if not equal from duplicating
+      currMomentIndex = chosenIndex;
+      goto(`/moments/${slug}`)    
+  
+      horizScrollClass = '';
+  
+      // Wait for horizontalTitle to resolve (it wasn't present in scrollMode)
+      await tick();
+      horizontalTitles.scrollLeft = 0;
+      horizontalTitles.scrollLeft += (panelWidth * chosenIndex);
+  
+    }
+  
+    async function scrollToNext(chosenIndex) {
+      console.log('go to index: ' + chosenIndex)
+      horizScrollClass = 'smooth-scroll';
+      await tick();
+      horizontalTitles.scrollLeft += panelWidth;
+    }
+  
+    async function scrollToPrev(chosenIndex) {
+      console.log('go to index: ' + chosenIndex)
+      horizScrollClass = 'smooth-scroll';
+      await tick();
+      horizontalTitles.scrollLeft -= panelWidth;
+    }
+  
+    $: imageIndex = Math.trunc((currScrollY + panelHeight - 125)/(panelHeight))
+  
+    $: scrolledXIndex = Math.trunc((currScrollX + (panelWidth/2.5))/panelWidth)
+  
+    // update which moment we're looking at
+    $: moment = data.moments.find((moment) => moment.slug === momentSlugs[currMomentIndex]);
+    
+    $: if (currMomentIndex != scrolledXIndex) {
+      currMomentIndex = scrolledXIndex;
+      // console.log('scrolledX ' + scrolledXIndex + ' currMomentIndex: ' + currMomentIndex);
+      goto(`/moments/${momentSlugs[currMomentIndex]}`)
+    }
+  
+    $: if (isModalShowing) {
+        console.log("modal is now showing")
+    }
+    // House parallax
+    $: if (imageIndex === 2 && !isCaptured) {
+        houseScrollStartY = currScrollY;
+        isCaptured = true;
+        // count += 1;
+    }
+    // Allow time for fade before starting zoom, hence the - ~ 150
+    $: if ((houseScrollStartY) - (currScrollY - zoomDelay) < 0) {
+        // houseTransY = Math.min(((houseScrollStartY - (currScrollY - zoomDelay))/2), 0);
+        houseTransY = ((houseScrollStartY - (currScrollY - zoomDelay))/2);
+        houseScale = 1 - ((houseScrollStartY - (currScrollY - zoomDelay))/2000);
+        houseBgTransY = ((houseScrollStartY - (currScrollY - zoomDelay))/6);
+        // houseBgTransX = ((houseScrollStartY - (currScrollY - zoomDelay))/6);
+        houseBgScale = 1 - ((houseScrollStartY - (currScrollY - zoomDelay))/5000)
+    }
+    // Leaves
+    $: if (imageIndex < 4 ) {
+        leavesTransX = currScrollY/4
+        leavesTransY = -currScrollY/7    
+    }
+    // Smoke
+    $: if (imageIndex === 2) {
+        animationInterval = setInterval(advance, 1200);
+    } else {
+      clearInterval(animationInterval);
+    }
+  
+    function beenClicked(event) {
+      console.log("target clicked: " + event.target.className)
+    }
+  
+  </script>
+  <svelte:window bind:scrollY={currScrollY} />
+  
+  <section class="style-wrapper-tbd">
+    
+    <header id="header" class="moment-header">
+      <MainNav />
+      <MomentNav  
+      scrollToChosenIdx={scrollToChosenSlug}
+      />
+    </header>
+    
+    {#if $isScrollMode }
+      <section class="moment-scroll" >
+      <!-- transition:slide={{ axis: 'y'}} -->
+        <div class="image-panel"> 
+          <div class="image-panel-fixed">
+  
+            <div class="image-panel-image">
+              <svg viewBox="0 0 2000 1286" preserveAspectRatio="xMidYMid slice">
+  
+                {#if imageIndex === 0}
+                    <image transition:fade={{ duration: 1500}}
+                    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/wells/02-dawn-house-color.jpg"
+                    alt="svg house" 
+                    width="100%" height="100%"></image>
+                {/if}
+                {#if imageIndex === 1}
+                    <image transition:fade={{ duration: 1500}}
+                    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/wells/03-candle-color.jpg"
+                    alt="svg house" 
+                    width="100%" height="100%"></image>
+                {/if}
+                {#if imageIndex === 2}
+                    <g transition:fade={{ duration: 1000}}>
+                        <image 
+                        transform="translate({houseBgTransX} {houseBgTransY}) scale({houseBgScale})"
+                        href="https://lucy-proto.deerfield-ma.org/assets/moments/images/wells/04-house-cutaway-color-nochim.jpg"
+                        alt="svg house" 
+                        width="100%" height="100%"></image>
+  
+                        <g transform="translate(0 {houseTransY}) scale({houseScale})">
+                          <image 
+                          class="image-layer" width="100%" height="100%" 
+                          href="https://lucy-proto.deerfield-ma.org/assets/moments/images/wells/1-dark-house-proto.png" /> 
+  
+                          {#if animationIndex === 0}
+                            <image transition:fade={{ duration: 1200}} 
+                            width="257px" height="235px" opacity=".7"
+                            transform="translate(570 185)"
+                            href="https://lucy-proto.deerfield-ma.org/assets/moments/images/wells/smoke1.png" />
+                          {/if}
+              
+                          {#if animationIndex === 1}
+                            <image transition:fade={{ duration: 1200}} 
+                            width="312px" height="273px"  opacity=".7"
+                            transform="translate(600 100)"
+                            href="https://lucy-proto.deerfield-ma.org/assets/moments/images/wells/smoke1.png" />
+                          {/if}
+  
+                          {#if animationIndex === 2}
+                            <image transition:fade={{ duration: 1200}} 
+                            width="454px" height="267px"  opacity=".7"
+                            transform="translate(600 50)"
+                            href="https://lucy-proto.deerfield-ma.org/assets/moments/images/wells/smoke1.png" />
+                          {/if}
+  
+  
+                        </g>
+                    </g>
+                {/if}
+  
+                <!-- leaves -->
+                {#if imageIndex < 4}
+                    <image transition:fade={{ duration: 500}} 
+                    class="image-layer" width="100%" height="100%" 
+                    transform="translate({leavesTransX} {leavesTransY})"
+                    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/wells/leaves-only.png" />
+                {/if}
+  
+  
+                {#if imageIndex === 3}
+                    <image transition:fade={{ duration: 1500}}
+                    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/wells/lucy-hearth.jpg"
+                    alt="svg house" 
+                    width="100%" height="100%"></image>
+                {/if}
+  
+                <!-- Begin hotspots - needs to be after (on top of) animation full frame pngs -->
+  
+  
+                {#if imageIndex === 1}
+                    <g transition:fade={{ duration: 1500}}>
+                        <!-- <a hx-get="/moments/more"> -->
+                        <a href="/"
+                          on:click={(e) => { e.preventDefault(); showModal("Casement Window", "how");}}>
+                            <rect x="620" y="700" width="50px" height="120px" 
+                            class="hotspot"></rect>
+                        </a>
+                    </g>
+                {/if}
+                {#if imageIndex === 3}
+                    <g transition:fade={{ duration: 1500}}>
+                        <!-- <a hx-get="/moments/more"> -->
+                        <a href="/"
+                          on:click={(e) => { e.preventDefault(); showModal("Lidded Hanging Pot", "how");}}>
+                            <rect x="727" y="745" width="240px" height="130px" 
+                            class="hotspot"></rect>
+                        </a>
+                    </g>
+                {/if}
+          
+  
+              </svg>
+            </div> <!-- end image panel image -->
+  
+            <!-- ---- Single dynamic more box ---- -->
+            <div class="more-container">
+              <h4 class="more-tab">More</h4>
+              <h4>More</h4>
+              <p>scrollmode: {$isScrollMode}</p>
+              <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
+              {#if imageIndex > 3}
+                <script>console.log('Past where Mores are defined')</script>
+              {:else}
+                {#if (moment.frames[imageIndex].moreWhoLinks.length > 0)}
+                <h5>Who Else?</h5>
+                <ul>
+                  {#each moment.frames[imageIndex].moreWhoLinks as link }
+                    <li><a href="/" 
+                        on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
+                        {link.title}</a></li>
+                  {/each}
+                </ul>     
+                {/if}
+  
+                {#if (moment.frames[imageIndex].moreTopicLinks.length > 0)}
+                  <h5>Topics &amp; Ideas</h5>
+                  <ul>
+                    {#each moment.frames[imageIndex].moreTopicLinks as link }
+                    <li><a href="/" 
+                      on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
+                      {link.title}</a></li>
+                    {/each}
+                  </ul>            
+                {/if}
+  
+                {#if (moment.frames[imageIndex].moreHowLinks.length > 0)}
+                  <h5>How Do We Know?</h5>
+                  <ul>
+                    {#each moment.frames[imageIndex].moreHowLinks as link }
+                    <li><a href="/" 
+                      on:click={(e) => { e.preventDefault(); showModal(link.title, "how");}}>
+                      {link.title}</a></li>
+                    {/each}
+                  </ul>            
+                {/if}
+  
+              {/if}
+  
+            </div> <!-- /more-container -->
+          </div> <!-- /image-panel-fixed -->
+        </div><!-- /image-panel -->
+  
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <div class="story-frames"
+          on:click={beenClicked}
+        >
+  
+          {#each moment.frames as frame}
+            <article class="story {frame.textAlign}">
+                <p>{ frame.storyText}</p>      
+            </article>
+          {/each}
+  
+          
+        </div><!--/story-frames-->
+  
+        <article class="total-more">
+          <h2>The Necessity for Community</h2>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+  
+          <h3>Who Else?</h3>
+          <ul >
+            {#each {length: 4} as _, i}
+              {#if (moment.frames[i].moreWhoLinks.length > 0)}
+                {#each moment.frames[i].moreWhoLinks as link }
+                  <li><a href="/" 
+                      on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
+                      {link.title}</a></li>
+                {/each}
+              {/if}
+            {/each}
+          </ul>   
+  
+          <h3>Topics &amp; Ideas</h3>
+          <ul>
+            {#each {length: 4} as _, i}
+              {#if (moment.frames[i].moreTopicLinks.length > 0)}
+                {#each moment.frames[i].moreTopicLinks as link }
+                  <li><a href="/" 
+                      on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
+                      {link.title}</a></li>
+                {/each}
+              {/if}
+            {/each}
+          </ul>     
+  
+          <h3>How Do We Know?</h3>
+          <ul>
+            {#each {length: 4} as _, i}
+              {#if (moment.frames[i].moreHowLinks.length > 0)}
+                {#each moment.frames[i].moreHowLinks as link }
+                  <li><a href="/" 
+                      on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
+                      {link.title}</a></li>
+                {/each}
+              {/if}
+            {/each}
+          </ul>     
+  
+          <h3>Where in the World</h3>
+          <ul>
+              <li>Map of Deefield</li>
+              <li>Another map</li>
+          </ul>
+          <h3>Myths and Assumptions</h3>
+          <ul>
+              <li>This is a myth</li>
+              <li>Another Myth</li>
+  
+          </ul>
+        </article> <!--/total-more -->
+  
+      </section> <!--/moment-scroll-->
+      {#if isModalShowing}
+        <Modal 
+          title={modalTitle}
+          modalType={modalType}
+          bind:isModalShowing
+        />
+      {/if}
+  
+    {:else}  <!-- title mode -->
+      <section class="moment-title">
+  
+        <div class="image-panel-fixed">
+          {#each data.moments as moment, i}
+            {#if currMomentIndex == i}
+              <div class="image-panel-image">
+                  <img transition:fade={{ duration: 700}}
+                    src="https://lucy-proto.deerfield-ma.org/assets/moments/images/titlescreens/{moment.slug}.jpg"
+                    alt="intro sketch"
+                  />
+              </div>
+            {/if}
+          {/each}
+        </div><!-- end image-panel-fixed -->   
+      
+        <div class="title-container">
+          <div id="horizontal-titles"
+            class="{ horizScrollClass }"
+            bind:this={horizontalTitles}
+            on:scroll={()=>currScrollX=horizontalTitles.scrollLeft} >
+            <section>
+              {#each data.moments as moment, i}
+                <div class="moment-title-block">
+                  <div>
+                    <h1>{moment.title}</h1>
+                    <p class="story-intro">{moment.storyIntro}</p>
+                    <p class="history-intro">{moment.historyIntro}</p>
+                  </div>
+                </div>
+              {/each}
+            </section>
+          </div>
+        </div><!-- /title-container -->
+      
+        <nav class="moment-options">
+          <ul>
+            {#if getPrevSlugIdx(moment.slug) >= 0 }
+              <li class="prev-moment">
+                <a href="/moments/{momentSlugs[getPrevSlugIdx(moment.slug)]}"
+                on:click={() => { scrollToPrev(getNextSlugIdx(moment.slug));}}>
+                  <i class="fa-solid fa-chevron-left"></i> {data.moments[getPrevSlugIdx(moment.slug)].title}
+                </a>
+              </li>
+            {/if}
+            {#if (currMomentIndex == 7 || currMomentIndex == 3)}
+              <li class="this-moment">
+                <a href="/"
+                  on:click={(e) => { e.preventDefault(); explore();}}>
+                  Explore this moment <i class="fa-solid fa-chevron-down"></i>
+                </a>
+              </li>
+            {/if}
+            
+            {#if getNextSlugIdx(moment.slug) <= 12 }
+              <li class="next-moment">
+                <a href="/moments/{momentSlugs[getNextSlugIdx(moment.slug)]}"
+                on:click={() => { scrollToNext(getNextSlugIdx(moment.slug));}}>
+                  <!-- X: { currScrollX } Idx: { scrolledXIndex }  -->
+                  {data.moments[getNextSlugIdx(moment.slug)].title} <i class="fa-solid fa-chevron-right"></i>
+                </a>
+              </li>
+            {/if}
+          </ul>
+        </nav>
+      </section><!--/moment-title-->
+  
+    {/if} <!-- end if isScrollMode -->
+  </section> <!--/style wrapper-->
+  
