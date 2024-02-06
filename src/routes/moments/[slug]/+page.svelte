@@ -224,32 +224,14 @@
 
           <div class="image-panel-image">
             <svg viewBox="0 0 2000 1286" preserveAspectRatio="xMidYMid slice">
-
-              {#if imageIndex === 0}
-                  <image transition:fade={{ duration: 1500}}
-                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
-                  alt="svg house" 
-                  width="100%" height="100%"></image>
-              {/if}
-              {#if imageIndex === 1}
-                  <image transition:fade={{ duration: 1500}}
-                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
-                  alt="svg house" 
-                  width="100%" height="100%"></image>
-              {/if}
-              {#if imageIndex === 2}
-                  <image transition:fade={{ duration: 1500}}
-                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
-                  alt="svg house" 
-                  width="100%" height="100%"></image>
-              {/if}
-
-              {#if imageIndex === 3}
-                  <image transition:fade={{ duration: 1500}}
-                  href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
-                  alt="svg house" 
-                  width="100%" height="100%"></image>
-              {/if}
+              {#each moment.frames as frame, i}
+                {#if imageIndex === i}
+                    <image transition:fade={{ duration: 1500}}
+                    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
+                    alt="svg house" 
+                    width="100%" height="100%"></image>
+                {/if}
+              {/each}
 
               <!-- Begin hotspots - needs to be after (on top of) animation full frame pngs -->
 
