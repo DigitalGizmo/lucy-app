@@ -133,8 +133,8 @@
         "historyIntro": "Like other Massachusetts communities, Deerfield’s enslaved and free residents crossed paths on a daily basis. Within that community were the relationships among enslaved people and their ongoing connections with freed African American people.This interior, “community within community” highlights the effort people of color, free and enslaved, invested in maintaining a social life and emotional connections against often overwhelming odds.",
         "frames": [
             {
-                "imageName": "main-street-kids",
-                "storyText": "Frame 1 of community text",
+                "imageName": "lucy-abijah-store-exterior",
+                "storyText": "“Walk you home?” Abijah asks. “Yes, that would be lovely. I'm looking forward to drinking my chocolate. Lucy wonders to herself, \"Should I invite him to share a cup of chocolate? Is this a courtship? Could it end in marriage?\"",
                 "textAlign": "left",
                 "moreWhoLinks": [
                     {"title": "Jenny (Jin) Cole", "url": "/people"},            
@@ -147,8 +147,8 @@
                 "moreHowLinks": []            
             },
             {
-                "imageName": "main-street-horse",
-                "storyText": "Frame 2 of community text",
+                "imageName": "lucy-thinking",
+                "storyText": "He is free and she is not. Marrying is out of the question if Mr. and Mrs. Wells won’t allow it. Even if her enslavers agree, would Abijah want to marry a woman whose children will also be born into slavery? For that matter, she doesn't want to be a woman whose children, too, would be enslaved.",
                 "textAlign": "center",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [
@@ -162,8 +162,8 @@
                 ]   
             },
             {
-                "imageName": "main-street-ox-cart-base",
-                "storyText": "Frame 3 community",
+                "imageName": "main-street-kids",
+                "storyText": "“Lucy, you promised us a story!” children clamor nearby. “I will tell you later!\" “sing them your Bars Fight” Abijah suggests.",
                 "textAlign": "right",
                 "moreWhoLinks": [
                     {"title": "Cesar", "url": "/people"}            
@@ -177,8 +177,8 @@
                 ]         
             },
             {
-                "imageName": "lucy-hearth",
-                "storyText": "Frame 4 Last community frame text as of 2024-01-19",
+                "imageName": "main-street-horse",
+                "storyText": "no text here",
                 "textAlign": "center",
                 "moreWhoLinks": [
                     {"title": "Jenny (Jin) Cole", "url": "/people"},
@@ -194,6 +194,141 @@
                     {"title": "Calico Pocket", "url": "/people"},
                     {"title": "Video Demo: Churning Butter", "url": "/people"}
                 ]            
+            },
+            {
+                "imageName": "main-street-ox-cart-base",
+                "storyText": "“I think I see Heber and Adam Honestman coming this way. When did Adam get so tall?”",
+                "textAlign": "right",
+                "moreWhoLinks": [
+                    {"title": "Cesar", "url": "/people"}            
+                ],
+                "moreTopicLinks": [
+                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                ],
+                "moreHowLinks": [
+                    {"title": "Straw Mattress and Bedding", "url": "/people"},
+                    {"title": "Canopied Bed", "url": "/people"}
+                ]         
+            },
+            {
+                "imageName": "main-street-ox-cart-composite",
+                "storyText": "Heber concludes his Susanna is right: Abijah Prince is courting Lucy. The conversation turns to the Honestmans, who have come down from Huntstown to shop at Captain Williams’s store for fabric, knee buckles, and sleeve buttons. It seems Susanna will have some sewing to do. Abijah mentions the fabric he has just purchased for a shirt. He adds, “I will be needing someone to make it for me.” Should he ask Lucy? If she agrees, he would gladly pay her.",
+                "textAlign": "right",
+                "moreWhoLinks": [
+                    {"title": "Cesar", "url": "/people"}            
+                ],
+                "moreTopicLinks": [
+                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                ],
+                "moreHowLinks": [
+                    {"title": "Straw Mattress and Bedding", "url": "/people"},
+                    {"title": "Canopied Bed", "url": "/people"}
+                ]         
+            },
+            {
+                "imageName": "main-street-ox-cart-composite",
+                "storyText": "Lucy asks Heber if his foot still pains him. “Sometimes,” he replies, “but I still smile to myself when I wonder what a bear would think to see me caught in one of my own traps.” Abijah and Lucy chuckle along with him. She can’t help thinking about another man with a crutch. She still remembers when Joseph Barnard made Pompey cut and sled wood every day one winter until Pompey’s feet froze like blocks of ice.",
+                "textAlign": "right",
+                "moreWhoLinks": [
+                    {"title": "Cesar", "url": "/people"}            
+                ],
+                "moreTopicLinks": [
+                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                ],
+                "moreHowLinks": [
+                    {"title": "Straw Mattress and Bedding", "url": "/people"},
+                    {"title": "Canopied Bed", "url": "/people"}
+                ]         
+            },
+            {
+                "imageName": "main-street-ox-cart-composite",
+                "storyText": "The conversation turns to the war that is on everyone’s mind. Adam seems eager to join. Abijah prays Heber’s son will serve under good commanders and be spared if there is fighting. Abijah says, “I am thinking of joining up again. The pay is good, and we need to protect our towns from the French and their Indian allies.” Lucy shudders when she thinks about what could happen to Abijah in a battle. Unbidden, words from her Bars Fight poem come to her mind…”And though he was so brave and bold, His face no more shall we behold.” Heber turns to Adam. “Son, it is time to continue with our errands.” Adam nods and cracks his whip. Over the creaking of cart wheels Lucy calls to Heber, “Bring Susanna on your next trip to Deerfield.” Abijah says, “God grant that I have such a fine son–a lad such as Adam.” “No doubt.” thinks Lucy, “All the more reason to marry a free woman.”",
+                "textAlign": "right",
+                "moreWhoLinks": [
+                    {"title": "Cesar", "url": "/people"}            
+                ],
+                "moreTopicLinks": [
+                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                ],
+                "moreHowLinks": [
+                    {"title": "Straw Mattress and Bedding", "url": "/people"},
+                    {"title": "Canopied Bed", "url": "/people"}
+                ]         
+            },
+            {
+                "imageName": "jin-approaches",
+                "storyText": "“Heber and Susanna have a good farm, like the place I’ll be getting now that I’ve bought my freedom,” says Abijah, hinting at a possible future with Lucy. Worried that he has been too forward, he shifts to the weather. “The river is running high even for spring.” Lucy smiles and nods but wishes Abijah would talk more about his future. She hopes she is right that his plans include her…but how can that possibly happen?",
+                "textAlign": "right",
+                "moreWhoLinks": [
+                    {"title": "Cesar", "url": "/people"}            
+                ],
+                "moreTopicLinks": [
+                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                ],
+                "moreHowLinks": [
+                    {"title": "Straw Mattress and Bedding", "url": "/people"},
+                    {"title": "Canopied Bed", "url": "/people"}
+                ]         
+            },
+            {
+                "imageName": "jin-approaches",
+                "storyText": "Abijah and Lucy greet Jin Cole. \"Good day! Mr. Ashley sent Cato to work for Samuel Dickinson today, so I‘m bringing him his nooning meal. Mr. Ashley is writing his Sunday sermons and had me take the children along so they will not disturb him.” “I remember Cato as a baby in your arms when you first came to Deerfield,” says Lucy.",
+                "textAlign": "right",
+                "moreWhoLinks": [
+                    {"title": "Cesar", "url": "/people"}            
+                ],
+                "moreTopicLinks": [
+                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                ],
+                "moreHowLinks": [
+                    {"title": "Straw Mattress and Bedding", "url": "/people"},
+                    {"title": "Canopied Bed", "url": "/people"}
+                ]         
+            },
+            {
+                "imageName": "jin-thinking",
+                "storyText": "As Abijah and Lucy walk away, Jin thinks, “What a handsome couple. Abijah has had to wait a long time to marry.” Jin believes Abijah has the will and the means to buy Lucy’s freedom from the Wells. Jin thinks of her own freedom. She has little hope that her enslavers will free her or her son.",
+                "textAlign": "right",
+                "moreWhoLinks": [
+                    {"title": "Cesar", "url": "/people"}            
+                ],
+                "moreTopicLinks": [
+                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                ],
+                "moreHowLinks": [
+                    {"title": "Straw Mattress and Bedding", "url": "/people"},
+                    {"title": "Canopied Bed", "url": "/people"}
+                ]         
+            },
+            {
+                "imageName": "lucy-thinking",
+                "storyText": "Lucy knows that Jin has always had to care for the Ashley children even as she raised Cato on her own. Lucy wants more for herself and any children God may send to her and Abijah.",
+                "textAlign": "right",
+                "moreWhoLinks": [
+                    {"title": "Cesar", "url": "/people"}            
+                ],
+                "moreTopicLinks": [
+                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                ],
+                "moreHowLinks": [
+                    {"title": "Straw Mattress and Bedding", "url": "/people"},
+                    {"title": "Canopied Bed", "url": "/people"}
+                ]         
+            },
+            {
+                "imageName": "lucy-abijah-store-exterior",
+                "storyText": "Lucy does not want her visit with Abijah to end. Should she invite Abijah in? What would Mrs. Wells think? Would she allow it? Lucy wouldn’t have to worry about such things if she and Abijah had a home of their own. As he watches Lucy pass through the door, Abijah comes to a decision. He will speak to Ebenezer Wells about his intentions.",
+                "textAlign": "right",
+                "moreWhoLinks": [
+                    {"title": "Cesar", "url": "/people"}            
+                ],
+                "moreTopicLinks": [
+                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                ],
+                "moreHowLinks": [
+                    {"title": "Straw Mattress and Bedding", "url": "/people"},
+                    {"title": "Canopied Bed", "url": "/people"}
+                ]         
             }
         ]
     },
