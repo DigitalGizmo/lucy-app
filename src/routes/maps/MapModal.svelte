@@ -14,9 +14,9 @@
   margin: auto;
   overflow-x: hidden;
   overflow-y: scroll;
-  position: fixed;/* this positions the modal window relative to viewport, it won't scroll with the page */  
-  right: 0;
-  top: 10vh;
+  position: absolute;  
+/*  right: 0;
+  top: 10vh;*/
   z-index: 100;
   max-height: 25vh;
   width: 25vw;
