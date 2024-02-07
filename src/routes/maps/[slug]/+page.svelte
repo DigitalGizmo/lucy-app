@@ -16,9 +16,9 @@
     console.log('activeovelay: ' + decadeIndex)
   }
 
-  function showModal(title, _chosenHouseIndex) {
+  function showModal(_chosenHouseIndex) {
       // event.preventDefault();
-      modalTitle = title;
+      // modalTitle = title;
       // chosenHouseIndex = _chosenHouseIndex;
       popItem = data.deerfield[decadeIndex].popItems[_chosenHouseIndex];
       isModalShowing = true;
@@ -328,58 +328,112 @@
         <polygon points="20.32 400.05 17.01 420.21 15.2 419.91 28.25 430.77 27.47 435.54 31.08 436.14 31.87 431.37 47.7 425.27 45.89 424.97 49.21 404.82 20.32 400.05" fill="none" fill-rule="evenodd" stroke="#ada38e" stroke-width="2.45"/>
       </g>
 
+      <!-------- HOUSE HOTSPOTS -------->
 
+      <!-- highlighted houses for 1690 decade -->
       {#if decadeIndex === 1}
         <g>
-          <polygon points="741.61 452.32 745.98 432.36 747.77 432.76 735.31 421.22 736.34 416.5 732.77 415.71 731.73 420.44 715.6 425.68 717.39 426.07 713 446.02 741.61 452.32" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
+          <!-- Robert Tigo -->
+          <a href="/" on:click={(e) => { e.preventDefault(); showModal(0);}}>
+            <polygon points="741.61 452.32 745.98 432.36 747.77 432.76 735.31 421.22 736.34 416.5 732.77 415.71 731.73 420.44 715.6 425.68 717.39 426.07 713 446.02 741.61 452.32" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
+          </a>
         </g>
       {/if}
+
+      <!-- highlighted houses for 1700 decade -->
       {#if decadeIndex === 2}
         <g>
-          <polygon points="820.69 468.39 825.07 448.44 826.86 448.83 814.4 437.3 815.43 432.57 811.86 431.79 810.82 436.51 794.7 441.75 796.48 442.15 792.09 462.1 820.69 468.39" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
-          <polygon points="741.61 452.32 745.98 432.36 747.77 432.76 735.31 421.22 736.34 416.5 732.77 415.71 731.73 420.44 715.6 425.68 717.39 426.07 713 446.02 741.61 452.32" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
+          <!-- Frank & Parthena -->
+          <a href="/" on:click={(e) => { e.preventDefault(); showModal(0);}}>
+            <polygon points="741.61 452.32 745.98 432.36 747.77 432.76 735.31 421.22 736.34 416.5 732.77 415.71 731.73 420.44 715.6 425.68 717.39 426.07 713 446.02 741.61 452.32" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
+          </a>
+
+          <!-- Lundun -->
+          <a href="/" on:click={(e) => { e.preventDefault(); showModal(1);}}>
+            <polygon points="820.69 468.39 825.07 448.44 826.86 448.83 814.4 437.3 815.43 432.57 811.86 431.79 810.82 436.51 794.7 441.75 796.48 442.15 792.09 462.1 820.69 468.39" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
+          </a>
         </g>
       {/if}
+
+      <!-- highlighted houses for 1710 decade -->
       {#if decadeIndex === 3}
         <g>
 
         </g>
       {/if}
+
+      <!-- highlighted houses for 1720 decade -->      
       {#if decadeIndex === 4}
         <g>
-          <a href="/"
-          on:click={(e) => { e.preventDefault(); showModal("Little House", 0);}}>
+          <!-- Ceasar -->
+          <a href="/" on:click={(e) => { e.preventDefault(); showModal(0);}}>
             <polygon points="643.31 445.46 646.64 425.31 644.92 425.02 648.05 416.82 660.08 418.81 660.87 414.04 664.31 414.61 663.52 419.38 675.55 421.37 675.86 430.14 674.14 429.86 670.81 450.01 643.31 445.46" fill="#06a5ff" fill-rule="evenodd" stroke-width="0"/>
           </a>
 
-          <a href="/"
-          on:click={(e) => { e.preventDefault(); showModal("Gone House", 1);}}>
+          <!-- Mesheck, Kedar -->
+          <a href="/" on:click={(e) => { e.preventDefault(); showModal(1);}}>
             <polygon points="741.61 452.32 745.98 432.36 747.77 432.76 735.31 421.22 736.34 416.5 732.77 415.71 731.73 420.44 715.6 425.68 717.39 426.07 713 446.02 741.61 452.32" 
             fill="#06a5ff" opacity=0.2
             fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
           </a>
 
-          <polygon points="979.29 585.66 975.98 605.82 974.17 605.52 987.22 616.38 986.44 621.15 990.05 621.75 990.83 616.97 1006.66 610.88 1004.86 610.58 1008.18 590.43 979.29 585.66" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
+          <!-- Pompey -->
+          <a href="/" on:click={(e) => { e.preventDefault(); showModal(2);}}>
+            <polygon points="979.29 585.66 975.98 605.82 974.17 605.52 987.22 616.38 986.44 621.15 990.05 621.75 990.83 616.97 1006.66 610.88 1004.86 610.58 1008.18 590.43 979.29 585.66" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
+          </a>
         </g>
       {/if}
+
+      <!-- highlighted houses for 1730 decade -->      
       {#if decadeIndex === 5}
         <g>
-          <polygon points="287.57 466.55 284.23 486.7 286.05 487.01 282.83 495.19 275.54 493.98 274.74 498.76 271.51 498.22 272.3 493.45 263.79 492.04 263.01 496.81 260.18 496.34 260.96 491.57 253.68 490.36 253.26 481.58 255.08 481.88 258.41 461.73 287.57 466.55" fill="#06a5ff" fill-rule="evenodd" stroke-width="0"/>
-          <polygon points="254.26 405.02 257.6 384.87 255.78 384.57 259.01 376.39 266.29 377.59 267.08 372.82 270.32 373.36 269.53 378.13 278.03 379.54 278.82 374.76 281.65 375.23 280.86 380.01 288.15 381.21 288.57 390 286.75 389.7 283.41 409.85 254.26 405.02" fill="#06a5ff" fill-rule="evenodd" stroke-width="0"/>
-          <polygon points="318.86 414.75 322.1 394.59 323.91 394.88 310.82 384.07 311.58 379.29 307.97 378.71 307.2 383.48 291.39 389.63 293.2 389.92 289.95 410.09 318.86 414.75" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
-      
+          <!-- Fortune -->
+          <a href="/" on:click={(e) => { e.preventDefault(); showModal(1);}}>
+            <polygon points="287.57 466.55 284.23 486.7 286.05 487.01 282.83 495.19 275.54 493.98 274.74 498.76 271.51 498.22 272.3 493.45 263.79 492.04 263.01 496.81 260.18 496.34 260.96 491.57 253.68 490.36 253.26 481.58 255.08 481.88 258.41 461.73 287.57 466.55" fill="#06a5ff" fill-rule="evenodd" stroke-width="0"/>
+          </a>
+
+          <!-- Rebecca -->
+          <a href="/" on:click={(e) => { e.preventDefault(); showModal(2);}}>
+            <polygon points="254.26 405.02 257.6 384.87 255.78 384.57 259.01 376.39 266.29 377.59 267.08 372.82 270.32 373.36 269.53 378.13 278.03 379.54 278.82 374.76 281.65 375.23 280.86 380.01 288.15 381.21 288.57 390 286.75 389.7 283.41 409.85 254.26 405.02" fill="#06a5ff" stroke-width="0"/>
+          </a>
+
+          <!-- Pompey -->
+          <a href="/" on:click={(e) => { e.preventDefault(); showModal(3);}}>
+            <polygon points="318.86 414.75 322.1 394.59 323.91 394.88 310.82 384.07 311.58 379.29 307.97 378.71 307.2 383.48 291.39 389.63 293.2 389.92 289.95 410.09 318.86 414.75" fill="#06a5ff" opacity="0.5" stroke="#06a5ff" stroke-width="2.45"/>
+          </a>
+
+          <!-- Lucy and Caesar -->
+          <a href="/" on:click={(e) => { e.preventDefault(); showModal(4);}}>
+            <polygon points="505.72 503.59 502.2 524.86 504.33 525.21 500.72 533.83 485.8 531.35 484.97 536.39 480.71 535.69 481.54 530.65 466.63 528.17 465.97 518.87 468.11 519.22 471.63 497.95 505.72 503.59" fill-rule="evenodd" fill="#06a5ff" opacity="0.5" stroke="#06a5ff" stroke-width="2.45"/>
+          </a>
+
+          <!-- Adam and Peter -->
+          <a href="/" on:click={(e) => { e.preventDefault(); showModal(5);}}>
+            <polygon points="1479.65 592.2 1482.98 572.05 1481.09 571.74 1484.39 563.57 1491.95 564.82 1492.74 560.05 1496.1 560.6 1495.31 565.38 1504.13 566.84 1504.92 562.06 1507.86 562.55 1507.07 567.32 1514.63 568.57 1515.12 577.37 1513.23 577.06 1509.89 597.2 1479.65 592.2" fill-rule="evenodd" fill="#06a5ff" opacity="0.5" stroke="#06a5ff" stroke-width="2.45"/> 
+          </a>
+
+          <!-- Jin and Cato -->
+          <a href="/" on:click={(e) => { e.preventDefault(); showModal(6);}}>
+            <polygon points="1167.9 558.01 1171.23 537.87 1169.67 537.61 1183.58 531.19 1184.37 526.42 1187.5 526.94 1186.71 531.71 1197.81 542.27 1196.25 542.01 1192.92 562.16 1167.9 558.01" fill-rule="evenodd" fill="#06a5ff" opacity="0.5" stroke="#06a5ff" stroke-width="2.45"/>
+          </a>
+                      
         </g>
       {/if}
+
+      <!-- highlighted houses for 1740 decade -->      
       {#if decadeIndex === 6}
         <g>
 
         </g>
       {/if}
+
+      <!-- highlighted houses for 1750 decade -->      
       {#if decadeIndex === 7}
         <g>
 
         </g>
       {/if}
+
     </svg>    
 
     <div class="intro-text">

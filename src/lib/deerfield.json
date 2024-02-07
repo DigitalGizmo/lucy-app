@@ -23,15 +23,15 @@
     "intro": "This decade was witness to the 1704 French and Indian raid on Deerfield which set the town back in many ways. Several families moved away but others began to be more well off and able to purchase enslaved people.",
     "popItems": [
       {
-        "slug": "parthena",
-        "title": "Parthena",
+        "slug": "frank-parthena",
+        "title": "Frank and Parthena",
         "pTop": 20,
         "pLeft": 50,
         "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
-        "slug": "frank",
-        "title": "Frank",
+        "slug": "lundun",
+        "title": "Lundun",
         "pTop": 20,
         "pLeft": 50,
         "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -46,28 +46,77 @@
   }, 
   {
     "layerName": "1720",
-    "intro": "intro 1720",
+    "intro": "intro 1720 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
     "popItems": [
       {
-        "slug": "parthena",
-        "title": "Parthena",
+        "slug": "pompey",
+        "title": "Pompey",
         "pTop": 5,
         "pLeft": 60,
         "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
-        "slug": "frank",
-        "title": "Frank",
+        "slug": "mesheck-kedar",
+        "title": "Mesheck and Kedar",
         "pTop": 20,
         "pLeft": 70,
         "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        "slug": "ceasar",
+        "title": "Ceasar",
+        "pTop": 5,
+        "pLeft": 60,
+        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       }
     ]
   }, 
   {
     "layerName": "1730",
-    "intro": "intro 1730",
+    "intro": "intro 1730 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt molli.",
     "popItems": [
+      {
+        "slug": "fortune",
+        "title": "Fortune",
+        "pTop": 20,
+        "pLeft": 70,
+        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        "slug": "rebecca",
+        "title": "Rebecca",
+        "pTop": 20,
+        "pLeft": 70,
+        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        "slug": "pompey",
+        "title": "Pompey",
+        "pTop": 5,
+        "pLeft": 60,
+        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "slug": "lucy-caesar",
+        "title": "Lucy and Caesar",
+        "pTop": 5,
+        "pLeft": 60,
+        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "slug": "adam-peter",
+        "title": "Adam and Peter",
+        "pTop": 5,
+        "pLeft": 60,
+        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "slug": "jin-cato",
+        "title": "Jin and Cato",
+        "pTop": 20,
+        "pLeft": 70,
+        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      }
     ] 
   }, 
   {
