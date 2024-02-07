@@ -8,6 +8,7 @@
   import Modal from '../../../temp-modal.svelte';
   import MainNav from "$lib/MainNav.svelte";
   import MomentNav from "$lib/MomentNav.svelte";
+  import DetailWells from '../DetailWells.svelte'
   // import frames from "$lib/frames.json";
 
   // import { page } from '$app/stores';
@@ -234,6 +235,12 @@
               {/each}
 
               <!-- Begin hotspots - needs to be after (on top of) animation full frame pngs -->
+
+              <DetailWells 
+                showModal = {showModal}
+                imageIndex = {imageIndex}
+              />
+
 
 
               {#if imageIndex === 1}
