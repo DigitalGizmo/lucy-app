@@ -52,7 +52,7 @@
 
   <section class="wrapper detail">
         
-    <h2>African Americans in Deerfield</h2>
+    <h2>{data.map.title}</h2>
 
     <!-- -------- NAVIGATION ------- -->
     <svg id="Layer_2" data-name="Layer 2" 
@@ -390,17 +390,16 @@
     </div>
     
     <div class="about">
-      <!-- @html data.map.full_text.html -->
-      About this map hard-wired into the template for now
+      {@html data.map.full_text.html}
     </div>
 
     <div>
       
         <h3>Related</h3>
         <ul style="margin:20px">
-          <!-- Related items hard-wired for now -->
-          <li><a href="people/lucy-terry-prince">Temp related to Lucy</a></li>
-          
+          {#each data.map.relateds as related (related.title)}
+          <li><a href="{related.link}">{related.title}</a></li>
+          {/each}
         </ul>
 
     </div>
