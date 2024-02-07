@@ -1,7 +1,6 @@
 <script>
   // import { createEventDispatcher } from "svelte";
   // const dispatch = createEventDispatcher();
-  export let title = 'title from param';
   export let popItem;
   export let isModalShowing;
   // Send function to parent;
@@ -24,7 +23,9 @@
 }
 </style>
 
-<div id="modal-container" class="map-modal">
+<div id="modal-container" class="map-modal"
+style="left: {popItem.pLeft}%; top: {popItem.pTop}vh;"
+>
   <div id="modal-wrapper">
 
     <div class="modal-close">
