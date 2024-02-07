@@ -4,20 +4,28 @@
   import MapModal from '../MapModal.svelte';
 
   
-  let activeOverlay = 0;
+  let decadeIndex = 0;
   let isModalShowing = false;
   let modalTitle ='tbd';
+  // let chosenHouseIndex = 0;
+  let popItem = data.deerfield[decadeIndex].popItems[0];
 
-  function setOverlay(decade) {
-    activeOverlay = decade;
-    console.log('activeovelay: ' + activeOverlay)
+  function setOverlay(_decadeIndex) {
+    isModalShowing = false;
+    decadeIndex = _decadeIndex;
+    console.log('activeovelay: ' + decadeIndex)
   }
 
-  function showModal(title) {
+  function showModal(title, _chosenHouseIndex) {
       // event.preventDefault();
       modalTitle = title;
+      // chosenHouseIndex = _chosenHouseIndex;
+      popItem = data.deerfield[decadeIndex].popItems[_chosenHouseIndex];
       isModalShowing = true;
   };  
+
+  // $: decadeInfo = data.deerfield[decadeIndex];
+  // $: popItem = data.deerfield[decadeIndex].popItems[chosenHouseIndex];
 </script>
 
 <style>
@@ -53,7 +61,7 @@
       <g id="buttons">
         <g>
           <rect width="200" height="60" fill="#06a5ff" stroke-width="0" 
-            class="{ activeOverlay === 1 ? 'map-selected' : ''}"/>
+            class="{ decadeIndex === 1 ? 'map-selected' : ''}"/>
           <a href="/" 
             on:click={(e) => { e.preventDefault(); setOverlay(1);}}>
             <text transform="translate(14.29 39.51)" fill="#fff" font-family="FiraSansCondensed-SemiBold, &apos;Fira Sans Condensed&apos;" font-size="36" font-weight="600">
@@ -62,7 +70,7 @@
           </a>
 
           <rect x="202" width="200" height="60" fill="#06a5ff" stroke-width="0" 
-            class="{ activeOverlay === 2 ? 'map-selected' : ''}"/>
+            class="{ decadeIndex === 2 ? 'map-selected' : ''}"/>
           <a href="/" 
             on:click={(e) => { e.preventDefault(); setOverlay(2);}}>
             <text transform="translate(216.83 39.51)" fill="#fff" font-family="FiraSansCondensed-SemiBold, &apos;Fira Sans Condensed&apos;" font-size="36" font-weight="600">
@@ -72,7 +80,7 @@
           </a>
     
           <rect x="404" width="200" height="60" fill="#06a5ff" stroke-width="0" 
-            class="{ activeOverlay === 3 ? 'map-selected' : ''}"/>
+            class="{ decadeIndex === 3 ? 'map-selected' : ''}"/>
           <a href="/" 
             on:click={(e) => { e.preventDefault(); setOverlay(3);}}>
             <text transform="translate(419.18 39.51)" fill="#fff" font-family="FiraSansCondensed-SemiBold, &apos;Fira Sans Condensed&apos;" font-size="36" font-weight="600">
@@ -81,7 +89,7 @@
           </a>
     
           <rect x="606" width="200" height="60" fill="#06a5ff" stroke-width="0" 
-            class="{ activeOverlay === 4 ? 'map-selected' : ''}"/>
+            class="{ decadeIndex === 4 ? 'map-selected' : ''}"/>
           <a href="/" 
             on:click={(e) => { e.preventDefault(); setOverlay(4);}}>
             <text transform="translate(621.35 39.51)" fill="#fff" font-family="FiraSansCondensed-SemiBold, &apos;Fira Sans Condensed&apos;" font-size="36" font-weight="600">
@@ -90,7 +98,7 @@
           </a>
     
           <rect x="808" width="200" height="60" fill="#06a5ff" stroke-width="0" 
-          class="{ activeOverlay === 5 ? 'map-selected' : ''}"/>
+          class="{ decadeIndex === 5 ? 'map-selected' : ''}"/>
           <a href="/" 
             on:click={(e) => { e.preventDefault(); setOverlay(5);}}>
             <text transform="translate(823.56 39.51)" fill="#fff" font-family="FiraSansCondensed-SemiBold, &apos;Fira Sans Condensed&apos;" font-size="36" font-weight="600">
@@ -99,7 +107,7 @@
           </a>
     
           <rect x="1011" width="198" height="59" fill="#06a5ff" stroke-width="0" 
-          class="{ activeOverlay === 6 ? 'map-selected' : ''}"/>
+          class="{ decadeIndex === 6 ? 'map-selected' : ''}"/>
           <a href="/" 
             on:click={(e) => { e.preventDefault(); setOverlay(6);}}>
             <text transform="translate(1025.01 39.51)" fill="#fff" font-family="FiraSansCondensed-SemiBold, &apos;Fira Sans Condensed&apos;" font-size="36" font-weight="600">
@@ -108,7 +116,7 @@
           </a>
     
           <rect x="1212" width="200" height="60" fill="#06a5ff" stroke-width="0" 
-          class="{ activeOverlay === 7 ? 'map-selected' : ''}"/>
+          class="{ decadeIndex === 7 ? 'map-selected' : ''}"/>
           <a href="/" 
             on:click={(e) => { e.preventDefault(); setOverlay(7);}}>
             <text transform="translate(1226.29 39.51)" fill="#fff" font-family="FiraSansCondensed-SemiBold, &apos;Fira Sans Condensed&apos;" font-size="36" font-weight="600">
@@ -321,31 +329,31 @@
       </g>
 
 
-      {#if activeOverlay === 1}
+      {#if decadeIndex === 1}
         <g>
           <polygon points="741.61 452.32 745.98 432.36 747.77 432.76 735.31 421.22 736.34 416.5 732.77 415.71 731.73 420.44 715.6 425.68 717.39 426.07 713 446.02 741.61 452.32" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
         </g>
       {/if}
-      {#if activeOverlay === 2}
+      {#if decadeIndex === 2}
         <g>
           <polygon points="820.69 468.39 825.07 448.44 826.86 448.83 814.4 437.3 815.43 432.57 811.86 431.79 810.82 436.51 794.7 441.75 796.48 442.15 792.09 462.1 820.69 468.39" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
           <polygon points="741.61 452.32 745.98 432.36 747.77 432.76 735.31 421.22 736.34 416.5 732.77 415.71 731.73 420.44 715.6 425.68 717.39 426.07 713 446.02 741.61 452.32" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
         </g>
       {/if}
-      {#if activeOverlay === 3}
+      {#if decadeIndex === 3}
         <g>
 
         </g>
       {/if}
-      {#if activeOverlay === 4}
+      {#if decadeIndex === 4}
         <g>
           <a href="/"
-          on:click={(e) => { e.preventDefault(); showModal("Little House");}}>
+          on:click={(e) => { e.preventDefault(); showModal("Little House", 0);}}>
             <polygon points="643.31 445.46 646.64 425.31 644.92 425.02 648.05 416.82 660.08 418.81 660.87 414.04 664.31 414.61 663.52 419.38 675.55 421.37 675.86 430.14 674.14 429.86 670.81 450.01 643.31 445.46" fill="#06a5ff" fill-rule="evenodd" stroke-width="0"/>
           </a>
 
           <a href="/"
-          on:click={(e) => { e.preventDefault(); showModal("Gone House");}}>
+          on:click={(e) => { e.preventDefault(); showModal("Gone House", 1);}}>
             <polygon points="741.61 452.32 745.98 432.36 747.77 432.76 735.31 421.22 736.34 416.5 732.77 415.71 731.73 420.44 715.6 425.68 717.39 426.07 713 446.02 741.61 452.32" 
             fill="#06a5ff" opacity=0.2
             fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
@@ -354,7 +362,7 @@
           <polygon points="979.29 585.66 975.98 605.82 974.17 605.52 987.22 616.38 986.44 621.15 990.05 621.75 990.83 616.97 1006.66 610.88 1004.86 610.58 1008.18 590.43 979.29 585.66" fill="none" fill-rule="evenodd" stroke="#06a5ff" stroke-width="2.45"/>
         </g>
       {/if}
-      {#if activeOverlay === 5}
+      {#if decadeIndex === 5}
         <g>
           <polygon points="287.57 466.55 284.23 486.7 286.05 487.01 282.83 495.19 275.54 493.98 274.74 498.76 271.51 498.22 272.3 493.45 263.79 492.04 263.01 496.81 260.18 496.34 260.96 491.57 253.68 490.36 253.26 481.58 255.08 481.88 258.41 461.73 287.57 466.55" fill="#06a5ff" fill-rule="evenodd" stroke-width="0"/>
           <polygon points="254.26 405.02 257.6 384.87 255.78 384.57 259.01 376.39 266.29 377.59 267.08 372.82 270.32 373.36 269.53 378.13 278.03 379.54 278.82 374.76 281.65 375.23 280.86 380.01 288.15 381.21 288.57 390 286.75 389.7 283.41 409.85 254.26 405.02" fill="#06a5ff" fill-rule="evenodd" stroke-width="0"/>
@@ -362,12 +370,12 @@
       
         </g>
       {/if}
-      {#if activeOverlay === 6}
+      {#if decadeIndex === 6}
         <g>
 
         </g>
       {/if}
-      {#if activeOverlay === 7}
+      {#if decadeIndex === 7}
         <g>
 
         </g>
@@ -376,7 +384,7 @@
 
     <div class="intro-text">
       <p>
-        {data.deerfield[activeOverlay].intro}
+        {data.deerfield[decadeIndex].intro}
       </p>
 
     </div>
@@ -400,6 +408,7 @@
     {#if isModalShowing}
       <MapModal 
         title={modalTitle}
+        popItem = {popItem}
         bind:isModalShowing
       />
     {/if}
