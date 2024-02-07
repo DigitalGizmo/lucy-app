@@ -440,7 +440,6 @@
       <p>
         {data.deerfield[decadeIndex].intro}
       </p>
-
     </div>
     
     <div class="about">
