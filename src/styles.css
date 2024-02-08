@@ -582,6 +582,84 @@ nav.moment-options ul li.prev-moment {
   width: 70vw;
 }
 
+.map-wrapper {
+	position: relative;
+}
+
+.map-modal {
+  overflow-y: scroll;
+  position: absolute;  
+  max-height: 25vh;
+  width: 30vw;
+  z-index: 100;
+}
+
+.map-selected {
+  fill: #FF6F06
+}
+
+.road-labels {
+	fill: #4f4f4f;
+	font-family: 'Fira Sans Condensed', sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+#houses {
+	fill: #ada38e;
+	stroke-width: 0;
+}
+
+.house-hilite {
+	fill: #FF6F06;
+}
+
+#map-nav a:hover {
+	text-decoration: none;
+}
+
+#map-nav rect:hover {
+	fill: #FF6F06;
+}
+
+#map-nav tspan {
+	fill: #ffffff;
+	font-family: 'Fira Sans Condensed', sans-serif;
+	font-size: 2em;
+}
+
+.compass text  {
+  fill: #8c8270;
+  font-family: FiraSansCondensed-Regular, 'Fira Sans Condensed';
+  font-size: 16px;
+  letter-spacing: .05em;
+}
+
+.cls-6 {
+  fill: #cbbcac;
+}
+
+.cls-7 {
+  fill: #e1d8ce;
+}
+
+.cls-8 {
+  fill: #a89074;
+}
+
+.map-intro-text {
+  background-color: rgba(256, 256, 256, 0.3);
+  left: 60%;
+  padding: 1em;
+	position: absolute;
+  top: 10%;
+  width: 35%;
+}
+
+.map-intro-text h3, .map-intro-text p {
+	margin: 0;
+}
+
 .modal-close {
 	position: absolute;
 	top: 10px;

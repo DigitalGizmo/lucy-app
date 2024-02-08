@@ -6,26 +6,7 @@
   // Send function to parent;
 </script>
 
-<style>
-.map-modal {
-  bottom: 0;
-  display: block;
-  left: 0;
-  margin: auto;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  position: absolute;  
-/*  right: 0;
-  top: 10vh;*/
-  z-index: 100;
-  max-height: 25vh;
-  width: 25vw;
-}
-</style>
-
-<div id="modal-container" class="map-modal"
-style="left: {popItem.pLeft}%; top: {popItem.pTop}vh;"
->
+<div class="map-modal" style="left: {popItem.pLeft}%; top: {popItem.pTop}vh;">
   <div id="modal-wrapper">
 
     <div class="modal-close">
@@ -38,13 +19,7 @@ style="left: {popItem.pLeft}%; top: {popItem.pTop}vh;"
     <article class="more-content">
       <h2>{popItem.title}</h2>
       <p>{popItem.blurb}</p>
-
-      <!-- <slot name="named" />
-      <p>
-        <slot>No test text provided</slot>
-      </p> -->
     </article><!-- /more-content -->
-
           
   </div><!-- /modal-wrapper -->
 </div> <!-- /#modal-container /.modal-basic --> <!-- /#modal-container /.modal-basic -->
