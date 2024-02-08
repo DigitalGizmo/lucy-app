@@ -1,6 +1,6 @@
 <script>
   import { onMount, tick } from 'svelte';
-  import { fade, slide } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
   import { goto } from '$app/navigation';
   import { page } from '$app/stores';
 
@@ -8,7 +8,8 @@
   import Modal from '../../../temp-modal.svelte';
   import MainNav from "$lib/MainNav.svelte";
   import MomentNav from "$lib/MomentNav.svelte";
-  import DetailWells from '../DetailWells.svelte'
+  import Wells from '../components/Wells.svelte'
+  import Community from '../components/Community.svelte';
   // import frames from "$lib/frames.json";
 
   // import { page } from '$app/stores';
@@ -235,36 +236,20 @@
               {/each}
 
               <!-- Begin hotspots - needs to be after (on top of) animation full frame pngs -->
-
-              <DetailWells 
-                showModal = {showModal}
-                imageIndex = {imageIndex}
-              />
-
-
-
-              {#if imageIndex === 1}
-                  <g transition:fade={{ duration: 1500}}>
-                      <!-- <a hx-get="/moments/more"> -->
-                      <a href="/"
-                        on:click={(e) => { e.preventDefault(); showModal("Casement Window", "how");}}>
-                          <rect x="620" y="700" width="50px" height="120px" 
-                          class="hotspot"></rect>
-                      </a>
-                  </g>
+              {#if currMomentIndex === 3}
+                <Wells 
+                  showModal = {showModal}
+                  imageIndex = {imageIndex}
+                  currScrollY = {currScrollY}
+                />
               {/if}
-              {#if imageIndex === 3}
-                  <g transition:fade={{ duration: 1500}}>
-                      <!-- <a hx-get="/moments/more"> -->
-                      <a href="/"
-                        on:click={(e) => { e.preventDefault(); showModal("Lidded Hanging Pot", "how");}}>
-                          <rect x="727" y="745" width="240px" height="130px" 
-                          class="hotspot"></rect>
-                      </a>
-                  </g>
+              {#if currMomentIndex === 7}
+                <Community 
+                  showModal = {showModal}
+                  imageIndex = {imageIndex}
+                />
               {/if}
         
-
             </svg>
           </div> <!-- end image panel image -->
 
