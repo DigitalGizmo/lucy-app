@@ -241,12 +241,15 @@
                   showModal = {showModal}
                   imageIndex = {imageIndex}
                   currScrollY = {currScrollY}
-                />
-              {/if}
-              {#if currMomentIndex === 7}
-                <Community 
+                  {panelHeight}
+                  />
+                  {/if}
+                  {#if currMomentIndex === 7}
+                  <Community 
                   showModal = {showModal}
                   imageIndex = {imageIndex}
+                  currScrollY = {currScrollY}
+                  {panelHeight}
                 />
               {/if}
         
