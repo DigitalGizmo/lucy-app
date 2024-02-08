@@ -162,7 +162,7 @@
                 ]   
             },
             {
-                "imageName": "main-street-kids",
+                "imageName": "main-street-plain",
                 "storyText": "“Lucy, you promised us a story!” children clamor nearby. “I will tell you later!\" “sing them your Bars Fight” Abijah suggests.",
                 "textAlign": "right",
                 "moreWhoLinks": [
@@ -177,7 +177,7 @@
                 ]         
             },
             {
-                "imageName": "main-street-horse",
+                "imageName": "main-street-plain",
                 "storyText": "no text here",
                 "textAlign": "center",
                 "moreWhoLinks": [
@@ -196,7 +196,7 @@
                 ]            
             },
             {
-                "imageName": "main-street-ox-cart-base",
+                "imageName": "main-street-plain",
                 "storyText": "“I think I see Heber and Adam Honestman coming this way. When did Adam get so tall?”",
                 "textAlign": "right",
                 "moreWhoLinks": [

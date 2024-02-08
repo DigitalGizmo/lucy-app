@@ -10,6 +10,7 @@
   import MomentNav from "$lib/MomentNav.svelte";
   import Wells from '../components/Wells.svelte'
   import Community from '../components/Community.svelte';
+  import CommunityBG from '../components/CommunityBG.svelte';
   // import frames from "$lib/frames.json";
 
   // import { page } from '$app/stores';
@@ -85,9 +86,9 @@
   let houseBgScale = 1;
   const zoomDelay = 130;
 
-  // Leaves
-  let leavesTransX = 0;
-  let leavesTransY = 0;    
+  // // Leaves
+  // let leavesTransX = 0;
+  // let leavesTransY = 0;    
   // Smoke
   let animationIndex = 0;
   let animationInterval;
@@ -190,11 +191,11 @@
       // houseBgTransX = ((houseScrollStartY - (currScrollY - zoomDelay))/6);
       houseBgScale = 1 - ((houseScrollStartY - (currScrollY - zoomDelay))/5000)
   }
-  // Leaves
-  $: if (imageIndex < 4 ) {
-      leavesTransX = currScrollY/4
-      leavesTransY = -currScrollY/7    
-  }
+  // // Leaves
+  // $: if (imageIndex < 4 ) {
+  //     leavesTransX = currScrollY/4
+  //     leavesTransY = -currScrollY/7    
+  // }
   // Smoke
   $: if (imageIndex === 2) {
       animationInterval = setInterval(advance, 1200);
@@ -226,25 +227,38 @@
 
           <div class="image-panel-image">
             <svg viewBox="0 0 2000 1286" preserveAspectRatio="xMidYMid slice">
+
+              
+              <!-- Background animation, such as clouds -->
+              {#if currMomentIndex === 7}
+                  <CommunityBG 
+                  imageIndex = {imageIndex}
+                  currScrollY = {currScrollY}
+                  {panelHeight}
+                />
+              {/if}
+
+
+              <!-- Loop through all images -->
               {#each moment.frames as frame, i}
                 {#if imageIndex === i}
                     <image transition:fade={{ duration: 1500}}
-                    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
+                    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
                     alt="svg house" 
                     width="100%" height="100%"></image>
                 {/if}
               {/each}
 
-              <!-- Begin hotspots - needs to be after (on top of) animation full frame pngs -->
+              <!-- Begin hotspots and overlay animation
+                needs to be after (on top of) animation full frame pngs -->
               {#if currMomentIndex === 3}
                 <Wells 
                   showModal = {showModal}
                   imageIndex = {imageIndex}
                   currScrollY = {currScrollY}
-                  {panelHeight}
-                  />
-                  {/if}
-                  {#if currMomentIndex === 7}
+                  {panelHeight}/>
+              {/if}
+              {#if currMomentIndex === 7}
                   <Community 
                   showModal = {showModal}
                   imageIndex = {imageIndex}
