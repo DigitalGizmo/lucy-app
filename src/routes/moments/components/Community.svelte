@@ -16,10 +16,16 @@
 
 </script>
 
+<style>
+    .moment-image {
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
 <!-- ---- BACKGROUND ---- -->
 <!-- ---- CLOUDS ---- -->
-{#if (imageIndex > 1 && imageIndex < 7)}
+{#if (imageIndex > 1 && imageIndex < 8)}
     <image transition:fade={{ duration: 500}} 
     width="100%" 
     transform="translate({cloudsTransX} 0), scale(2)"
@@ -27,22 +33,116 @@
 {/if}
 
 
-<!-- Loop through all images -->
-{#each moment.frames as frame, i}
-{#if imageIndex === i}
-    <image transition:fade={{ duration: 1500}}
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
-    alt="svg house" 
-    width="100%" height="100%"></image>
+<!-- Images (frames) one index at a time -->
+<!-- --- lucy abijah in front of store ---- -->
+{#if imageIndex === 0}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[0].imageName}.png"
+    alt="svg house"></image>
 {/if}
-{/each}
+<!-- --- lucy thinking ---- -->
+{#if imageIndex === 1}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[1].imageName}.png"
+    alt="svg house"></image>
+{/if}
+<!-- --- L & A + kids ---- -->
+{#if imageIndex === 2}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[2].imageName}.png"
+    alt="svg house" width="100%" height="100%"></image>
+
+    <image transition:fade={{ duration: 500}}  class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-small.png" />
+
+    <image transition:fade={{ duration: 500}}  class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-kids.png" />
+{/if}
+<!-- --- Horse comes in ---- -->
+{#if imageIndex === 3}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[3].imageName}.png" alt="svg house"></image>
+
+    <image transition:fade={{ duration: 500}}  class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med.png" />    
+
+    <image transition:fade={{ duration: 500}}  class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-horse.png" />    
+
+{/if}
+<!-- --- L & A closer ---- -->
+{#if imageIndex === 4}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[4].imageName}.png"
+    alt="svg house"></image>
+
+    <image transition:fade={{ duration: 500}}  class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-large.png" />   
+{/if}
+<!-- --- ox cart comes in ---- -->
+{#if imageIndex > 4 && imageIndex < 8}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[5].imageName}.png"
+    alt="svg house"></image>
+
+    <image transition:fade={{ duration: 500}}  class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-large.png" 
+    transform= "translate(200 100) scale(0.7)" />  
+
+    <image transition:fade={{ duration: 500}}  class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-ox-cart.png" 
+    transform="translate(-100 200) scale(1.4)" />  
+{/if}
+<!-- ---  ---- -->
+<!-- {#if imageIndex === 6}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[6].imageName}.png"
+    alt="svg house"></image>
+{/if} -->
+<!-- ---  ---- -->
+<!-- {#if imageIndex === 7}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[7].imageName}.png"
+    alt="svg house"></image>
+{/if} -->
+<!-- ---  ---- -->
+{#if imageIndex === 8}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[8].imageName}.png"
+    alt="svg house"></image>
+{/if}
+<!-- ---  ---- -->
+{#if imageIndex === 9}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[9].imageName}.png"
+    alt="svg house"></image>
+{/if}
+<!-- ---  ---- -->
+{#if imageIndex === 10}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[10].imageName}.png"
+    alt="svg house"></image>
+{/if}
+<!-- ---  ---- -->
+{#if imageIndex === 11}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[11].imageName}.png"
+    alt="svg house"></image>
+{/if}
+<!-- ---  ---- -->
+{#if imageIndex === 12}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[12].imageName}.png"
+    alt="svg house"></image>
+{/if}
+
 
 <!-- ---- FOREGROUND ANIMATIONS ---- -->
-{#if (imageIndex === 2)}
+<!-- {#if (imageIndex === 2)}
     <image transition:fade={{ duration: 500}} 
     width="100%" height="100%" 
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-small.png" />
-{/if}
+{/if} -->
 
 <!-- ---- HOTSPOTS ---- -->
 {#if imageIndex === 0}

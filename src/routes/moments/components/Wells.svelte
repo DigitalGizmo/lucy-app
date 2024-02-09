@@ -2,7 +2,7 @@
   import { fade } from 'svelte/transition';
   export let showModal;
   export let imageIndex;
-  export let currScrollY, moment;
+  export let currScrollY;
 
   // Leaves
   let leavesTransX = 0;
