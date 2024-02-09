@@ -2,11 +2,15 @@
   // import { createEventDispatcher } from "svelte";
   // const dispatch = createEventDispatcher();
   export let popItem;
-  export let isModalShowing;
-  // Send function to parent;
+  export let isModalShowing, isMobile;
+
+
 </script>
 
-<div class="map-modal">
+<div class="map-modal" 
+  style="{ isMobile ? '' : `left: ${popItem.pLeft}%; top: ${popItem.pTop}vh;`}"
+
+>
   <div id="modal-wrapper">
 
     <div class="modal-close">

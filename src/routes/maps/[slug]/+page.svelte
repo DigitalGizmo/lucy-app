@@ -1,4 +1,6 @@
 <script>
+  import { onMount } from 'svelte';
+  // import { browser } from '$app/environment';
   import MainNav from "$lib/MainNav.svelte";
   export let data;
   import MapModal from '../MapModal.svelte';
@@ -6,9 +8,22 @@
   
   let decadeIndex = 0;
   let isModalShowing = false;
-  let modalTitle ='tbd';
+  const mobileWidthThreshold = 800;
+  let panelWidth = 1200;
+  let isMobile = false;
   // let chosenHouseIndex = 0;
   let popItem = data.deerfield[decadeIndex].popItems[0];
+
+  onMount(() => {
+    panelWidth = window.innerWidth;
+  })
+
+  // function resetWidth() {
+  //   console.log('width' +  window.innerWidth);
+  //   panelWidth = window.innerWidth;
+  // }
+
+  // document.window.onresize = resetWidth;
 
   function setOverlay(_decadeIndex) {
     isModalShowing = false;
@@ -24,6 +39,8 @@
       isModalShowing = true;
   };  
 
+  // $: if (browser && document.window) {document.window.onresize = resetWidth; }
+  $: isMobile = panelWidth < mobileWidthThreshold ? true : false;
   // $: decadeInfo = data.deerfield[decadeIndex];
   // $: popItem = data.deerfield[decadeIndex].popItems[chosenHouseIndex];
 </script>
@@ -460,9 +477,9 @@
       <!-- /pop ups -->
       {#if isModalShowing}
         <MapModal 
-          title={modalTitle}
           popItem = {popItem}
           bind:isModalShowing
+          {isMobile}
         />
       {/if}
 
