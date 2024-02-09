@@ -2,13 +2,40 @@
     import { fade } from 'svelte/transition';
     export let showModal;
     export let imageIndex;
-    export let currScrollY, panelHeight;
+    export let currScrollY, panelHeight, moment;
+
+    // Leaves
+    let cloudsTransX = 0;
+    // let cloudsTransY = 0;    
+
+    // Leaves
+    $: if (imageIndex < 4 ) {
+        cloudsTransX = (currScrollY/4) - (panelHeight * 2) + 100;
+        // cloudsTransY = -currScrollY/7    
+    }
 
 </script>
 
-<style>
 
-</style>
+<!-- ---- BACKGROUND ---- -->
+<!-- ---- CLOUDS ---- -->
+{#if (imageIndex > 1 && imageIndex < 7)}
+    <image transition:fade={{ duration: 500}} 
+    width="100%" 
+    transform="translate({cloudsTransX} 0), scale(2)"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-clouds.jpg" />
+{/if}
+
+
+<!-- Loop through all images -->
+{#each moment.frames as frame, i}
+{#if imageIndex === i}
+    <image transition:fade={{ duration: 1500}}
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    alt="svg house" 
+    width="100%" height="100%"></image>
+{/if}
+{/each}
 
 <!-- ---- FOREGROUND ANIMATIONS ---- -->
 {#if (imageIndex === 2)}
@@ -16,7 +43,6 @@
     width="100%" height="100%" 
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-small.png" />
 {/if}
-
 
 <!-- ---- HOTSPOTS ---- -->
 {#if imageIndex === 0}

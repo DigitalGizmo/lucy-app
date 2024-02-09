@@ -10,7 +10,7 @@
   import MomentNav from "$lib/MomentNav.svelte";
   import Wells from '../components/Wells.svelte'
   import Community from '../components/Community.svelte';
-  import CommunityBG from '../components/CommunityBG.svelte';
+  // import CommunityBG from '../components/CommunityBG.svelte';
   // import frames from "$lib/frames.json";
 
   // import { page } from '$app/stores';
@@ -229,25 +229,6 @@
             <svg viewBox="0 0 2000 1286" preserveAspectRatio="xMidYMid slice">
 
               
-              <!-- Background animation, such as clouds -->
-              {#if currMomentIndex === 7}
-                  <CommunityBG 
-                  imageIndex = {imageIndex}
-                  currScrollY = {currScrollY}
-                  {panelHeight}
-                />
-              {/if}
-
-
-              <!-- Loop through all images -->
-              {#each moment.frames as frame, i}
-                {#if imageIndex === i}
-                    <image transition:fade={{ duration: 1500}}
-                    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
-                    alt="svg house" 
-                    width="100%" height="100%"></image>
-                {/if}
-              {/each}
 
               <!-- Begin hotspots and overlay animation
                 needs to be after (on top of) animation full frame pngs -->
@@ -256,14 +237,16 @@
                   showModal = {showModal}
                   imageIndex = {imageIndex}
                   currScrollY = {currScrollY}
-                  {panelHeight}/>
+                  {panelHeight}
+                  {moment}/>
               {/if}
               {#if currMomentIndex === 7}
                   <Community 
-                  showModal = {showModal}
-                  imageIndex = {imageIndex}
-                  currScrollY = {currScrollY}
+                  {showModal}
+                  {imageIndex}
+                  {currScrollY}
                   {panelHeight}
+                  {moment}
                 />
               {/if}
         

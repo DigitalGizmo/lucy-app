@@ -2,7 +2,7 @@
     import { fade } from 'svelte/transition';
     export let showModal;
     export let imageIndex;
-    export let currScrollY;
+    export let currScrollY, moment;
 
     // Leaves
     let leavesTransX = 0;
@@ -16,6 +16,16 @@
 
 </script>
 
+
+<!-- Loop through all images -->
+{#each moment.frames as frame, i}
+{#if imageIndex === i}
+    <image transition:fade={{ duration: 1500}}
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
+    alt="svg house" 
+    width="100%" height="100%"></image>
+{/if}
+{/each}
 
 <!-- ---- LEAVES ---- -->
 <!-- leaves -->
