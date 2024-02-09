@@ -13,7 +13,7 @@
 <!-- ---- FOREGROUND ANIMATIONS ---- -->
 {#if (imageIndex === 2)}
     <image transition:fade={{ duration: 500}} 
-    transform="translate(-380 -300), scale(0.6)"
+    width="100%" height="100%" 
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-small.png" />
 {/if}
 
