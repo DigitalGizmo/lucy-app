@@ -6,7 +6,7 @@
   // Send function to parent;
 </script>
 
-<div class="map-modal" style="left: {popItem.pLeft}%; top: {popItem.pTop}vh;">
+<div class="map-modal">
   <div id="modal-wrapper">
 
     <div class="modal-close">

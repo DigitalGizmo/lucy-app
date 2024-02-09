@@ -1,6 +1,6 @@
-/*-- ---------------- --*/
-/*-- WIREFRAME BASICS --*/
-/*-- ---------------- --*/
+/* --------------------------*/
+/* BASICS -------------------*/
+/* --------------------------*/
 
 body {
 	margin: 0;
@@ -10,6 +10,11 @@ body {
 ul, ol {
 	padding: 0;
 	margin: 0;
+	list-style-type: none;
+}
+
+p, li {/* should this be part of wireframe-wrapper? */
+	line-height: 1.3em;
 }
 
 section.wireframe-wrapper {
@@ -41,9 +46,14 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-size: 3em;
-	font-weight: normal;
+	font-size: 2em;
 	margin: 0;
+}
+
+@media screen and (min-width: 800px) {/* for large displays */
+	h1 {
+		font-size: 3em;
+	}
 }
 
 a:link {
@@ -60,11 +70,13 @@ a:visited {
 	color: #2A6283
 }
 
-.picture {
+.picture {/* where is this used? cf .detail img and .more-content figure img */
 	max-width: 600px;
 }
 
-/* GLOBAL NAVIGATION */
+/* --------------------------------- */
+/* GLOBAL NAV ---------------------- */
+/* --------------------------------- */
 .global-nav {
 	position: relative;
 }
@@ -91,7 +103,7 @@ a:visited {
 
 /* When the screen is less than 800 pixels wide, hide all global nav links 
 Show the icon/link that opens and closes the global nav */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {/* small displays */
 	.global-nav ul { 
 		display: none;
 	}
@@ -107,7 +119,7 @@ Show the icon/link that opens and closes the global nav */
 /* The "responsive" class is added to global-nav with JavaScript 
 when the user clicks the icon. This class makes global-nav 
 display the links vertically instead of horizontally */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {/* small displays */
 	.global-nav.responsive ul {
 		background-color: #fff;
 		border: 1px solid #eaeaea;
@@ -130,8 +142,14 @@ display the links vertically instead of horizontally */
 	font-size: 1.5em;/* for hamburger icon */
 }
 
-section.wrapper {/* is this being used??? */
-	margin-top: 160px;
+section.wrapper {
+	margin-top: 100px;
+}
+
+@media screen and (min-width: 800px) {/* for large displays */
+	section.wrapper {
+		margin-top: 160px;
+	}
 }
 
 nav.moment-nav {/* for mini-nav */
@@ -164,15 +182,15 @@ nav.moment-nav ul li.selected{
 	background-color: lightgrey;
 }
 
-/* -------------------- */
-/* ----  MOMENTS   ---- */
-/* -------------------- */
+/* --------------------------------- */
+/* MOMENTS ------------------------- */
+/* --------------------------------- */
 .moment-header {
 	padding: 0 1em;
 }
 
 /* --------------------------------- */
-/* ------  Moment Title Frames ----- */
+/* Moment Title Frames ------------- */
 /* --------------------------------- */
 
 .moment-title {
@@ -188,10 +206,7 @@ nav.moment-nav ul li.selected{
 }
 
 .title-container {
-	/*pointer-events: none; */
 	position: relative;
-	/*	z-index: 120;*/
-	/* padding-top: 12vh;to make room for the moment options nav */
 }
 
 #horizontal-titles {
@@ -202,7 +217,6 @@ nav.moment-nav ul li.selected{
 	overflow: auto;
 	resize: both;
 	white-space: nowrap;
-	/* overflow-x: scroll; */
 	scroll-snap-type: x mandatory;
 }
 
@@ -321,7 +335,7 @@ nav.moment-options ul li.prev-moment {
 }
 
 /* ----------------------------------- */
-/* -- Scrolling Moment Story Frames -- */
+/* Scrolling Moment Story Frames ----- */
 /* ----------------------------------- */
 .moment-scroll {/* displays less than 800px */
 	background-color: black;
@@ -341,9 +355,7 @@ nav.moment-options ul li.prev-moment {
 	}
 }
 
-/* -------- */
-/*  IMAGES  */
-/* -------- */
+/* ----- Images -------------------- */
 
 /* put the images in the only column */
 .image-panel {
@@ -377,8 +389,7 @@ nav.moment-options ul li.prev-moment {
 		height: 60vh;
 		object-fit: cover;    
 	}	
-}	
-
+}
 
 /* make the image full height for DESKTOP: displays larger than 800px */
 /* fixed container to keep image from scrolling */
@@ -408,7 +419,7 @@ nav.moment-options ul li.prev-moment {
 	}	
 }
 
-/* More panel */
+/* ------ More Panel --------------- */
 .more-container {
   border-radius: 0 3px 3px 0;
 	background-color: white;
@@ -417,7 +428,7 @@ nav.moment-options ul li.prev-moment {
 	height: 300px;
 	width: 250px;
 	padding: 0 1em 1em 1em;
-	z-index: 120;
+	z-index: 100;
 	position: absolute;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
@@ -430,7 +441,7 @@ nav.moment-options ul li.prev-moment {
 }
 
 .more-tab {
-  background-color: #146cc1;
+  background-color: #038EDF;
   border-radius: 0 0 3px 3px;
 	color: #fff;
   padding: 1.25em 1em 0.25em 1em;
@@ -474,17 +485,14 @@ nav.moment-options ul li.prev-moment {
 }
 
 
-/* -------------- */
-/*   STORY TEXT   */
-/* -------------- */
-/* for MOBILE: displays smaller than 800px */
-.story-frames { 
+/* ---- Story Text -------------   */
+.story-frames { /* for MOBILE: displays smaller than 800px */
 	grid-column: 1;
 	grid-row: 1;
 /*margin: 30vh auto 30vh auto;
 	width: 60vw;*/
 	pointer-events: none;
-	z-index: 10;
+	z-index: 50;
 }
 
 .story-frames article.story {/* displays smaller than 800px */
@@ -520,9 +528,7 @@ nav.moment-options ul li.prev-moment {
 	}
 }
 
-/* -------------- */
-/*   TOTAL MORE   */
-/* -------------- */
+/* ----- Total More -------------------   */
 .total-more {
 	background-color: white;
 	grid-column: 1 / 3;
@@ -535,9 +541,11 @@ nav.moment-options ul li.prev-moment {
 	list-style-type: none;
 }
 
-/* ---------------------- */
-/*   MODAL MORE WINDOWS   */
-/* ---------------------- */
+/* ----------------------------------- */
+/* MODAL MORE WINDOWS ---------------  */
+/* ----------------------------------- */
+
+/* ------ General ------- */
 .hidden {
   display: none;
 }
@@ -560,9 +568,9 @@ nav.moment-options ul li.prev-moment {
 #modal-wrapper {
   background-color: white;
   border: 1px solid lightgrey;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);/* this isn't working on map--svg? */
   overflow: auto;
-  padding: 1em;
+  padding: 1.5em;
   position: relative;
 }
 
@@ -582,16 +590,179 @@ nav.moment-options ul li.prev-moment {
   width: 70vw;
 }
 
+.modal-close {
+	position: absolute;
+	right:20px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.close { 
+  cursor:pointer;
+}
+
+.close:after, .close:before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-top: 2px solid #888;
+  position: absolute;
+  top: 6px;
+  right: -8px;
+  rotate: -45deg;
+}
+      
+.close:before {
+  right: 6px;
+  rotate: 45deg;
+}
+  
+.close:hover {	
+  opacity: 0.3;
+}
+
+.more-content h2, .more-content h4 {
+	margin: 0;
+}
+
+.more-content figure {
+	float: left;
+	margin: 1em 1em 0 0;
+	width: 50%;
+}
+
+.more-content figure img {
+	max-width: 100%;
+}
+
+.more-content figure figcaption {
+	color: gray;
+	font-size: .8em;
+}
+
+/* ----------------------------------- */
+/* MENUS ----------------------------- */
+/* ----------------------------------- */
+
+.menu-tools {
+	background-color: lightgrey;
+	padding: .25em;
+}
+
+.menu {
+	list-style-type: none;
+	width: 50vw;
+}
+
+.menu li {
+	margin-bottom: 1em;
+}
+
+.menu li a {
+	display: block;
+	font-weight: bold;
+}
+
+.people-menu tr {
+	height: 3em;
+}
+
+.people-menu tr th {
+	text-align: left;
+}
+
+.people-menu tr td {
+	border-bottom: 1px solid lightgrey;
+}
+
+.people-menu tr th.col1 {
+	width: 15%;
+}
+
+.people-menu tr th.col2 {
+	width: 15%;
+}
+
+.people-menu a {
+	font-weight: bold;
+}
+
+/* --------------------------------- */
+/* Detail Pages -------------------- */
+/* --------------------------------- */
+.detail h2 {
+	margin: 0;
+}
+
+.detail p.dates {
+	margin: 0.25em 0;
+}
+
+.detail img {
+	max-height: 75vh;
+}
+
+.about {
+	margin-top: 1em;
+	width: 100%;
+}
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.about {
+		max-width: 75%;
+	}
+}
+
+.about h3 {
+	margin: 0;
+}
+
+.about p {
+	margin: 0 0 1em 0;
+}
+
+/* --------- Map ------------- */
 .map-wrapper {
 	position: relative;
 }
 
 .map-modal {
-  overflow-y: scroll;
-  position: absolute;  
-  max-height: 25vh;
-  width: 30vw;
-  z-index: 100;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.map-modal { 
+	  overflow-y: scroll;
+	  position: absolute;  
+		z-index: 100;
+	  max-height: 25vh;
+	  width: 30vw;
+	}
+}
+
+.map-intro-text {
+  background-color: rgba(256, 256, 256, 0.3);
+  left: 60%;
+  padding: 1em;
+	position: absolute;
+  top: 10%;
+  width: 35%;
+}
+
+.map-intro-text h3, .map-intro-text p, .map-modal .more-content h3, .map-modal .more-content p {
+	margin: 0;
+}
+
+.map-modal .more-content, .map-intro-text {
+	font-size: .75em;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.map-modal .more-content, .map-intro-text {
+		font-size: 1em;
+	}
 }
 
 .map-selected {
@@ -647,138 +818,3 @@ nav.moment-options ul li.prev-moment {
   fill: #a89074;
 }
 
-.map-intro-text {
-  background-color: rgba(256, 256, 256, 0.3);
-  left: 60%;
-  padding: 1em;
-	position: absolute;
-  top: 10%;
-  width: 35%;
-}
-
-.map-intro-text h3, .map-intro-text p {
-	margin: 0;
-}
-
-.modal-close {
-	position: absolute;
-	top: 10px;
-	right:20px;
-}
-
-.close { 
-  cursor:pointer;
-}
-
-.close:after, .close:before {
-  content: "";
-  height: 20px;
-  width: 20px;
-  border-top: 1px solid #000;
-  position: absolute;
-  top: 10px;
-  right: -8px;
-  rotate: -45deg;
-}
-      
-.close:before {
-  right: 6px;
-  rotate: 45deg;
-}
-  
-.close:hover {	
-  opacity: 0.3;
-}
-
-.more-content h2, .more-content h4 {
-	margin: 0;
-}
-
-.more-content figure {
-	float: left;
-	margin: 1em 1em 0 0;
-	width: 50%;
-}
-
-.more-content figure img {
-	max-width: 100%;
-}
-
-.more-content figure figcaption {
-	color: gray;
-	font-size: .8em;
-}
-/* -------------------- */
-/* ------ MENUS ------- */
-/* -------------------- */
-
-.menu-tools {
-	background-color: lightgrey;
-	padding: .25em;
-}
-
-.menu {
-	list-style-type: none;
-	width: 50vw;
-}
-
-.menu li {
-	margin-bottom: 1em;
-}
-
-.menu li a {
-	display: block;
-	font-weight: bold;
-}
-
-.people-menu tr {
-	height: 3em;
-}
-
-.people-menu tr th {
-	text-align: left;
-}
-
-.people-menu tr td {
-	border-bottom: 1px solid lightgrey;
-}
-
-.people-menu tr th.col1 {
-	width: 15%;
-}
-
-.people-menu tr th.col2 {
-	width: 15%;
-}
-
-.people-menu a {
-	font-weight: bold;
-}
-
-/* --------------------------------- */
-/* ---------  Detail Pages --------- */
-/* --------------------------------- */
-.detail h2 {
-	margin: 0;
-}
-
-.detail p.dates {
-	margin: 0.25em 0;
-}
-
-.detail img {
-	max-height: 75vh;
-}
-
-.about {
-	margin-top: 1em;
-	max-width: 75%;
-}
-
-.about h3 {
-	margin: 0;
-}
-
-.about p {
-	margin: 0 0 1em 0;
-}
