@@ -1,6 +1,6 @@
 <script>
   import { onMount, tick } from 'svelte';
-  import { fade, slide } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
   import { goto } from '$app/navigation';
   import { page } from '$app/stores';
 
@@ -8,6 +8,9 @@
   import Modal from '../../../temp-modal.svelte';
   import MainNav from "$lib/MainNav.svelte";
   import MomentNav from "$lib/MomentNav.svelte";
+  import Wells from '../components/Wells.svelte'
+  import Community from '../components/Community.svelte';
+  // import CommunityBG from '../components/CommunityBG.svelte';
   // import frames from "$lib/frames.json";
 
   // import { page } from '$app/stores';
@@ -72,31 +75,6 @@
   let scrolledXIndex = 0;
   let currScrollX = 0;
   let horizScrollClass = ''; // smooth-scroll
-
-  // For house parallax
-  let isCaptured = false;
-  let houseScrollStartY = 800;
-  let houseTransY = 0;
-  let houseScale = 1;
-  let houseBgTransY = 0;
-  let houseBgTransX = 0;
-  let houseBgScale = 1;
-  const zoomDelay = 130;
-
-  // Leaves
-  let leavesTransX = 0;
-  let leavesTransY = 0;    
-  // Smoke
-  let animationIndex = 0;
-  let animationInterval;
-  function advance() {
-    if (animationIndex < 2) {
-      animationIndex += 1;
-    } else {
-      animationIndex = 0;
-    }
-    // console.log('ani idx: ' + animationIndex);
-  }
 
   let isModalShowing = false;
   let modalTitle = "title tbd";
@@ -173,32 +151,6 @@
   $: if (isModalShowing) {
       console.log("modal is now showing")
   }
-  // House parallax
-  $: if (imageIndex === 2 && !isCaptured) {
-      houseScrollStartY = currScrollY;
-      isCaptured = true;
-      // count += 1;
-  }
-  // Allow time for fade before starting zoom, hence the - ~ 150
-  $: if ((houseScrollStartY) - (currScrollY - zoomDelay) < 0) {
-      // houseTransY = Math.min(((houseScrollStartY - (currScrollY - zoomDelay))/2), 0);
-      houseTransY = ((houseScrollStartY - (currScrollY - zoomDelay))/2);
-      houseScale = 1 - ((houseScrollStartY - (currScrollY - zoomDelay))/2000);
-      houseBgTransY = ((houseScrollStartY - (currScrollY - zoomDelay))/6);
-      // houseBgTransX = ((houseScrollStartY - (currScrollY - zoomDelay))/6);
-      houseBgScale = 1 - ((houseScrollStartY - (currScrollY - zoomDelay))/5000)
-  }
-  // Leaves
-  $: if (imageIndex < 4 ) {
-      leavesTransX = currScrollY/4
-      leavesTransY = -currScrollY/7    
-  }
-  // Smoke
-  $: if (imageIndex === 2) {
-      animationInterval = setInterval(advance, 1200);
-  } else {
-    clearInterval(animationInterval);
-  }
 
   function beenClicked(event) {
     console.log("target clicked: " + event.target.className)
@@ -224,40 +176,28 @@
 
           <div class="image-panel-image">
             <svg viewBox="0 0 2000 1286" preserveAspectRatio="xMidYMid slice">
-              {#each moment.frames as frame, i}
-                {#if imageIndex === i}
-                    <image transition:fade={{ duration: 1500}}
-                    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
-                    alt="svg house" 
-                    width="100%" height="100%"></image>
-                {/if}
-              {/each}
 
-              <!-- Begin hotspots - needs to be after (on top of) animation full frame pngs -->
+              
 
-
-              {#if imageIndex === 1}
-                  <g transition:fade={{ duration: 1500}}>
-                      <!-- <a hx-get="/moments/more"> -->
-                      <a href="/"
-                        on:click={(e) => { e.preventDefault(); showModal("Casement Window", "how");}}>
-                          <rect x="620" y="700" width="50px" height="120px" 
-                          class="hotspot"></rect>
-                      </a>
-                  </g>
+              <!-- Begin hotspots and overlay animation
+                needs to be after (on top of) animation full frame pngs -->
+              {#if currMomentIndex === 3}
+                <Wells 
+                  showModal = {showModal}
+                  imageIndex = {imageIndex}
+                  currScrollY = {currScrollY}
+                  {moment}/>
               {/if}
-              {#if imageIndex === 3}
-                  <g transition:fade={{ duration: 1500}}>
-                      <!-- <a hx-get="/moments/more"> -->
-                      <a href="/"
-                        on:click={(e) => { e.preventDefault(); showModal("Lidded Hanging Pot", "how");}}>
-                          <rect x="727" y="745" width="240px" height="130px" 
-                          class="hotspot"></rect>
-                      </a>
-                  </g>
+              {#if currMomentIndex === 7}
+                  <Community 
+                  {showModal}
+                  {imageIndex}
+                  {currScrollY}
+                  {panelHeight}
+                  {moment}
+                />
               {/if}
         
-
             </svg>
           </div> <!-- end image panel image -->
 
