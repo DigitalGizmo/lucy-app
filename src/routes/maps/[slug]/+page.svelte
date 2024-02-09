@@ -56,64 +56,57 @@
         viewBox="0 0 1412 60">
         <g id="map-nav">
           <g>
-            <rect width="200" height="60" fill="#06a5ff" stroke-width="0" 
+            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(1);}}>
+              <rect width="200" height="60" fill="#06a5ff" stroke-width="0" 
               class="{ decadeIndex === 1 ? 'map-selected' : ''}"/>
-            <a href="/" 
-              on:click={(e) => { e.preventDefault(); setOverlay(1);}}>
               <text transform="translate(14.29 39.51)">
                   <tspan x="0" y="0">1690 - 1699</tspan>
               </text>
             </a>
 
-            <rect x="202" width="200" height="60" fill="#06a5ff" stroke-width="0" 
+            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(2);}}>
+              <rect x="202" width="200" height="60" fill="#06a5ff" stroke-width="0" 
               class="{ decadeIndex === 2 ? 'map-selected' : ''}"/>
-            <a href="/" 
-              on:click={(e) => { e.preventDefault(); setOverlay(2);}}>
               <text transform="translate(216.83 39.51)">
                   <tspan x="0" y="0">1700 - 1709</tspan>
               </text>
             </a>
       
-            <rect x="404" width="200" height="60" fill="#06a5ff" stroke-width="0" 
+            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(3);}}>
+              <rect x="404" width="200" height="60" fill="#06a5ff" stroke-width="0" 
               class="{ decadeIndex === 3 ? 'map-selected' : ''}"/>
-            <a href="/" 
-              on:click={(e) => { e.preventDefault(); setOverlay(3);}}>
               <text transform="translate(419.18 39.51)">
                   <tspan x="0" y="0">1710 - 1719</tspan>
               </text>
             </a>
       
-            <rect x="606" width="200" height="60" fill="#06a5ff" stroke-width="0" 
+            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(4);}}>
+              <rect x="606" width="200" height="60" fill="#06a5ff" stroke-width="0" 
               class="{ decadeIndex === 4 ? 'map-selected' : ''}"/>
-            <a href="/" 
-              on:click={(e) => { e.preventDefault(); setOverlay(4);}}>
               <text transform="translate(621.35 39.51)">
                   <tspan x="0" y="0">1720 - 1729</tspan>
               </text>
             </a>
       
-            <rect x="808" width="200" height="60" fill="#06a5ff" stroke-width="0" 
-            class="{ decadeIndex === 5 ? 'map-selected' : ''}"/>
-            <a href="/" 
-              on:click={(e) => { e.preventDefault(); setOverlay(5);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(5);}}>
+              <rect x="808" width="200" height="60" fill="#06a5ff" stroke-width="0" 
+              class="{ decadeIndex === 5 ? 'map-selected' : ''}"/>
               <text transform="translate(823.56 39.51)">
                   <tspan x="0" y="0">1730 - 1739</tspan>
               </text>
             </a>
       
-            <rect x="1011" width="198" height="59" fill="#06a5ff" stroke-width="0" 
-            class="{ decadeIndex === 6 ? 'map-selected' : ''}"/>
-            <a href="/" 
-              on:click={(e) => { e.preventDefault(); setOverlay(6);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(6);}}>
+              <rect x="1011" width="198" height="59" fill="#06a5ff" stroke-width="0" 
+              class="{ decadeIndex === 6 ? 'map-selected' : ''}"/>
               <text transform="translate(1025.01 39.51)">
                   <tspan x="0" y="0">1740 - 1749</tspan>
               </text>
             </a>
       
-            <rect x="1212" width="200" height="60" fill="#06a5ff" stroke-width="0" 
-            class="{ decadeIndex === 7 ? 'map-selected' : ''}"/>
-            <a href="/" 
-              on:click={(e) => { e.preventDefault(); setOverlay(7);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(7);}}>
+              <rect x="1212" width="200" height="60" fill="#06a5ff" stroke-width="0" 
+              class="{ decadeIndex === 7 ? 'map-selected' : ''}"/>
               <text transform="translate(1226.29 39.51)">
                   <tspan x="0" y="0">1750 - 1759</tspan>
               </text>
