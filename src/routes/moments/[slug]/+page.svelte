@@ -76,31 +76,6 @@
   let currScrollX = 0;
   let horizScrollClass = ''; // smooth-scroll
 
-  // For house parallax
-  let isCaptured = false;
-  let houseScrollStartY = 800;
-  let houseTransY = 0;
-  let houseScale = 1;
-  let houseBgTransY = 0;
-  let houseBgTransX = 0;
-  let houseBgScale = 1;
-  const zoomDelay = 130;
-
-  // // Leaves
-  // let leavesTransX = 0;
-  // let leavesTransY = 0;    
-  // Smoke
-  let animationIndex = 0;
-  let animationInterval;
-  function advance() {
-    if (animationIndex < 2) {
-      animationIndex += 1;
-    } else {
-      animationIndex = 0;
-    }
-    // console.log('ani idx: ' + animationIndex);
-  }
-
   let isModalShowing = false;
   let modalTitle = "title tbd";
   const modalTypes = {
@@ -176,32 +151,6 @@
   $: if (isModalShowing) {
       console.log("modal is now showing")
   }
-  // House parallax
-  $: if (imageIndex === 2 && !isCaptured) {
-      houseScrollStartY = currScrollY;
-      isCaptured = true;
-      // count += 1;
-  }
-  // Allow time for fade before starting zoom, hence the - ~ 150
-  $: if ((houseScrollStartY) - (currScrollY - zoomDelay) < 0) {
-      // houseTransY = Math.min(((houseScrollStartY - (currScrollY - zoomDelay))/2), 0);
-      houseTransY = ((houseScrollStartY - (currScrollY - zoomDelay))/2);
-      houseScale = 1 - ((houseScrollStartY - (currScrollY - zoomDelay))/2000);
-      houseBgTransY = ((houseScrollStartY - (currScrollY - zoomDelay))/6);
-      // houseBgTransX = ((houseScrollStartY - (currScrollY - zoomDelay))/6);
-      houseBgScale = 1 - ((houseScrollStartY - (currScrollY - zoomDelay))/5000)
-  }
-  // // Leaves
-  // $: if (imageIndex < 4 ) {
-  //     leavesTransX = currScrollY/4
-  //     leavesTransY = -currScrollY/7    
-  // }
-  // Smoke
-  $: if (imageIndex === 2) {
-      animationInterval = setInterval(advance, 1200);
-  } else {
-    clearInterval(animationInterval);
-  }
 
   function beenClicked(event) {
     console.log("target clicked: " + event.target.className)
@@ -237,7 +186,6 @@
                   showModal = {showModal}
                   imageIndex = {imageIndex}
                   currScrollY = {currScrollY}
-                  {panelHeight}
                   {moment}/>
               {/if}
               {#if currMomentIndex === 7}
