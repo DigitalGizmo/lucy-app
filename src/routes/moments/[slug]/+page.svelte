@@ -67,7 +67,7 @@
     return currMomentIndex + 1
   }
 
-  let imageIndex = 0;
+  let imageIndex = 0; // calculation will subtract 1
   let currScrollY = 0;
 
   // Horizontal scrolling
@@ -135,7 +135,11 @@
     horizontalTitles.scrollLeft -= panelWidth;
   }
 
-  $: imageIndex = Math.trunc((currScrollY + panelHeight - 105)/(panelHeight))
+  $: if (currScrollY < (panelHeight/2)) {
+    imageIndex = 0;
+  } else {
+    imageIndex = (Math.trunc(((currScrollY + panelHeight)/(panelHeight)) - 0.4));
+  }
 
   $: scrolledXIndex = Math.trunc((currScrollX + (panelWidth/2.5))/panelWidth)
 
@@ -205,9 +209,9 @@
           <div class="more-container">
             <h4 class="more-tab">More</h4>
             <h4>More</h4>
-            <p>scrollmode: {$isScrollMode}</p>
+
             <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
-            {#if imageIndex > 3}
+            {#if imageIndex > 12}
               <script>console.log('Past where Mores are defined')</script>
             {:else}
               {#if (moment.frames[imageIndex].moreWhoLinks.length > 0)}
