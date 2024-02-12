@@ -37,20 +37,20 @@
 <!-- --- lucy abijah in front of store ---- -->
 {#if imageIndex === 0}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[0].imageName}.png"
-    alt="svg house"></image>
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
 <!-- --- lucy thinking ---- -->
 {#if imageIndex === 1}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[1].imageName}.png"
-    alt="svg house"></image>
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
 <!-- --- L & A + kids ---- -->
 {#if imageIndex === 2}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[2].imageName}.png"
-    alt="svg house" width="100%" height="100%"></image>
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    alt="{moment.frames[imageIndex].alt}" width="100%" height="100%"></image>
 
     <image transition:fade={{ duration: 500}}  class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-small.png" />
@@ -61,7 +61,7 @@
 <!-- --- Horse comes in ---- -->
 {#if imageIndex === 3}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[3].imageName}.png" alt="svg house"></image>
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png" alt="{moment.frames[imageIndex].alt}"></image>
 
     <image transition:fade={{ duration: 500}}  class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med.png" />    
@@ -73,17 +73,17 @@
 <!-- --- L & A closer ---- -->
 {#if imageIndex === 4}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[4].imageName}.png"
-    alt="svg house"></image>
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
 
     <image transition:fade={{ duration: 500}}  class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-large.png" />   
 {/if}
-<!-- --- ox cart comes in ---- -->
-{#if imageIndex > 4 && imageIndex < 9}
+<!-- --- 5, 6, 7 ox cart comes in ---- -->
+{#if imageIndex > 4 && imageIndex < 8}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[5].imageName}.png"
-    alt="svg house"></image>
+    alt="{moment.frames[imageIndex].alt}"></image>
 
     <image transition:fade={{ duration: 500}}  class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-large.png" 
@@ -97,49 +97,44 @@
 <!-- {#if imageIndex === 6}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[6].imageName}.png"
-    alt="svg house"></image>
+    alt="{moment.frames[imageIndex].alt}"></image>
 {/if} -->
 <!-- ---  ---- -->
 <!-- {#if imageIndex === 7}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[7].imageName}.png"
-    alt="svg house"></image>
+    alt="{moment.frames[imageIndex].alt}"></image>
 {/if} -->
-<!-- --- Heber and Susanna ---- -->
-<!-- {#if imageIndex === 9}
-    <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[8].imageName}.png"
-    alt="svg house"></image>
-{/if} -->
-<!-- ---  ---- -->
+
+<!-- --- Jin approaches "Heber and Susanna.. ---- -->
 {#if imageIndex === 8}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[8].imageName}.png"
-    alt="svg house"></image>
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
-<!-- ---  ---- -->
+<!-- ---  lucy, abijah greet jin ---- -->
 {#if imageIndex === 9}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[9].imageName}.png"
-    alt="svg house"></image>
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
-<!-- ---  ---- -->
+<!-- --- jin thinking ---- -->
 {#if imageIndex === 10}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[10].imageName}.png"
-    alt="svg house"></image>
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
-<!-- ---  ---- -->
+<!-- --- lucy thinking ---- -->
 {#if imageIndex === 11}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[11].imageName}.png"
-    alt="svg house"></image>
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
-<!-- ---  ---- -->
+<!-- --- lucy-abijah-wells-exterior ---- -->
 {#if imageIndex === 12}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[12].imageName}.png"
-    alt="svg house"></image>
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
 
 
