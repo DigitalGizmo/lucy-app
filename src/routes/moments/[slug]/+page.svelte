@@ -159,10 +159,18 @@
   function beenClicked(event) {
     console.log("target clicked: " + event.target.className)
   }
-
 </script>
-<svelte:window bind:scrollY={currScrollY} />
 
+<style>
+  	.more-panel-fixed {
+		height: 60vh;
+		width: 100%;
+		position: fixed;
+    z-index: 30;
+	}
+</style>
+
+<svelte:window bind:scrollY={currScrollY} />
 <section class="style-wrapper-tbd">
   
   <header id="header" class="moment-header">
@@ -205,68 +213,77 @@
             </svg>
           </div> <!-- end image panel image -->
 
-          <!-- ---- Single dynamic more box ---- -->
-          <div class="more-container">
-            <h4 class="more-tab">More</h4>
-            <h4>More</h4>
+          <!-- More container was here -->
 
-            <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
-            {#if imageIndex > 12}
-              <script>console.log('Past where Mores are defined')</script>
-            {:else}
-              {#if (moment.frames[imageIndex].moreWhoLinks.length > 0)}
-              <h5>Who Else?</h5>
-              <ul>
-                {#each moment.frames[imageIndex].moreWhoLinks as link }
-                  <li><a href="/" 
-                      on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
-                      {link.title}</a></li>
-                {/each}
-              </ul>     
-              {/if}
-
-              {#if (moment.frames[imageIndex].moreTopicLinks.length > 0)}
-                <h5>Topics &amp; Ideas</h5>
-                <ul>
-                  {#each moment.frames[imageIndex].moreTopicLinks as link }
-                  <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
-                    {link.title}</a></li>
-                  {/each}
-                </ul>            
-              {/if}
-
-              {#if (moment.frames[imageIndex].moreHowLinks.length > 0)}
-                <h5>How Do We Know?</h5>
-                <ul>
-                  {#each moment.frames[imageIndex].moreHowLinks as link }
-                  <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.title, "how");}}>
-                    {link.title}</a></li>
-                  {/each}
-                </ul>            
-              {/if}
-
-            {/if}
-
-          </div> <!-- /more-container -->
         </div> <!-- /image-panel-fixed -->
       </div><!-- /image-panel -->
+
+      <!-- Experiment by Don -->
+      <div class="more-panel-fixed">
+        <!-- ---- Single dynamic more box ---- -->
+        <div class="more-container">
+          <h4 class="more-tab">More</h4>
+          <h4>More</h4>
+
+          <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
+          {#if imageIndex > 12}
+            <script>console.log('Past where Mores are defined')</script>
+          {:else}
+            {#if (moment.frames[imageIndex].moreWhoLinks.length > 0)}
+            <h5>Who Else?</h5>
+            <ul>
+              {#each moment.frames[imageIndex].moreWhoLinks as link }
+                <li><a href="/" 
+                    on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
+                    {link.title}</a></li>
+              {/each}
+            </ul>     
+            {/if}
+
+            {#if (moment.frames[imageIndex].moreTopicLinks.length > 0)}
+              <h5>Topics &amp; Ideas</h5>
+              <ul>
+                {#each moment.frames[imageIndex].moreTopicLinks as link }
+                <li><a href="/" 
+                  on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
+                  {link.title}</a></li>
+                {/each}
+              </ul>            
+            {/if}
+
+            {#if (moment.frames[imageIndex].moreHowLinks.length > 0)}
+              <h5>How Do We Know?</h5>
+              <ul>
+                {#each moment.frames[imageIndex].moreHowLinks as link }
+                <li><a href="/" 
+                  on:click={(e) => { e.preventDefault(); showModal(link.title, "how");}}>
+                  {link.title}</a></li>
+                {/each}
+              </ul>            
+            {/if}
+
+          {/if}
+
+        </div> <!-- /more-container -->
+
+    </div>  <!-- /more-panel-fixed -->
+
+
+
 
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <!-- svelte-ignore a11y-no-static-element-interactions -->
       <div class="story-frames"
-        on:click={beenClicked}
-      >
-
+        on:click={beenClicked}>
         {#each moment.frames as frame}
           <article class="story {frame.textAlign}">
               <p>{ frame.storyText}</p>      
           </article>
-        {/each}
-
-        
+        {/each}  
       </div><!--/story-frames-->
+
+
+
 
       <article class="total-more">
         <h2>The Necessity for Community</h2>
