@@ -135,7 +135,7 @@
     horizontalTitles.scrollLeft -= panelWidth;
   }
 
-  $: imageIndex = Math.trunc((currScrollY + panelHeight - 125)/(panelHeight))
+  $: imageIndex = Math.trunc((currScrollY + panelHeight - 105)/(panelHeight))
 
   $: scrolledXIndex = Math.trunc((currScrollX + (panelWidth/2.5))/panelWidth)
 
