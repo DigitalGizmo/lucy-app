@@ -25,7 +25,7 @@
 
 <!-- ---- BACKGROUND ---- -->
 <!-- ---- CLOUDS ---- -->
-{#if (imageIndex > 1 && imageIndex < 8)}
+{#if (imageIndex > 1 && imageIndex < 10)}
     <image transition:fade={{ duration: 500}} 
     width="100%" 
     transform="translate({cloudsTransX} 0), scale(2)"
@@ -80,7 +80,7 @@
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-large.png" />   
 {/if}
 <!-- --- ox cart comes in ---- -->
-{#if imageIndex > 4 && imageIndex < 8}
+{#if imageIndex > 4 && imageIndex < 10}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[5].imageName}.png"
     alt="svg house"></image>
@@ -105,32 +105,32 @@
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[7].imageName}.png"
     alt="svg house"></image>
 {/if} -->
-<!-- ---  ---- -->
-{#if imageIndex === 8}
+<!-- --- Heber and Susanna ---- -->
+<!-- {#if imageIndex === 9}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[8].imageName}.png"
     alt="svg house"></image>
-{/if}
+{/if} -->
 <!-- ---  ---- -->
-{#if imageIndex === 9}
+{#if imageIndex === 10}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[9].imageName}.png"
     alt="svg house"></image>
 {/if}
 <!-- ---  ---- -->
-{#if imageIndex === 10}
+{#if imageIndex === 11}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[10].imageName}.png"
     alt="svg house"></image>
 {/if}
 <!-- ---  ---- -->
-{#if imageIndex === 11}
+{#if imageIndex === 12}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[11].imageName}.png"
     alt="svg house"></image>
 {/if}
 <!-- ---  ---- -->
-{#if imageIndex === 12}
+{#if imageIndex === 13}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[12].imageName}.png"
     alt="svg house"></image>
