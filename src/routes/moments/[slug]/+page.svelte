@@ -22,6 +22,8 @@
   let panelWidth = 1200;
   let momentScrollHeight = 10000;
   let frameHeight = 900;
+  const totalHeightFudgeFactor = 1.3;
+  let numberOfFrames = 13;
 
   let moment = data.moments.find((moment) => moment.slug === $page.params.slug); 
 
@@ -100,7 +102,7 @@
   function calcMomentHeight () {
     console.log(" got to calc");
     momentScrollHeight = document.getElementsByClassName("moment-scroll")[0].offsetHeight;
-    frameHeight = (momentScrollHeight - (panelHeight * 2))/13;
+    frameHeight = (momentScrollHeight - (panelHeight * totalHeightFudgeFactor))/numberOfFrames;
   }
 
   async function explore() {
@@ -154,7 +156,6 @@
   // } else {
   //   imageIndex = (Math.trunc(((currScrollY + panelHeight)/(panelHeight)) - 0.4));
   // }
-
   // $: scrolledXIndex = Math.trunc((currScrollX + (panelWidth/2.5))/panelWidth)
 
   $: if (currScrollY < (frameHeight/2)) {
@@ -162,7 +163,6 @@
   } else {
     imageIndex = (Math.trunc(((currScrollY + frameHeight)/(frameHeight)) - 0.4));
   }
-
   $: scrolledXIndex = Math.trunc((currScrollX + (panelWidth/2.5))/panelWidth)
 
   // update which moment we're looking at
@@ -190,6 +190,9 @@
 		position: fixed;
     z-index: 30;
 	}
+  .story p {
+    min-height: 10em;
+  }
 </style>
 
 <svelte:window bind:scrollY={currScrollY} />
