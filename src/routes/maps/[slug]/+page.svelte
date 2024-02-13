@@ -367,7 +367,7 @@
           <g>
             <!-- Robert Tigo -->
             <a href="/" on:click={(e) => { e.preventDefault(); showModal(0);}}>
-              <polygon points="741.61 452.32 745.98 432.36 747.77 432.76 735.31 421.22 736.34 416.5 732.77 415.71 731.73 420.44 715.6 425.68 717.39 426.07 713 446.02 741.61 452.32" class="house-hilite"/>
+              <circle class="house-hilite" cx="730" cy="497" r="14"/>
             </a>
           </g>
         {/if}
@@ -375,14 +375,19 @@
         <!-- highlighted houses for 1700 decade -->
         {#if decadeIndex === 2}
           <g>
-            <!-- Frank & Parthena -->
+            <!-- Parthena -->
             <a href="/" on:click={(e) => { e.preventDefault(); showModal(0);}}>
-              <polygon points="741.61 452.32 745.98 432.36 747.77 432.76 735.31 421.22 736.34 416.5 732.77 415.71 731.73 420.44 715.6 425.68 717.39 426.07 713 446.02 741.61 452.32" class="house-hilite"/>
+              <circle class="house-hilite" cx="729" cy="417" r="14"/>
+            </a>
+
+            <!-- Frank  -->
+            <a href="/" on:click={(e) => { e.preventDefault(); showModal(1);}}>
+              <circle class="house-hilite" cx="729" cy="451" r="14"/>
             </a>
 
             <!-- Lundun -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(1);}}>
-              <polygon points="820.69 468.39 825.07 448.44 826.86 448.83 814.4 437.3 815.43 432.57 811.86 431.79 810.82 436.51 794.7 441.75 796.48 442.15 792.09 462.1 820.69 468.39" class="house-hilite"/>
+            <a href="/" on:click={(e) => { e.preventDefault(); showModal(2);}}>
+              <circle class="house-hilite" cx="809" cy="452" r="14"/>
             </a>
           </g>
         {/if}
@@ -395,21 +400,26 @@
         {/if}
 
         <!-- highlighted houses for 1720 decade -->      
-        {#if decadeIndex === 4}
+        {#if decadeIndex === 4}    
           <g>
             <!-- Ceasar -->
             <a href="/" on:click={(e) => { e.preventDefault(); showModal(0);}}>
-              <polygon points="643.31 445.46 646.64 425.31 644.92 425.02 648.05 416.82 660.08 418.81 660.87 414.04 664.31 414.61 663.52 419.38 675.55 421.37 675.86 430.14 674.14 429.86 670.81 450.01 643.31 445.46" class="house-hilite"/>
+              <circle cx="659" cy="436" r="14" class="house-hilite"/>
             </a>
 
-            <!-- Mesheck, Kedar -->
+            <!-- Mesheck -->
             <a href="/" on:click={(e) => { e.preventDefault(); showModal(1);}}>
-              <polygon points="741.61 452.32 745.98 432.36 747.77 432.76 735.31 421.22 736.34 416.5 732.77 415.71 731.73 420.44 715.6 425.68 717.39 426.07 713 446.02 741.61 452.32" class="house-hilite"/>
+              <circle cx="731" cy="415" r="14" class="house-hilite"/>
+            </a>
+
+            <!-- Kedar -->
+            <a href="/" on:click={(e) => { e.preventDefault(); showModal(2);}}>
+              <circle cx="731" cy="449" r="14" class="house-hilite"/>
             </a>
 
             <!-- Pompey -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(2);}}>
-              <polygon points="979.29 585.66 975.98 605.82 974.17 605.52 987.22 616.38 986.44 621.15 990.05 621.75 990.83 616.97 1006.66 610.88 1004.86 610.58 1008.18 590.43 979.29 585.66" class="house-hilite"/>
+            <a href="/" on:click={(e) => { e.preventDefault(); showModal(3);}}>
+              <circle cx="991" cy="603" r="14" class="house-hilite"/>
             </a>
           </g>
         {/if}

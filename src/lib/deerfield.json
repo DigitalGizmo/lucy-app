@@ -23,8 +23,15 @@
     "intro": "This decade was witness to the 1704 French and Indian raid on Deerfield which set the town back in many ways. Several families moved away but others began to be more well off and able to purchase enslaved people.",
     "popItems": [
       {
-        "slug": "frank-parthena",
-        "title": "Frank and Parthena",
+        "slug": "parthena",
+        "title": "Parthena",
+        "pTop": 25,
+        "pLeft": 50,
+        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "slug": "frank",
+        "title": "Frank",
         "pTop": 30,
         "pLeft": 50,
         "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -56,9 +63,16 @@
         "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
-        "slug": "mesheck-kedar",
-        "title": "Mesheck and Kedar",
-        "pTop": 30,
+        "slug": "mesheck",
+        "title": "Mesheck",
+        "pTop": 35,
+        "pLeft": 50,
+        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        "slug": "kedar",
+        "title": "Kedar",
+        "pTop": 40,
         "pLeft": 50,
         "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       },
