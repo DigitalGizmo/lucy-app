@@ -20,6 +20,8 @@
 
   let panelHeight = 800;
   let panelWidth = 1200;
+  let momentScrollHeight = 10000;
+  let frameHeight = 900;
 
   let moment = data.moments.find((moment) => moment.slug === $page.params.slug); 
 
@@ -32,6 +34,8 @@
   onMount(() => {
     panelHeight = window.innerHeight - 138;
     panelWidth = window.innerWidth;
+    // Base frame interval on total element height
+
     // console.log('mount - slug: ' + data.moment.slug + ' currMomIdx: ' + currMomentIndex);
     // console.log('mount page param slug: ' + $page.params.slug);
     const getIndexOfSlug = (element) => element === $page.params.slug;
@@ -93,8 +97,18 @@
       isModalShowing = true;
   };
 
-  function explore() {
+  function calcMomentHeight () {
+    console.log(" got to calc");
+    momentScrollHeight = document.getElementsByClassName("moment-scroll")[0].offsetHeight;
+    frameHeight = (momentScrollHeight - panelHeight)/13;
+  }
+
+  async function explore() {
     isScrollMode.set(true);
+    console.log("got to explore");
+    await(tick);
+    calcMomentHeight();
+    console.log("moment height: " + momentScrollHeight);
   }
 
   async function scrollToChosen(chosenIndex) {
@@ -135,10 +149,18 @@
     horizontalTitles.scrollLeft -= panelWidth;
   }
 
-  $: if (currScrollY < (panelHeight/2)) {
+  // $: if (currScrollY < (panelHeight/2)) {
+  //   imageIndex = 0;
+  // } else {
+  //   imageIndex = (Math.trunc(((currScrollY + panelHeight)/(panelHeight)) - 0.4));
+  // }
+
+  // $: scrolledXIndex = Math.trunc((currScrollX + (panelWidth/2.5))/panelWidth)
+
+  $: if (currScrollY < (frameHeight/2)) {
     imageIndex = 0;
   } else {
-    imageIndex = (Math.trunc(((currScrollY + panelHeight)/(panelHeight)) - 0.4));
+    imageIndex = (Math.trunc(((currScrollY + frameHeight)/(frameHeight)) - 0.4));
   }
 
   $: scrolledXIndex = Math.trunc((currScrollX + (panelWidth/2.5))/panelWidth)
@@ -224,7 +246,7 @@
         <div class="more-container">
           <h4 class="more-tab">More</h4>
           <h4>More</h4>
-
+          <p>height: {momentScrollHeight}</p>
           <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
           {#if imageIndex > 12}
             <script>console.log('Past where Mores are defined')</script>
