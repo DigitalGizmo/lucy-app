@@ -111,24 +111,45 @@
         "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
-        "slug": "lucy-caesar",
-        "title": "Lucy and Caesar",
+        "slug": "lucy",
+        "title": "Lucy",
+        "pTop": 35,
+        "pLeft": 35,
+        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "slug": "caesar",
+        "title": "Caesar",
         "pTop": 40,
         "pLeft": 35,
         "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
-        "slug": "adam-peter",
-        "title": "Adam and Peter",
-        "pTop": 45,
-        "pLeft": 60,
+        "slug": "adam",
+        "title": "Adam",
+        "pTop": 40,
+        "pLeft": 40,
         "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       },
       {
-        "slug": "jin-cato",
-        "title": "Jin and Cato",
+        "slug": "peter",
+        "title": "Peter",
         "pTop": 45,
         "pLeft": 40,
+        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        "slug": "gin",
+        "title": "Gin",
+        "pTop": 40,
+        "pLeft": 60,
+        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        "slug": "cato",
+        "title": "Cato",
+        "pTop": 45,
+        "pLeft": 60,
         "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       }
     ] 
