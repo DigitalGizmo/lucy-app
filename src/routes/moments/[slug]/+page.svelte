@@ -100,7 +100,7 @@
   function calcMomentHeight () {
     console.log(" got to calc");
     momentScrollHeight = document.getElementsByClassName("moment-scroll")[0].offsetHeight;
-    frameHeight = (momentScrollHeight - panelHeight)/13;
+    frameHeight = (momentScrollHeight - (panelHeight * 2))/13;
   }
 
   async function explore() {
