@@ -87,7 +87,8 @@
   const modalTypes = {
     "who": "Who Else?",
     "topic": "Topics & Ideas",
-    "how": "How Do We Know?"
+    "how": "How Do We Know?",
+    "where": "Where in the World?"
     }
   let modalType = "type tbd";
 
@@ -249,7 +250,7 @@
         <div class="more-container">
           <h4 class="more-tab">More</h4>
           <h4>More</h4>
-          <p>height: {momentScrollHeight}</p>
+          <p>{ moment.frames[imageIndex].moreBlurb}</p>
           <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
           {#if imageIndex > 12}
             <script>console.log('Past where Mores are defined')</script>
@@ -282,6 +283,17 @@
                 {#each moment.frames[imageIndex].moreHowLinks as link }
                 <li><a href="/" 
                   on:click={(e) => { e.preventDefault(); showModal(link.title, "how");}}>
+                  {link.title}</a></li>
+                {/each}
+              </ul>            
+            {/if}
+
+            {#if (moment.frames[imageIndex].moreWhereLinks.length > 0)}
+              <h5>Where in the World?</h5>
+              <ul>
+                {#each moment.frames[imageIndex].moreWhereLinks as link }
+                <li><a href="/" 
+                  on:click={(e) => { e.preventDefault(); showModal(link.title, "where");}}>
                   {link.title}</a></li>
                 {/each}
               </ul>            
