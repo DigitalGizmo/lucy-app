@@ -1,8 +1,5 @@
 <script>
-    // import { createEventDispatcher } from "svelte";
-    // const dispatch = createEventDispatcher();
-    export let slug; // = 'abijah-prince';
-    export let modalType; // = 'people';
+
     export let isModalShowing;
 
     async function getMoreInfo() {
@@ -30,32 +27,15 @@
     </div><!-- / -->
             
     <article class="more-content">
-      <h4>More: <a href="/{modalType}">{modalType} </a> </h4>
-      {#await moreInfoPromise }
-        <p>...waiting. There might not be {modalType} with a slug of {slug}</p>
-        <p>Attempt a direct link: <a href="/{modalType}/{slug}"> /{modalType}/{slug}</a></p>
-      {:then moreInfo}
-        <h2>
-          
-          {#if modalType === 'people'}
-            {moreInfo.first_name} {moreInfo.last_name}
-          {:else}
-            {moreInfo.title}
-          {/if}          
+      <h4>More: Where in the World </h4>
+
+        <h2>Deefield Map          
         </h2>
         <figure>
           <img src="https://placehold.co/600x400"
               alt="placehoder showing 600 x 400"/>
           <figcaption>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</figcaption>
         </figure>
-        {#if modalType === 'people'}
-          {@html moreInfo.bio.html}
-        {:else}
-          {@html moreInfo.full_text.html}
-        {/if}
-      {:catch error}
-          <p style="color: red">{error.message}</p>
-      {/await}
 
 
 

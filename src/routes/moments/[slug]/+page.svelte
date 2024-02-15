@@ -5,7 +5,8 @@
   import { page } from '$app/stores';
 
   import { isScrollMode } from '$lib/stores.js';
-  import Modal from '../components/MoreModal.svelte';
+  import MoreModal from '../components/MoreModal.svelte';
+  import MoreMapModal from '../components/MoreMapModal.svelte';
   import MainNav from "$lib/MainNav.svelte";
   import MomentNav from "$lib/MomentNav.svelte";
   import Wells from '../components/Wells.svelte'
@@ -84,6 +85,7 @@
 
   let isModalShowing = false;
   let modalSlug = "tbd";
+  let isMapShowing = false;
   // const modalTypes = {
   //   "people": "Who Else?",
   //   "evidence": "How Do We Know?",
@@ -98,6 +100,12 @@
       // modalType = modalTypes[type];
       modalType = type;
       // console.log('modal type: ' + modalType)
+      isMapShowing = false;
+      isModalShowing = true;
+  };
+  function showMapModal() {
+      // console.log('modal type: ' + modalType)
+      isMapShowing = true;
       isModalShowing = true;
   };
 
@@ -294,7 +302,7 @@
               <ul>
                 {#each moment.frames[imageIndex].moreWhereLinks as link }
                 <li><a href="/" 
-                  on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
+                  on:click={(e) => { e.preventDefault(); showMapModal();}}>
                   {link.title}</a></li>
                 {/each}
               </ul>            
@@ -372,7 +380,7 @@
             {#if (moment.frames[i].moreWhereLinks.length > 0)}
               {#each moment.frames[i].moreWhereLinks as link }
                 <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
+                    on:click={(e) => { e.preventDefault(); showMapModal();}}>
                     {link.title}</a></li>
               {/each}
             {/if}
@@ -394,11 +402,17 @@
 
     </section> <!--/moment-scroll-->
     {#if isModalShowing}
-      <Modal 
-        slug={modalSlug}
-        modalType={modalType}
-        bind:isModalShowing
-      />
+      {#if isMapShowing}
+        <MoreMapModal 
+          bind:isModalShowing
+        />
+      {:else}
+        <MoreModal 
+          slug={modalSlug}
+          modalType={modalType}
+          bind:isModalShowing
+        />
+      {/if}
     {/if}
 
   {:else}  <!-- title mode -->
