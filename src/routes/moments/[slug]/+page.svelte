@@ -83,15 +83,10 @@
   let currScrollX = 0;
   let horizScrollClass = ''; // smooth-scroll
 
+    // --- Modal Window ---
   let isModalShowing = false;
   let modalSlug = "tbd";
-  let isMapShowing = false;
-  // const modalTypes = {
-  //   "people": "Who Else?",
-  //   "evidence": "How Do We Know?",
-  //   "topics": "Topics & Ideas",
-  //   "maps": "Where in the World?"
-  //   }
+  // let isMapShowing = false;
   let modalType = "type tbd";
 
   function showModal(slug, type) {
@@ -100,14 +95,15 @@
       // modalType = modalTypes[type];
       modalType = type;
       // console.log('modal type: ' + modalType)
-      isMapShowing = false;
+      // isMapShowing = false;
       isModalShowing = true;
   };
-  function showMapModal() {
-      // console.log('modal type: ' + modalType)
-      isMapShowing = true;
-      isModalShowing = true;
-  };
+  // function showMapModal() {
+  //     // console.log('modal type: ' + modalType)
+  //     isMapShowing = true;
+  //     isModalShowing = true;
+  // };
+  // --- End Modal Window ---
 
   function calcMomentHeight () {
     console.log(" got to calc");
@@ -270,7 +266,7 @@
               {#each moment.frames[imageIndex].moreWhoLinks as link }
                 <li><a href="/" 
                     on:click={(e) => { e.preventDefault(); showModal(link.slug, "people");}}>
-                    {link.slug}</a></li>
+                    {link.title}</a></li>
               {/each}
             </ul>     
             {/if}
@@ -302,7 +298,7 @@
               <ul>
                 {#each moment.frames[imageIndex].moreWhereLinks as link }
                 <li><a href="/" 
-                  on:click={(e) => { e.preventDefault(); showMapModal();}}>
+                  on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
                   {link.title}</a></li>
                 {/each}
               </ul>            
@@ -380,7 +376,7 @@
             {#if (moment.frames[i].moreWhereLinks.length > 0)}
               {#each moment.frames[i].moreWhereLinks as link }
                 <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showMapModal();}}>
+                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
                     {link.title}</a></li>
               {/each}
             {/if}
@@ -402,18 +398,13 @@
 
     </section> <!--/moment-scroll-->
     {#if isModalShowing}
-      {#if isMapShowing}
-        <MoreMapModal 
-          bind:isModalShowing
-        />
-      {:else}
-        <MoreModal 
-          slug={modalSlug}
-          modalType={modalType}
-          bind:isModalShowing
-        />
-      {/if}
+      <MoreModal 
+        slug={modalSlug}
+        modalType={modalType}
+        bind:isModalShowing
+      />
     {/if}
+  <!-- End scroll mode -->
 
   {:else}  <!-- title mode -->
     <section class="moment-title">
