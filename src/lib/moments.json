@@ -144,13 +144,11 @@
                 ],
                 "moreHowLinks": [
                     {"title": "Basket", "url": "/evidence/basket"},
+                    {"title": "Cake of Chocolate", "url": "/evidence/cake-of-chocolate"},
                     {"title": "Chocolate Pot", "url": "/evidence/chocolate-pot"},
                     {"title": "Account Book of Elijah Williams", "url": "/evidence/williams-account-book"}                    
                 ],
-                "moreWhereLinks": [
-                    {"title": "Something", "url": "/evidence/basket"},
-                    {"title": "Else", "url": "/evidence/basket"}
-                ]            
+                "moreWhereLinks": []            
             },
             {
                 "imageName": "lucy-thinking",
@@ -162,8 +160,7 @@
                     {"title": "Amos Fortune", "url": "/people/amos-fortune"},
                     {"title": "Venture Smith", "url": "/people/venture-smith"}
                 ],
-                "moreTopicLinks": [
-                ],
+                "moreTopicLinks": [],
                 "moreHowLinks": [
                     {"title": "Example of sale ads listing women with children", "url": "/evidence/for-sale-temp"}
                 ],
@@ -175,15 +172,13 @@
                 "alt": "2  lucy and abijah small on main street, kids enter",
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
-                "moreWhoLinks": [
-                    {"title": "2 Cesar", "url": "/people"}            
-                ],
+                "moreWhoLinks": [],
                 "moreTopicLinks": [
-                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                    {"title": "The Bars Fight", "url": "/topic/bars-fight-poem"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Straw Mattress and Bedding", "url": "/people"},
-                    {"title": "Canopied Bed", "url": "/people"}
+                    {"title": "Child's Hoop", "url": "/evidence/hoop"},
+                    {"title": "Children's Clothing", "url": "/evidence/childrens-clothing"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -194,18 +189,14 @@
                 "textAlign": "center",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Jenny (Jin) Cole", "url": "/people"},
-                    {"title": "Phillis Wheatley", "url": "/people"}
+                    {"title": "Matthew Clesson", "url": "/people/matthew-clesson"}
                 ],
                 "moreTopicLinks": [
-                    {"title": "18th Century Foodways in New England",  "url": "/people"},
-                    {"title": "Women's work and men's work", "url": "/people"}            
+                    {"title": "The Great Chain of Being", "url": "/topic/hierarchy"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Lidded Hanging Pot", "url": "/people"},
-                    {"title": "Iron Bake Kettle", "url": "/people"},
-                    {"title": "Calico Pocket", "url": "/people"},
-                    {"title": "Video Demo: Churning Butter", "url": "/people"}
+                    {"title": "Great Coat", "url": "/evidence/great-coat"},
+                    {"title": "Probate Inventory of Matthew Clesson", "url": "/evidence/clesson-probate"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -216,15 +207,10 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "4 Cesar", "url": "/people"}            
+                    {"title": "Heber Honestman", "url": "/people/heber-honestman"}            
                 ],
-                "moreTopicLinks": [
-                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
-                ],
-                "moreHowLinks": [
-                    {"title": "Straw Mattress and Bedding", "url": "/people"},
-                    {"title": "Canopied Bed", "url": "/people"}
-                ],
+                "moreTopicLinks": [],
+                "moreHowLinks": [],
                 "moreWhereLinks": []            
             },
             {
@@ -234,16 +220,19 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "5 Cesar", "url": "/people"}            
+                    {"title": "Heber Honestman", "url": "/people/heber-honestman"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                    {"title": "Building Community", "url": "/topic/building-community"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Straw Mattress and Bedding", "url": "/people"},
-                    {"title": "Canopied Bed", "url": "/people"}
+                    {"title": "Account Book of Elijah Williams", "url": "/evidence/williams-account-book"},                   
+                    {"title": "Crutch", "url": "/evidence/crutch"},
+                    {"title": "Ox Cart", "url": "/evidence/ox-cart"}
                 ],
-                "moreWhereLinks": []            
+                "moreWhereLinks": [
+                    {"title": "African Americans in Deerfield", "url": "/map/deerfield-african-americans"}                    
+                ]          
             },
             {
                 "imageName": "main-street-plain",
@@ -252,16 +241,16 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "6 Cesar", "url": "/people"}            
+                    {"title": "Pompey", "url": "/people/pompey"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                    {"title": "Coercion and Abuse", "url": "/topic/coercion-abuse"},
+                    {"title": "Slavery and the 18th Century Family", "url": "/topic/slavery-family"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Straw Mattress and Bedding", "url": "/people"},
-                    {"title": "Canopied Bed", "url": "/people"}
+                    {"title": "Bear trap", "url": "/evidence/bear-trap"}
                 ],
-                "moreWhereLinks": []            
+                "moreWhereLinks": []           
             },
             {
                 "imageName": "main-street-plain",
@@ -269,33 +258,31 @@
                 "alt": "7 still with the ox ",
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
-                "moreWhoLinks": [
-                    {"title": "7 Cesar", "url": "/people"}            
-                ],
+                "moreWhoLinks": [],
                 "moreTopicLinks": [
-                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                    {"title": "Western Massachusetts in the French and Indian War", "url": "/topic/f-i-wars"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Straw Mattress and Bedding", "url": "/people"},
-                    {"title": "Canopied Bed", "url": "/people"}
+                    {"title": "Muster Roll", "url": "/evidence/muster-roll"}
                 ],
                 "moreWhereLinks": []            
             },
             {
                 "imageName": "jin-approaches",
                 "storyText": "“Heber and Susanna have a good farm, like the place I’ll be getting now that I’ve bought my freedom,” says Abijah, hinting at a possible future with Lucy. Worried that he has been too forward, he shifts to the weather. “The river is running high even for spring.” Lucy smiles and nods but wishes Abijah would talk more about his future. She hopes she is right that his plans include her…but how can that possibly happen?",
-                "alt": "8 Jin apporaches",
+                "alt": "8 Jin approaches",
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "8 Cesar", "url": "/people"}            
+                    {"title": "Jin Cole", "url": "/people/jin-cole"},        
+                    {"title": "Jonathan Ashley", "url": "/people/jonathan-ashley"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                    {"title": "Unlikely Enslavers?", "url": "/topic/ministers-enslavers"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Straw Mattress and Bedding", "url": "/people"},
-                    {"title": "Canopied Bed", "url": "/people"}
+                    {"title": "Sermon by Jonathan Ashley", "url": "/evidence/ashley-sermon"},
+                    {"title": "Honestman's Farm", "url": "/evidence/"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -306,33 +293,34 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "9 Cesar", "url": "/people"}            
+                    {"title": "Cato Cole", "url": "/people/cato-cole"},
+                    {"title": "Samuel Dickinson", "url": "/people/samuel-dickinson"}         
                 ],
                 "moreTopicLinks": [
-                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                    {"title": "Enslaved Labor for Sale", "url": "/topic/enslaved-labor"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Straw Mattress and Bedding", "url": "/people"},
-                    {"title": "Canopied Bed", "url": "/people"}
+                    {"title": "Plow", "url": "/evidence/plow"},
+                    {"title": "Plan of the Town of Deerfield", "url": "/evidence/hoyt-map"},
+                    {"title": "Account Book of Jonathan Ashley", "url": "/evidence/ashley-account-book"}
                 ],
                 "moreWhereLinks": []            
             },
             {
                 "imageName": "jin-thinking",
                 "storyText": "As Abijah and Lucy walk away, Jin thinks, “What a handsome couple. Abijah has had to wait a long time to marry.” Jin believes Abijah has the will and the means to buy Lucy’s freedom from the Wells. Jin thinks of her own freedom. She has little hope that her enslavers will free her or her son.",
-                "alt": "10 Jin thinkig ",
+                "alt": "10 Jin thinking",
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "10 Cesar", "url": "/people"}            
+                    {"title": "Amos Fortune", "url": "/people/amos-fortune"},            
+                    {"title": "Venture Smith", "url": "/people/venture-smith"},         
+                    {"title": "Elizabeth Freeman", "url": "/people/elizabeth-freeman"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                    {"title": "Possible Paths to Freedom", "url": "/topic/paths-to-freedom"}
                 ],
-                "moreHowLinks": [
-                    {"title": "Straw Mattress and Bedding", "url": "/people"},
-                    {"title": "Canopied Bed", "url": "/people"}
-                ],
+                "moreHowLinks": [],
                 "moreWhereLinks": []            
             },
             {
@@ -341,16 +329,9 @@
                 "alt": "11 Lucy thinking ",
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
-                "moreWhoLinks": [
-                    {"title": "Cesar", "url": "/people"}            
-                ],
-                "moreTopicLinks": [
-                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
-                ],
-                "moreHowLinks": [
-                    {"title": "Straw Mattress and Bedding", "url": "/people"},
-                    {"title": "Canopied Bed", "url": "/people"}
-                ],
+                "moreWhoLinks": [],
+                "moreTopicLinks": [],
+                "moreHowLinks": [],
                 "moreWhereLinks": []            
             },
             {
@@ -360,15 +341,13 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Cesar", "url": "/people"}            
+                    {"title": "Abigail Wells", "url": "/people/abigail-wells"},           
+                    {"title": "Ebenezer Wells", "url": "/people/ebenezer-wells"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                    {"title": "Courtship and Marriage in a Hierarchical Society", "url": "/topic/hierarchy-courtship"}
                 ],
-                "moreHowLinks": [
-                    {"title": "Straw Mattress and Bedding", "url": "/people"},
-                    {"title": "Canopied Bed", "url": "/people"}
-                ]         
+                "moreHowLinks": []         
             }
         ]
     },
