@@ -5,7 +5,7 @@
   import { page } from '$app/stores';
 
   import { isScrollMode } from '$lib/stores.js';
-  import Modal from '../../../temp-modal.svelte';
+  import Modal from '../components/MoreModal.svelte';
   import MainNav from "$lib/MainNav.svelte";
   import MomentNav from "$lib/MomentNav.svelte";
   import Wells from '../components/Wells.svelte'
@@ -83,19 +83,20 @@
   let horizScrollClass = ''; // smooth-scroll
 
   let isModalShowing = false;
-  let modalTitle = "title tbd";
-  const modalTypes = {
-    "who": "Who Else?",
-    "topic": "Topics & Ideas",
-    "how": "How Do We Know?",
-    "where": "Where in the World?"
-    }
+  let modalSlug = "tbd";
+  // const modalTypes = {
+  //   "people": "Who Else?",
+  //   "evidence": "How Do We Know?",
+  //   "topics": "Topics & Ideas",
+  //   "maps": "Where in the World?"
+  //   }
   let modalType = "type tbd";
 
-  function showModal(title, type) {
+  function showModal(slug, type) {
       // event.preventDefault();
-      modalTitle = title;
-      modalType = modalTypes[type];
+      modalSlug = slug;
+      // modalType = modalTypes[type];
+      modalType = type;
       // console.log('modal type: ' + modalType)
       isModalShowing = true;
   };
@@ -260,8 +261,8 @@
             <ul>
               {#each moment.frames[imageIndex].moreWhoLinks as link }
                 <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
-                    {link.title}</a></li>
+                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "people");}}>
+                    {link.slug}</a></li>
               {/each}
             </ul>     
             {/if}
@@ -271,7 +272,7 @@
               <ul>
                 {#each moment.frames[imageIndex].moreTopicLinks as link }
                 <li><a href="/" 
-                  on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
+                  on:click={(e) => { e.preventDefault(); showModal(link.slug, "topis");}}>
                   {link.title}</a></li>
                 {/each}
               </ul>            
@@ -282,7 +283,7 @@
               <ul>
                 {#each moment.frames[imageIndex].moreHowLinks as link }
                 <li><a href="/" 
-                  on:click={(e) => { e.preventDefault(); showModal(link.title, "how");}}>
+                  on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
                   {link.title}</a></li>
                 {/each}
               </ul>            
@@ -293,7 +294,7 @@
               <ul>
                 {#each moment.frames[imageIndex].moreWhereLinks as link }
                 <li><a href="/" 
-                  on:click={(e) => { e.preventDefault(); showModal(link.title, "where");}}>
+                  on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
                   {link.title}</a></li>
                 {/each}
               </ul>            
@@ -332,7 +333,7 @@
             {#if (moment.frames[i].moreWhoLinks.length > 0)}
               {#each moment.frames[i].moreWhoLinks as link }
                 <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.title, "who");}}>
+                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "people");}}>
                     {link.title}</a></li>
               {/each}
             {/if}
@@ -345,7 +346,7 @@
             {#if (moment.frames[i].moreTopicLinks.length > 0)}
               {#each moment.frames[i].moreTopicLinks as link }
                 <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
+                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "topics");}}>
                     {link.title}</a></li>
               {/each}
             {/if}
@@ -358,7 +359,20 @@
             {#if (moment.frames[i].moreHowLinks.length > 0)}
               {#each moment.frames[i].moreHowLinks as link }
                 <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.title, "topic");}}>
+                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
+                    {link.title}</a></li>
+              {/each}
+            {/if}
+          {/each}
+        </ul>     
+
+        <h3>Where in the world?</h3>
+        <ul>
+          {#each {length: 4} as _, i}
+            {#if (moment.frames[i].moreWhereLinks.length > 0)}
+              {#each moment.frames[i].moreWhereLinks as link }
+                <li><a href="/" 
+                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
                     {link.title}</a></li>
               {/each}
             {/if}
@@ -381,7 +395,7 @@
     </section> <!--/moment-scroll-->
     {#if isModalShowing}
       <Modal 
-        title={modalTitle}
+        slug={modalSlug}
         modalType={modalType}
         bind:isModalShowing
       />
