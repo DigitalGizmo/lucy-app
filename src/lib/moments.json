@@ -33,12 +33,12 @@
                 "textAlign": "center",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Jenny (Jin) Cole", "url": "/people"},            
-                    {"title": "Cesar", "url": "/people"}            
+                    {"title": "Jenny (Jin) Cole", "slug": "jin-cole"},            
+                    {"title": "Cesar", "slug": "/people"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Everyday Work in Colonial Households",  "url": "/people"},
-                    {"title": "Who Did What? Work Roles", "url": "/people"}            
+                    {"title": "Everyday Work in Colonial Households",  "slug": "/people"},
+                    {"title": "Who Did What? Work Roles", "slug": "/people"}            
                 ],
                 "moreHowLinks": [],
                 "moreWhereLinks": []            
@@ -51,13 +51,13 @@
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [
-                    {"title": "Sleeping Arrangements", "url": "/people"}
+                    {"title": "Sleeping Arrangements", "slug": "/people"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Casement Window", "url": "/people"},
-                    {"title": "Dress Up: Women's Clothing from 1750", "url": "/people"},
-                    {"title": "Floor Plans of the Wells House", "url": "/people"},
-                    {"title": "Candlestick", "url": "/people"}
+                    {"title": "Casement Window", "slug": "/people"},
+                    {"title": "Dress Up: Women's Clothing from 1750", "slug": "/people"},
+                    {"title": "Floor Plans of the Wells House", "slug": "/people"},
+                    {"title": "Candlestick", "slug": "/people"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -68,14 +68,14 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Cesar", "url": "/people"}            
+                    {"title": "Cesar", "slug": "/people"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Everyday Work in Colonial Households", "url": "/people"}
+                    {"title": "Everyday Work in Colonial Households", "slug": "/people"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Straw Mattress and Bedding", "url": "/people"},
-                    {"title": "Canopied Bed", "url": "/people"}
+                    {"title": "Straw Mattress and Bedding", "slug": "/people"},
+                    {"title": "Canopied Bed", "slug": "/people"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -86,18 +86,18 @@
                 "textAlign": "left",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Jenny (Jin) Cole", "url": "/people"},
-                    {"title": "Phillis Wheatley", "url": "/people"}
+                    {"title": "Jenny (Jin) Cole", "slug": "jin-cole"},
+                    {"title": "Phillis Wheatley", "slug": "/people"}
                 ],
                 "moreTopicLinks": [
-                    {"title": "18th Century Foodways in New England",  "url": "/people"},
-                    {"title": "Women's work and men's work", "url": "/people"}            
+                    {"title": "18th Century Foodways in New England",  "slug": "/people"},
+                    {"title": "Women's work and men's work", "slug": "/people"}            
                 ],
                 "moreHowLinks": [
-                    {"title": "Lidded Hanging Pot", "url": "/people"},
-                    {"title": "Iron Bake Kettle", "url": "/people"},
-                    {"title": "Calico Pocket", "url": "/people"},
-                    {"title": "Video Demo: Churning Butter", "url": "/people"}
+                    {"title": "Lidded Hanging Pot", "slug": "/people"},
+                    {"title": "Iron Bake Kettle", "slug": "/people"},
+                    {"title": "Calico Pocket", "slug": "/people"},
+                    {"title": "Video Demo: Churning Butter", "slug": "/people"}
                 ]            
             }
         ]
@@ -136,17 +136,17 @@
                 "textAlign": "left",
                 "moreBlurb": "Lorem store",
                 "moreWhoLinks": [
-                    {"title": "Abijah Prince", "url": "/people/abijah-prince"}      
+                    {"title": "Abijah Prince", "slug": "abijah-prince"}      
                 ],
                 "moreTopicLinks": [
-                    {"title": "Stimulating Beverages and the Slave Economy",  "url": "/topic/slave-economy-goods"},
-                    {"title": "Courtship in Early New England", "url": "/topic/courtship"}            
+                    {"title": "Stimulating Beverages and the Slave Economy",  "slug": "slave-economy-goods"},
+                    {"title": "Courtship in Early New England", "slug": "courtship"}            
                 ],
                 "moreHowLinks": [
-                    {"title": "Basket", "url": "/evidence/basket"},
-                    {"title": "Cake of Chocolate", "url": "/evidence/cake-of-chocolate"},
-                    {"title": "Chocolate Pot", "url": "/evidence/chocolate-pot"},
-                    {"title": "Account Book of Elijah Williams", "url": "/evidence/williams-account-book"}                    
+                    {"title": "Basket", "slug": "basket"},
+                    {"title": "Cake of Chocolate", "slug": "cake-of-chocolate"},
+                    {"title": "Chocolate Pot", "slug": "chocolate-pot"},
+                    {"title": "Account Book of Elijah Williams", "slug": "williams-account-book"}                    
                 ],
                 "moreWhereLinks": []            
             },
@@ -157,12 +157,12 @@
                 "textAlign": "center",
                 "moreBlurb": "Lorem Lucy",
                 "moreWhoLinks": [
-                    {"title": "Amos Fortune", "url": "/people/amos-fortune"},
-                    {"title": "Venture Smith", "url": "/people/venture-smith"}
+                    {"title": "Amos Fortune", "slug": "amos-fortune"},
+                    {"title": "Venture Smith", "slug": "venture-smith"}
                 ],
                 "moreTopicLinks": [],
                 "moreHowLinks": [
-                    {"title": "Example of sale ads listing women with children", "url": "/evidence/for-sale-temp"}
+                    {"title": "Example of sale ads listing women with children", "slug": "for-sale-temp"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -174,11 +174,11 @@
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [
-                    {"title": "The Bars Fight", "url": "/topic/bars-fight-poem"}
+                    {"title": "The Bars Fight", "slug": "bars-fight-poem"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Child's Hoop", "url": "/evidence/hoop"},
-                    {"title": "Children's Clothing", "url": "/evidence/childrens-clothing"}
+                    {"title": "Child's Hoop", "slug": "hoop"},
+                    {"title": "Children's Clothing", "slug": "childrens-clothing"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -189,14 +189,14 @@
                 "textAlign": "center",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Matthew Clesson", "url": "/people/matthew-clesson"}
+                    {"title": "Matthew Clesson", "slug": "matthew-clesson"}
                 ],
                 "moreTopicLinks": [
-                    {"title": "The Great Chain of Being", "url": "/topic/hierarchy"}
+                    {"title": "The Great Chain of Being", "slug": "hierarchy"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Great Coat", "url": "/evidence/great-coat"},
-                    {"title": "Probate Inventory of Matthew Clesson", "url": "/evidence/clesson-probate"}
+                    {"title": "Great Coat", "slug": "great-coat"},
+                    {"title": "Probate Inventory of Matthew Clesson", "slug": "clesson-probate"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -207,7 +207,7 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Heber Honestman", "url": "/people/heber-honestman"}            
+                    {"title": "Heber Honestman", "slug": "heber-honestman"}            
                 ],
                 "moreTopicLinks": [],
                 "moreHowLinks": [],
@@ -220,18 +220,18 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Heber Honestman", "url": "/people/heber-honestman"}            
+                    {"title": "Heber Honestman", "slug": "heber-honestman"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Building Community", "url": "/topic/building-community"}
+                    {"title": "Building Community", "slug": "building-community"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Account Book of Elijah Williams", "url": "/evidence/williams-account-book"},                   
-                    {"title": "Crutch", "url": "/evidence/crutch"},
-                    {"title": "Ox Cart", "url": "/evidence/ox-cart"}
+                    {"title": "Account Book of Elijah Williams", "slug": "williams-account-book"},                   
+                    {"title": "Crutch", "slug": "crutch"},
+                    {"title": "Ox Cart", "slug": "ox-cart"}
                 ],
                 "moreWhereLinks": [
-                    {"title": "African Americans in Deerfield", "url": "/map/deerfield-african-americans"}                    
+                    {"title": "African Americans in Deerfield", "slug": "deerfield-african-americans"}                    
                 ]          
             },
             {
@@ -241,14 +241,14 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Pompey", "url": "/people/pompey"}            
+                    {"title": "Pompey", "slug": "pompey"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Coercion and Abuse", "url": "/topic/coercion-abuse"},
-                    {"title": "Slavery and the 18th Century Family", "url": "/topic/slavery-family"}
+                    {"title": "Coercion and Abuse", "slug": "coercion-abuse"},
+                    {"title": "Slavery and the 18th Century Family", "slug": "slavery-family"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Bear trap", "url": "/evidence/bear-trap"}
+                    {"title": "Bear trap", "slug": "bear-trap"}
                 ],
                 "moreWhereLinks": []           
             },
@@ -260,10 +260,10 @@
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [
-                    {"title": "Western Massachusetts in the French and Indian War", "url": "/topic/f-i-wars"}
+                    {"title": "Western Massachusetts in the French and Indian War", "slug": "f-i-wars"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Muster Roll", "url": "/evidence/muster-roll"}
+                    {"title": "Muster Roll", "slug": "muster-roll"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -274,15 +274,15 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Jin Cole", "url": "/people/jin-cole"},        
-                    {"title": "Jonathan Ashley", "url": "/people/jonathan-ashley"}            
+                    {"title": "Jin Cole", "slug": "jin-cole"},        
+                    {"title": "Jonathan Ashley", "slug": "jonathan-ashley"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Unlikely Enslavers?", "url": "/topic/ministers-enslavers"}
+                    {"title": "Unlikely Enslavers?", "slug": "ministers-enslavers"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Sermon by Jonathan Ashley", "url": "/evidence/ashley-sermon"},
-                    {"title": "Honestman's Farm", "url": "/evidence/"}
+                    {"title": "Sermon by Jonathan Ashley", "slug": "ashley-sermon"},
+                    {"title": "Honestman's Farm", "slug": ""}
                 ],
                 "moreWhereLinks": []            
             },
@@ -293,16 +293,16 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Cato Cole", "url": "/people/cato-cole"},
-                    {"title": "Samuel Dickinson", "url": "/people/samuel-dickinson"}         
+                    {"title": "Cato Cole", "slug": "cato-cole"},
+                    {"title": "Samuel Dickinson", "slug": "samuel-dickinson"}         
                 ],
                 "moreTopicLinks": [
-                    {"title": "Enslaved Labor for Sale", "url": "/topic/enslaved-labor"}
+                    {"title": "Enslaved Labor for Sale", "slug": "enslaved-labor"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Plow", "url": "/evidence/plow"},
-                    {"title": "Plan of the Town of Deerfield", "url": "/evidence/hoyt-map"},
-                    {"title": "Account Book of Jonathan Ashley", "url": "/evidence/ashley-account-book"}
+                    {"title": "Plow", "slug": "plow"},
+                    {"title": "Plan of the Town of Deerfield", "slug": "hoyt-map"},
+                    {"title": "Account Book of Jonathan Ashley", "slug": "ashley-account-book"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -313,12 +313,12 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Amos Fortune", "url": "/people/amos-fortune"},            
-                    {"title": "Venture Smith", "url": "/people/venture-smith"},         
-                    {"title": "Elizabeth Freeman", "url": "/people/elizabeth-freeman"}            
+                    {"title": "Amos Fortune", "slug": "amos-fortune"},            
+                    {"title": "Venture Smith", "slug": "venture-smith"},         
+                    {"title": "Elizabeth Freeman", "slug": "elizabeth-freeman"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Possible Paths to Freedom", "url": "/topic/paths-to-freedom"}
+                    {"title": "Possible Paths to Freedom", "slug": "paths-to-freedom"}
                 ],
                 "moreHowLinks": [],
                 "moreWhereLinks": []            
@@ -341,11 +341,11 @@
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
-                    {"title": "Abigail Wells", "url": "/people/abigail-wells"},           
-                    {"title": "Ebenezer Wells", "url": "/people/ebenezer-wells"}            
+                    {"title": "Abigail Wells", "slug": "abigail-wells"},           
+                    {"title": "Ebenezer Wells", "slug": "ebenezer-wells"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Courtship and Marriage in a Hierarchical Society", "url": "/topic/hierarchy-courtship"}
+                    {"title": "Courtship and Marriage in a Hierarchical Society", "slug": "hierarchy-courtship"}
                 ],
                 "moreHowLinks": []         
             }
@@ -356,23 +356,7 @@
         "title": "A Fruitful Union",
         "storyIntro": "Lucy and Abijah get married and begin life as free people.",
         "historyIntro": "Marriage could change an enslaved person’s status; once free, all of a woman's children would be born free.",
-        "frames": [
-            {
-                "imageName": "placeholder",
-                "storyText": "ya de da",
-                "alt": " ",
-                "textAlign": "",
-                "moreBlurb": "Lorem",
-                "moreWhoLinks": [
-                    {"title": "whom", "url": "/people"},            
-                    {"title": "ever", "url": "/people"}            
-                ],
-                "moreTopicLinks": [
-                    {"title": "Who Did What? Work Roles", "url": "/people"}            
-                ],
-                "moreHowLinks": []            
-            }
-        ]
+        "frames": []
     },
     {
         "slug": "revolution",

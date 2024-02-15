@@ -272,7 +272,7 @@
               <ul>
                 {#each moment.frames[imageIndex].moreTopicLinks as link }
                 <li><a href="/" 
-                  on:click={(e) => { e.preventDefault(); showModal(link.slug, "topis");}}>
+                  on:click={(e) => { e.preventDefault(); showModal(link.slug, "topics");}}>
                   {link.title}</a></li>
                 {/each}
               </ul>            
