@@ -13,14 +13,14 @@
   </header>
 
   <section class="wrapper">    
-    <p class="menu-tools">Sort by: <a href="/">topic</a> | <a href="/">type</a></p>
+    <p class="menu-tools">Sort by: <a href="">topic</a> | <a href="">type</a></p>
 
-    <table class="people-menu">
+    <table class="feature-menu evidence">
       <tr>
-        <th class="col1">Image</th>
-        <th class="col2">Title</th>
-        <th class="col1">Topic</th>
-        <th class="col1">Type</th>
+        <th>Image</th>
+        <th class="col-title">Title</th>
+        <th>Date</th>
+        <th>Type</th>
         <th>About</th>
       </tr>
 

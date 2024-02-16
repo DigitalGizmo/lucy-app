@@ -16,10 +16,10 @@
   <section class="wrapper">
     <p class="menu-tools">Sort by: <a href="#">name</a> | <a href="#">date</a> | <a href="#">gender</a></p>
 
-    <table class="people-menu">
+    <table class="feature-menu people">
       <tr>
-        <th class="col1">Name</th>
-        <th class="col2">Dates</th>
+        <th class="col-title">Name</th>
+        <th class="col-date">Dates</th>
         <th>About</th>
       </tr>
 
