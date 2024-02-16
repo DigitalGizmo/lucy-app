@@ -6,7 +6,6 @@
 
   import { isScrollMode } from '$lib/stores.js';
   import MoreModal from '../components/MoreModal.svelte';
-  import MoreMapModal from '../components/MoreMapModal.svelte';
   import MainNav from "$lib/MainNav.svelte";
   import MomentNav from "$lib/MomentNav.svelte";
   import Wells from '../components/Wells.svelte'

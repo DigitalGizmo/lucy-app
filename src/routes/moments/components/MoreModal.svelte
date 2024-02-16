@@ -40,28 +40,31 @@
       <p>Attempt a direct link: <a href="/{modalType}/{slug}"> /{modalType}/{slug}</a></p>
     {:then itemInfo}
 
-    {#if modalType === 'people'}
-      <People
+    <article class="more-content">
+
+
+      {#if modalType === 'people'}
+        <People
+          {itemInfo}
+        />
+      {:else if modalType === 'evidence'}
+        <Evidence
         {itemInfo}
-      />
-    {:else if modalType === 'evidence'}
-      <Evidence
-      {itemInfo}
-      />
-    {:else if modalType === 'topics'}
-      <Topics
-      {itemInfo}
-      />
-    {:else if modalType === 'maps'}
-      <Maps
-      {itemInfo}
-      />
-    {/if}
+        />
+      {:else if modalType === 'topics'}
+        <Topics
+        {itemInfo}
+        />
+      {:else if modalType === 'maps'}
+        <Maps
+        {itemInfo}
+        />
+      {/if}
+    </article><!-- /more-content -->
 
     {:catch error}
         <p style="color: red">{error.message}</p>
     {/await}
-      
           
   </div><!-- /modal-wrapper -->
 </div> <!-- /#modal-container /.modal-basic --> <!-- /#modal-container /.modal-basic -->

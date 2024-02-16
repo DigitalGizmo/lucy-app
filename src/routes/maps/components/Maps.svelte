@@ -3,7 +3,7 @@
 </script>
 
 
-<article class="more-content">
+<!-- <article class="more-content"> -->
     <h4>More: <a href="/people">Where in the World?</a> </h4>
 
       <h2>
@@ -16,4 +16,5 @@
       </figure>
         {@html itemInfo.full_text.html}
 
-  </article><!-- /more-content -->
+  <!-- </article> -->
+  <!-- /more-content -->
