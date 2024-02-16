@@ -3,7 +3,8 @@
 </script>
 
 
-<!-- <article class="more-content"> -->
+<!-- <article class="more-content">, or 
+      <section class="wrapper detail"> -->
 
   <h4>More: <a href="/people">Who Else?</a> </h4>
 
@@ -25,5 +26,4 @@
     {/if}
   </div>
 
-  <!-- </article> -->
-  <!-- /more-content -->
+  <!-- / more-content or wrapper detail -->
