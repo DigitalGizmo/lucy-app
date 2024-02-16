@@ -1,22 +1,22 @@
 <script>
-    // import { createEventDispatcher } from "svelte";
-    // const dispatch = createEventDispatcher();
-    export let slug; // = 'abijah-prince';
-    export let modalType; // = 'people';
-    export let isModalShowing;
+  // import { createEventDispatcher } from "svelte";
+  // const dispatch = createEventDispatcher();
+  export let slug; // = 'abijah-prince';
+  export let modalType; // = 'people';
+  export let isModalShowing;
 
-    import People from '../../people/components/People.svelte';
-    import Evidence from '../../evidence/components/Evidence.svelte';
-    import Topics from '../../topics/components/Topics.svelte';
-    import Maps from '../../maps/components/Maps.svelte';
+  import People from '../../people/components/People.svelte';
+  import Evidence from '../../evidence/components/Evidence.svelte';
+  import Topics from '../../topics/components/Topics.svelte';
+  import Maps from '../../maps/components/Maps.svelte';
 
-    async function getItemInfo() {
-      const response = await fetch(`https://lucy-proto.deerfield-ma.org/${modalType}/api/${slug}`);
-      const values = await response.json();
+  async function getItemInfo() {
+    const response = await fetch(`https://lucy-proto.deerfield-ma.org/${modalType}/api/${slug}`);
+    const values = await response.json();
 
-      // console.log ('values: ' + values.full_text.plain);
-      return values;
-    }
+    // console.log ('values: ' + values.full_text.plain);
+    return values;
+  }
   
   // NOTE await not used here! 
   let itemInfoPromise = getItemInfo();

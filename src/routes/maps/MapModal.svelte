@@ -2,7 +2,7 @@
   // import { createEventDispatcher } from "svelte";
   // const dispatch = createEventDispatcher();
   export let popItem;
-  export let isModalShowing, isMobile;
+  export let isMapModalShowing, isMobile;
 
 
 </script>
@@ -15,7 +15,7 @@
 
     <div class="modal-close">
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <a href="/" on:click={(e) => { e.preventDefault(); isModalShowing = false;}}>
+      <a href="/" on:click={(e) => { e.preventDefault(); isMapModalShowing = false;}}>
         <span  id="close-button" class="close"></span>
       </a>
     </div><!-- / -->

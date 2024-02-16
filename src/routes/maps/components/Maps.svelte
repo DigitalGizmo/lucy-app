@@ -1,5 +1,9 @@
 <script>
-    export let itemInfo;
+  // Special for map - get map json
+  import deerfield from "./deerfieldMapPops.json";
+  // From the generic moments/components/MoreModal "shell"
+  export let itemInfo;
+
 </script>
 
 
@@ -9,6 +13,7 @@
       <h2>
           {itemInfo.title}
       </h2>
+      <p>test: {deerfield[1].intro}</p>
       <figure>
         <img src="https://placehold.co/600x400"
             alt="placehoder showing 600 x 400"/>

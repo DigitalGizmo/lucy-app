@@ -3,21 +3,15 @@
   // import { browser } from '$app/environment';
   import MainNav from "$lib/MainNav.svelte";
   export let data;
-  import MapModal from '../MapModal.svelte';
 
-  
-  let decadeIndex = 0;
-  let isModalShowing = false;
-  const mobileWidthThreshold = 800;
+  const itemInfo = data.map;
+  const mapInfo = data.deerfield;
+
   let panelWidth = 1200;
-  let isMobile = false;
-  // let chosenHouseIndex = 0;
-  let popItem = data.deerfield[decadeIndex].popItems[0];
 
   onMount(() => {
     panelWidth = window.innerWidth;
   })
-
   // function resetWidth() {
   //   console.log('width' +  window.innerWidth);
   //   panelWidth = window.innerWidth;
@@ -25,43 +19,54 @@
 
   // document.window.onresize = resetWidth;
 
-  function setOverlay(_decadeIndex) {
-    isModalShowing = false;
+  // Begin component
+  import MapModal from '../MapModal.svelte';
+
+  
+  let decadeIndex = 0;
+  let isMapModalShowing = false;
+  const mobileWidthThreshold = 800;
+
+  let isMobile = false;
+  // let chosenHouseIndex = 0;
+  let popItem = mapInfo[decadeIndex].popItems[0];
+
+
+  function setDecade(_decadeIndex) {
+    isMapModalShowing = false;
     decadeIndex = _decadeIndex;
     console.log('activeovelay: ' + decadeIndex)
   }
 
-  function showModal(_chosenHouseIndex) {
+  function showMapModal(_chosenHouseIndex) {
       // event.preventDefault();
       // modalTitle = title;
       // chosenHouseIndex = _chosenHouseIndex;
-      popItem = data.deerfield[decadeIndex].popItems[_chosenHouseIndex];
-      isModalShowing = true;
+      popItem = mapInfo[decadeIndex].popItems[_chosenHouseIndex];
+      isMapModalShowing = true;
   };  
 
   // $: if (browser && document.window) {document.window.onresize = resetWidth; }
   $: isMobile = panelWidth < mobileWidthThreshold ? true : false;
-  // $: decadeInfo = data.deerfield[decadeIndex];
-  // $: popItem = data.deerfield[decadeIndex].popItems[chosenHouseIndex];
+  // $: decadeInfo = mapInfo[decadeIndex];
+  // $: popItem = mapInfo[decadeIndex].popItems[chosenHouseIndex];
 </script>
   
 <section class="wireframe-wrapper">
+
   <header id="header">
-
     <MainNav />
-
-    <!-- Can this be outside of header -->
     <h1>Where in the World?</h1>
   </header>
 
-
   <section class="wrapper detail">
+
         
-    <h2>{data.map.title}</h2>
+    <h2>{itemInfo.title}</h2>
     <div class="about">
 
       <h3>About</h3>
-      {@html data.map.full_text.html}
+      {@html itemInfo.full_text.html}
       
     </div>
 
@@ -73,7 +78,7 @@
         viewBox="0 0 1412 60">
         <g id="map-nav">
           <g>
-            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(1);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); setDecade(1);}}>
               <rect width="200" height="60" fill="#06a5ff" stroke-width="0" 
               class="{ decadeIndex === 1 ? 'map-selected' : ''}"/>
               <text transform="translate(14.29 39.51)">
@@ -81,7 +86,7 @@
               </text>
             </a>
 
-            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(2);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); setDecade(2);}}>
               <rect x="202" width="200" height="60" fill="#06a5ff" stroke-width="0" 
               class="{ decadeIndex === 2 ? 'map-selected' : ''}"/>
               <text transform="translate(216.83 39.51)">
@@ -89,7 +94,7 @@
               </text>
             </a>
       
-            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(3);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); setDecade(3);}}>
               <rect x="404" width="200" height="60" fill="#06a5ff" stroke-width="0" 
               class="{ decadeIndex === 3 ? 'map-selected' : ''}"/>
               <text transform="translate(419.18 39.51)">
@@ -97,7 +102,7 @@
               </text>
             </a>
       
-            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(4);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); setDecade(4);}}>
               <rect x="606" width="200" height="60" fill="#06a5ff" stroke-width="0" 
               class="{ decadeIndex === 4 ? 'map-selected' : ''}"/>
               <text transform="translate(621.35 39.51)">
@@ -105,7 +110,7 @@
               </text>
             </a>
       
-            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(5);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); setDecade(5);}}>
               <rect x="808" width="200" height="60" fill="#06a5ff" stroke-width="0" 
               class="{ decadeIndex === 5 ? 'map-selected' : ''}"/>
               <text transform="translate(823.56 39.51)">
@@ -113,7 +118,7 @@
               </text>
             </a>
       
-            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(6);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); setDecade(6);}}>
               <rect x="1011" width="198" height="59" fill="#06a5ff" stroke-width="0" 
               class="{ decadeIndex === 6 ? 'map-selected' : ''}"/>
               <text transform="translate(1025.01 39.51)">
@@ -121,7 +126,7 @@
               </text>
             </a>
       
-            <a href="/" on:click={(e) => { e.preventDefault(); setOverlay(7);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); setDecade(7);}}>
               <rect x="1212" width="200" height="60" fill="#06a5ff" stroke-width="0" 
               class="{ decadeIndex === 7 ? 'map-selected' : ''}"/>
               <text transform="translate(1226.29 39.51)">
@@ -367,7 +372,7 @@
         {#if decadeIndex === 1}
           <g>
             <!-- Robert Tigo -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(0);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(0);}}>
               <circle class="house-hilite" cx="730" cy="437" r="14"/>
             </a>
           </g>
@@ -377,17 +382,17 @@
         {#if decadeIndex === 2}
           <g>
             <!-- Parthena -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(0);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(0);}}>
               <circle class="house-hilite" cx="729" cy="417" r="14"/>
             </a>
 
             <!-- Frank  -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(1);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(1);}}>
               <circle class="house-hilite" cx="729" cy="451" r="14"/>
             </a>
 
             <!-- Lundun -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(2);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(2);}}>
               <circle class="house-hilite" cx="809" cy="452" r="14"/>
             </a>
           </g>
@@ -404,22 +409,22 @@
         {#if decadeIndex === 4}    
           <g>
             <!-- Ceasar -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(0);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(0);}}>
               <circle cx="659" cy="436" r="14" class="house-hilite"/>
             </a>
 
             <!-- Mesheck -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(1);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(1);}}>
               <circle cx="731" cy="415" r="14" class="house-hilite"/>
             </a>
 
             <!-- Kedar -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(2);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(2);}}>
               <circle cx="731" cy="449" r="14" class="house-hilite"/>
             </a>
 
             <!-- Pompey -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(3);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(3);}}>
               <circle cx="991" cy="603" r="14" class="house-hilite"/>
             </a>
           </g>
@@ -429,47 +434,47 @@
         {#if decadeIndex === 5}
           <g>
             <!-- Fortune -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(0);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(0);}}>
               <circle id="fortune" class="house-hilite" cx="272" cy="478" r="14"/>
             </a>
 
             <!-- Rebecca -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(1);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(1);}}>
               <circle id="rebecca" class="house-hilite" cx="272" cy="392" r="14"/>
             </a>
 
             <!-- Pompey -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(2);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(2);}}>
               <circle id="pompey" class="house-hilite" cx="307" cy="399" r="14"/>
             </a>
 
             <!-- Lucy -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(3);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(3);}}>
               <circle id="lucy" class="house-hilite" cx="487" cy="514" r="14"/>
             </a>
 
             <!-- Caesar -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(4);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(4);}}>
               <circle id="caesar" class="house-hilite" cx="487" cy="549" r="14"/>
             </a>
 
             <!-- Adam -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(5);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(5);}}>
               <circle id="adam" class="house-hilite" cx="1184" cy="513" r="14"/>
             </a>
 
             <!-- Peter -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(6);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(6);}}>
               <circle id="peter" class="house-hilite" cx="1184" cy="547" r="14"/>
             </a>
 
             <!-- Gin -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(7);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(7);}}>
               <circle id="gin" class="house-hilite" cx="1498" cy="545" r="14"/>
             </a>
 
             <!-- Cato -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showModal(8);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(8);}}>
               <circle id="cato" class="house-hilite" cx="1498" cy="580" r="14"/>
             </a>
           </g>
@@ -495,15 +500,15 @@
       <div class="map-intro-text">
         <h3>This layer</h3>
         <p>
-          {data.deerfield[decadeIndex].intro}
+          {mapInfo[decadeIndex].intro}
         </p>
       </div>
 
       <!-- /pop ups -->
-      {#if isModalShowing}
+      {#if isMapModalShowing}
         <MapModal 
           popItem = {popItem}
-          bind:isModalShowing
+          bind:isMapModalShowing
           {isMobile}
         />
       {/if}
@@ -514,7 +519,7 @@
       
       <h3>Related</h3>
       <ul>
-        {#each data.map.relateds as related (related.title)}
+        {#each itemInfo.relateds as related (related.title)}
         <li><a href="{related.link}">{related.title}</a></li>
         {/each}
       </ul>
