@@ -146,7 +146,7 @@
                     {"title": "Basket", "slug": "basket"},
                     {"title": "Cake of Chocolate", "slug": "cake-of-chocolate"},
                     {"title": "Chocolate Pot", "slug": "chocolate-pot"},
-                    {"title": "Account Book of Elijah Williams", "slug": "williams-account-book"}                    
+                    {"title": "Account Book Record of Chocolate Purchase", "slug": "williams-account-book-chocolate"}                    
                 ],
                 "moreWhereLinks": []            
             },
@@ -178,7 +178,7 @@
                 ],
                 "moreHowLinks": [
                     {"title": "Child's Hoop", "slug": "hoop"},
-                    {"title": "Children's Clothing", "slug": "childrens-clothing"}
+                    {"title": "Colonial Boy's Clothing", "slug": "colonial-boys-clothing"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -226,7 +226,7 @@
                     {"title": "Building Community", "slug": "building-community"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Account Book of Elijah Williams", "slug": "williams-account-book"},                   
+                    {"title": "Heber Honestman Store Account", "slug": "heber-store-account"},                   
                     {"title": "Crutch", "slug": "crutch"},
                     {"title": "Ox Cart", "slug": "ox-cart"}
                 ],
