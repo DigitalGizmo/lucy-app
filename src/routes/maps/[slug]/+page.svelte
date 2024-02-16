@@ -12,6 +12,8 @@
   onMount(() => {
     panelWidth = window.innerWidth;
   })
+
+
   // function resetWidth() {
   //   console.log('width' +  window.innerWidth);
   //   panelWidth = window.innerWidth;
@@ -20,30 +22,29 @@
   // document.window.onresize = resetWidth;
 
   // Begin component
-  import MapModal from '../MapModal.svelte';
-
+  import MapPopModal from '../components/MapPopModal.svelte';
+  const mobileWidthThreshold = 800;
+  let isMobile = false;
   
   let decadeIndex = 0;
-  let isMapModalShowing = false;
-  const mobileWidthThreshold = 800;
+  let isMapPopModalShowing = false;
 
-  let isMobile = false;
   // let chosenHouseIndex = 0;
   let popItem = mapInfo[decadeIndex].popItems[0];
 
 
   function setDecade(_decadeIndex) {
-    isMapModalShowing = false;
+    isMapPopModalShowing = false;
     decadeIndex = _decadeIndex;
     console.log('activeovelay: ' + decadeIndex)
   }
 
-  function showMapModal(_chosenHouseIndex) {
+  function showMapPopModal(_chosenHouseIndex) {
       // event.preventDefault();
       // modalTitle = title;
       // chosenHouseIndex = _chosenHouseIndex;
       popItem = mapInfo[decadeIndex].popItems[_chosenHouseIndex];
-      isMapModalShowing = true;
+      isMapPopModalShowing = true;
   };  
 
   // $: if (browser && document.window) {document.window.onresize = resetWidth; }
@@ -372,7 +373,7 @@
         {#if decadeIndex === 1}
           <g>
             <!-- Robert Tigo -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(0);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(0);}}>
               <circle class="house-hilite" cx="730" cy="437" r="14"/>
             </a>
           </g>
@@ -382,17 +383,17 @@
         {#if decadeIndex === 2}
           <g>
             <!-- Parthena -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(0);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(0);}}>
               <circle class="house-hilite" cx="729" cy="417" r="14"/>
             </a>
 
             <!-- Frank  -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(1);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(1);}}>
               <circle class="house-hilite" cx="729" cy="451" r="14"/>
             </a>
 
             <!-- Lundun -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(2);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(2);}}>
               <circle class="house-hilite" cx="809" cy="452" r="14"/>
             </a>
           </g>
@@ -409,22 +410,22 @@
         {#if decadeIndex === 4}    
           <g>
             <!-- Ceasar -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(0);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(0);}}>
               <circle cx="659" cy="436" r="14" class="house-hilite"/>
             </a>
 
             <!-- Mesheck -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(1);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(1);}}>
               <circle cx="731" cy="415" r="14" class="house-hilite"/>
             </a>
 
             <!-- Kedar -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(2);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(2);}}>
               <circle cx="731" cy="449" r="14" class="house-hilite"/>
             </a>
 
             <!-- Pompey -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(3);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(3);}}>
               <circle cx="991" cy="603" r="14" class="house-hilite"/>
             </a>
           </g>
@@ -434,47 +435,47 @@
         {#if decadeIndex === 5}
           <g>
             <!-- Fortune -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(0);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(0);}}>
               <circle id="fortune" class="house-hilite" cx="272" cy="478" r="14"/>
             </a>
 
             <!-- Rebecca -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(1);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(1);}}>
               <circle id="rebecca" class="house-hilite" cx="272" cy="392" r="14"/>
             </a>
 
             <!-- Pompey -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(2);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(2);}}>
               <circle id="pompey" class="house-hilite" cx="307" cy="399" r="14"/>
             </a>
 
             <!-- Lucy -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(3);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(3);}}>
               <circle id="lucy" class="house-hilite" cx="487" cy="514" r="14"/>
             </a>
 
             <!-- Caesar -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(4);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(4);}}>
               <circle id="caesar" class="house-hilite" cx="487" cy="549" r="14"/>
             </a>
 
             <!-- Adam -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(5);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(5);}}>
               <circle id="adam" class="house-hilite" cx="1184" cy="513" r="14"/>
             </a>
 
             <!-- Peter -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(6);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(6);}}>
               <circle id="peter" class="house-hilite" cx="1184" cy="547" r="14"/>
             </a>
 
             <!-- Gin -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(7);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(7);}}>
               <circle id="gin" class="house-hilite" cx="1498" cy="545" r="14"/>
             </a>
 
             <!-- Cato -->
-            <a href="/" on:click={(e) => { e.preventDefault(); showMapModal(8);}}>
+            <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(8);}}>
               <circle id="cato" class="house-hilite" cx="1498" cy="580" r="14"/>
             </a>
           </g>
@@ -505,10 +506,10 @@
       </div>
 
       <!-- /pop ups -->
-      {#if isMapModalShowing}
-        <MapModal 
+      {#if isMapPopModalShowing}
+        <MapPopModal 
           popItem = {popItem}
-          bind:isMapModalShowing
+          bind:isMapPopModalShowing
           {isMobile}
         />
       {/if}
