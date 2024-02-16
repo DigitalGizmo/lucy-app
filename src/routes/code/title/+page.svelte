@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { fade, slide } from 'svelte/transition';
   import { isScrollMode } from '$lib/stores.js';
-  import Modal from '../../../temp-modal.svelte';
+  // import Modal from '../../../temp-modal.svelte';
   import MainNav from "$lib/MainNav.svelte";
   import MomentNav from "$lib/MomentNav.svelte";
   import frames from "$lib/frames.json";
