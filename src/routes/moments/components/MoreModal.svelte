@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte';
   // import { createEventDispatcher } from "svelte";
   // const dispatch = createEventDispatcher();
   export let slug; // = 'abijah-prince';
@@ -20,6 +21,14 @@
   
   // NOTE await not used here! 
   let itemInfoPromise = getItemInfo();
+
+  // For popup width for map
+  let panelWidth = 1000;
+  // should get width of element modal-basic
+  // but for now, since that's70vw
+  onMount(() => {
+    panelWidth = (window.innerWidth * 0.7);
+  })
 
 </script>
 
@@ -49,15 +58,15 @@
         />
       {:else if modalType === 'evidence'}
         <Evidence
-        {itemInfo}
+          {itemInfo}
         />
       {:else if modalType === 'topics'}
         <Topics
-        {itemInfo}
+          {itemInfo}
         />
       {:else if modalType === 'maps'}
         <Maps
-        {itemInfo}
+          {itemInfo}
         />
       {/if}
     </article><!-- /more-content -->

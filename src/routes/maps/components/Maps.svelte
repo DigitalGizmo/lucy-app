@@ -1,25 +1,20 @@
 <script>
-  // Special for map - get map json
-  import deerfield from "./deerfieldMapPops.json";
+  import DeerfieldMap from './DeerfieldMap.svelte';
   // From the generic moments/components/MoreModal "shell"
   export let itemInfo;
+
+  let panelWidth = 1000;
 
 </script>
 
 
-<!-- <article class="more-content"> -->
-    <h4>More: <a href="/people">Where in the World?</a> </h4>
+<!-- <article class="more-content">, or 
+     <section class="wrapper detail"> -->
+      
+  <DeerfieldMap
+    {itemInfo}
+    {panelWidth}
+  />
+  <!-- Could be another map here in the future -->
 
-      <h2>
-          {itemInfo.title}
-      </h2>
-      <p>test: {deerfield[1].intro}</p>
-      <figure>
-        <img src="https://placehold.co/600x400"
-            alt="placehoder showing 600 x 400"/>
-        <figcaption>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</figcaption>
-      </figure>
-        {@html itemInfo.full_text.html}
-
-  <!-- </article> -->
-  <!-- /more-content -->
+<!-- / more-content or wrapper detail -->

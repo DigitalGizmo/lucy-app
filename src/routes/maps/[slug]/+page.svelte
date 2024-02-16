@@ -6,7 +6,7 @@
   export let data;
 
   const itemInfo = data.map;
-  const mapInfo = data.deerfield;
+  // const mapInfo = data.deerfield;
 
   let panelWidth = 1200;
 
@@ -34,7 +34,6 @@
     <DeerfieldMap
       {itemInfo}
       {panelWidth}
-      {mapInfo}
     />
 
   </section><!-- /wrapper -->

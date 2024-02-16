@@ -8,7 +8,7 @@
 </script>
 
 <div class="map-modal" 
-  style="{ isMobile ? '' : `left: ${popItem.pLeft}%; top: ${popItem.pTop}vh;`}"
+  style="{ isMobile ? '' : `left: ${popItem.pLeft}%; top: ${popItem.pTop}%;`}"
 
 >
   <div id="modal-wrapper">

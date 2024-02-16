@@ -1,7 +1,9 @@
 <script>
-  export let itemInfo, panelWidth, mapInfo;
+  export let itemInfo, panelWidth;
   // Make map info internal
-  // Begin component
+  import deerfield from "./deerfieldMapPops.json";
+  const mapInfo = deerfield;
+ 
   import MapPopModal from '../components/MapPopModal.svelte';
   const mobileWidthThreshold = 800;
   let isMobile = false;
@@ -34,7 +36,8 @@
 
 </script>
 
-
+<!-- <article class="more-content">, or 
+     <section class="wrapper detail"> -->
 <h2>{itemInfo.title}</h2>
 <div class="about">
 
@@ -498,3 +501,4 @@
   </ul>
 
 </div>
+<!-- / more-content or wrapper detail -->
