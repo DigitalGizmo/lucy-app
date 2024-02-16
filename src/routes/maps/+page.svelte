@@ -14,10 +14,10 @@
 
   <section class="wrapper">
 
-    <table class="people-menu">
+    <table class="feature-menu maps">
       <tr>
-        <th class="col1">image</th>
-        <th class="col2">Title</th>
+        <th>Image</th>
+        <th>Title</th>
         <th>About</th>
       </tr>
 

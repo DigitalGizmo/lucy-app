@@ -14,7 +14,7 @@
 
   <section class="wrapper">
 
-    <table class="people-menu">
+    <table class="feature-menu topics">
       <tr>
         <th class="col1">Topic</th>
         <th>About</th>

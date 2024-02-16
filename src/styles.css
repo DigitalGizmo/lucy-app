@@ -632,19 +632,30 @@ nav.moment-options ul li.prev-moment {
 	margin: 0;
 }
 
-.more-content figure {
-	float: left;
-	margin: 1em 1em 0 0;
-	width: 50%;
+.more-content figure, .detail figure {
+  float: left;
+  max-width: 50%;
+  margin: 0 2em 0 0;
 }
 
-.more-content figure img {
+.more-content figure img, .detail figure img {
 	max-width: 100%;
 }
 
-.more-content figure figcaption {
+.more-content figure figcaption, .detail figure figcaption {
 	color: gray;
 	font-size: .8em;
+}
+
+dl.evidence-info {
+	font-size: 1em;
+}
+
+dl.evidence-info dt {
+	color: gray;
+	float: left;
+	font-weight: bold;
+	margin-right: 1em;
 }
 
 /* ----------------------------------- */
@@ -670,29 +681,34 @@ nav.moment-options ul li.prev-moment {
 	font-weight: bold;
 }
 
-.people-menu tr {
+.feature-menu tr {
 	height: 3em;
 }
 
-.people-menu tr th {
+.feature-menu tr th {
 	text-align: left;
 }
 
-.people-menu tr td {
+.feature-menu tr td {
 	border-bottom: 1px solid lightgrey;
 }
 
-.people-menu tr th.col1 {
+.feature-menu img {
+	max-width: 200px;
+}
+
+.feature-menu .col-title {
+	width: 20%;
+}
+
+.feature-menu .col-date {
 	width: 15%;
 }
 
-.people-menu tr th.col2 {
-	width: 15%;
+.feature-menu td, .feature-menu th {	
+	padding-right: 2em;
 }
 
-.people-menu a {
-	font-weight: bold;
-}
 
 /* --------------------------------- */
 /* Detail Pages -------------------- */
@@ -705,18 +721,9 @@ nav.moment-options ul li.prev-moment {
 	margin: 0.25em 0;
 }
 
-.detail img {
-	max-height: 75vh;
-}
-
 .about {
 	margin-top: 1em;
 	width: 100%;
-}
-@media screen and (min-width: 800px) { /* displays larger than 800px */
-	.about {
-		max-width: 75%;
-	}
 }
 
 .about h3 {
