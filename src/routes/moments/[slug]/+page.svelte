@@ -25,6 +25,10 @@
   const totalHeightFudgeFactor = 1.3;
   let numberOfFrames = 13;
 
+  let imageIndex = 0; // calculation will subtract 1
+  let prevImageIndex = 0;
+  let currScrollY = 0;
+
   let moment = data.moments.find((moment) => moment.slug === $page.params.slug); 
 
   const momentSlugs = ["sold", "forsale", "newlife", "wells", "church",
@@ -32,6 +36,8 @@
     "frontier", "court", "returning"
   ]
 
+  let isReadAloud = false;
+  let storyAudio;
   // Mount is triggered 
   onMount(() => {
     panelHeight = window.innerHeight - 138;
@@ -47,6 +53,12 @@
     scrolledXIndex = currMomentIndex;
     // scroll to text 
     scrollToChosen(currMomentIndex);
+    
+    // console.log('audio: ' + moment.frames[0].storyAudio);
+
+    // storyAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/${moment.frames[1].storyAudio}.mp3`);
+
+
 
     // console.log('scrolledX ' + scrolledXIndex + ' currMomentIndex: ' + currMomentIndex);
     // goto(`/moments/${momentSlugs[currMomentIndex]}`)    
@@ -73,8 +85,6 @@
     return currMomentIndex + 1
   }
 
-  let imageIndex = 0; // calculation will subtract 1
-  let currScrollY = 0;
 
   // Horizontal scrolling
   let horizontalTitles;
@@ -118,6 +128,36 @@
     console.log("moment height: " + momentScrollHeight);
   }
 
+  // --- Audio ---- 
+  function toggleReadAloud() {
+    console.log('Read aloud is on');
+    // storyAudio.play();
+    isReadAloud = !isReadAloud;
+  }
+
+  $: if (isReadAloud) {
+    console.log('is readAloud')
+    if (imageIndex != prevImageIndex) {
+      console.log('curr indx not = prev')
+      if (storyAudio) {
+        console.log('pausing bcz not equal')
+
+        storyAudio.pause();
+      }
+    }
+    console.log('should play')
+
+    storyAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/${moment.frames[imageIndex].storyAudio}.mp3`);
+    storyAudio.play();      
+  } else {
+    console.log('not read aloud')
+
+    if (storyAudio) {
+      storyAudio.pause();
+    }
+  }
+
+  // ----- Titles-----
   async function scrollToChosen(chosenIndex) {
     console.log('scroll to chosen: ' + chosenIndex)
     // Jump, don't smooth scroll
@@ -375,14 +415,18 @@
           <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 127 127">
             <g id="read-aloud" class="icon">
-              <g>
-                <circle class="read-cls-1" cx="63.5" cy="63.5" r="62"/>
-                <circle class="read-cls-3" cx="13.01" cy="69.05" r="3.66"/>
-                <circle class="read-cls-3" cx="81.15" cy="69.05" r="3.66"/>
-                <path class="read-cls-2" d="m21.43,54.87c10.63,8.63,10.63,20.68,0,27.91"/>
-                <path class="read-cls-2" d="m32.95,43.8c16.1,11.08,15.95,38.99,0,49.92"/>
-                <path class="read-cls-3" d="m96.74,20.91v31.9h-25.11c-2.22.15-2.68,1.27-2.68,2.81v8.78c-5.1.3-5.46,8.94,1.94,8.32.59,4.47,4.73,14.51,17.28,20.04l8.57.08v7.83h-7.53c-8.06-1.18-21.11-10.34-24.07-20.97-5.46-.59-12.26-12.26-4.22-18.8-.89-21.07,5.66-26.55,9.68-31.24,4.56-5.32,13.44-9.62,26.14-8.73Z"/>
-              </g>
+              <a href="/" 
+                on:click={(e) => { e.preventDefault(); toggleReadAloud();}}>
+                <g>
+                  <circle class="read-cls-1" cx="63.5" cy="63.5" r="62"/>
+                  <circle class="read-cls-3" cx="13.01" cy="69.05" r="3.66"/>
+                  <circle class="read-cls-3" cx="81.15" cy="69.05" r="3.66"/>
+                  <path class="read-cls-2" d="m21.43,54.87c10.63,8.63,10.63,20.68,0,27.91"/>
+                  <path class="read-cls-2" d="m32.95,43.8c16.1,11.08,15.95,38.99,0,49.92"/>
+                  <path class="read-cls-3" d="m96.74,20.91v31.9h-25.11c-2.22.15-2.68,1.27-2.68,2.81v8.78c-5.1.3-5.46,8.94,1.94,8.32.59,4.47,4.73,14.51,17.28,20.04l8.57.08v7.83h-7.53c-8.06-1.18-21.11-10.34-24.07-20.97-5.46-.59-12.26-12.26-4.22-18.8-.89-21.07,5.66-26.55,9.68-31.24,4.56-5.32,13.44-9.62,26.14-8.73Z"/>
+                </g>
+              </a>
+
             </g>
           </svg>
 
