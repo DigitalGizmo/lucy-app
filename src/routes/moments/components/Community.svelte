@@ -96,7 +96,8 @@
 
     <image transition:fade={{ duration: 500}}  class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-large.png" 
-    transform= "translate(200 100) scale(0.7)" />  
+     />  
+     <!-- transform= "translate(200 100) scale(0.7)" -->
 
     <image transition:fade={{ duration: 500}}  class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-ox-cart.png" 
@@ -108,12 +109,14 @@
     alt="{moment.frames[imageIndex].alt}"></image>
 
     <image transition:fade={{ duration: 500}}  class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-large.png" 
-    transform= "translate(-700 -2) scale(1.6)" />  
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-close.png" 
+    />  
+    <!-- transform= "translate(-700 -2) scale(1.6)"  -->
 
     <image transition:fade={{ duration: 500}}  class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-ox-cart.png" 
-    transform="translate(-3500 300) scale(4)" />  
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-honestmans-close.png" 
+    />
+    <!-- transform="translate(-3500 300) scale(4)"    -->
 {/if}
 <!-- ---  ---- -->
 <!-- {#if imageIndex === 6}
