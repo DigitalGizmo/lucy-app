@@ -45,6 +45,13 @@
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
     alt="{moment.frames[imageIndex].alt}"></image>
+
+    <image transition:fade={{ duration: 1000}}  class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-open.png" />
+
+    <image in:fade={{ duration: 1000, delay: 1000}}  out:fade={{duration: 1000}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-closed.png" />
+
 {/if}
 <!-- --- L & A + kids ---- -->
 {#if imageIndex === 2}
@@ -126,6 +133,17 @@
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
     alt="{moment.frames[imageIndex].alt}"></image>
+
+    <image in:fade={{ duration: 1000, delay: 1500}}  out:fade={{duration: 1000}}  class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/jin-approaches-jin.png" />
+
+    <image transition:fade={{ duration: 1000}}  class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/jin-approaches-foreground.png" />
+
+    <image transition:fade={{ duration: 1000}}  class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/jin-approaches-lucy-abijah.png" />
+
+
 {/if}
 <!-- ---  lucy, abijah greet jin ---- -->
 {#if imageIndex === 9}

@@ -369,9 +369,9 @@
 
             <p>{ moment.frames[imageIndex].moreBlurb}</p>
             <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
-            <!-- {#if imageIndex > 12}
+            {#if imageIndex > 12}
               <script>console.log('Past where Mores are defined')</script>
-            {:else} -->
+            {:else}
               {#if (moment.frames[imageIndex].moreWhoLinks.length > 0)}
               <h5>Who Else?</h5>
               <ul>
@@ -416,7 +416,7 @@
                 </ul>            
               {/if}
 
-            <!-- {/if} if less than 12 should no longer matter -->
+            {/if} 
 
           {/if}
 

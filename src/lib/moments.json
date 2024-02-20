@@ -156,7 +156,7 @@
                 "moreWhereLinks": []            
             },
             {
-                "imageName": "lucy-thinking",
+                "imageName": "lucy-thinking-bkgnd",
                 "storyAudio": "01-he-is-free",
                 "storyText": "He is free and she is not. Marrying is out of the question if Mr. and Mrs. Wells won’t allow it. Even if her enslavers agree, would Abijah want to marry a woman whose children will also be born into slavery? For that matter, she doesn't want to be a woman whose children, too, would be enslaved.",
                 "alt": "1 lucy-thinking ",
@@ -174,8 +174,8 @@
             },
             {
                 "imageName": "main-street-plain",
-                "storyAudio": "02-you-promised",
-                "storyText": "“Lucy, you promised us a story!” children clamor nearby. “I will tell you later!\" “sing them your Bars Fight” Abijah suggests.",
+                "storyAudio": "02-lucys-thoughts",
+                "storyText": "Lucy's thoughts are interrupted by some nearby children: “Lucy, you promised us a story!” “I'll sing for you later!\" “Tell them your Bars Fight” Abijah suggests.",
                 "alt": "2  lucy and abijah small on main street, kids enter",
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
@@ -210,7 +210,7 @@
             },
             {
                 "imageName": "main-street-plain",
-                "storyAudio": "",
+                "storyAudio": "04-i-think-i-see",
                 "storyText": "“I think I see Heber and Adam Honestman coming this way. When did Adam get so tall?”",
                 "alt": "4 Lucy and Abijah closer ",
                 "textAlign": "right",
@@ -280,7 +280,7 @@
                 "moreWhereLinks": []            
             },
             {
-                "imageName": "jin-approaches",
+                "imageName": "jin-approaches-bkgnd",
                 "storyAudio": "",
                 "storyText": "“Heber and Susanna have a good farm, like the place I’ll be getting now that I’ve bought my freedom,” says Abijah, hinting at a possible future with Lucy. Worried that he has been too forward, he shifts to the weather. “The river is running high even for spring.” Lucy smiles and nods but wishes Abijah would talk more about his future. She hopes she is right that his plans include her…but how can that possibly happen?",
                 "alt": "8 Jin approaches",
@@ -339,7 +339,7 @@
                 "moreWhereLinks": []            
             },
             {
-                "imageName": "lucy-thinking",
+                "imageName": "lucy-thinking-open",
                 "storyAudio": "",
                 "storyText": "Lucy knows that Jin has always had to care for the Ashley children even as she raised Cato on her own. Lucy wants more for herself and any children God may send to her and Abijah.",
                 "alt": "11 Lucy thinking ",
@@ -364,7 +364,8 @@
                 "moreTopicLinks": [
                     {"title": "Courtship and Marriage in a Hierarchical Society", "slug": "hierarchy-courtship"}
                 ],
-                "moreHowLinks": []         
+                "moreHowLinks": [],       
+                "moreWhereLinks": []            
             }
         ]
     },
