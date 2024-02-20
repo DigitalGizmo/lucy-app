@@ -135,6 +135,14 @@
     isReadAloud = !isReadAloud;
   }
 
+  function stopAudio(){
+    isReadAloud = false;
+    if (storyAudio) {
+        console.log('pausing bcz not equal')
+        storyAudio.pause();
+      }
+  }
+
   $: if (isReadAloud) {
     console.log('is readAloud')
     if (imageIndex != prevImageIndex) {
@@ -144,6 +152,7 @@
 
         storyAudio.pause();
       }
+      prevImageIndex = imageIndex;
     }
     console.log('should play')
 
@@ -156,6 +165,8 @@
       storyAudio.pause();
     }
   }
+
+
 
   // ----- Titles-----
   async function scrollToChosen(chosenIndex) {
@@ -305,7 +316,8 @@
   <header id="header" class="moment-header">
     <MainNav />
     <MomentNav  
-    scrollToChosenIdx={scrollToChosenSlug}
+      scrollToChosenIdx={scrollToChosenSlug}
+      {stopAudio}
     />
   </header>
   
