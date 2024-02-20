@@ -115,14 +115,14 @@
   // --- End Modal Window ---
 
   function calcMomentHeight () {
-    console.log(" got to calc");
+    // console.log(" got to calc");
     momentScrollHeight = document.getElementsByClassName("moment-scroll")[0].offsetHeight;
     frameHeight = (momentScrollHeight - (panelHeight * totalHeightFudgeFactor))/numberOfFrames;
   }
 
   async function explore() {
     isScrollMode.set(true);
-    console.log("got to explore");
+    // console.log("got to explore");
     await(tick);
     calcMomentHeight();
     console.log("moment height: " + momentScrollHeight);
@@ -144,9 +144,9 @@
   }
 
   $: if (isReadAloud) {
-    console.log('is readAloud')
+    // console.log('is readAloud')
     if (imageIndex != prevImageIndex) {
-      console.log('curr indx not = prev')
+      // console.log('curr indx not = prev')
       if (storyAudio) {
         console.log('pausing bcz not equal')
 
@@ -154,10 +154,11 @@
       }
       prevImageIndex = imageIndex;
     }
-    console.log('should play')
-
-    storyAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/${moment.frames[imageIndex].storyAudio}.mp3`);
-    storyAudio.play();      
+    // console.log('should play, imageIndex: ' + imageIndex)
+    if (imageIndex < 13) {
+      storyAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/${moment.frames[imageIndex].storyAudio}.mp3`);
+      storyAudio.play();      
+    }
   } else {
     console.log('not read aloud')
 

@@ -28,7 +28,7 @@
         "frames": [
             {
                 "imageName": "02-dawn-house-color",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "In colonial New England, work days for enslaved people began long before daybreak — long before their enslavers got up to begin their own work days.",
                 "alt": " ",
                 "textAlign": "center",
@@ -46,7 +46,7 @@
             },
             {
                 "imageName": "03-candle-color",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "While Ebenezer and Abigail Wells continue to sleep in their comfortable bed downstairs, Lucy arises from her straw-filled mattress in the garret and lights a candle so that she can see to dress for the day.",
                 "alt": " ",
                 "textAlign": "left",
@@ -65,7 +65,7 @@
             },
             {
                 "imageName": "04-house-cutaway-color-nochim",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "Cesar, sleeping on another garret mattress, also awakens and dresses. Lucy and Cesar slip quietly down the stairs to the kitchen.",
                 "alt": " ",
                 "textAlign": "right",
@@ -84,7 +84,7 @@
             },
             {
                 "imageName": "lucy-hearth",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "There, Cesar builds a new fire on the embers remaining from the night before, while Lucy begins to prepare breakfast for the Wells. She and Cesar will eat later.",
                 "alt": " ",
                 "textAlign": "left",
@@ -191,7 +191,7 @@
             },
             {
                 "imageName": "main-street-plain",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "no text here",
                 "alt": "3 Lucy and abijah medium on main, horse enters ",
                 "textAlign": "center",
@@ -224,7 +224,7 @@
             },
             {
                 "imageName": "main-street-plain",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "Heber concludes his Susanna is right: Abijah Prince is courting Lucy. The conversation turns to the Honestmans, who have come down from Huntstown to shop at Captain Williams’s store for fabric, knee buckles, and sleeve buttons. It seems Susanna will have some sewing to do. Abijah mentions the fabric he has just purchased for a shirt. He adds, “I will be needing someone to make it for me.” Should he ask Lucy? If she agrees, he would gladly pay her.[ox cart here]",
                 "alt": "5  Ox cart enters right",
                 "textAlign": "right",
@@ -246,7 +246,7 @@
             },
             {
                 "imageName": "main-street-plain",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "Lucy asks Heber if his foot still pains him. “Sometimes,” he replies, “but I still smile to myself when I wonder what a bear would think to see me caught in one of my own traps.” Abijah and Lucy chuckle along with him. She can’t help thinking about another man with a crutch. She still remembers when Joseph Barnard made Pompey cut and sled wood every day one winter until Pompey’s feet froze like blocks of ice.[still ox cart]",
                 "alt": "6   Ox cart fully in ",
                 "textAlign": "right",
@@ -265,7 +265,7 @@
             },
             {
                 "imageName": "main-street-plain",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "The conversation turns to the war that is on everyone’s mind. Adam seems eager to join. Abijah prays Heber’s son will serve under good commanders and be spared if there is fighting. Abijah says, “I am thinking of joining up again. The pay is good, and we need to protect our towns from the French and their Indian allies.” Lucy shudders when she thinks about what could happen to Abijah in a battle. Unbidden, words from her Bars Fight poem come to her mind…”And though he was so brave and bold, His face no more shall we behold.” Heber turns to Adam. “Son, it is time to continue with our errands.” Adam nods and cracks his whip. Over the creaking of cart wheels Lucy calls to Heber, “Bring Susanna on your next trip to Deerfield.” Abijah says, “God grant that I have such a fine son–a lad such as Adam.” “No doubt.” thinks Lucy, “All the more reason to marry a free woman.[more ox cart or less text]”",
                 "alt": "7 still with the ox ",
                 "textAlign": "right",
@@ -281,7 +281,7 @@
             },
             {
                 "imageName": "jin-approaches-bkgnd",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "“Heber and Susanna have a good farm, like the place I’ll be getting now that I’ve bought my freedom,” says Abijah, hinting at a possible future with Lucy. Worried that he has been too forward, he shifts to the weather. “The river is running high even for spring.” Lucy smiles and nods but wishes Abijah would talk more about his future. She hopes she is right that his plans include her…but how can that possibly happen?",
                 "alt": "8 Jin approaches",
                 "textAlign": "right",
@@ -301,7 +301,7 @@
             },
             {
                 "imageName": "lucy-abijah-jin",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "Abijah and Lucy greet Jin Cole. \"Good day! Mr. Ashley sent Cato to work for Samuel Dickinson today, so I‘m bringing him his nooning meal. Mr. Ashley is writing his Sunday sermons and had me take the children along so they will not disturb him.” “I remember Cato as a baby in your arms when you first came to Deerfield,” says Lucy.",
                 "alt": "9 lucy, abijah greet jin",
                 "textAlign": "right",
@@ -322,7 +322,7 @@
             },
             {
                 "imageName": "jin-thinking",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "As Abijah and Lucy walk away, Jin thinks, “What a handsome couple. Abijah has had to wait a long time to marry.” Jin believes Abijah has the will and the means to buy Lucy’s freedom from the Wells. Jin thinks of her own freedom. She has little hope that her enslavers will free her or her son.",
                 "alt": "10 Jin thinking",
                 "textAlign": "right",
@@ -340,7 +340,7 @@
             },
             {
                 "imageName": "lucy-thinking-open",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "Lucy knows that Jin has always had to care for the Ashley children even as she raised Cato on her own. Lucy wants more for herself and any children God may send to her and Abijah.",
                 "alt": "11 Lucy thinking ",
                 "textAlign": "right",
@@ -352,7 +352,7 @@
             },
             {
                 "imageName": "lucy-abijah-wells-exterior",
-                "storyAudio": "",
+                "storyAudio": "silence",
                 "storyText": "Lucy does not want her visit with Abijah to end. Should she invite Abijah in? What would Mrs. Wells think? Would she allow it? Lucy wouldn’t have to worry about such things if she and Abijah had a home of their own. As he watches Lucy pass through the door, Abijah comes to a decision. He will speak to Ebenezer Wells about his intentions.",
                 "alt": "12 lucy-abijah-wells-exterior",
                 "textAlign": "right",
