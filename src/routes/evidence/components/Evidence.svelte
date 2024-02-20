@@ -5,12 +5,16 @@
 
 <!-- <article class="more-content">, or 
      <section class="wrapper detail"> -->
-  <h4>More: <a href="/people">How Do We Know?</a></h4>
+  <h4>More: <a href="/evidence">How Do We Know?</a></h4>
 
   <h2>{itemInfo.title}</h2>
   <dl class="evidence-info">
     <dt>Date:</dt>
-    <dd>{ itemInfo.year ? itemInfo.year : 'date needed'}</dd>
+    <dd>
+      { itemInfo.is_circa ? 'circa ' : ''}
+      { itemInfo.year ? itemInfo.year : 'date needed'}
+      { itemInfo.end_year ? " - " + itemInfo.end_year : ''}
+    </dd>
     <dt>Item Type:</dt>
     <dd>{ itemInfo.item_type}</dd>
   </dl>
@@ -20,8 +24,7 @@
       src="https://lucy-proto.deerfield-ma.org/assets/evidence/images/fullpics/{itemInfo.slug}.jpg"
       alt="{itemInfo.title}"
     >
-
-    <figcaption>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</figcaption>
+    <figcaption>{itemInfo.caption}</figcaption>
   </figure>
 
   <div class="about">
@@ -30,7 +33,6 @@
   </div>
 
   <div>
-    <h3>Related</h3>
     {#if itemInfo.relateds.length > 0}
       <h3>Related</h3>
       <ul style="margin:20px">

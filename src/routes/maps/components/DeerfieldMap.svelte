@@ -38,6 +38,7 @@
 
 <!-- <article class="more-content">, or 
      <section class="wrapper detail"> -->
+<h4>More: <a href="/maps">Where in the World?</a></h4> <!-- ? takes up vert space -->
 <h2>{itemInfo.title}</h2>
 <div class="about">
 
