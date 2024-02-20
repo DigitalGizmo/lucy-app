@@ -1,13 +1,13 @@
 [
   {
     "layerName": "default",
-    "intro": "This is the introduction to the whole map, before users have selected a decade.",
+    "intro": "Enslaved Deerfielders lived in households up and down the mile-long village street through the 18th century. Choose a decade to see who they were and where they lived.",
     "popItems": [
     ] 
   }, 
   {
     "layerName": "1690",
-    "intro": "In the final decade of the 17th century, Deerfield was a struggling frontier town. The families who lived here were too poor to purchase enslaved people, with the exception of Reverend John Williams.",
+    "intro": "The earliest surviving reference to an African American in Deerfield appeared in a description of an encounter between a Native American prisoner and “the negro who watched him” in 1690.",
     "popItems": [
       {
         "slug": "tigo",
@@ -20,7 +20,7 @@
   },
   {
     "layerName": "1700",
-    "intro": "This decade was witness to the 1704 French and Indian raid on Deerfield which set the town back in many ways. Several families moved away but others began to be more well off and able to purchase enslaved people.",
+    "intro": "Loss of life and property from continual raids prevented most early residents, with the exception of the minister, from being able to afford to purchase enslaved labor.",
     "popItems": [
       {
         "slug": "parthena",
@@ -47,13 +47,13 @@
   },
   {
     "layerName": "1710",
-    "intro": "intro 1710",
+    "intro": "Deerfield remained one of the most dangerous places to live in British North America. Lacking the safety to farm their fields or pasture their livestock due to the constant threat of attack by the French and their Native allies, few residents had money or inclination to purchase enslaved labor.",
     "popItems": [
     ] 
   }, 
   {
     "layerName": "1720",
-    "intro": "intro 1720 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "intro": "Although the threat of attack still hampered residents from actively farming their land, enslaved people continued to labor in the minister’s household.",
     "popItems": [
       {
         "slug": "pompey",
@@ -87,7 +87,7 @@
   }, 
   {
     "layerName": "1730",
-    "intro": "intro 1730 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt molli.",
+    "intro": "References in Deerfield records to African American residents almost doubled by 1740. A greater sense of security helped to stimulate economic growth and prosperity among the town’s farmers, funding the purchase of enslaved labor to more profitably exploit Deerfield’s fertile meadows and arable fields.",
     "popItems": [
       {
         "slug": "fortune",
@@ -156,13 +156,31 @@
   }, 
   {
     "layerName": "1740",
-    "intro": "intro 1740",
+    "intro": "By the end of the decade, as many as 20 enslaved men, women, and children were living and working on the mile-long village street.",
     "popItems": [
     ] 
   }, 
   {
     "layerName": "1750",
-    "intro": "intro 1750",
+    "intro": "The number of enslaved people living in Deerfield continued to match the increasing prosperity of the town’s residents. By the mid-1750s, the village residents included a free Black family–Lucy and Abijah Prince’s household.",
+    "popItems": [
+    ] 
+  }, 
+  {
+    "layerName": "1760",
+    "intro": "Census data confirms that African Americans were a much larger presence than they had been 50 years earlier. In the Massachusetts census of 1765, Deerfield reported seventeen “Negroes & Molattoes” who comprised a little over two percent of the town’s total population of 737.",
+    "popItems": [
+    ] 
+  }, 
+  {
+    "layerName": "1770",
+    "intro": "Over two dozen African Americans lived in Deerfield in this decade. Most were enslaved, despite the emphasis on essential liberties of the American Revolution.",
+    "popItems": [
+    ] 
+  },
+  {
+    "layerName": "1780",
+    "intro": "The numbers of free and enslaved African Americans in Deerfield diminished in this decade, perhaps reflecting the gradual decline of slavery in Massachusetts in this decade due to court cases declaring it to be unconstitutional under the new Massachusetts state constitution.",
     "popItems": [
     ] 
   }

@@ -475,7 +475,7 @@
 
   <!-- /layer intros -->
   <div class="map-intro-text">
-    <h3>This layer</h3>
+    <h3>About This Decade</h3>
     <p>
       {mapInfo[decadeIndex].intro}
     </p>
