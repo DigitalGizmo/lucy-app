@@ -1,18 +1,48 @@
 <script>
-    import { fade } from 'svelte/transition';
-    export let showModal;
-    export let imageIndex;
-    export let currScrollY, panelHeight, moment;
+  import { fade } from 'svelte/transition';
+  export let showModal;
+  export let imageIndex, prevImageIndex;
+  export let currScrollY, panelHeight, moment, isSoundFx;
 
-    // Leaves
-    let cloudsTransX = 0;
-    // let cloudsTransY = 0;    
+  let fxAudio;
 
-    // Leaves
-    $: if (imageIndex < 4 ) {
-        cloudsTransX = (currScrollY/4) - (panelHeight * 2) + 100;
-        // cloudsTransY = -currScrollY/7    
+
+  // Leaves
+  let cloudsTransX = 0;
+  // let cloudsTransY = 0;    
+
+  // Leaves
+  $: if (imageIndex < 4 ) {
+      cloudsTransX = (currScrollY/4) - (panelHeight * 2) + 100;
+      // cloudsTransY = -currScrollY/7    
+  }
+
+  // Sound effects
+
+
+  $: if (isSoundFx) {
+    // console.log('is readAloud')
+    if (imageIndex != prevImageIndex) {
+      // console.log('curr indx not = prev')
+      if (fxAudio) {
+        // console.log('pausing bcz not equal')
+        fxAudio.pause();
+      }
+      prevImageIndex = imageIndex;
     }
+    // console.log('should play, imageIndex: ' + imageIndex)
+    if (imageIndex < 13) {
+      // fxAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/${moment.frames[imageIndex].fxAudio}.mp3`);
+      fxAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/crickets.mp3`);
+      fxAudio.play();      
+    }
+  } else {
+    console.log('not read aloud')
+
+    if (fxAudio) {
+      fxAudio.pause();
+    }
+  }
 
 </script>
 

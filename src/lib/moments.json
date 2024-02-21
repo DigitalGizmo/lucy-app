@@ -30,7 +30,7 @@
                 "imageName": "02-dawn-house-color",
                 "storyAudio": "silence",
                 "storyText": "In colonial New England, work days for enslaved people began long before daybreak — long before their enslavers got up to begin their own work days.",
-                "alt": " ",
+                "alt": "0 house ",
                 "textAlign": "center",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
@@ -48,7 +48,7 @@
                 "imageName": "03-candle-color",
                 "storyAudio": "silence",
                 "storyText": "While Ebenezer and Abigail Wells continue to sleep in their comfortable bed downstairs, Lucy arises from her straw-filled mattress in the garret and lights a candle so that she can see to dress for the day.",
-                "alt": " ",
+                "alt": "1 window lights up ",
                 "textAlign": "left",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [],
@@ -67,7 +67,7 @@
                 "imageName": "04-house-cutaway-color-nochim",
                 "storyAudio": "silence",
                 "storyText": "Cesar, sleeping on another garret mattress, also awakens and dresses. Lucy and Cesar slip quietly down the stairs to the kitchen.",
-                "alt": " ",
+                "alt": "2 zoom to cutaway ",
                 "textAlign": "right",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
@@ -86,7 +86,7 @@
                 "imageName": "lucy-hearth",
                 "storyAudio": "silence",
                 "storyText": "There, Cesar builds a new fire on the embers remaining from the night before, while Lucy begins to prepare breakfast for the Wells. She and Cesar will eat later.",
-                "alt": " ",
+                "alt": "3 hearth ",
                 "textAlign": "left",
                 "moreBlurb": "Lorem",
                 "moreWhoLinks": [
@@ -102,7 +102,8 @@
                     {"title": "Iron Bake Kettle", "slug": "/people"},
                     {"title": "Calico Pocket", "slug": "/people"},
                     {"title": "Video Demo: Churning Butter", "slug": "/people"}
-                ]            
+                ],          
+                "moreWhereLinks": []            
             }
         ]
     },  

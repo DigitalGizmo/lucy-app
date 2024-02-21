@@ -23,13 +23,17 @@
   let momentScrollHeight = 10000;
   let frameHeight = 900;
   const totalHeightFudgeFactor = 1.3;
-  let numberOfFrames = 13;
+  
 
   let imageIndex = 0; // calculation will subtract 1
   let prevImageIndex = 0;
   let currScrollY = 0;
 
   let moment = data.moments.find((moment) => moment.slug === $page.params.slug); 
+  let numberOfFrames = 13;
+  // Need to refactor this into per-moment -- right now this also applies to Wells
+  // let numberOfFrames = moment.frames.length;
+  // console.log('frames length: ' + numberOfFrames)
 
   const momentSlugs = ["sold", "forsale", "newlife", "wells", "church",
     "singer", "engaging", "community", "union", "revolution",
@@ -38,6 +42,8 @@
 
   let isReadAloud = false;
   let storyAudio;
+  let isSoundFx = false;
+ 
   // Mount is triggered 
   onMount(() => {
     panelHeight = window.innerHeight - 138;
@@ -53,18 +59,10 @@
     scrolledXIndex = currMomentIndex;
     // scroll to text 
     scrollToChosen(currMomentIndex);
-    
-    // console.log('audio: ' + moment.frames[0].storyAudio);
-
-    // storyAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/${moment.frames[1].storyAudio}.mp3`);
-
-
-
     // console.log('scrolledX ' + scrolledXIndex + ' currMomentIndex: ' + currMomentIndex);
     // goto(`/moments/${momentSlugs[currMomentIndex]}`)    
     // console.log('data.moment.frames[0].imageName: ' +
     //  data.moment.frames[0].moreWhoLinks[0].title);
-
   })
 
   let currMomentIndex = 0;
@@ -107,11 +105,6 @@
       // isMapShowing = false;
       isModalShowing = true;
   };
-  // function showMapModal() {
-  //     // console.log('modal type: ' + modalType)
-  //     isMapShowing = true;
-  //     isModalShowing = true;
-  // };
   // --- End Modal Window ---
 
   function calcMomentHeight () {
@@ -129,8 +122,9 @@
   }
 
   // --- Audio ---- 
+  // ---- Read Aloud ----
   function toggleReadAloud() {
-    console.log('Read aloud is on');
+    // console.log('Read aloud is on');
     // storyAudio.play();
     isReadAloud = !isReadAloud;
   }
@@ -148,8 +142,7 @@
     if (imageIndex != prevImageIndex) {
       // console.log('curr indx not = prev')
       if (storyAudio) {
-        console.log('pausing bcz not equal')
-
+        // console.log('pausing bcz not equal')
         storyAudio.pause();
       }
       prevImageIndex = imageIndex;
@@ -167,7 +160,19 @@
     }
   }
 
-
+  // ---- Sound effects ----
+  // Fx handling is in moment components
+  function toggleSoundFx() {
+    isSoundFx = !isSoundFx;
+    console.log('Sound effects on? ' + isSoundFx);
+  }
+  function stopSoundFx(){
+    isSoundFx = false;
+    // if (storyAudio) {
+    //     console.log('pausing bcz not equal')
+    //     storyAudio.pause();
+    //   }
+  }
 
   // ----- Titles-----
   async function scrollToChosen(chosenIndex) {
@@ -207,13 +212,6 @@
     await tick();
     horizontalTitles.scrollLeft -= panelWidth;
   }
-
-  // $: if (currScrollY < (panelHeight/2)) {
-  //   imageIndex = 0;
-  // } else {
-  //   imageIndex = (Math.trunc(((currScrollY + panelHeight)/(panelHeight)) - 0.4));
-  // }
-  // $: scrolledXIndex = Math.trunc((currScrollX + (panelWidth/2.5))/panelWidth)
 
   $: if (currScrollY < (frameHeight/2)) {
     imageIndex = 0;
@@ -331,16 +329,17 @@
           <div class="image-panel-image">
             <svg viewBox="0 0 2000 1286" preserveAspectRatio="xMidYMid slice">
 
-              
-
               <!-- Begin hotspots and overlay animation
                 needs to be after (on top of) animation full frame pngs -->
               {#if currMomentIndex === 3}
                 <Wells 
-                  showModal = {showModal}
-                  imageIndex = {imageIndex}
-                  currScrollY = {currScrollY}
-                  {moment}/>
+                  {showModal}
+                  {imageIndex}
+                  {currScrollY}
+                  {panelHeight}
+                  {moment}
+                  {isSoundFx}
+                  />
               {/if}
               {#if currMomentIndex === 7}
                   <Community 
@@ -349,6 +348,8 @@
                   {currScrollY}
                   {panelHeight}
                   {moment}
+                  {isSoundFx}
+                  {prevImageIndex}
                 />
               {/if}
         
@@ -445,25 +446,23 @@
 
           <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
             <g id="sound-fx" class="icon">
-              <g>
-                <circle class="effects-1" cx="32.5" cy="32.5" r="31"/>
+              <a href="/" 
+                on:click={(e) => { e.preventDefault(); toggleSoundFx();}}>
                 <g>
-                  <line class="effects-1" x1="31.12" y1="16.12" x2="31.12" y2="27.63"/>
-                  <line class="effects-1" x1="44.03" y1="13.4" x2="35.78" y2="28.17"/>
-                  <path class="effects-2" d="m8.18,31.24l4.32,7.88c17.54,2.92,16.44,11.76,24.31,11.76,6.51,0,8.25-5.36,8.25-5.36,2.77,2.65,6.79.47,6.73-2.35-.06-3.07-2.33-5.21-5.89-3.8.03-5.81-2.6-8.16-12.16-8.14l-3.33,6.72v-6.74l-22.22.02Z"/>
+                  <circle class="effects-1" cx="32.5" cy="32.5" r="31"/>
+                  <g>
+                    <line class="effects-1" x1="31.12" y1="16.12" x2="31.12" y2="27.63"/>
+                    <line class="effects-1" x1="44.03" y1="13.4" x2="35.78" y2="28.17"/>
+                    <path class="effects-2" d="m8.18,31.24l4.32,7.88c17.54,2.92,16.44,11.76,24.31,11.76,6.51,0,8.25-5.36,8.25-5.36,2.77,2.65,6.79.47,6.73-2.35-.06-3.07-2.33-5.21-5.89-3.8.03-5.81-2.6-8.16-12.16-8.14l-3.33,6.72v-6.74l-22.22.02Z"/>
+                  </g>
                 </g>
-              </g>
+              </a>
             </g>
           </svg>          
-
-            <!-- <img src="https://lucy-proto.deerfield-ma.org/assets/moments/images/wells/smoke1.png" alt=""> -->
 
         </div>
 
     </div>  <!-- /more-panel-fixed -->
-
-
-
 
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -475,9 +474,6 @@
           </article>
         {/each}  
       </div><!--/story-frames-->
-
-
-
 
       <article class="total-more">
         <h2>The Necessity for Community</h2>

@@ -2,7 +2,7 @@
   import { fade } from 'svelte/transition';
   export let showModal;
   export let imageIndex;
-  export let currScrollY;
+  export let currScrollY; // , panelHeight, moment
 
   // Leaves
   let leavesTransX = 0;
@@ -113,6 +113,12 @@
 {/if}
 
 
+{#if imageIndex === 3}
+<image transition:fade={{ duration: 1500}}
+href="https://lucy-proto.deerfield-ma.org/assets/moments/images/wells/lucy-hearth.jpg"
+alt="svg house" 
+width="100%" height="100%"></image>
+{/if}
 
 <!-- ---- LEAVES ---- -->
 <!-- leaves -->
@@ -124,12 +130,6 @@
 {/if}
 
 
-{#if imageIndex === 3}
-<image transition:fade={{ duration: 1500}}
-href="https://lucy-proto.deerfield-ma.org/assets/moments/images/wells/lucy-hearth.jpg"
-alt="svg house" 
-width="100%" height="100%"></image>
-{/if}
 
 
 <!-- ---- HOTSPOTS ---- -->
