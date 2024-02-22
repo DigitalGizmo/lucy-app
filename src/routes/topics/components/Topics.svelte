@@ -11,6 +11,23 @@
       {itemInfo.title}
   </h2>
 
-  {@html itemInfo.full_text.html}
+  {#if itemInfo.slug === 'ministers-enslavers'}
+    <figure>
+      <!-- svelte-ignore a11y-aria-attributes -->
+      <video width="320" height="240" controls>
+        <source src="https://lucy-proto.deerfield-ma.org/assets/topics/video/{itemInfo.slug}.mp4" 
+        type="video/mp4">
+        Your browser does not support the video tag.
+        <track src="./dummy.vtt" kind="captions" 
+        srclang="en" label="english_captions">
+      </video>
+    </figure>
+  {/if}
+
+
+  <div class="about">
+    <h3>About</h3>
+    {@html itemInfo.full_text.plain}
+  </div>
 
   <!-- / more-content or wrapper detail -->
