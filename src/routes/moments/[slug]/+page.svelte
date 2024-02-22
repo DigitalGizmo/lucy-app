@@ -238,42 +238,6 @@
   }
 </script>
 
-<style>
-  	.more-panel-fixed {
-		height: 60vh;
-		width: 100%;
-		position: fixed;
-    z-index: 30;
-	}
-  .story p {
-    min-height: 10em;
-  }
-  /* SVG icons */
-  /* Read Aloud */
-
-  /* Explore */
-  .explore-1 {
-    fill: #FFF;
-    stroke: #e6ba21;
-    stroke-miterlimit: 10;
-    stroke-width: 3px;
-  }
-
-  .explore-2 {
-    font-family: FiraSansCondensed-Regular, 'Fira Sans Condensed';
-    font-size: 12px;
-  }
-
-  .explore-2, .explore-3 {
-    fill: #FFF;
-  }
-
-  .explore-3 {
-    stroke-width: 3px;
-  }
-
-</style>
-
 <svelte:window bind:scrollY={currScrollY} />
 <section class="style-wrapper-tbd">
   
@@ -571,43 +535,21 @@
             <li class="prev-moment">
               <a href="/moments/{momentSlugs[getPrevSlugIdx(moment.slug)]}"
               on:click={() => { scrollToPrev(getNextSlugIdx(moment.slug));}}>
-                <i class="fa-solid fa-chevron-left"></i> {data.moments[getPrevSlugIdx(moment.slug)].title}
+                
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.8666 3.8147e-06L21.0156 3.149L8.55361 15.6333H35.7333V20.1H8.55361L21.0379 32.562L17.8666 35.7333L-5.72205e-05 17.8667L17.8666 3.8147e-06Z"/>
+                </svg>
+                <!-- <i class="fa-solid fa-chevron-left"></i> {data.moments[getPrevSlugIdx(moment.slug)].title} -->
               </a>
             </li>
           {/if}
           {#if (currMomentIndex == 7 || currMomentIndex == 3)}
             <li class="this-moment">
               <a href="/" on:click={(e) => { e.preventDefault(); explore();}}>
-
-                Explore this moment <i class="fa-solid fa-chevron-down"></i>
-
-<!--              <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.12 79">
-                <g id="explore" class="icon">
-                  <g>
-                    <circle class="explore-1" cx="44.9" cy="44.9" r="31"/>
-                    <path class="explore-3" d="m62.76,44.9l-3.15-3.15-12.48,12.46v-27.18h-4.47v27.18l-12.46-12.48-3.17,3.17,17.87,17.87,17.87-17.87Z"/>
-                    <text class="explore-2" transform="translate(10.68 44.74) rotate(-85.09)"><tspan x="0" y="0">E</tspan></text>
-                    <text class="explore-2" transform="translate(11.1 39.45) rotate(-75.97)"><tspan x="0" y="0">X</tspan></text>
-                    <text class="explore-2" transform="translate(12.4 34.06) rotate(-66.25)"><tspan x="0" y="0">P</tspan></text>
-                    <text class="explore-2" transform="translate(14.81 28.61) rotate(-57.06)"><tspan x="0" y="0">L</tspan></text>
-                    <text class="explore-2" transform="translate(17.11 24.77) rotate(-47.77)"><tspan x="0" y="0">O</tspan></text>
-                    <text class="explore-2" transform="translate(21.94 19.47) rotate(-36.65)"><tspan x="0" y="0">R</tspan></text>
-                    <text class="explore-2" transform="translate(26.94 15.76) rotate(-26.97)"><tspan x="0" y="0">E</tspan></text>
-                    <text class="explore-2" transform="translate(31.79 13.37) rotate(-20.21)"><tspan x="0" y="0"> </tspan></text>
-                    <text class="explore-2" transform="translate(34.18 12.39) rotate(-13.53)"><tspan x="0" y="0">T</tspan></text>
-                    <text class="explore-2" transform="translate(39.26 11.07) rotate(-3.34)"><tspan x="0" y="0">H</tspan></text>
-                    <text class="explore-2" transform="translate(46.23 10.79) rotate(4.82)"><tspan x="0" y="0">I</tspan></text>
-                    <text class="explore-2" transform="translate(49.12 10.93) rotate(12.02)"><tspan x="0" y="0">S</tspan></text>
-                    <text class="explore-2" transform="translate(54.69 12.2) rotate(19.04)"><tspan x="0" y="0"> </tspan></text>
-                    <text class="explore-2" transform="translate(57.17 12.79) rotate(28.1)"><tspan x="0" y="0">M</tspan></text>
-                    <text class="explore-2" transform="translate(64.22 16.55) rotate(40.61)"><tspan x="0" y="0">O</tspan></text>
-                    <text class="explore-2" transform="translate(69.65 21.07) rotate(53.18)"><tspan x="0" y="0">M</tspan></text>
-                    <text class="explore-2" transform="translate(74.46 27.66) rotate(64.43)"><tspan x="0" y="0">E</tspan></text>
-                    <text class="explore-2" transform="translate(76.83 32.38) rotate(74.73)"><tspan x="0" y="0">N</tspan></text>
-                    <text class="explore-2" transform="translate(78.62 39.09) rotate(84.94)"><tspan x="0" y="0">T</tspan></text>
-                  </g>
-                </g>
-              </svg> -->
+                Explore this moment
+                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M36.3666 18.0111L33.2176 14.8621L20.7333 27.3241V0.14444H16.2666V27.3241L3.80463 14.8398L0.633301 18.0111L18.5 35.8778L36.3666 18.0111Z"/>
+                </svg>
 
               </a>
             </li>
@@ -618,7 +560,11 @@
               <a href="/moments/{momentSlugs[getNextSlugIdx(moment.slug)]}"
               on:click={() => { scrollToNext(getNextSlugIdx(moment.slug));}}>
                 <!-- X: { currScrollX } Idx: { scrolledXIndex }  -->
-                {data.moments[getNextSlugIdx(moment.slug)].title} <i class="fa-solid fa-chevron-right"></i>
+                <!-- {data.moments[getNextSlugIdx(moment.slug)].title} <i class="fa-solid fa-chevron-right"></i> -->
+
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.8667 3.8147e-06L14.7177 3.149L27.1797 15.6333H0V20.1H27.1797L14.6953 32.562L17.8667 35.7333L35.7333 17.8667L17.8667 3.8147e-06Z"/>
+                </svg>
               </a>
             </li>
           {/if}

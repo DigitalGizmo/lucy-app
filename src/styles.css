@@ -296,25 +296,25 @@ nav.moment-options ul {
 	font-weight: bold;
 }
 
-nav.moment-options ul li a:link {
-	color: #ffc107;
+nav.moment-options ul li a svg path {
+	fill: #ffc107;
 }
 
-nav.moment-options ul li a:visited {
-	color: indianred;
-}
-
-nav.moment-options ul li a:hover {
-	color: orange;
-	text-decoration: underline;
+nav.moment-options ul li a svg path:hover {
+	fill: #038EDF;
 }
 
 nav.moment-options ul li.this-moment {
 	position: absolute;
+	text-align: center;
+	width: 130px;
 	bottom: 5vh;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%)
+}
+
+nav.moment-options ul li.this-moment svg {
 }
 /* hide next/previous links on mobile */
 nav.moment-options ul li.prev-moment, nav.moment-options ul li.next-moment {
@@ -329,37 +329,15 @@ nav.moment-options ul li.prev-moment, nav.moment-options ul li.next-moment {
 
 nav.moment-options ul li.next-moment {
 	position: absolute;
-	top: 3vh;
+	top: 30vh;
 	right: 4vw;
 }
 
 nav.moment-options ul li.prev-moment {
 	position: absolute;
-	top: 3vh;
+	top: 30vh;
 	left: 6px;
 }
-/* for svg explore this moment - not currently working -*/
-
-.explore-1 {
-  fill: #FFF;
-  stroke: #e6ba21;
-  stroke-miterlimit: 10;
-  stroke-width: 3px;
-}
-
-.explore-2 {
-  font-family: FiraSansCondensed-Regular, 'Fira Sans Condensed';
-  font-size: 12px;
-}
-
-.explore-2, .explore-3 {
-  fill: #FFF;
-}
-
-.explore-3 {
-  stroke-width: 3px;
-}
-
 
 /* ----------------------------------- */
 /* Scrolling Moment Story Frames ----- */
