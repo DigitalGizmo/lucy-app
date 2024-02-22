@@ -428,12 +428,12 @@ nav.moment-options ul li.prev-moment {
 .more-container {
   border-radius: 0 3px 3px 0;
 	background-color: white;
+	font-size: .9em;
 	left: -285px;
-	top: 20vh;
-	height: 300px;
+	top: 15vh;
+	height: 340px;
 	width: 250px;
 	padding: 0 1em 1em 1em;
-	/* z-index: 100; the new more-panel-fixed handles this */
 	position: absolute;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
@@ -441,7 +441,6 @@ nav.moment-options ul li.prev-moment {
 }
 
 .more-container:hover {
-  /* opacity: 1; */
   left: 0px;
 }
 
@@ -449,31 +448,33 @@ nav.moment-options ul li.prev-moment {
   background-color: #038EDF;
   border-radius: 0 0 3px 3px;
 	color: #fff;
-  padding: 1.25em 1em 0.25em 1em;
+  padding: 1.5em 1em 0.25em 1em;
   position: absolute;
   top: 60%;
-  /*top: 318px;*/
   left: 265px;
   margin: 0;
-  /*width: 318px;*/
   text-align: center;
   transform-origin: 0 0;
   transform: rotate(-90deg);
+	text-transform: uppercase;
+}
+
+.more-container p {
+	margin-top: 0;
 }
 
 .more-container ul {
 	list-style-type: none;
-	padding-left: 15px;
-	font-size: .9em;
 }
 
 .more-container ul li{
 	line-height: 1em;
-	padding-bottom: .25em;
+	padding-bottom: .5em;
 }
 
-.more-container h5 {
+.more-container h5, .more-container h3 {
 	margin: 1em 0 0 0;
+	text-transform: uppercase;
 }
 
 .hotspot {
@@ -599,8 +600,23 @@ nav.moment-options ul li.prev-moment {
 	z-index: 40;
 }
 
+.total-more-essay {
+	float: right;
+	width: 50%;
+	margin-left: 2em;
+}
+
+.total-more-list {
+float: left;
+}
+
 .total-more ul {
 	list-style-type: none;
+}
+
+.total-more h3, .total-more h2 {
+	margin-bottom: .25em;
+	text-transform: uppercase;
 }
 
 /* ----------------------------------- */
@@ -646,7 +662,7 @@ nav.moment-options ul li.prev-moment {
   overflow-y: scroll;
   position: fixed;/* this positions the modal window relative to viewport, it won't scroll with the page */  
   right: 0;
-  top: 10vh;
+  top: 15vh;
   z-index: 100;
   max-height: 75vh;
   width: 70vw;

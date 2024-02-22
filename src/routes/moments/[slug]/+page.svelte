@@ -290,70 +290,9 @@
         </div> <!-- /image-panel-fixed -->
       </div><!-- /image-panel -->
 
-      <!-- Experiment by Don -->
       <div class="more-panel-fixed">
-        <!-- ---- Single dynamic more box ---- -->
-        <div class="more-container">
-          <h4 class="more-tab">More</h4>
-          <h4>More</h4>
-          {#if moment.frames[imageIndex]}
 
-            <p>{ moment.frames[imageIndex].moreBlurb}</p>
-            <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
-            {#if imageIndex > 12}
-              <script>console.log('Past where Mores are defined')</script>
-            {:else}
-              {#if (moment.frames[imageIndex].moreWhoLinks.length > 0)}
-              <h5>Who Else?</h5>
-              <ul>
-                {#each moment.frames[imageIndex].moreWhoLinks as link }
-                  <li><a href="/" 
-                      on:click={(e) => { e.preventDefault(); showModal(link.slug, "people");}}>
-                      {link.title}</a></li>
-                {/each}
-              </ul>     
-              {/if}
-
-              {#if (moment.frames[imageIndex].moreTopicLinks.length > 0)}
-                <h5>Topics &amp; Ideas</h5>
-                <ul>
-                  {#each moment.frames[imageIndex].moreTopicLinks as link }
-                  <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "topics");}}>
-                    {link.title}</a></li>
-                  {/each}
-                </ul>            
-              {/if}
-
-              {#if (moment.frames[imageIndex].moreHowLinks.length > 0)}
-                <h5>How Do We Know?</h5>
-                <ul>
-                  {#each moment.frames[imageIndex].moreHowLinks as link }
-                  <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
-                    {link.title}</a></li>
-                  {/each}
-                </ul>            
-              {/if}
-
-              {#if (moment.frames[imageIndex].moreWhereLinks.length > 0)}
-                <h5>Where in the World?</h5>
-                <ul>
-                  {#each moment.frames[imageIndex].moreWhereLinks as link }
-                  <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
-                    {link.title}</a></li>
-                  {/each}
-                </ul>            
-              {/if}
-
-            {/if} 
-
-          {/if}
-
-        </div> <!-- /more-container -->
-
-        <div class="audio-icons"><!-- icons -->
+        <div class="audio-icons">
 
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 190">
 
@@ -398,6 +337,67 @@
 
         </div>
 
+        <!-- ---- Single dynamic more panel ---- -->
+        <div class="more-container">
+          <h4 class="more-tab">More</h4>
+          <h3>More</h3>
+          {#if moment.frames[imageIndex]}
+
+            <p>{ moment.frames[imageIndex].moreBlurb}</p>
+            <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
+            {#if imageIndex > 12}
+              <script>console.log('Past where Mores are defined')</script>
+            {:else}
+              {#if (moment.frames[imageIndex].moreWhoLinks.length > 0)}
+              <h5>Who Else?</h5>
+              <ul>
+                {#each moment.frames[imageIndex].moreWhoLinks as link }
+                  <li><a href="/" 
+                      on:click={(e) => { e.preventDefault(); showModal(link.slug, "people");}}>
+                      {link.title}</a></li>
+                {/each}
+              </ul>     
+              {/if}
+
+              {#if (moment.frames[imageIndex].moreHowLinks.length > 0)}
+                <h5>How Do We Know?</h5>
+                <ul>
+                  {#each moment.frames[imageIndex].moreHowLinks as link }
+                  <li><a href="/" 
+                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
+                    {link.title}</a></li>
+                  {/each}
+                </ul>            
+              {/if}
+
+              {#if (moment.frames[imageIndex].moreTopicLinks.length > 0)}
+                <h5>Topics &amp; Ideas</h5>
+                <ul>
+                  {#each moment.frames[imageIndex].moreTopicLinks as link }
+                  <li><a href="/" 
+                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "topics");}}>
+                    {link.title}</a></li>
+                  {/each}
+                </ul>            
+              {/if}
+
+              {#if (moment.frames[imageIndex].moreWhereLinks.length > 0)}
+                <h5>Where in the World?</h5>
+                <ul>
+                  {#each moment.frames[imageIndex].moreWhereLinks as link }
+                  <li><a href="/" 
+                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
+                    {link.title}</a></li>
+                  {/each}
+                </ul>            
+              {/if}
+
+            {/if} 
+
+          {/if}
+
+        </div> <!-- /more-container -->
+
     </div>  <!-- /more-panel-fixed -->
 
       <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -412,76 +412,74 @@
       </div><!--/story-frames-->
 
       <article class="total-more">
-        <h2>The Necessity for Community</h2>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        <div class="total-more-essay">
+          <h2>The Necessity for Community</h2>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+          <p>Follow Lucy's story&hellip;</p>
+          <h3>Next: 
+            <a href="/moments/{momentSlugs[getNextSlugIdx(moment.slug)]}"
+              on:click={() => { scrollToNext(getNextSlugIdx(moment.slug));}}></a>
+          </h3>
 
+        </div>
 
-        {#if moment.frames[0]}
+        <div class="total-more-list">
+          {#if moment.frames[0]}
 
-          <h3>Who Else?</h3>
-          <ul >
-            {#each {length: 4} as _, i}
-              {#if (moment.frames[i].moreWhoLinks.length > 0)}
-                {#each moment.frames[i].moreWhoLinks as link }
-                  <li><a href="/" 
-                      on:click={(e) => { e.preventDefault(); showModal(link.slug, "people");}}>
-                      {link.title}</a></li>
-                {/each}
-              {/if}
-            {/each}
-          </ul>   
+            <h3>Who Else?</h3>
+            <ul >
+              {#each {length: 4} as _, i}
+                {#if (moment.frames[i].moreWhoLinks.length > 0)}
+                  {#each moment.frames[i].moreWhoLinks as link }
+                    <li><a href="/" 
+                        on:click={(e) => { e.preventDefault(); showModal(link.slug, "people");}}>
+                        {link.title}</a></li>
+                  {/each}
+                {/if}
+              {/each}
+            </ul>
 
-          <h3>Topics &amp; Ideas</h3>
-          <ul>
-            {#each {length: 4} as _, i}
-              {#if (moment.frames[i].moreTopicLinks.length > 0)}
-                {#each moment.frames[i].moreTopicLinks as link }
-                  <li><a href="/" 
-                      on:click={(e) => { e.preventDefault(); showModal(link.slug, "topics");}}>
-                      {link.title}</a></li>
-                {/each}
-              {/if}
-            {/each}
-          </ul>     
+            <h3>How Do We Know?</h3>
+            <ul>
+              {#each {length: 4} as _, i}
+                {#if (moment.frames[i].moreHowLinks.length > 0)}
+                  {#each moment.frames[i].moreHowLinks as link }
+                    <li><a href="/" 
+                        on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
+                        {link.title}</a></li>
+                  {/each}
+                {/if}
+              {/each}
+            </ul>
 
-          <h3>How Do We Know?</h3>
-          <ul>
-            {#each {length: 4} as _, i}
-              {#if (moment.frames[i].moreHowLinks.length > 0)}
-                {#each moment.frames[i].moreHowLinks as link }
-                  <li><a href="/" 
-                      on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
-                      {link.title}</a></li>
-                {/each}
-              {/if}
-            {/each}
-          </ul>     
+            <h3>Topics &amp; Ideas</h3>
+            <ul>
+              {#each {length: 4} as _, i}
+                {#if (moment.frames[i].moreTopicLinks.length > 0)}
+                  {#each moment.frames[i].moreTopicLinks as link }
+                    <li><a href="/" 
+                        on:click={(e) => { e.preventDefault(); showModal(link.slug, "topics");}}>
+                        {link.title}</a></li>
+                  {/each}
+                {/if}
+              {/each}
+            </ul> 
 
-          <h3>Where in the world?</h3>
-          <ul>
-            {#each {length: 4} as _, i}
-              {#if (moment.frames[i].moreWhereLinks.length > 0)}
-                {#each moment.frames[i].moreWhereLinks as link }
-                  <li><a href="/" 
-                      on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
-                      {link.title}</a></li>
-                {/each}
-              {/if}
-            {/each}
-          </ul>     
+            <h3>Where in the world?</h3>
+            <ul>
+              {#each {length: 4} as _, i}
+                {#if (moment.frames[i].moreWhereLinks.length > 0)}
+                  {#each moment.frames[i].moreWhereLinks as link }
+                    <li><a href="/" 
+                        on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
+                        {link.title}</a></li>
+                  {/each}
+                {/if}
+              {/each}
+            </ul>
+          {/if}
+        </div>
 
-          <h3>Where in the World</h3>
-          <ul>
-              <li>Map of Deefield</li>
-              <li>Another map</li>
-          </ul>
-          <h3>Myths and Assumptions</h3>
-          <ul>
-              <li>This is a myth</li>
-              <li>Another Myth</li>
-
-          </ul>
-        {/if}
       </article> <!--/total-more -->
 
     </section> <!--/moment-scroll-->
