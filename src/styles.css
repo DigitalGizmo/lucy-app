@@ -338,6 +338,28 @@ nav.moment-options ul li.prev-moment {
 	top: 3vh;
 	left: 6px;
 }
+/* for svg explore this moment - not currently working -*/
+
+.explore-1 {
+  fill: #FFF;
+  stroke: #e6ba21;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+
+.explore-2 {
+  font-family: FiraSansCondensed-Regular, 'Fira Sans Condensed';
+  font-size: 12px;
+}
+
+.explore-2, .explore-3 {
+  fill: #FFF;
+}
+
+.explore-3 {
+  stroke-width: 3px;
+}
+
 
 /* ----------------------------------- */
 /* Scrolling Moment Story Frames ----- */
@@ -489,6 +511,59 @@ nav.moment-options ul li.prev-moment {
 	/* stroke-opacity: 9; */
 }
 
+.more-panel-fixed {/* is this in the right place? */
+	height: 60vh;
+	width: 100%;
+	position: fixed;
+  z-index: 30;
+}
+
+/* ------ SVG Audio Icons --------------- */
+.audio-icons {
+  height: 50px;
+  left: 10px;
+  position: absolute;
+  top: 60vh;
+  width: 50px;
+}
+
+.audio-icons a g circle:hover {
+	fill: #e5b921;
+	opacity: .70;
+}
+
+#read-aloud {
+	margin-bottom: 1em;
+}
+
+.circle {
+	fill: #e5b921;
+	opacity: .20;
+}
+
+.circle-stroke {
+  stroke: #e5b921;
+	stroke-width: 3px;
+	fill: none
+}
+
+.dot {
+  fill: #e5b921;
+  stroke-width: 0px;
+}
+
+.lines {
+  fill: none;
+  stroke: #e5b921;
+}
+
+.lines-thick {
+  stroke-width: 3px;
+}
+
+.lines-thin {
+  stroke-width: 2px;
+}
 
 /* ---- Story Text -------------   */
 .story-frames { /* for MOBILE: displays smaller than 800px */
@@ -513,6 +588,10 @@ nav.moment-options ul li.prev-moment {
 	.story-frames article.story {
 		font-size: 1.75rem;
 	}
+}
+
+.story p {/* Don's solution for regularizing the heights of varying story text lengths */
+  min-height: 10em;
 }
 
 .story-frames article.story.center, .story-frames article.story.right, .story-frames article.story.left {

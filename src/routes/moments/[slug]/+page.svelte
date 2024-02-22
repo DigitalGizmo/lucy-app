@@ -250,45 +250,10 @@
   }
   /* SVG icons */
   /* Read Aloud */
-  .audio-icons {
-    width: 50px;
-    height: 50px;
-    bottom: 0;
-    right: 0;
-  }
-  .read-cls-1 {
-    stroke-width: 3px;
-  }
 
-  .read-cls-1, .read-cls-2 {
-    fill: none;
-    stroke: #e5b921;
-    stroke-miterlimit: 10;
-  }
-
-  .read-cls-2 {
-    stroke-width: 7px;
-  }
-
-  .read-cls-3 {
-    fill: #e5b921;
-    stroke-width: 0px;
-  }
-  /* Sound effects */
-  .effects-1 {
-    fill: none;
-    stroke: #e5b921;
-    stroke-miterlimit: 10;
-    stroke-width: 3px;
-  }
-
-  .effects-2 {
-    fill: #e5b921;
-    stroke-width: 0px;
-  }
   /* Explore */
   .explore-1 {
-    fill: none;
+    fill: #FFF;
     stroke: #e6ba21;
     stroke-miterlimit: 10;
     stroke-width: 3px;
@@ -300,11 +265,11 @@
   }
 
   .explore-2, .explore-3 {
-    fill: #e6ba21;
+    fill: #FFF;
   }
 
   .explore-3 {
-    stroke-width: 0px;
+    stroke-width: 3px;
   }
 
 </style>
@@ -426,38 +391,45 @@
 
         <div class="audio-icons"><!-- icons -->
 
-          <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" 
-            viewBox="0 0 127 127">
-            <g id="read-aloud" class="icon">
-              <a href="/" 
-                on:click={(e) => { e.preventDefault(); toggleReadAloud();}}>
-                <g>
-                  <circle class="read-cls-1" cx="63.5" cy="63.5" r="62"/>
-                  <circle class="read-cls-3" cx="13.01" cy="69.05" r="3.66"/>
-                  <circle class="read-cls-3" cx="81.15" cy="69.05" r="3.66"/>
-                  <path class="read-cls-2" d="m21.43,54.87c10.63,8.63,10.63,20.68,0,27.91"/>
-                  <path class="read-cls-2" d="m32.95,43.8c16.1,11.08,15.95,38.99,0,49.92"/>
-                  <path class="read-cls-3" d="m96.74,20.91v31.9h-25.11c-2.22.15-2.68,1.27-2.68,2.81v8.78c-5.1.3-5.46,8.94,1.94,8.32.59,4.47,4.73,14.51,17.28,20.04l8.57.08v7.83h-7.53c-8.06-1.18-21.11-10.34-24.07-20.97-5.46-.59-12.26-12.26-4.22-18.8-.89-21.07,5.66-26.55,9.68-31.24,4.56-5.32,13.44-9.62,26.14-8.73Z"/>
-                </g>
-              </a>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 190">
 
-            </g>
-          </svg>
-
-          <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
             <g id="sound-fx" class="icon">
               <a href="/" 
                 on:click={(e) => { e.preventDefault(); toggleSoundFx();}}>
                 <g>
-                  <circle class="effects-1" cx="32.5" cy="32.5" r="31"/>
+                  <circle class="circle-stroke" cx="45" cy="45" r="43.5"/>
+                  <circle class="circle" cx="45" cy="45" r="43.5"/>
                   <g>
-                    <line class="effects-1" x1="31.12" y1="16.12" x2="31.12" y2="27.63"/>
-                    <line class="effects-1" x1="44.03" y1="13.4" x2="35.78" y2="28.17"/>
-                    <path class="effects-2" d="m8.18,31.24l4.32,7.88c17.54,2.92,16.44,11.76,24.31,11.76,6.51,0,8.25-5.36,8.25-5.36,2.77,2.65,6.79.47,6.73-2.35-.06-3.07-2.33-5.21-5.89-3.8.03-5.81-2.6-8.16-12.16-8.14l-3.33,6.72v-6.74l-22.22.02Z"/>
+                    <path class="lines lines-thin" d="m14,64L47.57,26h11.14l-3.29,3h3.58l-3.9,2.93c2.79,22.3-8.36,24.25-26.61,23.41l-6.69,7.66h-7.8v1Z"/>
+                    <circle class="dot" cx="48.79" cy="29.85" r="1.26"/>
+                    <path class="lines lines-thin" d="m39,36h8.81s.42,14.45-14.87,14.45"/>
+                    <line class="lines lines-thin" x1="33" y1="56" x2="33" y2="64"/>
+                    <line class="lines lines-thin" x1="37" y1="56" x2="37" y2="64"/>
+                  </g>
+                  <g>
+                    <line class="lines lines-thin" x1="67.31" y1="17.22" x2="62.68" y2="23.25"/>
+                    <line class="lines lines-thin" x1="75.03" y1="21" x2="63.38" y2="25.92"/>
+                    <line class="lines lines-thin" x1="72.36" y1="28.3" x2="64.65" y2="28.16"/>
                   </g>
                 </g>
               </a>
             </g>
+
+            <g id="read-aloud" class="icon" transform="translate(0,10)">
+              <a href="/" 
+                on:click={(e) => { e.preventDefault(); toggleReadAloud();}}>
+                <g>
+                  <circle class="circle-stroke" cx="45" cy="135" r="43.5"/>
+                  <circle class="circle" cx="45" cy="135" r="43.5"/>
+                  <circle class="dot" cx="48.5" cy="140.5" r="2.5"/>
+                  <path class="lines lines-thick" d="m54.3,130.72c7.46,6.05,7.46,14.51,0,19.58"/>
+                  <path class="lines lines-thick" d="m62.39,122.94c11.29,7.77,11.19,27.35,0,35.02"/>
+                  <polyline class="lines lines-thick" points="25.81 113.81 40.6 130.1 31.92 132.58 32.34 140.21 23.96 145.16 32.52 149.05 30.82 154.57"/>
+                  <circle class="dot" cx="19.5" cy="116.5" r="2.5"/>
+                </g>
+              </a>
+            </g>
+
           </svg>          
 
         </div>
@@ -609,7 +581,7 @@
 
                 Explore this moment <i class="fa-solid fa-chevron-down"></i>
 
-            <!-- <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.12 79">
+<!--              <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.12 79">
                 <g id="explore" class="icon">
                   <g>
                     <circle class="explore-1" cx="44.9" cy="44.9" r="31"/>
