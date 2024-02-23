@@ -1,15 +1,7 @@
 <script>
   import { page } from '$app/stores';
   import moments from "$lib/moments.json";
-  // import { isScrollMode } from '$lib/stores.js';
   export let scrollToChosenIdx = () => {}; // no-operation function
-  // export let stopAudio = () => {}; // no-operation function
-  // function goToChosen(idx, slug) {
-  //   // isScrollMode.set(false);
-  //   // stopAudio();
-  //   scrollToChosenIdx(idx, slug);
-  // }
-
 </script>
 
 <nav class="moment-nav">
