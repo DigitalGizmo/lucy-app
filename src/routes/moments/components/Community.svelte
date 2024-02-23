@@ -37,8 +37,7 @@
       fxAudio.play();      
     }
   } else {
-    console.log('not read aloud')
-
+    // console.log('not read aloud')
     if (fxAudio) {
       fxAudio.pause();
     }

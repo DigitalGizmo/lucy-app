@@ -177,6 +177,8 @@
   async function scrollToChosen(chosenIndex) {
     console.log('scroll to chosen: ' + chosenIndex)
     // Jump, don't smooth scroll
+    isScrollMode.set(false);
+    stopAudio();
     horizScrollClass = '';
     await tick();
     horizontalTitles.scrollLeft = 0;
@@ -417,7 +419,9 @@
           <p>Follow Lucy's story&hellip;</p>
           <h3>Next: 
             <a href="/moments/{momentSlugs[getNextSlugIdx(moment.slug)]}"
-              on:click={() => { scrollToNext(getNextSlugIdx(moment.slug));}}></a>
+              on:click={() => { scrollToChosen(getNextSlugIdx(moment.slug, moment.slug));}}>
+              {data.moments[getNextSlugIdx(moment.slug)].title}
+            </a>
           </h3>
 
         </div>
