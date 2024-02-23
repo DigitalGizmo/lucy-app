@@ -153,8 +153,7 @@
       storyAudio.play();      
     }
   } else {
-    console.log('not read aloud')
-
+    // console.log('not read aloud')
     if (storyAudio) {
       storyAudio.pause();
     }
@@ -428,9 +427,9 @@
 
             <h3>Who Else?</h3>
             <ul >
-              {#each {length: 4} as _, i}
-                {#if (moment.frames[i].moreWhoLinks.length > 0)}
-                  {#each moment.frames[i].moreWhoLinks as link }
+              {#each moment.frames as frame}
+                {#if (frame.moreWhoLinks.length > 0)}
+                  {#each frame.moreWhoLinks as link }
                     <li><a href="/" 
                         on:click={(e) => { e.preventDefault(); showModal(link.slug, "people");}}>
                         {link.title}</a></li>
@@ -441,9 +440,9 @@
 
             <h3>How Do We Know?</h3>
             <ul>
-              {#each {length: 4} as _, i}
-                {#if (moment.frames[i].moreHowLinks.length > 0)}
-                  {#each moment.frames[i].moreHowLinks as link }
+              {#each moment.frames as frame}
+                {#if (frame.moreHowLinks.length > 0)}
+                  {#each frame.moreHowLinks as link }
                     <li><a href="/" 
                         on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
                         {link.title}</a></li>
@@ -454,9 +453,9 @@
 
             <h3>Topics &amp; Ideas</h3>
             <ul>
-              {#each {length: 4} as _, i}
-                {#if (moment.frames[i].moreTopicLinks.length > 0)}
-                  {#each moment.frames[i].moreTopicLinks as link }
+              {#each moment.frames as frame}
+                {#if (frame.moreTopicLinks.length > 0)}
+                  {#each frame.moreTopicLinks as link }
                     <li><a href="/" 
                         on:click={(e) => { e.preventDefault(); showModal(link.slug, "topics");}}>
                         {link.title}</a></li>
@@ -467,9 +466,9 @@
 
             <h3>Where in the world?</h3>
             <ul>
-              {#each {length: 4} as _, i}
-                {#if (moment.frames[i].moreWhereLinks.length > 0)}
-                  {#each moment.frames[i].moreWhereLinks as link }
+              {#each moment.frames as frame}
+                {#if (frame.moreWhereLinks.length > 0)}
+                  {#each frame.moreWhereLinks as link }
                     <li><a href="/" 
                         on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
                         {link.title}</a></li>
