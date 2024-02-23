@@ -9,7 +9,7 @@
     <MainNav />
 
     <!-- Can this be outside of header -->
-    <h1>Where in the World?</h1>
+    <h1>Where In the World?</h1>
   </header>
 
   <section class="wrapper">

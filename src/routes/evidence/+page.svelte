@@ -13,7 +13,7 @@
   </header>
 
   <section class="wrapper">    
-    <p class="menu-tools">Sort by: <a href="">topic</a> | <a href="">type</a></p>
+    <p class="menu-tools">Filter by: <a href="">Topic</a> | <a href="">Item Type</a></p>
 
     <table class="feature-menu evidence">
       <tr>

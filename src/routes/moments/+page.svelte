@@ -10,7 +10,7 @@
 <section class="wireframe-wrapper">
 	<header id="header">
         <MainNav />
-		<h1>Moments Menu</h1>
+		<h1>Lucy's Life</h1>
 	</header>
 
 	<section class="wrapper">

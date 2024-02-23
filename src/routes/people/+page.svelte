@@ -14,7 +14,7 @@
   </header>
 
   <section class="wrapper">
-    <p class="menu-tools">Sort by: <a href="#">name</a> | <a href="#">date</a> | <a href="#">gender</a></p>
+    <p class="menu-tools">Sort by: <a href="#">Name</a> | <a href="#">Date</a> Filter by: <a href="#">Status</a></p>
 
     <table class="feature-menu people">
       <tr>

@@ -282,9 +282,9 @@ nav.moment-nav ul li.selected{
 }
 
 .moment-title-block div p.history-intro {
-	display: none;
-/*font-family: 'Cormorant Garamond', serif;
-	padding: 0 3%;*/
+	color: #fff;
+	font-family: 'Cormorant Garamond', serif;
+	padding: 0 3%;
 }
 
 /* links to next, previous, this moments */
