@@ -1,4 +1,4 @@
-import moments from "../../../lib/moments.json";
+import moments from "../components/moments.json";
 /* This should go up a level and be called +layout.server.js
 per https://learn.svelte.dev/tutorial/layout-data -- I think
 */

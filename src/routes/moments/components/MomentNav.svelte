@@ -1,6 +1,6 @@
 <script>
   import { page } from '$app/stores';
-  import moments from "$lib/moments.json";
+  import moments from './moments.json';
   export let scrollToChosenIdx = () => {}; // no-operation function
 </script>
 

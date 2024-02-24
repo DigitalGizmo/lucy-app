@@ -1,5 +1,5 @@
 <script>
-  import moments from "$lib/moments.json";
+  import moments from './components/moments.json';
   import MainNav from "$lib/MainNav.svelte";
   import { isScrollMode } from '$lib/stores.js';
   function setScrollMode(idx) {
