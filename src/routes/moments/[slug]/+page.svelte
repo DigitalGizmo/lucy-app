@@ -20,8 +20,6 @@
   const totalHeightFudgeFactor = 1.3;
   
 
-  let imageIndex = 0; // calculation will subtract 1
-  let prevImageIndex = 0;
   let currScrollY = 0;
 
   let moment = data.moments.find((moment) => moment.slug === $page.params.slug); 
@@ -85,28 +83,6 @@
   let currScrollX = 0;
   let horizScrollClass = ''; // smooth-scroll
 
-    // --- Modal Window ---
-  let isModalShowing = false;
-  let modalSlug = "tbd";
-  // let isMapShowing = false;
-  let modalType = "type tbd";
-
-  function showModal(slug, type) {
-      // event.preventDefault();
-      modalSlug = slug;
-      // modalType = modalTypes[type];
-      modalType = type;
-      // console.log('modal type: ' + modalType)
-      // isMapShowing = false;
-      isModalShowing = true;
-  };
-  // --- End Modal Window ---
-
-  function calcMomentHeight () {
-    // console.log(" got to calc");
-    momentScrollHeight = document.getElementsByClassName("moment-scroll")[0].offsetHeight;
-    frameHeight = (momentScrollHeight - (panelHeight * totalHeightFudgeFactor))/numberOfFrames;
-  }
 
   async function explore() {
     isScrollMode.set(true);
@@ -116,57 +92,6 @@
     console.log("moment height: " + momentScrollHeight);
   }
 
-  // --- Audio ---- 
-  // ---- Read Aloud ----
-  function toggleReadAloud() {
-    // console.log('Read aloud is on');
-    // storyAudio.play();
-    isReadAloud = !isReadAloud;
-  }
-
-  function stopAudio(){
-    isReadAloud = false;
-    if (storyAudio) {
-        console.log('pausing bcz not equal')
-        storyAudio.pause();
-      }
-  }
-
-  $: if (isReadAloud) {
-    // console.log('is readAloud')
-    if (imageIndex != prevImageIndex) {
-      // console.log('curr indx not = prev')
-      if (storyAudio) {
-        // console.log('pausing bcz not equal')
-        storyAudio.pause();
-      }
-      prevImageIndex = imageIndex;
-    }
-    // console.log('should play, imageIndex: ' + imageIndex)
-    if (imageIndex < 13) {
-      storyAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/${moment.frames[imageIndex].storyAudio}.mp3`);
-      storyAudio.play();      
-    }
-  } else {
-    // console.log('not read aloud')
-    if (storyAudio) {
-      storyAudio.pause();
-    }
-  }
-
-  // ---- Sound effects ----
-  // Fx handling is in moment components
-  function toggleSoundFx() {
-    isSoundFx = !isSoundFx;
-    console.log('Sound effects on? ' + isSoundFx);
-  }
-  function stopSoundFx(){
-    isSoundFx = false;
-    // if (storyAudio) {
-    //     console.log('pausing bcz not equal')
-    //     storyAudio.pause();
-    //   }
-  }
 
   // ----- Titles-----
   async function scrollToChosen(chosenIndex) {
@@ -232,6 +157,88 @@
   function beenClicked(event) {
     console.log("target clicked: " + event.target.className)
   }
+
+  // To move to Moment (Scroll) component
+
+  let imageIndex = 0; // calculation will subtract 1
+  let prevImageIndex = 0;
+
+  function calcMomentHeight () {
+    // console.log(" got to calc");
+    momentScrollHeight = document.getElementsByClassName("moment-scroll")[0].offsetHeight;
+    frameHeight = (momentScrollHeight - (panelHeight * totalHeightFudgeFactor))/numberOfFrames;
+  }
+
+  // --- Modal Window ---
+  let isModalShowing = false;
+  let modalSlug = "tbd";
+  // let isMapShowing = false;
+  let modalType = "type tbd";
+
+  function showModal(slug, type) {
+      // event.preventDefault();
+      modalSlug = slug;
+      // modalType = modalTypes[type];
+      modalType = type;
+      // console.log('modal type: ' + modalType)
+      // isMapShowing = false;
+      isModalShowing = true;
+  };
+  // --- End Modal Window ---
+
+
+  // --- Audio ---- 
+  // ---- Read Aloud ----
+  function toggleReadAloud() {
+    // console.log('Read aloud is on');
+    // storyAudio.play();
+    isReadAloud = !isReadAloud;
+  }
+
+  function stopAudio(){
+    isReadAloud = false;
+    if (storyAudio) {
+        console.log('pausing bcz not equal')
+        storyAudio.pause();
+      }
+  }
+
+  $: if (isReadAloud) {
+    // console.log('is readAloud')
+    if (imageIndex != prevImageIndex) {
+      // console.log('curr indx not = prev')
+      if (storyAudio) {
+        // console.log('pausing bcz not equal')
+        storyAudio.pause();
+      }
+      prevImageIndex = imageIndex;
+    }
+    // console.log('should play, imageIndex: ' + imageIndex)
+    if (imageIndex < 13) {
+      storyAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/${moment.frames[imageIndex].storyAudio}.mp3`);
+      storyAudio.play();      
+    }
+  } else {
+    // console.log('not read aloud')
+    if (storyAudio) {
+      storyAudio.pause();
+    }
+  }
+
+  // ---- Sound effects ----
+  // Fx handling is in moment components
+  function toggleSoundFx() {
+    isSoundFx = !isSoundFx;
+    console.log('Sound effects on? ' + isSoundFx);
+  }
+  function stopSoundFx(){
+    isSoundFx = false;
+    // if (storyAudio) {
+    //     console.log('pausing bcz not equal')
+    //     storyAudio.pause();
+    //   }
+  }
+
 </script>
 
 <svelte:window bind:scrollY={currScrollY} />
