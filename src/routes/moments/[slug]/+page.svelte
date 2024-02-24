@@ -107,17 +107,15 @@
 
   async function scrollToChosenSlug(chosenIndex, slug) {
     // console.log('scrollToChosenSlug, idx: ' + chosenIndex + ' slug: ' + slug) 
-    // Prevent $: if not equal from duplicating
-    currMomentIndex = chosenIndex;
-    goto(`/moments/${slug}`)    
-
-    horizScrollClass = '';
-
+    isScrollMode.set(false);
     // Wait for horizontalTitle to resolve (it wasn't present in scrollMode)
     await tick();
+    // Not sure if there might be a better sequence
+    currMomentIndex = chosenIndex;
+    goto(`/moments/${slug}`)    
+    horizScrollClass = '';
     horizontalTitles.scrollLeft = 0;
     horizontalTitles.scrollLeft += (panelWidth * chosenIndex);
-
   }
 
   async function scrollToNext(chosenIndex) {
