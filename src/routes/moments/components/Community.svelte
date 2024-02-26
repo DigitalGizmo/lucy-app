@@ -213,11 +213,19 @@
 <!-- ---- HOTSPOTS ---- -->
 {#if imageIndex === 0}
     <g transition:fade={{ duration: 1500}}>
-        <!-- <a hx-get="/moments/more"> -->
         <a href="/"
-        on:click={(e) => { e.preventDefault(); showModal("Bag", "how");}}>
-            <rect x="470" y="840" width="200px" height="200px" 
-            class="hotspot"></rect>
+        on:click={(e) => { e.preventDefault(); showModal("cake-of-chocolate", "evidence");}}>
+          <path class="hotspot" d="M1133.7,1244.6c-30.1-54.1-21-60-2.9-69.8c-21.3-16.8-10.5-16.4,16.7-27.3c-14.1-3.2-1.2-15.4,4.2-18.4
+          c-6.2-9.7-23.2-25.5,35.4-53.2c20.1-9.5,50.5,3.9,77.1,1.5c26.6-2.4,46.2-12.1,53.2-5.9c5.1,14.1,0.6,30.9-9.1,41
+          c9.6,4.3,9.9,13.4,3.7,16.6c14.5-2.1,18.6,23.9,26.6,36.9c26.3-0.5,47,5.4,31,28.7c-7.4,10.9-1.8-13.9-41.6,14.2
+          c-3,2.1-17.7-1.8-17.7-1.8C1275.2,1268.1,1206.9,1266.1,1133.7,1244.6z"/>
+        </a>
+        <a href="/"
+        on:click={(e) => { e.preventDefault(); showModal("basket", "evidence");}}>
+          <path class="hotspot" d="M962.1,1286h371c6.5-4.9,4.7-72.7-1.8-76.7c0,0-12,2.1-19.9-1.2c-43.3,77.9-143.2,46.7-178.5,37.7
+          c-9.9-21.6-37-55.1-5.2-71.4c-17.3-14.9-9.9-17.6,15.6-27c-8.4-5.4,1.1-14.5,6.7-18.8c-10.6-10-7.4-21-4.4-25.2
+          c-13.7-3.6-57-13.6-80.9-15.1c23-99,66.1-170.5,88-201.2c-57.3,23-111.1,162.2-109.5,194c-11.9,1.5-27.2,5.4-33,17
+          C1002.2,1113.8,935.5,1209.7,962.1,1286z"/>
         </a>
     </g>
 {/if}
@@ -225,8 +233,8 @@
     <g transition:fade={{ duration: 1500}}>
         <!-- <a hx-get="/moments/more"> -->
         <a href="/"
-        on:click={(e) => { e.preventDefault(); showModal("Lidded Hanging Pot", "how");}}>
-            <rect x="350" y="445" width="110px" height="160px" 
+        on:click={(e) => { e.preventDefault(); showModal("hoop", "evidence");}}>
+            <rect x="1650" y="350" width="110px" height="800px" 
             class="hotspot"></rect>
         </a>
     </g>

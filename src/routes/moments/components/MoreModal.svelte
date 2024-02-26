@@ -72,7 +72,9 @@
     </article><!-- /more-content -->
 
     {:catch error}
-        <p style="color: red">{error.message}</p>
+    <p>Error. There might not be {modalType} with a slug of {slug}</p>
+    <p>Attempt a direct link: <a href="/{modalType}/{slug}"> /{modalType}/{slug}</a></p>
+    <p style="color: red">{error.message}</p>
     {/await}
           
   </div><!-- /modal-wrapper -->
