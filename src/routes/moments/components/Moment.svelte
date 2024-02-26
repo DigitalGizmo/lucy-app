@@ -137,7 +137,7 @@
               {showModal}
               {imageIndex}
               {currScrollY}
-              {panelHeight}
+              {frameHeight}
               {moment}
               {isSoundFx}
               />
@@ -147,7 +147,7 @@
               {showModal}
               {imageIndex}
               {currScrollY}
-              {panelHeight}
+              {frameHeight}
               {moment}
               {isSoundFx}
               {prevImageIndex}

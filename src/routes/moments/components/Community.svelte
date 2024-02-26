@@ -2,7 +2,7 @@
   import { fade } from 'svelte/transition';
   export let showModal;
   export let imageIndex, prevImageIndex;
-  export let currScrollY, panelHeight, moment, isSoundFx;
+  export let currScrollY, frameHeight, moment, isSoundFx;
 
   let fxAudio;
 
@@ -10,7 +10,7 @@
   // Clouds
   let cloudsTransX = 0;
   $: if (imageIndex < 4 ) {
-      cloudsTransX = (currScrollY/4) - (panelHeight * 2) + 100;
+      cloudsTransX = (currScrollY/4) - (frameHeight * 2) + 100;
       // cloudsTransY = -currScrollY/7    
   }
 
@@ -44,6 +44,7 @@
   let lucyAbiTransX = 0;
   let lucyAbiScale = 1;
   let lucyAbiHorseBgScale = 1;
+  let lucAbiIndex = 0;
   // const zoomDelay = 130;  
   // let lucyAbiHorseBgTransY = 0;
   // let lucyAbiHorseBgTransX = 0;
@@ -54,13 +55,20 @@
   }
   // Allow time for fade before starting zoom, hence the - ~ 150
   $: if ((lucyAbiHorseScrollStartY) - (currScrollY ) < 0) { //- zoomDelay
-      lucyAbiTransY = ((lucyAbiHorseScrollStartY - (currScrollY ))/8); //- zoomDelay
-      lucyAbiTransX = ((lucyAbiHorseScrollStartY - (currScrollY ))/2); //- zoomDelay
+      // lucyAbiTransY = ((lucyAbiHorseScrollStartY - (currScrollY ))/8); //- zoomDelay
+      // lucyAbiTransX = ((lucyAbiHorseScrollStartY - (currScrollY ))/2); //- zoomDelay
       lucyAbiScale = 1 + ((lucyAbiHorseScrollStartY - (currScrollY ))/6000); // - zoomDelay
 
       // lucyAbiHorseBgTransY = ((lucyAbiHorseScrollStartY - (currScrollY - zoomDelay))/6);
       // lucyAbiHorseBgScale = 1 - ((lucyAbiHorseScrollStartY - (currScrollY ))/10000); // - zoomDelay
   }
+  // Luc-Abi image change
+  $: if ((currScrollY - lucyAbiHorseScrollStartY) < (frameHeight/2.2)) {
+    lucAbiIndex = 0;
+  } else {
+    lucAbiIndex = 1;
+  }  
+  // lucAbiIndex = Math.trunc((((currScrollY - lucyAbiHorseScrollStartY) )/(frameHeight/2)) - 0);
 
   // ---- Sound effects ---
   $: if (isSoundFx) {
@@ -93,6 +101,10 @@
         width: 100%;
         height: 100%;
     }
+    .Rrrrr {
+      font: italic 40px serif;
+      fill: red;
+    }    
 </style>
 
 <!-- ---- BACKGROUND ---- -->
@@ -124,7 +136,7 @@
       <image transition:fade={{ duration: 1000}}  class="moment-image"
       href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-open.png" />
   
-      <image in:fade={{ duration: 1000, delay: 2000}}  out:fade={{duration: 1000}} class="moment-image"
+      <image in:fade={{ duration: 1000, delay: 1500}}  out:fade={{duration: 1000}} class="moment-image"
       href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-closed.png" />
     </g>
 
@@ -149,14 +161,26 @@
 
     <!-- X compenstion for scale per: https://stackoverflow.com/questions/11671100/scale-path-from-center -->
     <g transform="translate({100 + (1-lucyAbiScale)* 700} {(1-lucyAbiScale)* 500}) scale({lucyAbiScale})">
-      <image transition:fade={{ duration: 1000}}  
-      class="moment-image"
-      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med.png" />
+
+      <text transform="translate(200 200) "
+      class="Rrrrr">abiIndex: {lucAbiIndex} (currScrollY - lucyAbiHorseScrollStartY): 
+      {(currScrollY - lucyAbiHorseScrollStartY)} </text>
+
+      <text transform="translate(200 240) "
+      class="Rrrrr"> frameHeight/2: {frameHeight/2}</text>
+      {#if lucAbiIndex === 0}
+        <image transition:fade={{ duration: 700}}  
+        class="moment-image"
+        href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med.png" />
+      {/if}
       
-      <image transition:fade={{ duration: 500,  delay: 2000}} 
-      transform="translate(-300 -50) scale(1.15)" 
-      class="moment-image"
-      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med-no-hat.png" />
+      {#if lucAbiIndex === 1}
+        <image transition:fade={{ duration: 700}} 
+        transform="translate(-300 -50) scale(1.15)" 
+        class="moment-image"
+        href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med-no-hat.png" />
+      {/if}
+
     </g>
 
     <image in:fade={{ duration: 1000, delay: 1000}}  out:fade={{duration: 1000}} 
