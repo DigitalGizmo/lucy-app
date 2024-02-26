@@ -234,7 +234,7 @@
         <!-- <a hx-get="/moments/more"> -->
         <a href="/"
         on:click={(e) => { e.preventDefault(); showModal("hoop", "evidence");}}>
-            <rect x="1650" y="350" width="110px" height="800px" 
+            <rect x="1650" y="650" width="110px" height="150px" 
             class="hotspot"></rect>
         </a>
     </g>
