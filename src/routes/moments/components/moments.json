@@ -145,8 +145,7 @@
                     {"title": "Abijah Prince", "slug": "abijah-prince"}      
                 ],
                 "moreTopicLinks": [
-                    {"title": "Stimulating Beverages and the Slave Economy",  "slug": "slave-economy-goods"},
-                    {"title": "Courtship in Early New England", "slug": "courtship"}            
+                    {"title": "Stimulating Beverages and the Slave Economy",  "slug": "slave-economy-goods"}
                 ],
                 "moreHowLinks": [
                     {"title": "Basket", "slug": "basket"},
@@ -167,7 +166,9 @@
                     {"title": "Amos Fortune", "slug": "amos-fortune"},
                     {"title": "Venture Smith", "slug": "venture-smith"}
                 ],
-                "moreTopicLinks": [],
+                "moreTopicLinks": [
+                    {"title": "Courtship in Early New England", "slug": "courtship"}
+                ],
                 "moreHowLinks": [
                     {"title": "Example of sale ads listing women with children", "slug": "for-sale-temp"}
                 ],
@@ -188,7 +189,9 @@
                     {"title": "Child's Hoop", "slug": "hoop"},
                     {"title": "Colonial Boy's Clothing", "slug": "colonial-boys-clothing"}
                 ],
-                "moreWhereLinks": []            
+                "moreWhereLinks": [
+                    {"title": "African Americans in Deerfield", "slug": "deerfield-african-americans"}
+                ]            
             },
             {
                 "imageName": "main-street-plain",
@@ -226,40 +229,20 @@
             {
                 "imageName": "main-street-plain",
                 "storyAudio": "silence",
-                "storyText": "The Honestmans have come to town to shop at Captain Williams’s store for fabric, knee buckles, and sleeve buttons. Talk turns to the possible war that is on everyone's mind. \"I'm thinking of joining up again, the pay is good and we need to protect our towns if there's a war.\" Lucy shudders to think of Abijah in battle. Watching, Heber concludes his Susanna is right: Abijah Prince is surely courting Lucy.",
-                "alt": "5  Ox cart enters right",
-                "textAlign": "right",
-                "moreBlurb": "Something about the importance of community - redundant?.",
-                "moreWhoLinks": [
-                    {"title": "Heber Honestman", "slug": "heber-honestman"}            
-                ],
-                "moreTopicLinks": [
-                    {"title": "Building Community", "slug": "building-community"}
-                ],
-                "moreHowLinks": [
-                    {"title": "Heber Honestman Store Account", "slug": "heber-store-account"},                   
-                    {"title": "Crutch", "slug": "crutch"},
-                    {"title": "Ox Cart", "slug": "ox-cart"}
-                ],
-                "moreWhereLinks": [
-                    {"title": "African Americans in Deerfield", "slug": "deerfield-african-americans"}                    
-                ]          
-            },
-            {
-                "imageName": "main-street-plain",
-                "storyAudio": "silence",
-                "storyText": "Lucy asks Heber if his foot still pains him. “Sometimes,” he replies, “but I still smile to myself when I wonder what a bear would think to see me caught in one of my own traps.” Lucy thinks about another Black man who needs a crutch: Pompey’s feet froze like blocks of ice after Joseph Barnard made him cut and sled wood every day one bitter winter.",
-                "alt": "6   Ox cart fully in ",
+                "storyText": "The Honestmans have come to town to shop at Captain Williams’s store for fabric, knee buckles, and sleeve buttons. Lucy asks Heber if his foot still pains him. “Sometimes,” he replies, “but I still smile to myself when I wonder what a bear would think to see me caught in one of my own traps.” Lucy thinks about another Black man who needs a crutch: Pompey’s feet froze like blocks of ice after Joseph Barnard made him cut and sled wood every day one bitter winter.",
+                "alt": "5   Ox cart enters right",
                 "textAlign": "right",
                 "moreBlurb": "Many enslavers abused the enslaved people whose work they controlled.",
                 "moreWhoLinks": [
                     {"title": "Pompey", "slug": "pompey"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Coercion and Abuse", "slug": "coercion-abuse"},
-                    {"title": "Slavery and the 18th Century Family", "slug": "slavery-family"}
+                    {"title": "Coercion and Abuse", "slug": "coercion-abuse"}
                 ],
                 "moreHowLinks": [
+                    {"title": "Heber Honestman Store Account", "slug": "heber-store-account"},                   
+                    {"title": "Crutch", "slug": "crutch"},
+                    {"title": "Ox Cart", "slug": "ox-cart"},
                     {"title": "Bear trap", "slug": "bear-trap"}
                 ],
                 "moreWhereLinks": []           
@@ -267,17 +250,35 @@
             {
                 "imageName": "main-street-plain",
                 "storyAudio": "silence",
-                "storyText": "Heber turns to Adam. “Son, it is time to get on with our errands.” Adam nods and cracks his whip. Over the creaking of cart wheels Abijah says, “You have a fine son, Heber. God willing, one day I will have a lad such as Adam.”",
-                "alt": "7 still with the ox ",
+                "storyText": "Talk turns to the possible war that is on everyone's mind. \"I'm thinking of joining up again, the pay is good and we need to protect our towns if there's a war.\" Lucy shudders to think of Abijah in battle. Watching, Heber concludes his Susanna is right: Abijah Prince is surely courting Lucy.",
+                "alt": "6  Ox cart fully in",
                 "textAlign": "right",
                 "moreBlurb": "Becoming a soldier was one way that enslaved men could earn their freedom, but it was dangerous.",
-                "moreWhoLinks": [],
+                "moreWhoLinks": [
+                    {"title": "Heber Honestman", "slug": "heber-honestman"}            
+                ],
                 "moreTopicLinks": [
-                    {"title": "Western Massachusetts in the French and Indian War", "slug": "f-i-wars"}
+                    {"title": "Western Massachusetts in the French and Indian War", "slug": "f-i-wars"},
+                    {"title": "Building Community", "slug": "building-community"}
                 ],
                 "moreHowLinks": [
                     {"title": "Muster Roll", "slug": "muster-roll"}
                 ],
+                "moreWhereLinks": []          
+            },
+
+            {
+                "imageName": "main-street-plain",
+                "storyAudio": "silence",
+                "storyText": "Heber turns to Adam. “Son, it is time to get on with our errands.” Adam nods and cracks his whip. Over the creaking of cart wheels Abijah says, “You have a fine son, Heber. God willing, one day I will have a lad such as Adam.”",
+                "alt": "7 still with the ox ",
+                "textAlign": "right",
+                "moreBlurb": "",
+                "moreWhoLinks": [],
+                "moreTopicLinks": [
+                    {"title": "Slavery and the 18th Century Family", "slug": "slavery-family"}
+                ],
+                "moreHowLinks": [],
                 "moreWhereLinks": []            
             },
             {
@@ -287,15 +288,9 @@
                 "alt": "8 Jin approaches",
                 "textAlign": "right",
                 "moreBlurb": "A family and some land was the typical path to self-sufficiency and prosperity, but often proved elusive.",
-                "moreWhoLinks": [
-                    {"title": "Jin Cole", "slug": "jin-cole"},        
-                    {"title": "Jonathan Ashley", "slug": "jonathan-ashley"}            
-                ],
-                "moreTopicLinks": [
-                    {"title": "Unlikely Enslavers?", "slug": "ministers-enslavers"}
-                ],
+                "moreWhoLinks": [],
+                "moreTopicLinks": [],
                 "moreHowLinks": [
-                    {"title": "Sermon by Jonathan Ashley", "slug": "ashley-sermon"},
                     {"title": "Honestman's Farm", "slug": ""}
                 ],
                 "moreWhereLinks": []            
@@ -308,13 +303,17 @@
                 "textAlign": "right",
                 "moreBlurb": "Enslavers benefitted from the labor of enslaved people -- directly and by selling this labor.",
                 "moreWhoLinks": [
-                    {"title": "Cato Cole", "slug": "cato-cole"},
+                    {"title": "Jin Cole", "slug": "jin-cole"},        
+                    {"title": "Cato Cole", "slug": "cato-cole"},        
+                    {"title": "Jonathan Ashley", "slug": "jonathan-ashley"},
                     {"title": "Samuel Dickinson", "slug": "samuel-dickinson"}         
                 ],
                 "moreTopicLinks": [
+                    {"title": "Unlikely Enslavers?", "slug": "ministers-enslavers"},
                     {"title": "Enslaved Labor for Sale", "slug": "enslaved-labor"}
                 ],
                 "moreHowLinks": [
+                    {"title": "Sermon by Jonathan Ashley", "slug": "ashley-sermon"},
                     {"title": "Plow", "slug": "plow"},
                     {"title": "Plan of the Town of Deerfield", "slug": "hoyt-map"},
                     {"title": "Account Book of Jonathan Ashley", "slug": "ashley-account-book"}
@@ -346,7 +345,9 @@
                 "alt": "11 Lucy thinking ",
                 "textAlign": "right",
                 "moreBlurb": "The children of enslaved women were automatically born into slavery.",
-                "moreWhoLinks": [],
+                "moreWhoLinks": [
+                    {"title": "Cato Cole", "slug": "cato-cole"}        
+                ],
                 "moreTopicLinks": [],
                 "moreHowLinks": [],
                 "moreWhereLinks": []            
