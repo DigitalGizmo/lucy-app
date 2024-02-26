@@ -137,7 +137,7 @@
             {
                 "imageName": "lucy-abijah-store-exterior",
                 "storyAudio": "00-walk-home",
-                "storyText": "“Walk you home?” Abijah asks. “Yes, that would be lovely. I'm looking forward to drinking my chocolate. Lucy wonders to herself, \"Should I invite him to share a cup of chocolate? Is this a courtship? Could it end in marriage?\"",
+                "storyText": "“Walk you home?” “yes, please.” replies Lucy. \"I bought a little chocolate — do you like sipping chocolate? I don't often buy such a treat.” Lucy wonders if Mrs. Wells would allow her to invite Abijah to the house. Wouldn’t it be nice to have a home of one’s own…and to be able to see whoever you please, whenever you please...",
                 "alt": "0 lucy-abijah-store-exterior ",
                 "textAlign": "left",
                 "moreBlurb": "Store account books provide a rich resource of information about people's activities in the 18th century.",
@@ -145,8 +145,7 @@
                     {"title": "Abijah Prince", "slug": "abijah-prince"}      
                 ],
                 "moreTopicLinks": [
-                    {"title": "Stimulating Beverages and the Slave Economy",  "slug": "slave-economy-goods"},
-                    {"title": "Courtship in Early New England", "slug": "courtship"}            
+                    {"title": "Stimulating Beverages and the Slave Economy",  "slug": "slave-economy-goods"}
                 ],
                 "moreHowLinks": [
                     {"title": "Basket", "slug": "basket"},
@@ -159,7 +158,7 @@
             {
                 "imageName": "lucy-thinking-bkgnd",
                 "storyAudio": "01-he-is-free",
-                "storyText": "He is free and she is not. Marrying is out of the question if Mr. and Mrs. Wells won’t allow it. Even if her enslavers agree, would Abijah want to marry a woman whose children will also be born into slavery? For that matter, she doesn't want to be a woman whose children, too, would be enslaved.",
+                "storyText": "Lucy wonders, \"Is this a courtship? Is Abijah thinking of marriage?\" He is free, she is not. Marrying isn't possible if the Wells won’t allow it. Even if her enslavers agree, would Abijah want to marry a woman whose children will be born into slavery? She doesn't want that for her children.",
                 "alt": "1 lucy-thinking ",
                 "textAlign": "center",
                 "moreBlurb": "Enslaved people lived with the daily challenge of limited autonomy.",
@@ -167,7 +166,9 @@
                     {"title": "Amos Fortune", "slug": "amos-fortune"},
                     {"title": "Venture Smith", "slug": "venture-smith"}
                 ],
-                "moreTopicLinks": [],
+                "moreTopicLinks": [
+                    {"title": "Courtship in Early New England", "slug": "courtship"}
+                ],
                 "moreHowLinks": [
                     {"title": "Example of sale ads listing women with children", "slug": "for-sale-temp"}
                 ],
@@ -176,7 +177,7 @@
             {
                 "imageName": "main-street-plain",
                 "storyAudio": "02-lucys-thoughts",
-                "storyText": "Lucy's thoughts are interrupted by some nearby children: “Lucy, you promised us a story!” “I'll sing for you later!\" “Tell them your Bars Fight” Abijah suggests.",
+                "storyText": "Lucy's thoughts are interrupted by some nearby children: “Lucy, you promised us a story!” “I'll sing for you later!\" “Tell them your Bars Fight” Abijah suggests, while he thinks to himself, \"Lucy seems to know everyone in town.\"",
                 "alt": "2  lucy and abijah small on main street, kids enter",
                 "textAlign": "right",
                 "moreBlurb": "Many enslaved people had active roles in the wider community.",
@@ -188,7 +189,9 @@
                     {"title": "Child's Hoop", "slug": "hoop"},
                     {"title": "Colonial Boy's Clothing", "slug": "colonial-boys-clothing"}
                 ],
-                "moreWhereLinks": []            
+                "moreWhereLinks": [
+                    {"title": "African Americans in Deerfield", "slug": "deerfield-african-americans"}
+                ]            
             },
             {
                 "imageName": "main-street-plain",
@@ -226,40 +229,20 @@
             {
                 "imageName": "main-street-plain",
                 "storyAudio": "silence",
-                "storyText": "Heber concludes his Susanna is right: Abijah Prince is courting Lucy. The conversation turns to the Honestmans, who have come down from Huntstown to shop at Captain Williams’s store for fabric, knee buckles, and sleeve buttons. It seems Susanna will have some sewing to do. Abijah mentions the fabric he has just purchased for a shirt. He adds, “I will be needing someone to make it for me.” Should he ask Lucy? If she agrees, he would gladly pay her.[ox cart here]",
-                "alt": "5  Ox cart enters right",
-                "textAlign": "right",
-                "moreBlurb": "Something about the importance of community - redundant?.",
-                "moreWhoLinks": [
-                    {"title": "Heber Honestman", "slug": "heber-honestman"}            
-                ],
-                "moreTopicLinks": [
-                    {"title": "Building Community", "slug": "building-community"}
-                ],
-                "moreHowLinks": [
-                    {"title": "Heber Honestman Store Account", "slug": "heber-store-account"},                   
-                    {"title": "Crutch", "slug": "crutch"},
-                    {"title": "Ox Cart", "slug": "ox-cart"}
-                ],
-                "moreWhereLinks": [
-                    {"title": "African Americans in Deerfield", "slug": "deerfield-african-americans"}                    
-                ]          
-            },
-            {
-                "imageName": "main-street-plain",
-                "storyAudio": "silence",
-                "storyText": "Lucy asks Heber if his foot still pains him. “Sometimes,” he replies, “but I still smile to myself when I wonder what a bear would think to see me caught in one of my own traps.” Abijah and Lucy chuckle along with him. She can’t help thinking about another man with a crutch. She still remembers when Joseph Barnard made Pompey cut and sled wood every day one winter until Pompey’s feet froze like blocks of ice.[still ox cart]",
-                "alt": "6   Ox cart fully in ",
+                "storyText": "The Honestmans have come to town to shop at Captain Williams’s store for fabric, knee buckles, and sleeve buttons. Lucy asks Heber if his foot still pains him. “Sometimes,” he replies, “but I still smile to myself when I wonder what a bear would think to see me caught in one of my own traps.” Lucy thinks about another Black man who needs a crutch: Pompey’s feet froze like blocks of ice after Joseph Barnard made him cut and sled wood every day one bitter winter.",
+                "alt": "5   Ox cart enters right",
                 "textAlign": "right",
                 "moreBlurb": "Many enslavers abused the enslaved people whose work they controlled.",
                 "moreWhoLinks": [
                     {"title": "Pompey", "slug": "pompey"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Coercion and Abuse", "slug": "coercion-abuse"},
-                    {"title": "Slavery and the 18th Century Family", "slug": "slavery-family"}
+                    {"title": "Coercion and Abuse", "slug": "coercion-abuse"}
                 ],
                 "moreHowLinks": [
+                    {"title": "Heber Honestman Store Account", "slug": "heber-store-account"},                   
+                    {"title": "Crutch", "slug": "crutch"},
+                    {"title": "Ox Cart", "slug": "ox-cart"},
                     {"title": "Bear trap", "slug": "bear-trap"}
                 ],
                 "moreWhereLinks": []           
@@ -267,35 +250,47 @@
             {
                 "imageName": "main-street-plain",
                 "storyAudio": "silence",
-                "storyText": "The conversation turns to the war that is on everyone’s mind. Adam seems eager to join. Abijah prays Heber’s son will serve under good commanders and be spared if there is fighting. Abijah says, “I am thinking of joining up again. The pay is good, and we need to protect our towns from the French and their Indian allies.” Lucy shudders when she thinks about what could happen to Abijah in a battle. Unbidden, words from her Bars Fight poem come to her mind…”And though he was so brave and bold, His face no more shall we behold.” Heber turns to Adam. “Son, it is time to continue with our errands.” Adam nods and cracks his whip. Over the creaking of cart wheels Lucy calls to Heber, “Bring Susanna on your next trip to Deerfield.” Abijah says, “God grant that I have such a fine son–a lad such as Adam.” “No doubt.” thinks Lucy, “All the more reason to marry a free woman.[more ox cart or less text]”",
-                "alt": "7 still with the ox ",
+                "storyText": "Talk turns to the possible war that is on everyone's mind. \"I'm thinking of joining up again, the pay is good and we need to protect our towns if there's a war.\" Lucy shudders to think of Abijah in battle. Watching, Heber concludes his Susanna is right: Abijah Prince is surely courting Lucy.",
+                "alt": "6  Ox cart fully in",
                 "textAlign": "right",
                 "moreBlurb": "Becoming a soldier was one way that enslaved men could earn their freedom, but it was dangerous.",
-                "moreWhoLinks": [],
+                "moreWhoLinks": [
+                    {"title": "Heber Honestman", "slug": "heber-honestman"}            
+                ],
                 "moreTopicLinks": [
-                    {"title": "Western Massachusetts in the French and Indian War", "slug": "f-i-wars"}
+                    {"title": "Western Massachusetts in the French and Indian War", "slug": "f-i-wars"},
+                    {"title": "Building Community", "slug": "building-community"}
                 ],
                 "moreHowLinks": [
                     {"title": "Muster Roll", "slug": "muster-roll"}
                 ],
+                "moreWhereLinks": []          
+            },
+
+            {
+                "imageName": "main-street-plain",
+                "storyAudio": "silence",
+                "storyText": "Heber turns to Adam. “Son, it is time to get on with our errands.” Adam nods and cracks his whip. Over the creaking of cart wheels Abijah says, “You have a fine son, Heber. God willing, one day I will have a lad such as Adam.”",
+                "alt": "7 still with the ox ",
+                "textAlign": "right",
+                "moreBlurb": "",
+                "moreWhoLinks": [],
+                "moreTopicLinks": [
+                    {"title": "Slavery and the 18th Century Family", "slug": "slavery-family"}
+                ],
+                "moreHowLinks": [],
                 "moreWhereLinks": []            
             },
             {
                 "imageName": "jin-approaches-bkgnd",
                 "storyAudio": "silence",
-                "storyText": "“Heber and Susanna have a good farm, like the place I’ll be getting now that I’ve bought my freedom,” says Abijah, hinting at a possible future with Lucy. Worried that he has been too forward, he shifts to the weather. “The river is running high even for spring.” Lucy smiles and nods but wishes Abijah would talk more about his future. She hopes she is right that his plans include her…but how can that possibly happen?",
+                "storyText": "“Heber and Susanna have a good farm, like the place I’ll be getting now that I’ve bought my freedom,” says Abijah, hinting at a possible future with Lucy. Worried that he has been too forward, he shifts to the weather. “The river is running high even for spring.” Lucy smiles and nods but wishes Abijah would talk more about his future. She hopes she's right that his plans include her...but how can that possibly happen?",
                 "alt": "8 Jin approaches",
                 "textAlign": "right",
                 "moreBlurb": "A family and some land was the typical path to self-sufficiency and prosperity, but often proved elusive.",
-                "moreWhoLinks": [
-                    {"title": "Jin Cole", "slug": "jin-cole"},        
-                    {"title": "Jonathan Ashley", "slug": "jonathan-ashley"}            
-                ],
-                "moreTopicLinks": [
-                    {"title": "Unlikely Enslavers?", "slug": "ministers-enslavers"}
-                ],
+                "moreWhoLinks": [],
+                "moreTopicLinks": [],
                 "moreHowLinks": [
-                    {"title": "Sermon by Jonathan Ashley", "slug": "ashley-sermon"},
                     {"title": "Honestman's Farm", "slug": ""}
                 ],
                 "moreWhereLinks": []            
@@ -303,18 +298,22 @@
             {
                 "imageName": "lucy-abijah-jin",
                 "storyAudio": "silence",
-                "storyText": "Abijah and Lucy greet Jin Cole. \"Good day! Mr. Ashley sent Cato to work for Samuel Dickinson today, so I‘m bringing him his nooning meal. Mr. Ashley is writing his Sunday sermons and had me take the children along so they will not disturb him.” “I remember Cato as a baby in your arms when you first came to Deerfield,” says Lucy.",
+                "storyText": "Abijah and Lucy greet Jin Cole. \"Good day! Mr. Ashley is writing his Sunday sermons and had me take the children along so they will not disturb him. He's hired out Cato to work for Samuel Dickinson today, so I‘m bringing him his nooning meal.\"",
                 "alt": "9 lucy, abijah greet jin",
                 "textAlign": "right",
                 "moreBlurb": "Enslavers benefitted from the labor of enslaved people -- directly and by selling this labor.",
                 "moreWhoLinks": [
-                    {"title": "Cato Cole", "slug": "cato-cole"},
+                    {"title": "Jin Cole", "slug": "jin-cole"},        
+                    {"title": "Cato Cole", "slug": "cato-cole"},        
+                    {"title": "Jonathan Ashley", "slug": "jonathan-ashley"},
                     {"title": "Samuel Dickinson", "slug": "samuel-dickinson"}         
                 ],
                 "moreTopicLinks": [
+                    {"title": "Unlikely Enslavers?", "slug": "ministers-enslavers"},
                     {"title": "Enslaved Labor for Sale", "slug": "enslaved-labor"}
                 ],
                 "moreHowLinks": [
+                    {"title": "Sermon by Jonathan Ashley", "slug": "ashley-sermon"},
                     {"title": "Plow", "slug": "plow"},
                     {"title": "Plan of the Town of Deerfield", "slug": "hoyt-map"},
                     {"title": "Account Book of Jonathan Ashley", "slug": "ashley-account-book"}
@@ -324,7 +323,7 @@
             {
                 "imageName": "jin-thinking",
                 "storyAudio": "silence",
-                "storyText": "As Abijah and Lucy walk away, Jin thinks, “What a handsome couple. Abijah has had to wait a long time to marry.” Jin believes Abijah has the will and the means to buy Lucy’s freedom from the Wells. Jin thinks of her own freedom. She has little hope that her enslavers will free her or her son.",
+                "storyText": "As Abijah and Lucy walk away, Jin thinks, “What a handsome couple. Abijah has had to wait a long time to marry.” Jin believes Abijah has the will and the means to buy Lucy’s freedom from the Wells. Thinking about her own situation, Jin has little hope that her enslavers will free her or her son.",
                 "alt": "10 Jin thinking",
                 "textAlign": "right",
                 "moreBlurb": "One path to freedom for enslaved women was marriage to a man who could afford to purchase her.",
@@ -342,11 +341,13 @@
             {
                 "imageName": "lucy-thinking-open",
                 "storyAudio": "silence",
-                "storyText": "Lucy knows that Jin has always had to care for the Ashley children even as she raised Cato on her own. Lucy wants more for herself and any children God may send to her and Abijah.",
+                "storyText": "Lucy knows that Jin has always had to care for the Ashley children even as she raised Cato on her own. She remembers when Jin first arrived in Deerfield with Cato as a baby in her arms. Lucy wants more for herself and any children God may send to her ... and Abijah.",
                 "alt": "11 Lucy thinking ",
                 "textAlign": "right",
                 "moreBlurb": "The children of enslaved women were automatically born into slavery.",
-                "moreWhoLinks": [],
+                "moreWhoLinks": [
+                    {"title": "Cato Cole", "slug": "cato-cole"}        
+                ],
                 "moreTopicLinks": [],
                 "moreHowLinks": [],
                 "moreWhereLinks": []            
@@ -354,7 +355,7 @@
             {
                 "imageName": "lucy-abijah-wells-exterior",
                 "storyAudio": "silence",
-                "storyText": "Lucy does not want her visit with Abijah to end. Should she invite Abijah in? What would Mrs. Wells think? Would she allow it? Lucy wouldn’t have to worry about such things if she and Abijah had a home of their own. As he watches Lucy pass through the door, Abijah comes to a decision. He will speak to Ebenezer Wells about his intentions.",
+                "storyText": "Having finally arrived at the Wells house, Lucy does not want her visit with him to end. Should she invite Abijah in? What would Mrs. Wells think? Would she allow it? Lucy wouldn’t have to worry about such things if she and Abijah had a home of their own. As he watches Lucy pass through the door, Abijah comes to a decision. He will share his intentions with Ebenezer Wells and ask him for permission to marry Lucy.",
                 "alt": "12 lucy-abijah-wells-exterior",
                 "textAlign": "right",
                 "moreBlurb": "The lack of automony affected enslaved people in little and very large ways.",
