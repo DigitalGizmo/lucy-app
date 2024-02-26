@@ -14,34 +14,52 @@
       // cloudsTransY = -currScrollY/7    
   }
 
-  // For lucy parallax
-  let isCaptured = false;
+  // ---- For lucy zoom ----
+  let isLucyCaptured = false;
   let lucyScrollStartY = 800;
   let lucyTransY = 0;
   let lucyTransX = 0;
   let lucyScale = 1;
+  let lucyBgScale = 1;
   // const zoomDelay = 130;  
   // let lucyBgTransY = 0;
   // let lucyBgTransX = 0;
-  let lucyBgScale = 1;
-
-  // lucy parallax
-  $: if (imageIndex === 1 && !isCaptured) {
+  $: if (imageIndex === 1 && !isLucyCaptured) {
     lucyScrollStartY = currScrollY;
-    isCaptured = true;
-    // count += 1;
+    isLucyCaptured = true;
   }
   // Allow time for fade before starting zoom, hence the - ~ 150
   $: if ((lucyScrollStartY) - (currScrollY ) < 0) { //- zoomDelay
-      // lucyTransY = Math.min(((lucyScrollStartY - (currScrollY - zoomDelay))/2), 0);
-
       lucyTransY = ((lucyScrollStartY - (currScrollY ))/8); //- zoomDelay
       lucyTransX = ((lucyScrollStartY - (currScrollY ))/2); //- zoomDelay
-
       lucyScale = 1 - ((lucyScrollStartY - (currScrollY ))/4000); // - zoomDelay
       // lucyBgTransY = ((lucyScrollStartY - (currScrollY - zoomDelay))/6);
-      // // lucyBgTransX = ((lucyScrollStartY - (currScrollY - zoomDelay))/6);
       lucyBgScale = 1 - ((lucyScrollStartY - (currScrollY ))/10000); // - zoomDelay
+  }
+
+  // ---- Lucy, Abijah & horse -----
+  let islucyAbiHorseCaptured = false;
+  let lucyAbiHorseScrollStartY = 800;
+  let lucyAbiTransY = 0;
+  let lucyAbiTransX = 0;
+  let lucyAbiScale = 1;
+  let lucyAbiHorseBgScale = 1;
+  // const zoomDelay = 130;  
+  // let lucyAbiHorseBgTransY = 0;
+  // let lucyAbiHorseBgTransX = 0;
+
+  $: if (imageIndex === 3 && !islucyAbiHorseCaptured) {
+    lucyAbiHorseScrollStartY = currScrollY;
+    islucyAbiHorseCaptured = true;
+  }
+  // Allow time for fade before starting zoom, hence the - ~ 150
+  $: if ((lucyAbiHorseScrollStartY) - (currScrollY ) < 0) { //- zoomDelay
+      lucyAbiTransY = ((lucyAbiHorseScrollStartY - (currScrollY ))/8); //- zoomDelay
+      lucyAbiTransX = ((lucyAbiHorseScrollStartY - (currScrollY ))/2); //- zoomDelay
+      lucyAbiScale = 1 + ((lucyAbiHorseScrollStartY - (currScrollY ))/6000); // - zoomDelay
+
+      // lucyAbiHorseBgTransY = ((lucyAbiHorseScrollStartY - (currScrollY - zoomDelay))/6);
+      // lucyAbiHorseBgScale = 1 - ((lucyAbiHorseScrollStartY - (currScrollY ))/10000); // - zoomDelay
   }
 
   // ---- Sound effects ---
@@ -106,7 +124,7 @@
       <image transition:fade={{ duration: 1000}}  class="moment-image"
       href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-open.png" />
   
-      <image in:fade={{ duration: 1000, delay: 1000}}  out:fade={{duration: 1000}} class="moment-image"
+      <image in:fade={{ duration: 1000, delay: 2000}}  out:fade={{duration: 1000}} class="moment-image"
       href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-closed.png" />
     </g>
 
@@ -129,8 +147,17 @@
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png" alt="{moment.frames[imageIndex].alt}"></image>
 
-    <image transition:fade={{ duration: 500}}  class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med.png" />    
+    <!-- X compenstion for scale per: https://stackoverflow.com/questions/11671100/scale-path-from-center -->
+    <g transform="translate({100 + (1-lucyAbiScale)* 700} {(1-lucyAbiScale)* 500}) scale({lucyAbiScale})">
+      <image transition:fade={{ duration: 1000}}  
+      class="moment-image"
+      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med.png" />
+      
+      <image transition:fade={{ duration: 500,  delay: 2000}} 
+      transform="translate(-300 -50) scale(1.15)" 
+      class="moment-image"
+      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med-no-hat.png" />
+    </g>
 
     <image in:fade={{ duration: 1000, delay: 1000}}  out:fade={{duration: 1000}} 
     class="moment-image"
