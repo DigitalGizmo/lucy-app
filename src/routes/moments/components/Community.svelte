@@ -7,19 +7,44 @@
   let fxAudio;
 
 
-  // Leaves
+  // Clouds
   let cloudsTransX = 0;
-  // let cloudsTransY = 0;    
-
-  // Leaves
   $: if (imageIndex < 4 ) {
       cloudsTransX = (currScrollY/4) - (panelHeight * 2) + 100;
       // cloudsTransY = -currScrollY/7    
   }
 
-  // Sound effects
+  // For lucy parallax
+  let isCaptured = false;
+  let lucyScrollStartY = 800;
+  let lucyTransY = 0;
+  let lucyTransX = 0;
+  let lucyScale = 1;
+  // const zoomDelay = 130;  
+  // let lucyBgTransY = 0;
+  // let lucyBgTransX = 0;
+  let lucyBgScale = 1;
 
+  // lucy parallax
+  $: if (imageIndex === 1 && !isCaptured) {
+    lucyScrollStartY = currScrollY;
+    isCaptured = true;
+    // count += 1;
+  }
+  // Allow time for fade before starting zoom, hence the - ~ 150
+  $: if ((lucyScrollStartY) - (currScrollY ) < 0) { //- zoomDelay
+      // lucyTransY = Math.min(((lucyScrollStartY - (currScrollY - zoomDelay))/2), 0);
 
+      lucyTransY = ((lucyScrollStartY - (currScrollY ))/8); //- zoomDelay
+      lucyTransX = ((lucyScrollStartY - (currScrollY ))/2); //- zoomDelay
+
+      lucyScale = 1 - ((lucyScrollStartY - (currScrollY ))/4000); // - zoomDelay
+      // lucyBgTransY = ((lucyScrollStartY - (currScrollY - zoomDelay))/6);
+      // // lucyBgTransX = ((lucyScrollStartY - (currScrollY - zoomDelay))/6);
+      lucyBgScale = 1 - ((lucyScrollStartY - (currScrollY ))/10000); // - zoomDelay
+  }
+
+  // ---- Sound effects ---
   $: if (isSoundFx) {
     // console.log('is readAloud')
     if (imageIndex != prevImageIndex) {
@@ -71,15 +96,19 @@
 {/if}
 <!-- --- lucy thinking ---- -->
 {#if imageIndex === 1}
-    <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
-    alt="{moment.frames[imageIndex].alt}"></image>
+    <g transform="translate(0 0) scale({lucyBgScale})">
+      <image transition:fade={{ duration: 1500}} class="moment-image"
+      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+      alt="{moment.frames[imageIndex].alt}"></image>
+    </g>
 
-    <image transition:fade={{ duration: 1000}}  class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-open.png" />
-
-    <image in:fade={{ duration: 1000, delay: 1000}}  out:fade={{duration: 1000}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-closed.png" />
+    <g transform="translate({lucyTransX} {lucyTransY}) scale({lucyScale})">
+      <image transition:fade={{ duration: 1000}}  class="moment-image"
+      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-open.png" />
+  
+      <image in:fade={{ duration: 1000, delay: 1000}}  out:fade={{duration: 1000}} class="moment-image"
+      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-closed.png" />
+    </g>
 
 {/if}
 <!-- --- L & A + kids ---- -->
