@@ -12,11 +12,12 @@
   let prevImageIndex = 0;
   let frameHeight = 900;
   let momentScrollHeight = 10000;
-  const totalHeightFudgeFactor = 1.3;
+  const totalHeightFudgeFactor = 1.8; // Larger number makes image appear sooner
+  // 1.3 when it was 13
   // Need to refactor this into per-moment -- right now this also applies to Wells
   // let numberOfFrames = moment.frames.length;
   // console.log('frames length: ' + numberOfFrames)
-  let numberOfFrames = 13;
+  let numberOfFrames = 14;
 
   let isReadAloud = false;
   let storyAudio;

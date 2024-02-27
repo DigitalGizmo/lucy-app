@@ -285,6 +285,11 @@
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
     alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
+{#if imageIndex === 13}
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
+{/if}
 
 
 <!-- ---- FOREGROUND ANIMATIONS ---- -->
