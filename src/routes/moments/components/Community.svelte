@@ -160,14 +160,15 @@
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png" alt="{moment.frames[imageIndex].alt}"></image>
 
     <!-- X compenstion for scale per: https://stackoverflow.com/questions/11671100/scale-path-from-center -->
-    <g transform="translate({100 + (1-lucyAbiScale)* 700} {(1-lucyAbiScale)* 500}) scale({lucyAbiScale})">
+    <g transform="translate({100 + (1-lucyAbiScale)* 700} {(1-lucyAbiScale)* 500}) scale({lucyAbiScale})"
+    transition:fade={{ duration: 700}}>
 
       <text transform="translate(200 200) "
       class="Rrrrr">abiIndex: {lucAbiIndex} (currScrollY - lucyAbiHorseScrollStartY): 
       {(currScrollY - lucyAbiHorseScrollStartY)} </text>
-
       <text transform="translate(200 240) "
       class="Rrrrr"> frameHeight/2: {frameHeight/2}</text>
+
       {#if lucAbiIndex === 0}
         <image transition:fade={{ duration: 700}}  
         class="moment-image"
@@ -179,13 +180,16 @@
         transform="translate(-300 -50) scale(1.15)" 
         class="moment-image"
         href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med-no-hat.png" />
+
       {/if}
 
     </g>
 
-    <image in:fade={{ duration: 1000, delay: 1000}}  out:fade={{duration: 1000}} 
-    class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-horse.png" />    
+    {#if lucAbiIndex === 1}
+      <image in:fade={{ duration: 1000}}  out:fade={{duration: 1000}} 
+      class="moment-image"
+      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-horse.png" />  
+    {/if}  
 
 {/if}
 <!-- --- L & A closer ---- -->
