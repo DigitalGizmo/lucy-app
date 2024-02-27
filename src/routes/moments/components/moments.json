@@ -123,8 +123,8 @@
     },  
     {
         "slug": "engaging",
-        "title": "Engaging With the Community",
-        "storyIntro": "Lucy goes to the Williams Store to buy chocolate where she encounters Abijah Prince, the free African American man she will marry.",
+        "title": "In the Community",
+        "storyIntro": "Lucy goes to the Williams's Store to buy chocolate where she encounters Abijah Prince, the free African American man she will marry.",
         "historyIntro": "In colonial Massachusetts, some enslaved people had limited autonomy that included earning a bit of money to make small purchases that included rum, tobacco, and textiles, making them part of a larger Atlantic economy fueled by slavery.",
         "frames": []
     },  
@@ -355,7 +355,7 @@
             {
                 "imageName": "lucy-abijah-wells-exterior",
                 "storyAudio": "silence",
-                "storyText": "Having finally arrived at the Wells house, Lucy does not want her visit with him to end. Should she invite Abijah in? What would Mrs. Wells think? Would she allow it? Lucy wouldn’t have to worry about such things if she and Abijah had a home of their own. As he watches Lucy pass through the door, Abijah comes to a decision. He will share his intentions with Ebenezer Wells and ask him for permission to marry Lucy.",
+                "storyText": "Having finally arrived at the Wells house, Lucy does not want her visit with Abijah to end. Should she invite him in? What would Mrs. Wells think? Would she allow it? Lucy wouldn’t have to worry about such things if she and Abijah had a home of their own. As he watches Lucy pass through the door, Abijah comes to a decision. He will share his intentions with Ebenezer Wells and ask him for permission to marry Lucy.",
                 "alt": "12 lucy-abijah-wells-exterior",
                 "textAlign": "right",
                 "moreBlurb": "The lack of automony affected enslaved people in little and very large ways.",
