@@ -21,6 +21,7 @@
   let lucyTransX = 0;
   let lucyScale = 1;
   let lucyBgScale = 1;
+  let lucyBgOpacity = 1;
   // const zoomDelay = 130;  
   // let lucyBgTransY = 0;
   // let lucyBgTransX = 0;
@@ -35,6 +36,8 @@
       lucyScale = 1 - ((lucyScrollStartY - (currScrollY ))/4000); // - zoomDelay
       // lucyBgTransY = ((lucyScrollStartY - (currScrollY - zoomDelay))/6);
       lucyBgScale = 1 - ((lucyScrollStartY - (currScrollY ))/10000); // - zoomDelay
+      lucyBgOpacity = 1 + ((lucyScrollStartY - (currScrollY ))/frameHeight); // - zoomDelay
+      lucyBgOpacity = lucyBgOpacity < 0 ? 0 : lucyBgOpacity;
   }
 
   // ---- Lucy, Abijah & horse -----
@@ -128,16 +131,20 @@
 {#if imageIndex === 1}
     <g transform="translate(0 0) scale({lucyBgScale})">
       <image transition:fade={{ duration: 1500}} class="moment-image"
+      opacity="{lucyBgOpacity}"
       href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
       alt="{moment.frames[imageIndex].alt}"></image>
     </g>
-
-    <g transform="translate({lucyTransX} {lucyTransY}) scale({lucyScale})">
-      <image transition:fade={{ duration: 1000}}  class="moment-image"
+    <!-- X compenstion for scale per: https://stackoverflow.com/questions/11671100/scale-path-from-center -->
+    <g transform="translate({-300 +(1-lucyScale)* 1000} {lucyTransY}) scale({lucyScale})">
+      <image transition:fade={{ duration: 200}}  class="moment-image"
       href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-open.png" />
   
-      <image in:fade={{ duration: 1000, delay: 1500}}  out:fade={{duration: 1000}} class="moment-image"
+      <image in:fade={{ duration: 200, delay: 1500}}  out:fade={{duration: 1000}} class="moment-image"
       href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-closed.png" />
+
+      <!-- <text transform="translate(800 240)"
+      class="Rrrrr"> lucyBgOpacity: {lucyBgOpacity}</text> -->
     </g>
 
 {/if}
@@ -159,31 +166,23 @@
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png" alt="{moment.frames[imageIndex].alt}"></image>
 
-    <!-- X compenstion for scale per: https://stackoverflow.com/questions/11671100/scale-path-from-center -->
-    <g transform="translate({100 + (1-lucyAbiScale)* 700} {(1-lucyAbiScale)* 500}) scale({lucyAbiScale})"
-    transition:fade={{ duration: 700}}>
 
-      <!-- <text transform="translate(200 200) "
-      class="Rrrrr">abiIndex: {lucAbiIndex} (currScrollY - lucyAbiHorseScrollStartY): 
-      {(currScrollY - lucyAbiHorseScrollStartY)} </text>
-      <text transform="translate(200 240) "
-      class="Rrrrr"> frameHeight/2: {frameHeight/2}</text> -->
+    {#if lucAbiIndex === 0}
+      <g transform="translate(75 0)" transition:fade={{ duration: 700}}>
+          <image transition:fade={{ duration: 700}}  
+          class="moment-image"
+          href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med.png" />
+      </g>
+    {/if}
 
-      {#if lucAbiIndex === 0}
-        <image transition:fade={{ duration: 700}}  
-        class="moment-image"
-        href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med.png" />
-      {/if}
-      
-      {#if lucAbiIndex === 1}
+    {#if lucAbiIndex === 1}
+      <g transform="translate(-150 0) scale(1)" transition:fade={{ duration: 700}}>
         <image transition:fade={{ duration: 700}} 
-        transform="translate(-300 -50) scale(1.15)" 
+
         class="moment-image"
         href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med-no-hat.png" />
-
+      </g>
       {/if}
-
-    </g>
 
     {#if lucAbiIndex === 1}
       <image in:fade={{ duration: 1000}}  out:fade={{duration: 1000}} 
