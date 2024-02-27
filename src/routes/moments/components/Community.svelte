@@ -246,14 +246,14 @@
 <!-- --- Jin approaches "Heber and Susanna.. ---- -->
 {#if imageIndex === 8}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
     alt="{moment.frames[imageIndex].alt}"></image>
 
     <image in:fade={{ duration: 1000, delay: 1500}}  out:fade={{duration: 1000}}  class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/jin-approaches-jin.png" />
 
-    <image transition:fade={{ duration: 1000}}  class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/jin-approaches-foreground.png" />
+    <!-- <image transition:fade={{ duration: 1000}}  class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/jin-approaches-foreground.png" /> -->
 
     <image transition:fade={{ duration: 1000}}  class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/jin-approaches-lucy-abijah.png" />
@@ -265,6 +265,21 @@
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
     alt="{moment.frames[imageIndex].alt}"></image>
+
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/greeting-jin-lucy-abijah.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
+
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/greeting-jin-jin.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
+
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/greeting-jin-plow.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
+
+
+
 {/if}
 <!-- --- jin thinking ---- -->
 {#if imageIndex === 10}
