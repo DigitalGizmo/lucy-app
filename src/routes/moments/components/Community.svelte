@@ -124,7 +124,7 @@
 <!-- --- lucy abijah in front of store ---- -->
 {#if imageIndex === 0}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
     alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
 <!-- --- lucy thinking ---- -->
@@ -132,7 +132,7 @@
     <g transform="translate(0 0) scale({lucyBgScale})">
       <image transition:fade={{ duration: 1500}} class="moment-image"
       opacity="{lucyBgOpacity}"
-      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
       alt="{moment.frames[imageIndex].alt}"></image>
     </g>
     <!-- X compenstion for scale per: https://stackoverflow.com/questions/11671100/scale-path-from-center -->
@@ -246,7 +246,7 @@
 <!-- --- Jin approaches "Heber and Susanna.. ---- -->
 {#if imageIndex === 8}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
     alt="{moment.frames[imageIndex].alt}"></image>
 
     <image in:fade={{ duration: 1000, delay: 1500}}  out:fade={{duration: 1000}}  class="moment-image"
@@ -263,7 +263,7 @@
 <!-- ---  lucy, abijah greet jin ---- -->
 {#if imageIndex === 9}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
     alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
 <!-- --- jin thinking ---- -->
@@ -281,12 +281,12 @@
 <!-- --- lucy-abijah-wells-exterior ---- -->
 {#if imageIndex === 12}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
     alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
 {#if imageIndex === 13}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
     alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
 

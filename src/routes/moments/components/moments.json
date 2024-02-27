@@ -137,7 +137,7 @@
             {
                 "imageName": "lucy-abijah-store-exterior",
                 "storyAudio": "00-walk-home",
-                "storyText": "“Walk you home?” “yes, please.” replies Lucy. \"I bought a little chocolate — do you like sipping chocolate? I don't often buy such a treat.” Lucy wonders if Mrs. Wells would allow her to invite Abijah to the house. Wouldn’t it be nice to have a home of one’s own…and to be able to see whoever you please, whenever you please...",
+                "storyText": "“Walk you home?” “Yes, please,” replies Lucy. \"I bought a little chocolate — do you like sipping chocolate? I don't often buy such a treat.” Lucy wonders if Mrs. Wells would allow her to invite Abijah to the house. Wouldn’t it be nice to have a home of one’s own…and to be able to see whoever you please, whenever you please...?",
                 "alt": "0 lucy-abijah-store-exterior ",
                 "textAlign": "left",
                 "moreBlurb": "Store account books provide a rich resource of information about people's activities in the 18th century.",
@@ -323,7 +323,7 @@
             {
                 "imageName": "jin-thinking",
                 "storyAudio": "silence",
-                "storyText": "As Abijah and Lucy walk away, Jin thinks, “What a handsome couple. Abijah has had to wait a long time to marry.” Jin believes Abijah has the will and the means to buy Lucy’s freedom from the Wells. Thinking about her own situation, Jin has little hope that her enslavers will free her or her son.",
+                "storyText": "As Abijah and Lucy walk away, Jin thinks, “What a handsome couple. Abijah has had to wait a long time to marry.” She believes Abijah has the will and the means to buy Lucy’s freedom from the Wells. Thinking about her own situation, Jin has little hope that her enslavers will free her or her son.",
                 "alt": "10 Jin thinking",
                 "textAlign": "right",
                 "moreBlurb": "One path to freedom for enslaved women was marriage to a man who could afford to purchase her.",
@@ -370,7 +370,7 @@
                 "moreWhereLinks": []            
             },
             {
-                "imageName": "lucy-abijah-wells-exterior",
+                "imageName": "abijah-wells-exterior",
                 "storyAudio": "silence",
                 "storyText": "As he watches Lucy pass through the door, Abijah comes to a decision. He will share his intentions with Ebenezer Wells and ask him for permission to marry Lucy.",
                 "alt": "13 lucy-abijah-wells-exterior",
