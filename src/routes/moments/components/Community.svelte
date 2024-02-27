@@ -163,11 +163,11 @@
     <g transform="translate({100 + (1-lucyAbiScale)* 700} {(1-lucyAbiScale)* 500}) scale({lucyAbiScale})"
     transition:fade={{ duration: 700}}>
 
-      <text transform="translate(200 200) "
+      <!-- <text transform="translate(200 200) "
       class="Rrrrr">abiIndex: {lucAbiIndex} (currScrollY - lucyAbiHorseScrollStartY): 
       {(currScrollY - lucyAbiHorseScrollStartY)} </text>
       <text transform="translate(200 240) "
-      class="Rrrrr"> frameHeight/2: {frameHeight/2}</text>
+      class="Rrrrr"> frameHeight/2: {frameHeight/2}</text> -->
 
       {#if lucAbiIndex === 0}
         <image transition:fade={{ duration: 700}}  
