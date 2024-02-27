@@ -73,6 +73,25 @@
   }  
   // lucAbiIndex = Math.trunc((((currScrollY - lucyAbiHorseScrollStartY) )/(frameHeight/2)) - 0);
 
+  // ---- Ox cart ----
+  let isOxCaptured = false;
+  let OxScrollStartY = 800;
+  let OxTransY = 0;
+  let OxTransX = 0;
+  let OxScale = 1.4;
+  // let OxBgScale = 1;
+
+  $: if (imageIndex === 5 && !isOxCaptured) {
+    OxScrollStartY = currScrollY;
+    isOxCaptured = true;
+  }
+  $: if ((OxScrollStartY) - (currScrollY ) < 0) { 
+      OxTransY = ((OxScrollStartY - (currScrollY ))/10); 
+      OxTransX = ((OxScrollStartY - (currScrollY ))/2.5); 
+      // OxScale = 1 - ((OxScrollStartY - (currScrollY ))/4000); 
+      // lucyBgTransY = ((lucyScrollStartY - (currScrollY - zoomDelay))/6);
+  }
+
   // ---- Sound effects ---
   $: if (isSoundFx) {
     // console.log('is readAloud')
@@ -168,7 +187,7 @@
 
 
     {#if lucAbiIndex === 0}
-      <g transform="translate(75 0)" transition:fade={{ duration: 700}}>
+      <g transform="translate(75 -20) scale(0.9)" transition:fade={{ duration: 700}}>
           <image transition:fade={{ duration: 700}}  
           class="moment-image"
           href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med.png" />
@@ -176,16 +195,17 @@
     {/if}
 
     {#if lucAbiIndex === 1}
-      <g transform="translate(-150 0) scale(1)" transition:fade={{ duration: 700}}>
+      <g transform="translate(0 0) scale(0.9)" transition:fade={{ duration: 700}}>
         <image transition:fade={{ duration: 700}} 
 
         class="moment-image"
         href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-med-no-hat.png" />
       </g>
       {/if}
-
+    <!-- horse -->
     {#if lucAbiIndex === 1}
       <image in:fade={{ duration: 1000}}  out:fade={{duration: 1000}} 
+      transform="translate(-100 20) scale(1.1)"
       class="moment-image"
       href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-horse.png" />  
     {/if}  
@@ -200,7 +220,7 @@
     <image transition:fade={{ duration: 500}}  class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-large.png" />   
 {/if}
-<!-- --- 5, 6, 7 ox cart comes in ---- -->
+<!-- --- 5, 6 ox cart comes in ---- -->
 {#if imageIndex > 4 && imageIndex < 7}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[5].imageName}.png"
@@ -212,8 +232,9 @@
      <!-- transform= "translate(200 100) scale(0.7)" -->
 
     <image transition:fade={{ duration: 500}}  class="moment-image"
+    transform="translate({300 + OxTransX} {200 + OxTransY}) scale({OxScale})"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-ox-cart.png" 
-    transform="translate(-100 200) scale(1.4)" />  
+    />  
 {/if}
 {#if imageIndex === 7}
     <image transition:fade={{ duration: 1500}} class="moment-image"
