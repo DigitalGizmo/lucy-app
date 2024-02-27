@@ -9,9 +9,21 @@
 
   // Clouds
   let cloudsTransX = 0;
-  $: if (imageIndex < 4 ) {
-      cloudsTransX = (currScrollY/4) - (frameHeight * 2) + 100;
-      // cloudsTransY = -currScrollY/7    
+  $: if (imageIndex < 9 ) {
+      cloudsTransX = (currScrollY/8) - (frameHeight * 2) + 100;
+      // frame height compenstion because we start on the 3rd frame    
+  }
+  // Jim & Lucy thinking
+  let cloudThinkTransX = 0;
+  let isCloudThinkCaptured = false;
+  let cloudThinkScrollStartY = 8000;
+  $: if (imageIndex === 10 && !isCloudThinkCaptured) {
+    cloudThinkScrollStartY = currScrollY;
+    isCloudThinkCaptured = true;
+  }
+  $: if (imageIndex > 9 ) {
+      cloudThinkTransX = (-(cloudThinkScrollStartY - (currScrollY ))/8) - 200;
+      // frame height compenstion because we start on the 3rd frame    
   }
 
   // ---- For lucy zoom ----
@@ -134,7 +146,15 @@
 {#if (imageIndex > 1 && imageIndex < 9)}
     <image transition:fade={{ duration: 500}} 
     width="100%" 
-    transform="translate({cloudsTransX} 0), scale(2)"
+    transform="translate({cloudsTransX} 0), scale(2.8)"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-clouds.jpg" />
+{/if}
+
+<!--  -->
+{#if (imageIndex > 9 && imageIndex < 12)}
+    <image transition:fade={{ duration: 500}} 
+    width="100%" 
+    transform="translate({cloudThinkTransX} 0), scale(7.5)"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-clouds.jpg" />
 {/if}
 
