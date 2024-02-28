@@ -59,7 +59,7 @@
   let lucyAbiTransX = 0;
   let lucyAbiScale = 1;
   let lucyAbiHorseBgScale = 1;
-  let lucAbiIndex = 0;
+  // let lucAbiIndex = 0;
   // const zoomDelay = 130;  
   // let lucyAbiHorseBgTransY = 0;
   // let lucyAbiHorseBgTransX = 0;
@@ -78,11 +78,11 @@
       // lucyAbiHorseBgScale = 1 - ((lucyAbiHorseScrollStartY - (currScrollY ))/10000); // - zoomDelay
   }
   // Luc-Abi image change
-  $: if ((currScrollY - lucyAbiHorseScrollStartY) < (frameHeight/2.2)) {
-    lucAbiIndex = 0;
-  } else {
-    lucAbiIndex = 1;
-  }  
+  // $: if ((currScrollY - lucyAbiHorseScrollStartY) < (frameHeight/2.2)) {
+  //   lucAbiIndex = 0;
+  // } else {
+  //   lucAbiIndex = 1;
+  // }  
   // lucAbiIndex = Math.trunc((((currScrollY - lucyAbiHorseScrollStartY) )/(frameHeight/2)) - 0);
 
   // ---- Ox cart ----
@@ -221,7 +221,7 @@
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png" alt="{moment.frames[imageIndex].alt}"></image>
 
 
-    {#if lucAbiIndex === 0}
+    {#if imageDecimal <= 3.5}
       <g transform="translate(75 -20) scale(0.9)" transition:fade={{ duration: 700}}>
           <image transition:fade={{ duration: 700}}  
           class="moment-image"
@@ -229,7 +229,7 @@
       </g>
     {/if}
 
-    {#if lucAbiIndex === 1}
+    {#if imageDecimal > 3.5}
       <g transform="translate(0 0) scale(0.9)" transition:fade={{ duration: 700}}>
         <image transition:fade={{ duration: 700}} 
 
@@ -238,7 +238,7 @@
       </g>
       {/if}
     <!-- horse -->
-    {#if lucAbiIndex === 1}
+    {#if imageDecimal > 3.3}
       <image in:fade={{ duration: 1000}}  out:fade={{duration: 1000}} 
       transform="translate(-100 20) scale(1.1)"
       class="moment-image"
