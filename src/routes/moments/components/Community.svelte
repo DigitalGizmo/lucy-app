@@ -118,7 +118,7 @@
     // console.log('should play, imageIndex: ' + imageIndex)
     if (imageIndex < 13) {
       // fxAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/${moment.frames[imageIndex].fxAudio}.mp3`);
-      fxAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/crickets.mp3`);
+      fxAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/Yellowthroated-Warbler.mp3`);
       fxAudio.play();      
     }
   } else {

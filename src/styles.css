@@ -506,6 +506,7 @@ nav.moment-options ul li.prev-moment {
   position: absolute;
   top: 60vh;
   width: 50px;
+  pointer-events: visible;
 }
 
 .audio-icons a g circle:hover {
