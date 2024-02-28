@@ -2,29 +2,29 @@
     {
         "slug": "sold",
         "title": "Sold Out of Africa",
-        "storyIntro": "Lucy with many other Africans are captured and taken away from all that is safe and familiar. Once she arrives at the coast she is imprisoned, sold, and taken onto a ship bound for a strange world thousands of miles from home.",
-        "historyIntro": "An endless demand among European colonizers for the essential labor to produce sugar and other lucrative commodities is destroying the lives of millions of African men, women, and children. Their captors and others eager to profit from the booming trade in human beings engage in a brutal winnowing process. Imprisoned in slave castles and other holding areas on the West Africa coast, survivors are forced into the ships that will transport them thousands of miles to the Americas in the infamous Middle Passage.",
+        "storyIntro": "Lucy is captured and taken away from all that is safe and familiar.",
+        "historyIntro": "Millions of captured Africans imprisoned at the West Africa coast are sold and forced into the ships that will transport them to the Americas in the infamous Middle Passage.",
         "frames": []
     },  
     {
         "slug": "forsale",
         "title": "For Sale Again",
         "storyIntro": "Three-year old Lucy is among a group of captured Africans for sale in Bristol, Rhode Island.",
-        "historyIntro": "Africans who survive capture and the horrors of the Middle Passage encounter a new world where the loss of autonomy and the arbitrary power of their enslavers are the only constants.",
+        "historyIntro": "Africans who survive capture and the horrors of the Middle Passage encounter a world where loss of freedom and the arbitrary power of their enslavers are the only constants.",
         "frames": []
     },  
     {
         "slug": "newlife",
         "title": "A Strange New Life",
-        "storyIntro": "Eight-year-old Lucy arrives in Deerfield and meets the couple who are purchasing her from Samuel Terry. Once again, her life is about to change but her status as an enslaved child does not.",
-        "historyIntro": "Enslaved people often experienced multiple captivities. They could be sold at a moment’s notice to new captors anytime, anywhere, upending in the process any relationships they may have been able to establish, including marriage, children and siblings. Dealing with the loss of old connections and forging new ones required resilience, courage, and persistence by young and old alike.",
+        "storyIntro": "Eight-year-old Lucy arrives in a new place but her status as an enslaved child does not change.",
+        "historyIntro": "Enslaved people could be sold at a moment’s notice to new captors anytime, anywhere, upending any and all relationships including parents, children, siblings and spouses.",
         "frames": []
     },  
     {
         "slug": "wells",
         "title": "Enslaved at the Wells's House",
-        "storyIntro": "Life in the Wells household is an unending cycle of labor, especially for Lucy and Cesar who are expected to undertake the most menial, demanding tasks on a rural farm.",
-        "historyIntro": "In the 18th century, keeping a rural New England house and farm running smoothly was extremely labor intensive. Enslaved people provided essential, often backbreaking agricultural labor but unlike free members of the household, they worked for someone else’s benefit.",
+        "storyIntro": "Lucy and Cesar are expected to undertake the most menial tasks on a rural farm in an unending cycle of labor.",
+        "historyIntro": "Enslaved people provided essential, often backbreaking agricultural labor but unlike free members of an 18th-century household, they worked for someone else’s benefit. ",
         "frames": [
             {
                 "imageName": "02-dawn-house-color",
@@ -110,29 +110,29 @@
     {
         "slug": "church",
         "title": "Joining the Church",
-        "storyIntro": "When Lucy experiences her own personal religious conversion, she becomes a member of the Church: a baptized body of Protestant believers, both free and enslaved, who believe they have experienced God’s saving grace.",
-        "historyIntro": "Enslaved people could and many did embrace Christianity. In Puritan New England, becoming a full member of the Church required sharing with a minister a verifiable conversion experience. Being welcomed into full communion in the Church did not affect a convert’s place in the social hierarchy. Enslaved people assured of freedom in salvation were thus expected to accept what their enslavers considered to be their God-ordained station in life: human property.",
+        "storyIntro": "Lucy joins a baptized body of Protestant believers, free and enslaved, who believe they have experienced God’s saving grace.",
+        "historyIntro": "Enslaved people who embraced Christianity were still expected to accept what enslavers insisted was their God-ordained station in this life: human property.",
         "frames": []
     },  
     {
         "slug": "singer",
         "title": "Singer of History",
-        "storyIntro": "Lucy sings her poem, the Bars Fight, to customers she is serving in Ebenezer Wells’s tavern.",
-        "historyIntro": "Many enslaved people brought their story-telling and oral traditions to the Americas. This talent could sometimes confer social status in the white community.",
+        "storyIntro": "Lucy sings her poem, the Bars Fight, to customers in Ebenezer Wells’s tavern.",
+        "historyIntro": "Many enslaved people brought their story-telling and oral traditions to the Americas. Their talent could sometimes confer social status in the White community.",
         "frames": []
     },  
     {
         "slug": "engaging",
         "title": "In the Community",
-        "storyIntro": "Lucy goes to the Williams's Store to buy chocolate where she encounters Abijah Prince, the free African American man she will marry.",
-        "historyIntro": "In colonial Massachusetts, some enslaved people had limited autonomy that included earning a bit of money to make small purchases that included rum, tobacco, and textiles, making them part of a larger Atlantic economy fueled by slavery.",
+        "storyIntro": "Running errands for her enslaver, Lucy stops at the busy Williams store, encountering many people including one who might play a central role in her life.",
+        "historyIntro": "New Englanders at times permitted enslaved people to earn a bit of money; their purchases of rum, tobacco, chocolate, and textiles linked them to the trans-Atlantic slave economy.",
         "frames": []
     },  
     {
         "slug": "community",
         "title": "Community Within Community",
-        "storyIntro": "After seeing Lucy at the store, Abijah offers to walk her home along the main street of the village where they encounter several Black residents of Deerfield and surrounding towns.",
-        "historyIntro": "Like other Massachusetts communities, Deerfield’s enslaved and free residents crossed paths on a daily basis. Within that community were the relationships among enslaved people and their ongoing connections with freed African American people.This interior, “community within community” highlights the effort people of color, free and enslaved, invested in maintaining a social life and emotional connections against often overwhelming odds.",
+        "storyIntro": "As Abijah walks Lucy home along the village street they encounter several Black residents of Deerfield and surrounding towns.",
+        "historyIntro": "An interior network of relationships among enslaved and free people of color fostered an essential “community within community” in Deerfield and other New England towns.",
         "frames": [
             {
                 "imageName": "lucy-abijah-store-exterior",
@@ -140,7 +140,7 @@
                 "storyText": "“Walk you home?” “Yes, please,” replies Lucy. \"I bought a little chocolate — do you like sipping chocolate? I don't often buy such a treat.” Lucy wonders if Mrs. Wells would allow her to invite Abijah to the house. Wouldn’t it be nice to have a home of one’s own…and to be able to see whoever you please, whenever you please...?",
                 "alt": "0 lucy-abijah-store-exterior ",
                 "textAlign": "left",
-                "moreBlurb": "Store account books provide a rich resource of information about people's activities in the 18th century.",
+                "moreBlurb": "Store account books provide rich and fascinating evidence of people's participation in the 18th century economy.",
                 "moreWhoLinks": [
                     {"title": "Abijah Prince", "slug": "abijah-prince"}      
                 ],
@@ -161,7 +161,7 @@
                 "storyText": "Lucy wonders, \"Is this a courtship? Is Abijah thinking of marriage?\" He is free, she is not. Marrying isn't possible if the Wells won’t allow it. Even if her enslavers agree, would Abijah want to marry a woman whose children will be born into slavery? She doesn't want that for her children.",
                 "alt": "1 lucy-thinking ",
                 "textAlign": "center",
-                "moreBlurb": "Enslaved people lived with the daily challenge of limited autonomy.",
+                "moreBlurb": "Enslaved people were reminded of their limited autonomy on a daily basis.",
                 "moreWhoLinks": [
                     {"title": "Amos Fortune", "slug": "amos-fortune"},
                     {"title": "Venture Smith", "slug": "venture-smith"}
@@ -180,7 +180,7 @@
                 "storyText": "Lucy's thoughts are interrupted by some nearby children: “Lucy, you promised us a story!” “I'll sing for you later!\" “Tell them your Bars Fight” Abijah suggests, while he thinks to himself, \"Lucy seems to know everyone in town.\"",
                 "alt": "2  lucy and abijah small on main street, kids enter",
                 "textAlign": "right",
-                "moreBlurb": "Many enslaved people had active roles in the wider community.",
+                "moreBlurb": "Many enslaved people played an active role in the wider community.",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [
                     {"title": "The Bars Fight", "slug": "bars-fight-poem"}
@@ -199,7 +199,7 @@
                 "storyText": "",
                 "alt": "3 Lucy and abijah medium on main, horse enters ",
                 "textAlign": "center",
-                "moreBlurb": "A rigid social hierarchy existed for all members of the community.",
+                "moreBlurb": "A rigid social hierarchy defined the role and status of every member of the community in the 18th century.",
                 "moreWhoLinks": [
                     {"title": "Matthew Clesson", "slug": "matthew-clesson"}
                 ],
@@ -218,7 +218,7 @@
                 "storyText": "“I think I see Heber and Adam Honestman coming this way. When did Adam get so tall?”",
                 "alt": "4 Lucy and Abijah closer ",
                 "textAlign": "right",
-                "moreBlurb": "Something about maintaining a network of relationships, even with distant connections.",
+                "moreBlurb": "An interior, “community within community” reflected efforts by people of color, free and enslaved, to maintaining a social life and emotional connections with one another, despite often overwhelming odds.",
                 "moreWhoLinks": [
                     {"title": "Heber Honestman", "slug": "heber-honestman"}            
                 ],
@@ -232,7 +232,7 @@
                 "storyText": "The Honestmans have come to town to shop at Captain Williams’s store for fabric, knee buckles, and sleeve buttons. Lucy asks Heber if his foot still pains him. “Sometimes,” he replies, “but I still smile to myself when I wonder what a bear would think to see me caught in one of my own traps.” Lucy thinks about another Black man who needs a crutch: Pompey’s feet froze like blocks of ice after Joseph Barnard made him cut and sled wood every day one bitter winter.",
                 "alt": "5   Ox cart enters right",
                 "textAlign": "left",
-                "moreBlurb": "Many enslavers abused the enslaved people whose work they controlled.",
+                "moreBlurb": "The coercion that was part of daily life for enslaved people could also include physical and emotional abuse.",
                 "moreWhoLinks": [
                     {"title": "Pompey", "slug": "pompey"}            
                 ],
@@ -253,7 +253,7 @@
                 "storyText": "Talk turns to the possible war that is on everyone's mind. \"I'm thinking of joining up again, the pay is good and we need to protect our towns if there's a war.\" Lucy shudders to think of Abijah in battle. Watching, Heber concludes his Susanna is right: Abijah Prince is surely courting Lucy.",
                 "alt": "6  Ox cart fully in",
                 "textAlign": "right",
-                "moreBlurb": "Becoming a soldier was one way that enslaved men could earn their freedom, but it was dangerous.",
+                "moreBlurb": "Enlisting in the militia during wartime offered the possibility of freedom for some enslaved men, but military service could be perilous and uncertain.",
                 "moreWhoLinks": [
                     {"title": "Heber Honestman", "slug": "heber-honestman"}            
                 ],
@@ -273,7 +273,7 @@
                 "storyText": "Heber turns to Adam. “Son, it is time to get on with our errands.” Adam nods and cracks his whip. Over the creaking of cart wheels Abijah says, “You have a fine son, Heber. God willing, one day I will have a lad such as Adam.”",
                 "alt": "7 still with the ox ",
                 "textAlign": "center",
-                "moreBlurb": "",
+                "moreBlurb": "Men and women in 18th-century New England hoped to marry and raise a family in an independent household—a goal that enslaved people could not hope to attain.",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [
                     {"title": "Slavery and the 18th Century Family", "slug": "slavery-family"}
@@ -287,7 +287,7 @@
                 "storyText": "“Heber and Susanna have a good farm, like the place I’ll be getting now that I’ve bought my freedom,” says Abijah, hinting at a possible future with Lucy. Worried that he has been too forward, he shifts to the weather. “The river is running high even for spring.” Lucy smiles and nods but wishes Abijah would talk more about his future. She hopes she's right that his plans include her...but how can that possibly happen?",
                 "alt": "8 Jin approaches",
                 "textAlign": "right",
-                "moreBlurb": "A family and some land was the typical path to self-sufficiency and prosperity, but often proved elusive.",
+                "moreBlurb": "At a time when most people were farmers, owning land was the typical path to independence and prosperity—a goal that often proved elusive, especially for people of color.",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [],
                 "moreHowLinks": [
@@ -301,7 +301,7 @@
                 "storyText": "Abijah and Lucy greet Jin Cole. \"Good day! Mr. Ashley is writing his Sunday sermons and had me take the children along so they will not disturb him. He's hired out Cato to work for Samuel Dickinson today, so I‘m bringing him his nooning meal.\"",
                 "alt": "9 lucy, abijah greet jin",
                 "textAlign": "right",
-                "moreBlurb": "Enslavers benefitted from the labor of enslaved people -- directly and by selling this labor.",
+                "moreBlurb": "Enslavers and non-enslavers alike bought and sold enslaved labor in a social and economic web that defined the community.",
                 "moreWhoLinks": [
                     {"title": "Jin Cole", "slug": "jin-cole"},        
                     {"title": "Cato Cole", "slug": "cato-cole"},        
@@ -326,7 +326,7 @@
                 "storyText": "As Abijah and Lucy walk away, Jin thinks, “What a handsome couple. Abijah has had to wait a long time to marry.” She believes Abijah has the will and the means to buy Lucy’s freedom from the Wells. Thinking about her own situation, Jin has little hope that her enslavers will free her or her son.",
                 "alt": "10 Jin thinking",
                 "textAlign": "center",
-                "moreBlurb": "One path to freedom for enslaved women was marriage to a man who could afford to purchase her.",
+                "moreBlurb": "Marriage to a man who wished to and could afford to purchase her was one path to freedom for an enslaved woman.",
                 "moreWhoLinks": [
                     {"title": "Amos Fortune", "slug": "amos-fortune"},            
                     {"title": "Venture Smith", "slug": "venture-smith"},         
@@ -344,7 +344,7 @@
                 "storyText": "Lucy knows that Jin has always had to care for the Ashley children even as she raised Cato on her own. She remembers when Jin first arrived in Deerfield with Cato as a baby in her arms. Lucy wants more for herself and any children God may send to her ... and Abijah.",
                 "alt": "11 Lucy thinking ",
                 "textAlign": "left",
-                "moreBlurb": "The children of enslaved women were automatically born into slavery.",
+                "moreBlurb": "Under the law, any child born to an enslaved mother was automatically enslaved from birth.",
                 "moreWhoLinks": [
                     {"title": "Cato Cole", "slug": "cato-cole"}        
                 ],
@@ -358,7 +358,7 @@
                 "storyText": "Having finally arrived at the Wells house, Lucy does not want her visit with Abijah to end. Should she invite him in? What would Mrs. Wells think? Would she allow it? Lucy wouldn’t have to worry about such things if she and Abijah had a home of their own.",
                 "alt": "12 lucy-abijah-wells-exterior",
                 "textAlign": "center",
-                "moreBlurb": "The lack of automony affected enslaved people in little and very large ways.",
+                "moreBlurb": "Their lack of autonomy affected enslaved people constantly and in many ways, large and small.",
                 "moreWhoLinks": [
                     {"title": "Abigail Wells", "slug": "abigail-wells"},           
                     {"title": "Ebenezer Wells", "slug": "ebenezer-wells"}            
@@ -375,7 +375,7 @@
                 "storyText": "As he watches Lucy pass through the door, Abijah comes to a decision. He will share his intentions with Ebenezer Wells and ask him for permission to marry Lucy.",
                 "alt": "13 lucy-abijah-wells-exterior",
                 "textAlign": "right",
-                "moreBlurb": "The lack of automony affected enslaved people in little and very large ways.",
+                "moreBlurb": "One aspect of 18th century social hierarchy was that marriage for a women, either free or enslaved, was determined by a man.",
                 "moreWhoLinks": [
                     {"title": "Abigail Wells", "slug": "abigail-wells"},           
                     {"title": "Ebenezer Wells", "slug": "ebenezer-wells"}            
@@ -391,36 +391,36 @@
     {
         "slug": "union",
         "title": "A Fruitful Union",
-        "storyIntro": "Lucy and Abijah get married and begin life as free people.",
-        "historyIntro": "Marriage could change an enslaved person’s status; once free, all of a woman's children would be born free.",
+        "storyIntro": "Lucy and Abijah get married and begin their life together as free people. ",
+        "historyIntro": "If an enslaved women was emancipated, her new status ensured that any children she might have would be born free.",
         "frames": []
     },
     {
         "slug": "revolution",
         "title": "Sons of the Revolution",
         "storyIntro": "Like many Black mothers, Lucy sends her sons off to fight in the Revolution.",
-        "historyIntro": "Even as they embrace the promises of the American Revolution, African American and Indigenous people know the bitter irony of enslaved people fighting for freedom alongside colonial enslavers.",
+        "historyIntro": "Even as they embraced the promises of the American Revolution, African American and Indigenous people knew the bitter irony of fighting for freedom alongside colonial enslavers.",
         "frames": []
     },  
     {
         "slug": "frontier",
         "title": "Living on the Frontier",
-        "storyIntro": "Lucy, Abijah and their children struggle to make a life for themselves in Vermont–a struggle that includes intimidation and violence by hostile neighbors.",
-        "historyIntro": " Although the new state constitution put slavery on the defensive and free people of color could and did hold property in Vermont as well as Massachusetts, they often encountered challenges as they endeavored to live and prosper as free citizens in the new nation.",
+        "storyIntro": "Lucy and Abijah face intimidation and violence from hostile neighbors as they struggle to make a life for themselves on their Vermont farm.",
+        "historyIntro": "Even as Vermont’s constitution put slavery on the defensive, free African Americans often encountered challenges as they endeavored to live and prosper as citizens of a new nation. ",
         "frames": []
     },  
     {
         "slug": "court",
         "title": "Fighting in Court",
-        "storyIntro": "Lucy travels to Windsor, Vermont, to fight in court to protect her family's legal claim to their land and for fair treatment by their neighbors.",
-        "historyIntro": "The laws of Vermont and other New England states protected the property and the rights of citizens while simultaneously posing challenges to those rights for free people of color.",
+        "storyIntro": "Lucy fights in court to protect her family's legal claim to their land and for fair treatment by their neighbors.",
+        "historyIntro": "The laws of Vermont and other New England states protected their citizens’ property rights while simultaneously posing challenges to those rights for free people of color.",
         "frames": []
     },  
     {
         "slug": "returning",
         "title": "Returning to Deerfield",
-        "storyIntro": "Her children are grown and her husband Abijah has passed away when Lucy decides to return to Deerfield for a visit.",
-        "historyIntro": "Histories of continued connections between formerly enslaved people and the people and places where they were enslaved suggests a powerful connection to people and place, both positive and negative.",
+        "storyIntro": "Her children are grown and Lucy is recently widowed when she decides to return to Deerfield for a visit.",
+        "historyIntro": "Continued ties between formerly enslaved people with families and communities where they were enslaved highlight a sense of connection to people and place, both positive and negative.",
         "frames": []
     }
 
