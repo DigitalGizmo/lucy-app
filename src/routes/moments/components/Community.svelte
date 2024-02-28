@@ -1,7 +1,7 @@
 <script>
   import { fade } from 'svelte/transition';
   export let showModal;
-  export let imageIndex, prevImageIndex;
+  export let imageIndex, imageDecimal, prevImageIndex;
   export let currScrollY, frameHeight, moment, isSoundFx;
 
   let fxAudio;
@@ -135,10 +135,10 @@
         width: 100%;
         height: 100%;
     }
-    .Rrrrr {
+    /* .Rrrrr {
       font: italic 40px serif;
       fill: red;
-    }    
+    }     */
 </style>
 
 <!-- ---- BACKGROUND ---- -->
@@ -165,6 +165,9 @@
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
     alt="{moment.frames[imageIndex].alt}"></image>
+
+    <!-- <text transform="translate(800 240)"
+    class="Rrrrr"> imageIndex: {imageIndex} imageDecimal: {imageDecimal}</text> -->
 {/if}
 <!-- --- lucy thinking ---- -->
 {#if imageIndex === 1}
@@ -182,8 +185,9 @@
       <image in:fade={{ duration: 200, delay: 1500}}  out:fade={{duration: 1000}} class="moment-image"
       href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-closed.png" />
 
-      <!-- <text transform="translate(800 240)"
-      class="Rrrrr"> lucyBgOpacity: {lucyBgOpacity}</text> -->
+      <!-- <text transform="translate(800 240)"class="Rrrrr"> 
+        imageIndex: {imageIndex} imageDecimal: {imageDecimal}
+      </text> -->
     </g>
 
 {/if}
