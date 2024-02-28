@@ -70,20 +70,8 @@
   }
   // Allow time for fade before starting zoom, hence the - ~ 150
   $: if ((lucyAbiHorseScrollStartY) - (currScrollY ) < 0) { //- zoomDelay
-      // lucyAbiTransY = ((lucyAbiHorseScrollStartY - (currScrollY ))/8); //- zoomDelay
-      // lucyAbiTransX = ((lucyAbiHorseScrollStartY - (currScrollY ))/2); //- zoomDelay
       lucyAbiScale = 1 + ((lucyAbiHorseScrollStartY - (currScrollY ))/6000); // - zoomDelay
-
-      // lucyAbiHorseBgTransY = ((lucyAbiHorseScrollStartY - (currScrollY - zoomDelay))/6);
-      // lucyAbiHorseBgScale = 1 - ((lucyAbiHorseScrollStartY - (currScrollY ))/10000); // - zoomDelay
   }
-  // Luc-Abi image change
-  // $: if ((currScrollY - lucyAbiHorseScrollStartY) < (frameHeight/2.2)) {
-  //   lucAbiIndex = 0;
-  // } else {
-  //   lucAbiIndex = 1;
-  // }  
-  // lucAbiIndex = Math.trunc((((currScrollY - lucyAbiHorseScrollStartY) )/(frameHeight/2)) - 0);
 
   // ---- Ox cart ----
   let isOxCaptured = false;
@@ -98,10 +86,10 @@
     isOxCaptured = true;
   }
   $: if ((OxScrollStartY) - (currScrollY ) < 0) { 
-      OxTransY = ((OxScrollStartY - (currScrollY ))/10); 
-      OxTransX = ((OxScrollStartY - (currScrollY ))/2.5); 
-      // OxScale = 1 - ((OxScrollStartY - (currScrollY ))/4000); 
-      // lucyBgTransY = ((lucyScrollStartY - (currScrollY - zoomDelay))/6);
+    OxTransX = ((OxScrollStartY - (currScrollY ))/2.5); 
+    OxTransY = ((OxScrollStartY - (currScrollY ))/12); 
+    // OxScale = 1 - ((OxScrollStartY - (currScrollY ))/4000); 
+    // lucyBgTransY = ((lucyScrollStartY - (currScrollY - zoomDelay))/6);
   }
 
   // ---- Sound effects ---
@@ -286,18 +274,6 @@
     />
     <!-- transform="translate(-3500 300) scale(4)"    -->
 {/if}
-<!-- ---  ---- -->
-<!-- {#if imageIndex === 6}
-    <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[6].imageName}.png"
-    alt="{moment.frames[imageIndex].alt}"></image>
-{/if} -->
-<!-- ---  ---- -->
-<!-- {#if imageIndex === 7}
-    <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[7].imageName}.png"
-    alt="{moment.frames[imageIndex].alt}"></image>
-{/if} -->
 
 <!-- --- Jin approaches "Heber and Susanna.. ---- -->
 {#if imageIndex === 8}
@@ -305,8 +281,10 @@
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
     alt="{moment.frames[imageIndex].alt}"></image>
 
-    <image in:fade={{ duration: 1000, delay: 1500}}  out:fade={{duration: 1000}}  class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/jin-approaches-jin.png" />
+    {#if imageDecimal > 8.6}
+      <image in:fade={{ duration: 1000}}  out:fade={{duration: 1000}}  class="moment-image"
+      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/jin-approaches-jin.png" />
+    {/if}
 
     <!-- <image transition:fade={{ duration: 1000}}  class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/jin-approaches-foreground.png" /> -->
@@ -333,41 +311,35 @@
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/greeting-jin-plow.png"
     alt="{moment.frames[imageIndex].alt}"></image>
-
-
-
 {/if}
+
 <!-- --- jin thinking ---- -->
 {#if imageIndex === 10}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
     alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
+
 <!-- --- lucy thinking ---- -->
 {#if imageIndex === 11}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
     alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
+
 <!-- --- lucy-abijah-wells-exterior ---- -->
 {#if imageIndex === 12}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
     alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
+
+<!-- --- abijah-wells-exterior ---- -->
 {#if imageIndex === 13}
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
     alt="{moment.frames[imageIndex].alt}"></image>
 {/if}
-
-
-<!-- ---- FOREGROUND ANIMATIONS ---- -->
-<!-- {#if (imageIndex === 2)}
-    <image transition:fade={{ duration: 500}} 
-    width="100%" height="100%" 
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-small.png" />
-{/if} -->
 
 <!-- ---- HOTSPOTS ---- -->
 {#if imageIndex === 0}
@@ -385,15 +357,6 @@
           c-9.9-21.6-37-55.1-5.2-71.4c-17.3-14.9-9.9-17.6,15.6-27c-8.4-5.4,1.1-14.5,6.7-18.8c-10.6-10-7.4-21-4.4-25.2
           c-13.7-3.6-57-13.6-80.9-15.1c23-99,66.1-170.5,88-201.2c-57.3,23-111.1,162.2-109.5,194c-11.9,1.5-27.2,5.4-33,17
           C1002.2,1113.8,935.5,1209.7,962.1,1286z"/>
-        </a>
-    </g>
-{/if}
-{#if imageIndex === 99}
-    <g transition:fade={{ duration: 1500}}>
-        <a href="/"
-        on:click={(e) => { e.preventDefault(); showModal("hoop", "evidence");}}>
-            <rect x="1650" y="650" width="110px" height="150px" 
-            class="hotspot"></rect>
         </a>
     </g>
 {/if}
