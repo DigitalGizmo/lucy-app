@@ -200,9 +200,20 @@
     <image transition:fade={{ duration: 1000}}  class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-small.png" />
 
-    <image in:fade={{ duration: 1000, delay: 1000}}  out:fade={{duration: 1000}}
-    class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-kids.png" />
+    {#if imageDecimal > 2.3}
+      <image in:fade={{ duration: 1000}}  out:fade={{duration: 800}}
+      class="moment-image"
+      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-kids.png" />
+
+      <g transition:fade={{ duration: 1000}}>
+        <a href="/"
+        on:click={(e) => { e.preventDefault(); showModal("hoop", "evidence");}}>
+            <rect x="1650" y="650" width="110px" height="150px" 
+            class="hotspot"></rect>
+        </a>
+    </g>
+
+    {/if}
 {/if}
 <!-- --- Horse comes in ---- -->
 {#if imageIndex === 3}
@@ -377,9 +388,8 @@
         </a>
     </g>
 {/if}
-{#if imageIndex === 2}
+{#if imageIndex === 99}
     <g transition:fade={{ duration: 1500}}>
-        <!-- <a hx-get="/moments/more"> -->
         <a href="/"
         on:click={(e) => { e.preventDefault(); showModal("hoop", "evidence");}}>
             <rect x="1650" y="650" width="110px" height="150px" 
