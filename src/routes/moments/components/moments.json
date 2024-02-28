@@ -231,7 +231,7 @@
                 "storyAudio": "silence",
                 "storyText": "The Honestmans have come to town to shop at Captain Williams’s store for fabric, knee buckles, and sleeve buttons. Lucy asks Heber if his foot still pains him. “Sometimes,” he replies, “but I still smile to myself when I wonder what a bear would think to see me caught in one of my own traps.” Lucy thinks about another Black man who needs a crutch: Pompey’s feet froze like blocks of ice after Joseph Barnard made him cut and sled wood every day one bitter winter.",
                 "alt": "5   Ox cart enters right",
-                "textAlign": "right",
+                "textAlign": "left",
                 "moreBlurb": "Many enslavers abused the enslaved people whose work they controlled.",
                 "moreWhoLinks": [
                     {"title": "Pompey", "slug": "pompey"}            
@@ -272,7 +272,7 @@
                 "storyAudio": "silence",
                 "storyText": "Heber turns to Adam. “Son, it is time to get on with our errands.” Adam nods and cracks his whip. Over the creaking of cart wheels Abijah says, “You have a fine son, Heber. God willing, one day I will have a lad such as Adam.”",
                 "alt": "7 still with the ox ",
-                "textAlign": "right",
+                "textAlign": "center",
                 "moreBlurb": "",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [
@@ -325,7 +325,7 @@
                 "storyAudio": "silence",
                 "storyText": "As Abijah and Lucy walk away, Jin thinks, “What a handsome couple. Abijah has had to wait a long time to marry.” She believes Abijah has the will and the means to buy Lucy’s freedom from the Wells. Thinking about her own situation, Jin has little hope that her enslavers will free her or her son.",
                 "alt": "10 Jin thinking",
-                "textAlign": "right",
+                "textAlign": "center",
                 "moreBlurb": "One path to freedom for enslaved women was marriage to a man who could afford to purchase her.",
                 "moreWhoLinks": [
                     {"title": "Amos Fortune", "slug": "amos-fortune"},            
@@ -343,7 +343,7 @@
                 "storyAudio": "silence",
                 "storyText": "Lucy knows that Jin has always had to care for the Ashley children even as she raised Cato on her own. She remembers when Jin first arrived in Deerfield with Cato as a baby in her arms. Lucy wants more for herself and any children God may send to her ... and Abijah.",
                 "alt": "11 Lucy thinking ",
-                "textAlign": "right",
+                "textAlign": "left",
                 "moreBlurb": "The children of enslaved women were automatically born into slavery.",
                 "moreWhoLinks": [
                     {"title": "Cato Cole", "slug": "cato-cole"}        
@@ -357,7 +357,7 @@
                 "storyAudio": "silence",
                 "storyText": "Having finally arrived at the Wells house, Lucy does not want her visit with Abijah to end. Should she invite him in? What would Mrs. Wells think? Would she allow it? Lucy wouldn’t have to worry about such things if she and Abijah had a home of their own.",
                 "alt": "12 lucy-abijah-wells-exterior",
-                "textAlign": "right",
+                "textAlign": "center",
                 "moreBlurb": "The lack of automony affected enslaved people in little and very large ways.",
                 "moreWhoLinks": [
                     {"title": "Abigail Wells", "slug": "abigail-wells"},           
@@ -374,7 +374,7 @@
                 "storyAudio": "silence",
                 "storyText": "As he watches Lucy pass through the door, Abijah comes to a decision. He will share his intentions with Ebenezer Wells and ask him for permission to marry Lucy.",
                 "alt": "13 lucy-abijah-wells-exterior",
-                "textAlign": "middle",
+                "textAlign": "right",
                 "moreBlurb": "The lack of automony affected enslaved people in little and very large ways.",
                 "moreWhoLinks": [
                     {"title": "Abigail Wells", "slug": "abigail-wells"},           

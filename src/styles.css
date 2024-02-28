@@ -297,11 +297,11 @@ nav.moment-options ul {
 }
 
 nav.moment-options ul li a svg path {
-	fill: #ffc107;
+	fill: #038EDF;
 }
 
 nav.moment-options ul li a svg path:hover {
-	fill: #038EDF;
+	fill: #ffc107;
 }
 
 nav.moment-options ul li.this-moment {
@@ -482,16 +482,13 @@ nav.moment-options ul li.prev-moment {
 }
 
 .hotspot {
-	fill: #FEDA00;
-	opacity: 0.3;
-	/* stroke: #FEDA00;
-	stroke-opacity: 7;
-	stroke-width: "20"; */
+	opacity: 0.5;
+	stroke: #06A5FF;
+  stroke-width: 2px;
 }
 
 .hotspot:hover {
 	opacity: 0.5;
-	/* stroke-opacity: 9; */
 }
 
 .more-panel-fixed {/* is this in the right place? */
@@ -512,7 +509,7 @@ nav.moment-options ul li.prev-moment {
 }
 
 .audio-icons a g circle:hover {
-	fill: #e5b921;
+	fill: #06A5FF;
 	opacity: .70;
 }
 
@@ -521,28 +518,28 @@ nav.moment-options ul li.prev-moment {
 }
 
 .circle {
-	fill: #e5b921;
+	fill: #06A5FF;
 	opacity: .20;
 }
 
 .circle-stroke {
-  stroke: #e5b921;
-	stroke-width: 3px;
+  stroke: #06A5FF;
+	stroke-width: 4px;
 	fill: none
 }
 
 .dot {
-  fill: #e5b921;
+  fill: #06A5FF;
   stroke-width: 0px;
 }
 
 .lines {
   fill: none;
-  stroke: #e5b921;
+  stroke: #06A5FF;
 }
 
 .lines-thick {
-  stroke-width: 3px;
+  stroke-width: 4px;
 }
 
 .lines-thin {
@@ -562,20 +559,21 @@ nav.moment-options ul li.prev-moment {
 .story-frames article.story {/* displays smaller than 800px */
 	margin-bottom: calc(100vh - 250px);
 	color: white;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	text-align: center;
-	text-shadow: 1px 1px black;
-	width: 60vw;
+	text-shadow: 1px 1px 1px black;
+/*	width: 60vw;*/
 }
 
 @media screen and (min-width: 800px) { /* displays larger than 800px */
 	.story-frames article.story {
-		font-size: 1.75rem;
+		font-size: 1.5rem;
+	  min-height: 10em;
 	}
 }
 
 .story p {/* Don's solution for regularizing the heights of varying story text lengths */
-  min-height: 10em;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .story-frames article.story.center, .story-frames article.story.right, .story-frames article.story.left {
@@ -584,7 +582,7 @@ nav.moment-options ul li.prev-moment {
 
 @media screen and (min-width: 800px) { /* displays larger than 800px */
 	.story-frames article.story.right {
-		margin: 40vh 5vw 70vh 35vw;
+		margin: 40vh 5vw 70vh 50vw;
 	}
 
 	.story-frames article.story.center {
@@ -592,7 +590,7 @@ nav.moment-options ul li.prev-moment {
 	}
 
 	.story-frames article.story.left {
-		margin: 40vh 35vw 70vh 5vw;
+		margin: 40vh 50vw 70vh 5vw;
 	}
 }
 
