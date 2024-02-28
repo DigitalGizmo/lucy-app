@@ -9,6 +9,7 @@
   moment;
 
   let imageIndex = 0; // calculation will subtract 1
+  let imageDecimal = 0.1;
   let prevImageIndex = 0;
   let frameHeight = 900;
   let momentScrollHeight = 10000;
@@ -34,10 +35,12 @@
     frameHeight = (momentScrollHeight - (panelHeight * totalHeightFudgeFactor))/numberOfFrames;
   }
 
+  $: imageDecimal = (Math.trunc((((currScrollY + frameHeight)/(frameHeight) - 0.4)*10) )/10);
+
   $: if (currScrollY < (frameHeight/2)) {
     imageIndex = 0;
   } else {
-    imageIndex = (Math.trunc(((currScrollY + frameHeight)/(frameHeight)) - 0.4));
+    imageIndex = Math.trunc(((currScrollY + frameHeight)/(frameHeight)) - 0.4);
   }  
 
   $: if (isModalShowing) {
@@ -117,11 +120,14 @@
     //     storyAudio.pause();
     //   }
   }
-
-
 </script>
 
-
+<style>
+  /* .Rrrrr {
+    font: italic 40px serif;
+    fill: red;
+  }     */
+</style>
 
 <section class="moment-scroll" >
   <!-- transition:slide={{ axis: 'y'}} -->
@@ -137,16 +143,19 @@
             <Wells 
               {showModal}
               {imageIndex}
+              {imageDecimal}
               {currScrollY}
               {frameHeight}
               {moment}
               {isSoundFx}
+              {prevImageIndex}
               />
           {/if}
           {#if currMomentIndex === 7}
               <Community 
               {showModal}
               {imageIndex}
+              {imageDecimal}
               {currScrollY}
               {frameHeight}
               {moment}
@@ -154,7 +163,10 @@
               {prevImageIndex}
             />
           {/if}
-    
+
+          <!-- <text transform="translate(800 240)"class="Rrrrr"> 
+            imageIndex: {imageIndex} imageDecimal: {imageDecimal}
+          </text>     -->
         </svg>
       </div> <!-- end image panel image -->
 

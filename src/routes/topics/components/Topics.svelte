@@ -27,7 +27,7 @@
 
   <div class="about">
     <h3>About</h3>
-    {@html itemInfo.full_text.plain}
+    {@html itemInfo.full_text.html}
   </div>
 
   <!-- / more-content or wrapper detail -->

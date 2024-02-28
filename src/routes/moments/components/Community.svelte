@@ -1,7 +1,7 @@
 <script>
   import { fade } from 'svelte/transition';
   export let showModal;
-  export let imageIndex, prevImageIndex;
+  export let imageIndex, imageDecimal, prevImageIndex;
   export let currScrollY, frameHeight, moment, isSoundFx;
 
   let fxAudio;
@@ -59,7 +59,7 @@
   let lucyAbiTransX = 0;
   let lucyAbiScale = 1;
   let lucyAbiHorseBgScale = 1;
-  let lucAbiIndex = 0;
+  // let lucAbiIndex = 0;
   // const zoomDelay = 130;  
   // let lucyAbiHorseBgTransY = 0;
   // let lucyAbiHorseBgTransX = 0;
@@ -78,11 +78,11 @@
       // lucyAbiHorseBgScale = 1 - ((lucyAbiHorseScrollStartY - (currScrollY ))/10000); // - zoomDelay
   }
   // Luc-Abi image change
-  $: if ((currScrollY - lucyAbiHorseScrollStartY) < (frameHeight/2.2)) {
-    lucAbiIndex = 0;
-  } else {
-    lucAbiIndex = 1;
-  }  
+  // $: if ((currScrollY - lucyAbiHorseScrollStartY) < (frameHeight/2.2)) {
+  //   lucAbiIndex = 0;
+  // } else {
+  //   lucAbiIndex = 1;
+  // }  
   // lucAbiIndex = Math.trunc((((currScrollY - lucyAbiHorseScrollStartY) )/(frameHeight/2)) - 0);
 
   // ---- Ox cart ----
@@ -135,10 +135,10 @@
         width: 100%;
         height: 100%;
     }
-    .Rrrrr {
+    /* .Rrrrr {
       font: italic 40px serif;
       fill: red;
-    }    
+    }     */
 </style>
 
 <!-- ---- BACKGROUND ---- -->
@@ -165,6 +165,9 @@
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
     alt="{moment.frames[imageIndex].alt}"></image>
+
+    <!-- <text transform="translate(800 240)"
+    class="Rrrrr"> imageIndex: {imageIndex} imageDecimal: {imageDecimal}</text> -->
 {/if}
 <!-- --- lucy thinking ---- -->
 {#if imageIndex === 1}
@@ -182,8 +185,9 @@
       <image in:fade={{ duration: 200, delay: 1500}}  out:fade={{duration: 1000}} class="moment-image"
       href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/lucy-thinking-closed.png" />
 
-      <!-- <text transform="translate(800 240)"
-      class="Rrrrr"> lucyBgOpacity: {lucyBgOpacity}</text> -->
+      <!-- <text transform="translate(800 240)"class="Rrrrr"> 
+        imageIndex: {imageIndex} imageDecimal: {imageDecimal}
+      </text> -->
     </g>
 
 {/if}
@@ -196,9 +200,20 @@
     <image transition:fade={{ duration: 1000}}  class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-lucy-abijah-small.png" />
 
-    <image in:fade={{ duration: 1000, delay: 1000}}  out:fade={{duration: 1000}}
-    class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-kids.png" />
+    {#if imageDecimal > 2.3}
+      <image in:fade={{ duration: 1000}}  out:fade={{duration: 800}}
+      class="moment-image"
+      href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/main-street-kids.png" />
+
+      <g transition:fade={{ duration: 1000}}>
+        <a href="/"
+        on:click={(e) => { e.preventDefault(); showModal("hoop", "evidence");}}>
+            <rect x="1650" y="650" width="110px" height="150px" 
+            class="hotspot"></rect>
+        </a>
+    </g>
+
+    {/if}
 {/if}
 <!-- --- Horse comes in ---- -->
 {#if imageIndex === 3}
@@ -206,7 +221,7 @@
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png" alt="{moment.frames[imageIndex].alt}"></image>
 
 
-    {#if lucAbiIndex === 0}
+    {#if imageDecimal <= 3.5}
       <g transform="translate(75 -20) scale(0.9)" transition:fade={{ duration: 700}}>
           <image transition:fade={{ duration: 700}}  
           class="moment-image"
@@ -214,7 +229,7 @@
       </g>
     {/if}
 
-    {#if lucAbiIndex === 1}
+    {#if imageDecimal > 3.5}
       <g transform="translate(0 0) scale(0.9)" transition:fade={{ duration: 700}}>
         <image transition:fade={{ duration: 700}} 
 
@@ -223,7 +238,7 @@
       </g>
       {/if}
     <!-- horse -->
-    {#if lucAbiIndex === 1}
+    {#if imageDecimal > 3.3}
       <image in:fade={{ duration: 1000}}  out:fade={{duration: 1000}} 
       transform="translate(-100 20) scale(1.1)"
       class="moment-image"
@@ -373,9 +388,8 @@
         </a>
     </g>
 {/if}
-{#if imageIndex === 2}
+{#if imageIndex === 99}
     <g transition:fade={{ duration: 1500}}>
-        <!-- <a hx-get="/moments/more"> -->
         <a href="/"
         on:click={(e) => { e.preventDefault(); showModal("hoop", "evidence");}}>
             <rect x="1650" y="650" width="110px" height="150px" 
