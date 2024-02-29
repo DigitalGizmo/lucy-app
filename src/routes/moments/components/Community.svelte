@@ -103,12 +103,9 @@
       }
       prevImageIndex = imageIndex;
     }
-    // console.log('should play, imageIndex: ' + imageIndex)
-    if (imageIndex < 13) {
-      // fxAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/${moment.frames[imageIndex].fxAudio}.mp3`);
-      fxAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/Yellowthroated-Warbler.mp3`);
-      fxAudio.play();      
-    }
+    // Play the audio for imageIndex
+    fxAudio = new Audio(`https://lucy-proto.deerfield-ma.org/assets/moments/audio/community/sound-fx/${ moment.frames[imageIndex].soundFx}.mp3`);
+    fxAudio.play();      
   } else {
     // console.log('not read aloud')
     if (fxAudio) {
