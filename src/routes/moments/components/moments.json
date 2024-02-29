@@ -154,7 +154,7 @@
                 ],
                 "moreHowLinks": [
                     {"title": "Basket", "slug": "basket"},
-                    {"title": "Cake of Chocolate", "slug": "cake-of-chocolate"},
+                    {"title": "18th-century chocolate", "slug": "cake-of-chocolate"},
                     {"title": "Chocolate Pot", "slug": "chocolate-pot"},
                     {"title": "Account Book Record of Chocolate Purchase", "slug": "williams-account-book-chocolate"}                    
                 ],
@@ -176,7 +176,7 @@
                     {"title": "Courtship in Early New England", "slug": "courtship"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Example of sale ads listing women with children", "slug": "for-sale-temp"}
+                    {"title": "A newpaper ad for the sale of a woman and children", "slug": "for-sale-ad"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -190,11 +190,11 @@
                 "moreBlurb": "Many enslaved people played an active role in the wider community.",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [
-                    {"title": "The Bars Fight", "slug": "bars-fight-poem"}
+                    {"title": "The Bars Fight Poem", "slug": "bars-fight-poem"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Child's Hoop", "slug": "hoop"},
-                    {"title": "Colonial Boy's Clothing", "slug": "colonial-boys-clothing"}
+                    {"title": "Hoop Toy", "slug": "hoop"},
+                    {"title": "Portrait of Two Boys: Colonial Boy's Clothing", "slug": "colonial-boys-clothing"}
                 ],
                 "moreWhereLinks": [
                     {"title": "African Americans in Deerfield", "slug": "deerfield-african-americans"}
@@ -223,7 +223,7 @@
             {
                 "imageName": "main-street-plain",
                 "storyAudio": "04-i-think-i-see",
-                "soundFx": "silence",
+                "soundFx": "ox-cart-fade-in",
                 "storyText": "“I think I see Heber and Adam Honestman coming this way. When did Adam get so tall?”",
                 "alt": "4 Lucy and Abijah closer ",
                 "textAlign": "right",
@@ -251,7 +251,7 @@
                 ],
                 "moreHowLinks": [
                     {"title": "Heber Honestman Store Account", "slug": "heber-store-account"},                   
-                    {"title": "Crutch", "slug": "crutch"},
+                    {"title": "\"Bath Races\": Crutches", "slug": "crutch"},
                     {"title": "Ox Cart", "slug": "ox-cart"},
                     {"title": "Bear trap", "slug": "bear-trap"}
                 ],
@@ -272,9 +272,7 @@
                     {"title": "Western Massachusetts in the French and Indian War", "slug": "f-i-wars"},
                     {"title": "Building Community", "slug": "building-community"}
                 ],
-                "moreHowLinks": [
-                    {"title": "Muster Roll", "slug": "muster-roll"}
-                ],
+                "moreHowLinks": [],
                 "moreWhereLinks": []          
             },
 
@@ -357,7 +355,7 @@
                 "imageName": "lucy-thinking-open",
                 "storyAudio": "silence",
                 "soundFx": "silence",
-                "storyText": "Lucy knows that Jin has always had to care for the Ashley children even as she raised Cato on her own. She remembers when Jin first arrived in Deerfield with Cato as a baby in her arms. Lucy wants more for herself and any children God may send to her ... and Abijah.",
+                "storyText": "Lucy knows that Jin has always had to care for the Ashley children even as she raised Cato on her own. She remembers when Jin first arrived in Deerfield with Cato as a baby in her arms. Lucy hopes to have more for herself and any children God may send to her ... and Abijah.",
                 "alt": "11 Lucy thinking ",
                 "textAlign": "left",
                 "moreBlurb": "Under the law, any child born to an enslaved mother was automatically enslaved from birth.",
@@ -393,7 +391,7 @@
                 "storyText": "As he watches Lucy pass through the door, Abijah comes to a decision. He will share his intentions with Ebenezer Wells and ask him for permission to marry Lucy.",
                 "alt": "13 lucy-abijah-wells-exterior",
                 "textAlign": "right",
-                "moreBlurb": "One aspect of 18th century social hierarchy was that marriage for a women, either free or enslaved, was determined by a man.",
+                "moreBlurb": "Colonial New Englanders, free and enslaved, lived in a patriarchal and hierarchical society in which the heads of their households decided who could or should marry.",
                 "moreWhoLinks": [
                     {"title": "Abigail Wells", "slug": "abigail-wells"},           
                     {"title": "Ebenezer Wells", "slug": "ebenezer-wells"}            

@@ -482,13 +482,13 @@ nav.moment-options ul li.prev-moment {
 }
 
 .hotspot {
-	opacity: 0.5;
-	stroke: #06A5FF;
-  stroke-width: 2px;
+  opacity: 0.25;
+  fill: #06a5ff;
 }
 
 .hotspot:hover {
-	opacity: 0.5;
+  fill: #06a5ff;
+  opacity: 0.65;
 }
 
 .more-panel-fixed {/* is this in the right place? */
