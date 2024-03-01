@@ -12,9 +12,9 @@
       {
         "slug": "tigo",
         "title": "Robert Tigo",
-        "pTop": 30,
-        "pLeft": 50,
-        "blurb": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        "pTop": 45,
+        "pLeft": 48,
+        "blurb": "Robert Tigo, enslaved by the Reverend John Williams, died in 1695. He is the first known enslaved person in Deerfield."
       }
     ]
   },
@@ -25,23 +25,16 @@
       {
         "slug": "parthena",
         "title": "Parthena",
-        "pTop": 25,
-        "pLeft": 50,
-        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "pTop": 40,
+        "pLeft": 48,
+        "blurb": "Parthena and her husband Frank were enslaved by the town’s minister, John Williams. Both were tragically killed in a raid on the town only a year later."
       },
       {
         "slug": "frank",
         "title": "Frank",
-        "pTop": 30,
-        "pLeft": 50,
-        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      },
-      {
-        "slug": "lundun",
-        "title": "Lundun",
-        "pTop": 30,
-        "pLeft": 55,
-        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "pTop": 45,
+        "pLeft": 48,
+        "blurb": "Frank and his wife Parthena were enslaved by Deerfield’s minister, the Reverend John Williams, who also presided over their marriage in 1703."
       }
     ]
   },
@@ -49,6 +42,13 @@
     "layerName": "1710",
     "intro": "Deerfield remained one of the most dangerous places to live in British North America. Lacking the safety to farm their fields or pasture their livestock due to the constant threat of attack by the French and their Native allies, few residents had money or inclination to purchase enslaved labor.",
     "popItems": [
+      {
+        "slug": "unknown",
+        "title": "Name Unknown",
+        "pTop": 37,
+        "pLeft": 25,
+        "blurb": "At least one man, name unknown, was enslaved by Timothy Childs in a house which survives to the present day."
+      }
     ] 
   }, 
   {
@@ -56,32 +56,25 @@
     "intro": "Although the threat of attack still hampered residents from actively farming their land, enslaved people continued to labor in the minister’s household.",
     "popItems": [
       {
-        "slug": "pompey",
-        "title": "Pompey",
-        "pTop": 30,
-        "pLeft": 45,
-        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      },
-      {
-        "slug": "mesheck",
-        "title": "Mesheck",
-        "pTop": 35,
-        "pLeft": 50,
-        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      },
-      {
-        "slug": "kedar",
-        "title": "Kedar",
-        "pTop": 40,
-        "pLeft": 50,
-        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      },
-      {
         "slug": "ceasar",
         "title": "Ceasar",
         "pTop": 40,
         "pLeft": 65,
-        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "blurb": "Caesar was enslaved by Ensign Samuel Field (1678-1762)."
+      },
+      {
+        "slug": "mesheck",
+        "title": "Mesheck",
+        "pTop": 40,
+        "pLeft": 48,
+        "blurb": "Mesheck was first enslaved by John Williams and in 1729, was inherited by John’s daughter Sarah Williams."
+      },
+      {
+        "slug": "kedar",
+        "title": "Kedar",
+        "pTop": 45,
+        "pLeft": 48,
+        "blurb": "Enslaved by the Reverend John Williams, Kedar was inherited by Williams’s son Elijah Williams (1712-1771) on the minister’s death in 1729."
       }
     ]
   }, 
@@ -94,93 +87,100 @@
         "title": "Fortune",
         "pTop": 40,
         "pLeft": 20,
-        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "blurb": "Fortune \"Servant to Samuell Dickinson was Baptized upon his Mistress account\" in June, 1737."
       },
       {
-        "slug": "rebecca",
-        "title": "Rebecca",
-        "pTop": 28,
-        "pLeft": 20,
-        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "slug": "unknown-girl",
+        "title": "Name Unknown",
+        "pTop": 52,
+        "pLeft": 47,
+        "blurb": "A girl whose name is no longer known might have been enslaved in the household of Jonathan Hoyt."
       },
       {
-        "slug": "pompey",
-        "title": "Pompey",
+        "slug": "kedar",
+        "title": "Kedar",
         "pTop": 25,
         "pLeft": 22,
-        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "blurb": "Kedar was first enslaved by Reverend John Williams and then by his son Elijah Williams. "
       },
       {
         "slug": "lucy",
         "title": "Lucy",
         "pTop": 35,
         "pLeft": 35,
-        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "blurb": "Lucy Terry came to Deerfield as a child in 1734 where she was enslaved by Ebenezer Wells until her marriage to Abijah Prince in 1756."
       },
       {
         "slug": "caesar",
         "title": "Caesar",
         "pTop": 40,
         "pLeft": 35,
-        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "blurb": "Enslaved by Ebenezer Wells, Caesar was baptized in 1734 and became a full member of the church two years later."
       },
       {
         "slug": "adam",
         "title": "Adam",
         "pTop": 40,
         "pLeft": 40,
-        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "blurb": "One of several men named Adam was enslaved by Justice Thomas Wells."
       },
       {
         "slug": "peter",
         "title": "Peter",
         "pTop": 45,
         "pLeft": 40,
-        "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "blurb": "Peter, enslaved by Justice Thomas Wells, was baptized on June 15, 1734 one day after he was “received into Charity with people\" after he “Confessed Sins of drunkeness & stealing.”"
       },
       {
         "slug": "gin",
-        "title": "Gin",
+        "title": "Jin",
         "pTop": 40,
         "pLeft": 60,
-        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "blurb": "Enslaved by Reverend Jonathan Ashley in 1738, Jin (Jene, Jenne) spent the remainder of her long life laboring for the Ashley family."
+      },
+      {
+        "slug": "mesheck",
+        "title": "Mesheck",
+        "pTop": 40,
+        "pLeft": 60,
+        "blurb": "Mesheck was first enslaved by Reverend John Williams and was inherited first by John’s daughter Sarah and later Abigail following the minister’s death in 1729."
       },
       {
         "slug": "cato",
         "title": "Cato",
         "pTop": 45,
         "pLeft": 60,
-        "blurb": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "blurb": "Cato was an infant when he and his mother were enslaved by the Reverend Jonathan Ashley in 1738."
       }
     ] 
   }, 
   {
     "layerName": "1740",
-    "intro": "By the end of the decade, as many as 20 enslaved men, women, and children were living and working on the mile-long village street.",
+    "intro": "This decade not completed yet. By the end of the decade, as many as 20 enslaved men, women, and children were living and working on the mile-long village street.",
     "popItems": [
     ] 
   }, 
   {
     "layerName": "1750",
-    "intro": "The number of enslaved people living in Deerfield continued to match the increasing prosperity of the town’s residents. By the mid-1750s, the village residents included a free Black family–Lucy and Abijah Prince’s household.",
+    "intro": "This decade not completed yet. The number of enslaved people living in Deerfield continued to match the increasing prosperity of the town’s residents. By the mid-1750s, the village residents included a free Black family–Lucy and Abijah Prince’s household.",
     "popItems": [
     ] 
   }, 
   {
     "layerName": "1760",
-    "intro": "Census data confirms that African Americans were a much larger presence than they had been 50 years earlier. In the Massachusetts census of 1765, Deerfield reported seventeen “Negroes & Molattoes” who comprised a little over two percent of the town’s total population of 737.",
+    "intro": "This decade not completed yet. Census data confirms that African Americans were a much larger presence than they had been 50 years earlier. In the Massachusetts census of 1765, Deerfield reported seventeen “Negroes & Molattoes” who comprised a little over two percent of the town’s total population of 737.",
     "popItems": [
     ] 
   }, 
   {
     "layerName": "1770",
-    "intro": "Over two dozen African Americans lived in Deerfield in this decade. Most were enslaved, despite the emphasis on essential liberties of the American Revolution.",
+    "intro": "This decade not completed yet. Over two dozen African Americans lived in Deerfield in this decade. Most were enslaved, despite the emphasis on essential liberties of the American Revolution.",
     "popItems": [
     ] 
   },
   {
     "layerName": "1780",
-    "intro": "The numbers of free and enslaved African Americans in Deerfield diminished in this decade, perhaps reflecting the gradual decline of slavery in Massachusetts in this decade due to court cases declaring it to be unconstitutional under the new Massachusetts state constitution.",
+    "intro": "This decade not completed yet. The numbers of free and enslaved African Americans in Deerfield diminished in this decade, perhaps reflecting the gradual decline of slavery in Massachusetts in this decade due to court cases declaring it to be unconstitutional under the new Massachusetts state constitution.",
     "popItems": [
     ] 
   }
