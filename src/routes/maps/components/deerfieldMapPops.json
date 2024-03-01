@@ -12,8 +12,8 @@
       {
         "slug": "tigo",
         "title": "Robert Tigo",
-        "pTop": 30,
-        "pLeft": 50,
+        "pTop": 45,
+        "pLeft": 48,
         "blurb": "Robert Tigo, enslaved by the Reverend John Williams, died in 1695. He is the first known enslaved person in Deerfield."
       }
     ]
@@ -25,15 +25,15 @@
       {
         "slug": "parthena",
         "title": "Parthena",
-        "pTop": 25,
-        "pLeft": 50,
+        "pTop": 40,
+        "pLeft": 48,
         "blurb": "Parthena and her husband Frank were enslaved by the town’s minister, John Williams. Both were tragically killed in a raid on the town only a year later."
       },
       {
         "slug": "frank",
         "title": "Frank",
-        "pTop": 30,
-        "pLeft": 50,
+        "pTop": 45,
+        "pLeft": 48,
         "blurb": "Frank and his wife Parthena were enslaved by Deerfield’s minister, the Reverend John Williams, who also presided over their marriage in 1703."
       }
     ]
@@ -45,8 +45,8 @@
       {
         "slug": "unknown",
         "title": "Name Unknown",
-        "pTop": 30,
-        "pLeft": 55,
+        "pTop": 37,
+        "pLeft": 25,
         "blurb": "At least one man, name unknown, was enslaved by Timothy Childs in a house which survives to the present day."
       }
     ] 
@@ -65,15 +65,15 @@
       {
         "slug": "mesheck",
         "title": "Mesheck",
-        "pTop": 35,
-        "pLeft": 50,
+        "pTop": 40,
+        "pLeft": 48,
         "blurb": "Mesheck was first enslaved by John Williams and in 1729, was inherited by John’s daughter Sarah Williams."
       },
       {
         "slug": "kedar",
         "title": "Kedar",
-        "pTop": 40,
-        "pLeft": 50,
+        "pTop": 45,
+        "pLeft": 48,
         "blurb": "Enslaved by the Reverend John Williams, Kedar was inherited by Williams’s son Elijah Williams (1712-1771) on the minister’s death in 1729."
       }
     ]
@@ -92,8 +92,8 @@
       {
         "slug": "unknown-girl",
         "title": "Name Unknown",
-        "pTop": 28,
-        "pLeft": 20,
+        "pTop": 52,
+        "pLeft": 47,
         "blurb": "A girl whose name is no longer known might have been enslaved in the household of Jonathan Hoyt."
       },
       {

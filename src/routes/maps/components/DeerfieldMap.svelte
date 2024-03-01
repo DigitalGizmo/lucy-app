@@ -56,66 +56,83 @@
     <g id="map-nav">
       <g>
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(1);}}>
-          <rect width="200" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect width="170" height="60" fill="#06a5ff" stroke-width="0" 
           class="{ decadeIndex === 1 ? 'map-selected' : ''}"/>
-          <text transform="translate(14.29 39.51)">
+          <text transform="translate(14 40)">
               <tspan x="0" y="0">1690 - 1699</tspan>
           </text>
         </a>
 
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(2);}}>
-          <rect x="202" width="200" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="172" width="170" height="60" fill="#06a5ff" stroke-width="0" 
           class="{ decadeIndex === 2 ? 'map-selected' : ''}"/>
-          <text transform="translate(216.83 39.51)">
+          <text transform="translate(186 40)">
               <tspan x="0" y="0">1700 - 1709</tspan>
           </text>
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(3);}}>
-          <rect x="404" width="200" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="344" width="170" height="60" fill="#06a5ff" stroke-width="0" 
           class="{ decadeIndex === 3 ? 'map-selected' : ''}"/>
-          <text transform="translate(419.18 39.51)">
+          <text transform="translate(358 40)">
               <tspan x="0" y="0">1710 - 1719</tspan>
           </text>
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(4);}}>
-          <rect x="606" width="200" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="516" width="170" height="60" fill="#06a5ff" stroke-width="0" 
           class="{ decadeIndex === 4 ? 'map-selected' : ''}"/>
-          <text transform="translate(621.35 39.51)">
+          <text transform="translate(534 40)">
               <tspan x="0" y="0">1720 - 1729</tspan>
           </text>
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(5);}}>
-          <rect x="808" width="200" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="688" width="170" height="60" fill="#06a5ff" stroke-width="0" 
           class="{ decadeIndex === 5 ? 'map-selected' : ''}"/>
-          <text transform="translate(823.56 39.51)">
+          <text transform="translate(704 40)">
               <tspan x="0" y="0">1730 - 1739</tspan>
           </text>
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(6);}}>
-          <rect x="1011" width="198" height="59" fill="#06a5ff" stroke-width="0" 
+          <rect x="860" width="170" height="59" fill="#06a5ff" stroke-width="0" 
           class="{ decadeIndex === 6 ? 'map-selected' : ''}"/>
-          <text transform="translate(1025.01 39.51)">
+          <text transform="translate(876 40)">
               <tspan x="0" y="0">1740 - 1749</tspan>
           </text>
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(7);}}>
-          <rect x="1212" width="200" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="1032" width="170" height="60" fill="#06a5ff" stroke-width="0" 
           class="{ decadeIndex === 7 ? 'map-selected' : ''}"/>
-          <text transform="translate(1226.29 39.51)">
+          <text transform="translate(1048 40)">
               <tspan x="0" y="0">1750 - 1759</tspan>
           </text>
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(8);}}>
-          <rect x="1212" width="200" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="1204" width="170" height="60" fill="#06a5ff" stroke-width="0" 
           class="{ decadeIndex === 8 ? 'map-selected' : ''}"/>
-          <text transform="translate(1427.29 39.51)">
+          <text transform="translate(1218 40)">
               <tspan x="0" y="0">1760 - 1769</tspan>
+          </text>
+        </a>
+
+  
+        <a href="/" on:click={(e) => { e.preventDefault(); setDecade(9);}}>
+          <rect x="1376" width="170" height="60" fill="#06a5ff" stroke-width="0" 
+          class="{ decadeIndex === 8 ? 'map-selected' : ''}"/>
+          <text transform="translate(1388 40)">
+              <tspan x="0" y="0">1770 - 1779</tspan>
+          </text>
+        </a>
+  
+        <a href="/" on:click={(e) => { e.preventDefault(); setDecade(10);}}>
+          <rect x="1548" width="170" height="60" fill="#06a5ff" stroke-width="0" 
+          class="{ decadeIndex === 8 ? 'map-selected' : ''}"/>
+          <text transform="translate(1558 40)">
+              <tspan x="0" y="0">1780 - 1789</tspan>
           </text>
         </a>
 
@@ -383,7 +400,7 @@
       <g>
         <!-- Unknown  -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(0);}}>
-          <circle class="house-hilite" cx="729" cy="451" r="14"/>
+          <circle class="house-hilite" cx="338" cy="402" r="14"/>
         </a>
       </g>
     {/if}
@@ -398,12 +415,12 @@
 
         <!-- Mesheck -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(1);}}>
-          <circle cx="731" cy="415" r="14" class="house-hilite"/>
+          <circle cx="729" cy="417" r="14" class="house-hilite"/>
         </a>
 
         <!-- Kedar -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(2);}}>
-          <circle cx="731" cy="449" r="14" class="house-hilite"/>
+          <circle cx="729" cy="451" r="14" class="house-hilite"/>
         </a>
       </g>
     {/if}
@@ -418,7 +435,7 @@
 
         <!-- Name Unknown -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(1);}}>
-          <circle id="unknown-girl" class="house-hilite" cx="272" cy="392" r="14"/>
+          <circle id="unknown-girl" class="house-hilite" cx="1266" cy="558" r="14"/>
         </a>
 
         <!-- Kedar -->
@@ -479,6 +496,21 @@
 
     <!-- highlighted houses for 1760 decade -->      
     {#if decadeIndex === 8}
+      <g>
+
+      </g>
+    {/if}
+
+    <!-- highlighted houses for 1770 decade -->      
+    {#if decadeIndex === 9}
+      <g>
+
+      </g>
+    {/if}
+
+
+    <!-- highlighted houses for 1780 decade -->      
+    {#if decadeIndex === 10}
       <g>
 
       </g>
