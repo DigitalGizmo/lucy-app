@@ -52,7 +52,7 @@
   <!-- -------- MAP NAVIGATION ------- -->
   <svg id="Layer_2" data-name="Layer 2" 
     xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 1412 60">
+    viewBox="0 0 1712 60">
     <g id="map-nav">
       <g>
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(1);}}>
@@ -108,6 +108,14 @@
           class="{ decadeIndex === 7 ? 'map-selected' : ''}"/>
           <text transform="translate(1226.29 39.51)">
               <tspan x="0" y="0">1750 - 1759</tspan>
+          </text>
+        </a>
+  
+        <a href="/" on:click={(e) => { e.preventDefault(); setDecade(8);}}>
+          <rect x="1212" width="200" height="60" fill="#06a5ff" stroke-width="0" 
+          class="{ decadeIndex === 8 ? 'map-selected' : ''}"/>
+          <text transform="translate(1427.29 39.51)">
+              <tspan x="0" y="0">1760 - 1769</tspan>
           </text>
         </a>
 
@@ -367,18 +375,16 @@
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(1);}}>
           <circle class="house-hilite" cx="729" cy="451" r="14"/>
         </a>
-
-        <!-- Lundun -->
-        <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(2);}}>
-          <circle class="house-hilite" cx="809" cy="452" r="14"/>
-        </a>
       </g>
     {/if}
 
-    <!-- highlighted houses for 1710 decade - no hilights -->
+    <!-- highlighted houses for 1710 decade  -->
     {#if decadeIndex === 3}
       <g>
-
+        <!-- Unknown  -->
+        <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(0);}}>
+          <circle class="house-hilite" cx="729" cy="451" r="14"/>
+        </a>
       </g>
     {/if}
 
@@ -399,11 +405,6 @@
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(2);}}>
           <circle cx="731" cy="449" r="14" class="house-hilite"/>
         </a>
-
-        <!-- Pompey -->
-        <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(3);}}>
-          <circle cx="991" cy="603" r="14" class="house-hilite"/>
-        </a>
       </g>
     {/if}
 
@@ -415,14 +416,14 @@
           <circle id="fortune" class="house-hilite" cx="272" cy="478" r="14"/>
         </a>
 
-        <!-- Rebecca -->
+        <!-- Name Unknown -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(1);}}>
-          <circle id="rebecca" class="house-hilite" cx="272" cy="392" r="14"/>
+          <circle id="unknown-girl" class="house-hilite" cx="272" cy="392" r="14"/>
         </a>
 
-        <!-- Pompey -->
+        <!-- Kedar -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(2);}}>
-          <circle id="pompey" class="house-hilite" cx="307" cy="399" r="14"/>
+          <circle id="kedar" class="house-hilite" cx="307" cy="399" r="14"/>
         </a>
 
         <!-- Lucy -->
@@ -450,8 +451,13 @@
           <circle id="gin" class="house-hilite" cx="1498" cy="545" r="14"/>
         </a>
 
-        <!-- Cato -->
+        <!-- Mesheck -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(8);}}>
+          <circle cx="731" cy="415" r="14" class="house-hilite"/>
+        </a>
+
+        <!-- Cato -->
+        <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(9);}}>
           <circle id="cato" class="house-hilite" cx="1498" cy="580" r="14"/>
         </a>
       </g>
@@ -471,6 +477,12 @@
       </g>
     {/if}
 
+    <!-- highlighted houses for 1760 decade -->      
+    {#if decadeIndex === 8}
+      <g>
+
+      </g>
+    {/if}
   </svg>    
 
   <!-- /layer intros -->
