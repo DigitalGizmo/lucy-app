@@ -440,7 +440,7 @@
 
         <!-- Kedar -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(2);}}>
-          <circle id="kedar" class="house-hilite" cx="307" cy="399" r="14"/>
+          <circle id="kedar" class="house-hilite" cx="731" cy="450" r="14"/>
         </a>
 
         <!-- Lucy -->
@@ -455,17 +455,17 @@
 
         <!-- Adam -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(5);}}>
-          <circle id="adam" class="house-hilite" cx="1184" cy="513" r="14"/>
+          <circle id="adam" class="house-hilite" cx="1134" cy="513" r="14"/>
         </a>
 
         <!-- Peter -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(6);}}>
-          <circle id="peter" class="house-hilite" cx="1184" cy="547" r="14"/>
+          <circle id="peter" class="house-hilite" cx="1134" cy="547" r="14"/>
         </a>
 
         <!-- Gin -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(7);}}>
-          <circle id="gin" class="house-hilite" cx="1498" cy="545" r="14"/>
+          <circle id="gin" class="house-hilite" cx="1448" cy="545" r="14"/>
         </a>
 
         <!-- Mesheck -->
@@ -475,7 +475,7 @@
 
         <!-- Cato -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(9);}}>
-          <circle id="cato" class="house-hilite" cx="1498" cy="580" r="14"/>
+          <circle id="cato" class="house-hilite" cx="1448" cy="580" r="14"/>
         </a>
       </g>
     {/if}
