@@ -122,7 +122,7 @@
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(9);}}>
           <rect x="1376" width="170" height="60" fill="#06a5ff" stroke-width="0" 
-          class="{ decadeIndex === 8 ? 'map-selected' : ''}"/>
+          class="{ decadeIndex === 9 ? 'map-selected' : ''}"/>
           <text transform="translate(1388 40)">
               <tspan x="0" y="0">1770 - 1779</tspan>
           </text>
@@ -130,7 +130,7 @@
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(10);}}>
           <rect x="1548" width="170" height="60" fill="#06a5ff" stroke-width="0" 
-          class="{ decadeIndex === 8 ? 'map-selected' : ''}"/>
+          class="{ decadeIndex === 10 ? 'map-selected' : ''}"/>
           <text transform="translate(1558 40)">
               <tspan x="0" y="0">1780 - 1789</tspan>
           </text>
