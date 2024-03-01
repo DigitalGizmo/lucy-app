@@ -11,7 +11,7 @@
       {itemInfo.title}
   </h2>
 
-  {#if itemInfo.slug === 'ministers-enslavers'}
+  {#if itemInfo.has_video}
     <figure>
       <!-- svelte-ignore a11y-aria-attributes -->
       <video width="320" height="240" controls>
