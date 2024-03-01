@@ -30,9 +30,29 @@
     panelWidth = (window.innerWidth * 0.7);
   })
 
-</script>
+  function onKeyDown(e) {
+    // console.log('got to key down');
+    if (e.keyCode === 27) {
+      isModalShowing = false;
+    }
+  }
 
-<div id="modal-overlay" class="">
+  function closeModal(e) {
+    // console.log('target: ' + e.target.id)
+    if (e.target.id === 'modal-overlay') {
+      isModalShowing = false;
+    }
+  }
+
+</script>
+<!-- A11y: visible, non-interactive elements with an on:click event must 
+  be accompanied by a keyboard event handler. -->
+
+<svelte:window on:keydown|preventDefault={onKeyDown} />
+
+<div id="modal-overlay" class=""
+on:click={(e) => { e.preventDefault(); closeModal(e)}}
+>
 	<div id="modal-container" class="modal-basic">
   <div id="modal-wrapper">
 
