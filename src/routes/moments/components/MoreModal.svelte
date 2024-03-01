@@ -43,16 +43,12 @@
       isModalShowing = false;
     }
   }
-
 </script>
-<!-- A11y: visible, non-interactive elements with an on:click event must 
-  be accompanied by a keyboard event handler. -->
 
-<svelte:window on:keydown|preventDefault={onKeyDown} />
+<svelte:window on:keydown|preventDefault={onKeyDown} 
+on:click={(e) => { closeModal(e)}}/>
 
-<div id="modal-overlay" class=""
-on:click={(e) => { e.preventDefault(); closeModal(e)}}
->
+<div id="modal-overlay" class="">
 	<div id="modal-container" class="modal-basic">
   <div id="modal-wrapper">
 
@@ -62,7 +58,6 @@ on:click={(e) => { e.preventDefault(); closeModal(e)}}
         <span  id="close-button" class="close"></span>
       </a>
     </div><!-- / -->
-
     
     {#await itemInfoPromise }
       <p>...waiting. There might not be {modalType} with a slug of {slug}</p>
@@ -70,8 +65,6 @@ on:click={(e) => { e.preventDefault(); closeModal(e)}}
     {:then itemInfo}
 
     <article class="more-content">
-
-
       {#if modalType === 'people'}
         <People
           {itemInfo}
