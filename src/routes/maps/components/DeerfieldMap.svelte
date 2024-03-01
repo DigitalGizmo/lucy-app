@@ -410,7 +410,7 @@
       <g>
         <!-- Ceasar -->
         <a href="/" on:click={(e) => { e.preventDefault(); showMapPopModal(0);}}>
-          <circle cx="659" cy="436" r="14" class="house-hilite"/>
+          <circle cx="951" cy="600" r="14" class="house-hilite"/>
         </a>
 
         <!-- Mesheck -->
