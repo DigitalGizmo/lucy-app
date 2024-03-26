@@ -424,6 +424,36 @@ nav.moment-options ul li.prev-moment {
 	}	
 }
 
+/* make the image narrower for letterbox displays: displays with an aspect ratio above 3/2 */
+/* fixed container to keep image from scrolling */
+@media (min-aspect-ratio: 3/2) {
+	/* .image-panel div.image-panel-fixed {
+		Removing image-panel so it will also apply to moment-title  */
+	.image-panel-fixed {
+		width: auto;
+		height: calc(100vh - 125px);
+		position: fixed;
+		left:50%;
+	}
+	/* no inner div version */
+	.image-panel-image {
+		width: auto;
+		height: calc(100vh - 125px); 
+		position: absolute;
+	}
+	/* the size has to be declared this third time! */
+	.image-panel-image svg {
+		width: auto;
+		height: calc(100vh - 125px);    
+	}	
+	.image-panel-image img {
+		width: auto;
+		height: calc(100vh - 125px);
+		object-fit: cover;    
+	}	
+}
+
+
 /* ------ More Panel --------------- */
 .more-container {
   border-radius: 0 3px 3px 0;
