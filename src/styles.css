@@ -250,13 +250,6 @@ nav.moment-nav ul li.selected{
 	}
 }
 
-@media (min-aspect-ratio: 2/1) {/* letterbox displays */
-	#horizontal-titles section div.moment-title-block {
-		margin-left: 3vw;
-		margin-right: 48vw;
-	}
-}
-
 .moment-title-block div {
   padding: 1em;
   background-color: rgba(0, 0, 0, 0.5);
@@ -266,6 +259,16 @@ nav.moment-nav ul li.selected{
 @media screen and (min-width: 800px) { /* displays larger than 800px */
 	.moment-title-block div {
 	  margin-top: 10vh;	
+	}
+}
+
+
+@media (min-aspect-ratio: 2/1) {/* letterbox displays 
+	#horizontal-titles section div.moment-title-block {*/
+	.moment-title-block div {
+		margin: 40vh 52vw 60vh 5vw;
+		text-align: left;
+		width: 40vw;
 	}
 }
 
@@ -288,7 +291,7 @@ nav.moment-nav ul li.selected{
 .moment-title-block div p.history-intro {
 	color: #fff;
 	font-family: 'Cormorant Garamond', serif;
-	padding: 0 3%;
+/*	padding: 0 3%;*/
 }
 
 /* links to next, previous, this moments */
