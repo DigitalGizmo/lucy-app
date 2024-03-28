@@ -238,9 +238,6 @@ nav.moment-nav ul li.selected{
 	text-align: center;
 	vertical-align: top;
 	white-space: normal;
-/*	background-color: rgba(256, 256, 256, 0.85);
-	border: 1px solid lightgrey;
-	box-shadow: 2px 2px 2px #333;*/
 	font-size: 1.2em;
 	scroll-snap-align: center;
 }
@@ -250,6 +247,13 @@ nav.moment-nav ul li.selected{
 		margin-left: 15vw;
 		margin-right: 15vw;
 		width: 70vw;
+	}
+}
+
+@media (min-aspect-ratio: 2/1) {/* letterbox displays */
+	#horizontal-titles section div.moment-title-block {
+		margin-left: 3vw;
+		margin-right: 48vw;
 	}
 }
 
@@ -426,33 +430,25 @@ nav.moment-options ul li.prev-moment {
 
 /* make the image narrower for letterbox displays: displays with an aspect ratio above 3/2 */
 /* fixed container to keep image from scrolling */
-@media (min-aspect-ratio: 3/2) {
+@media (min-aspect-ratio: 2/1) {
 	/* .image-panel div.image-panel-fixed {
 		Removing image-panel so it will also apply to moment-title  */
 	.image-panel-fixed {
 		width: auto;
-		height: calc(100vh - 125px);
-		position: fixed;
 		left:50%;
 	}
 	/* no inner div version */
 	.image-panel-image {
 		width: auto;
-		height: calc(100vh - 125px); 
-		position: absolute;
 	}
 	/* the size has to be declared this third time! */
 	.image-panel-image svg {
-		width: auto;
-		height: calc(100vh - 125px);    
+		width: auto;    
 	}	
 	.image-panel-image img {
-		width: auto;
-		height: calc(100vh - 125px);
-		object-fit: cover;    
+		width: auto;   
 	}	
 }
-
 
 /* ------ More Panel --------------- */
 .more-container {
@@ -481,15 +477,14 @@ nav.moment-options ul li.prev-moment {
   border-radius: 0 0 3px 3px;
 	color: #fff;
 	font-weight: 800;
-  padding: 1.75em 1em 0.25em 1em;
+  padding: 1.75em 1.5em 1.75em 2em;
   position: absolute;
-  top: 60%;
-  left: 265px;
+  top: 20%;
+  left: 260px;
   margin: 0;
   text-align: center;
-  transform-origin: 0 0;
-  transform: rotate(-90deg);
 	text-transform: uppercase;
+	clip-path: polygon(0% 50%,20% 20%,75% 20%,100% 50%,75% 80%,20% 80%);
 }
 
 .more-container p {
@@ -581,8 +576,6 @@ nav.moment-options ul li.prev-moment {
 .story-frames { /* for MOBILE: displays smaller than 800px */
 	grid-column: 1;
 	grid-row: 1;
-/*margin: 30vh auto 30vh auto;
-	width: 60vw;*/
 	pointer-events: none;
 	z-index: 20;
 }
@@ -593,7 +586,6 @@ nav.moment-options ul li.prev-moment {
 	font-size: 1.25rem;
 	text-align: center;
 	text-shadow: 1px 1px 1px black;
-/*	width: 60vw;*/
 }
 
 @media screen and (min-width: 800px) { /* displays larger than 800px */
@@ -603,7 +595,7 @@ nav.moment-options ul li.prev-moment {
 	}
 }
 
-.story p {/* Don's solution for regularizing the heights of varying story text lengths */
+.story p {
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -625,6 +617,12 @@ nav.moment-options ul li.prev-moment {
 	}
 }
 
+@media (min-aspect-ratio: 2/1) {/* letterbox displays */
+	.story-frames article.story.center, .story-frames article.story.right, .story-frames article.story.left {
+		margin: 40vh 52vw 60vh 5vw;
+		text-align: left;
+	}
+}
 /* ----- Total More -------------------   */
 .total-more {
 	background-color: white;
