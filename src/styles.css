@@ -250,12 +250,13 @@ nav.moment-nav ul li.selected{
 	}
 }
 
-
 @media (min-aspect-ratio: 2/1) {/* letterbox displays */
 	#horizontal-titles section div.moment-title-block {
-		margin: null 55vw null 5vw;
+		margin-left: 5vw;
+		margin-right: 55vw;
 		text-align: left;
 		width: 40vw;
+		scroll-snap-align: none;
 	}
 }
 
@@ -885,10 +886,6 @@ dl.evidence-info dt {
 	}
 }
 
-.map-selected {
-  fill: #FF6F06
-}
-
 .road-labels {
 	fill: #4f4f4f;
 	font-family: 'Fira Sans Condensed', sans-serif;
@@ -905,12 +902,22 @@ dl.evidence-info dt {
 	fill: #FF6F06;
 }
 
+#map-nav rect.map-selected {
+  fill: #ff6f06;;
+}
+
 #map-nav a:hover {
 	text-decoration: none;
 }
 
-#map-nav rect:hover {
-	fill: #FF6F06;
+#map-nav a:hover rect, #map-nav a:hover tspan {
+	filter: 
+    invert(1)
+    brightness(1);
+}
+
+#map-nav rect {
+	fill: dodgerblue;
 }
 
 #map-nav tspan {

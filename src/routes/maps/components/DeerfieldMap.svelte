@@ -44,7 +44,9 @@
 
   <h3>About</h3>
   {@html itemInfo.full_text.html}
-  
+  <p>Download and print a walking tour map of African American Historic Sites in Deerfield. This is a PDF file that has two parts:<br>
+  &mdash; a <a href="https://americancenturies.org/wp-content/uploads/AfrAm_userprint_map.pdf" target="_blank">map with information about each site</a> (2.8 MB file)<br>
+  &mdash; a <a href="https://americancenturies.org/wp-content/uploads/AfrAm_userprint_essays.pdf" target="_blank">set of several short essays</a> (2.9 MB file) that tell more about slavery in Deerfield.</p>
 </div>
 
 <div class="map-wrapper">
@@ -53,10 +55,11 @@
   <svg id="Layer_2" data-name="Layer 2" 
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 1712 60">
+
     <g id="map-nav">
       <g>
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(1);}}>
-          <rect width="170" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect width="170" height="60" 
           class="{ decadeIndex === 1 ? 'map-selected' : ''}"/>
           <text transform="translate(14 40)">
               <tspan x="0" y="0">1690 - 1699</tspan>
@@ -64,7 +67,7 @@
         </a>
 
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(2);}}>
-          <rect x="172" width="170" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="172" width="170" height="60"
           class="{ decadeIndex === 2 ? 'map-selected' : ''}"/>
           <text transform="translate(186 40)">
               <tspan x="0" y="0">1700 - 1709</tspan>
@@ -72,7 +75,7 @@
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(3);}}>
-          <rect x="344" width="170" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="344" width="170" height="60"
           class="{ decadeIndex === 3 ? 'map-selected' : ''}"/>
           <text transform="translate(358 40)">
               <tspan x="0" y="0">1710 - 1719</tspan>
@@ -80,7 +83,7 @@
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(4);}}>
-          <rect x="516" width="170" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="516" width="170" height="60"
           class="{ decadeIndex === 4 ? 'map-selected' : ''}"/>
           <text transform="translate(534 40)">
               <tspan x="0" y="0">1720 - 1729</tspan>
@@ -88,7 +91,7 @@
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(5);}}>
-          <rect x="688" width="170" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="688" width="170" height="60"
           class="{ decadeIndex === 5 ? 'map-selected' : ''}"/>
           <text transform="translate(704 40)">
               <tspan x="0" y="0">1730 - 1739</tspan>
@@ -96,7 +99,7 @@
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(6);}}>
-          <rect x="860" width="170" height="59" fill="#06a5ff" stroke-width="0" 
+          <rect x="860" width="170" height="59"
           class="{ decadeIndex === 6 ? 'map-selected' : ''}"/>
           <text transform="translate(876 40)">
               <tspan x="0" y="0">1740 - 1749</tspan>
@@ -104,7 +107,7 @@
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(7);}}>
-          <rect x="1032" width="170" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="1032" width="170" height="60"
           class="{ decadeIndex === 7 ? 'map-selected' : ''}"/>
           <text transform="translate(1048 40)">
               <tspan x="0" y="0">1750 - 1759</tspan>
@@ -112,7 +115,7 @@
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(8);}}>
-          <rect x="1204" width="170" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="1204" width="170" height="60"
           class="{ decadeIndex === 8 ? 'map-selected' : ''}"/>
           <text transform="translate(1218 40)">
               <tspan x="0" y="0">1760 - 1769</tspan>
@@ -121,7 +124,7 @@
 
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(9);}}>
-          <rect x="1376" width="170" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="1376" width="170" height="60"
           class="{ decadeIndex === 9 ? 'map-selected' : ''}"/>
           <text transform="translate(1388 40)">
               <tspan x="0" y="0">1770 - 1779</tspan>
@@ -129,7 +132,7 @@
         </a>
   
         <a href="/" on:click={(e) => { e.preventDefault(); setDecade(10);}}>
-          <rect x="1548" width="170" height="60" fill="#06a5ff" stroke-width="0" 
+          <rect x="1548" width="170" height="60"
           class="{ decadeIndex === 10 ? 'map-selected' : ''}"/>
           <text transform="translate(1558 40)">
               <tspan x="0" y="0">1780 - 1789</tspan>
@@ -141,15 +144,15 @@
   </svg>
   
   <!-- ------------- MAP  ------------ -->
-  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1574.51 904.51">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1574.51 904.51">
     <!-- -------- BASE MAP ------- -->
     <g id="base_map" data-name="base map">
       <rect x="1.26" y="1.26" width="1572" height="902" fill="#d9ead6" stroke="#9e8546" stroke-width="1"/>
       <!-- compass -->
-      <g class="compass" transform="translate(0 -80)">
-        <circle cx="201.83" cy="199.92" r="72.18" stroke="#a89074" fill="none" stroke-width="1"/>
+      <g class="compass" transform="translate(1100 620) scale(.75 .75)">
+        <circle cx="201.83" cy="199.92" r="72.18" stroke="#a89074" fill="none" stroke-width="2"/>
         <g>
-          <line x1="70.64" y1="200.64" x2="356.17" y2="200.64" stroke="#a89074" />
+          <line x1="70.64" y1="200.64" x2="356.17" y2="200.64" stroke="#a89074" stroke-width="2"/>
           <g>
             <path class="cls-6" d="m69.83,200.64c-3.5-2.39-6.45-5.56-8.73-9.1h16.74c2.25,3.8,5.75,6.78,9.47,9.1h-17.47Z"/>
             <path class="cls-7" d="m87.31,200.64c-3.76,2.29-7.11,5.38-9.47,9.1h-16.7c2.36-3.61,5.19-6.74,8.69-9.1h17.47Z"/>
@@ -168,9 +171,13 @@
           <tspan x="0" y="0">NORTH</tspan>
         </text>
       </g>
-
       <!-- routes 5&10 -->
       <path d="m1.26,656.96c6.65,1.24,13.73,2.56,21.27,3.96,99.37,18.47,1409.14,219.13,1544.58,241.65,6.03,1-168.58-.14-168.58-.14C1045.48,845.4,257.54,719.83,1.26,682.22v-25.25Z" fill="#e8d585" stroke="#a89074" stroke-width="1"/>
+      <!-- locator map -->
+      <image
+        x="1%" y="1%" width="340" height="220"
+        xlink:href="https://lucy-proto.deerfield-ma.org/assets/maps/images/thumbpics/locator-map.jpg"
+        />        
       <!-- roads -->
       <path d="m1.19,629.89c15.81-19.47,36.62-48.31,46.99-76.15,10.23-27.47,14.72-58.61,20.5-86.9,17.85-24.97,30.39-29.26,43.45-38.75,18.62,2.13,49.93,6.12,93.63,14.96,42.13,8.52,91.73,16.49,137.07,24.39,2.76.42-38.38,238.91-35.63,239.34,1.6.24,15.82,2.29,17.42,2.54,2.77.42,36.8-238.44,39.55-238.01,65.21,10.08,116.91,19.86,144.9,25.81,3.82.81,2.13,24.61.54,26.66-53.85,69.15-60.23,278.2-81.14,323.3-8.61,18.57-30.31,22.04-59.66,17.53-57.7-8.88-84.55-25.97-111.37,4.84-4.4,5.05-7.6,17.31-9.89,32.84l20.48.13c3.4-13.91,8.23-23.38,14.98-25.6,26.5-8.76,50.52,2.83,82.68,8.58,31.57,5.64,60.87.86,78.37-22.49,22.74-30.35,30.98-301.79,105.03-357.17,45.26,5.95,701.75,99.77,903.01,131.32,20.44,3.2,35.46,5.83,45.41,7.51,7.05,1.2,11.49,13.94,11.11,16.6-4.21,29.99-36.82,113.35,6.13,233.55,7.15,2.03,20.29,3.99,27.43,4.41-38.64-90.64-33.75-166.9-7.98-250.11,9.59-15.25,24.02-31.77,39.06-49.36v-34.88c-18.05,23.25-32.39,36.51-44.3,53.85-11.66,4.57-31.19,2.2-71.26-3.29-178.16-24.38-627.05-90.08-654.98-95.06,2.19-35.06-88.09-58.22-98.48-58.62,6.54-31.46,47.44-372.21,48.35-407.27.46-17.61-12.84-36.84-29.86-53.12h-29.43c20.19,15.56,40.02,28.82,40.02,61.68,0,5.72-43.88,354.81-49.57,398.09-27.13,9.44-47.74,23.56-56.73,33.16-14.04-1.49-57.57-7.35-117.08-17.87-41.66-7.36-91.65-17.93-142.7-26.91-2.04-.36,34.15-103.25,32.11-103.61-3.19-.56-14.49-3.44-17.68-4-2.83-.5-33.45,103.85-36.27,103.35-47.19-8.34-94.55-15.27-135.33-23.29-40.83-8.03-76.75-12.67-101.59-16.83-19.72-3.3-32.1-6.89-37.02-7.34-9.32-22.14-32.18-82.51-70.18-120.51l-.07,27.5c27.92,35.46,50.67,93.97,50.67,116.87-.4,36.7-6.94,81.63-22.34,124.23-7.14,19.74-17.83,37.3-28.33,52.73m.07-.75v32m654.86-131.52c2.42-5.72,25.4-16.52,38.53-18.74,7.92-1.33,90.05,20.6,88.95,36.79,0,0-83.64-11.03-127.48-18.05ZM71.26,433.11v-12.85h11.32l-11.32,12.85Z" fill="#ede0bc" stroke="#a89074" stroke-width="1"/>
       <!-- road labels -->
