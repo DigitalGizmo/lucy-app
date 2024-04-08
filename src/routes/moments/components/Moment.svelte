@@ -230,7 +230,7 @@
 
         <p>{ moment.frames[imageIndex].moreBlurb}</p>
         <!-- {#if (frames.community[imageIndex].moreWhoLinks === undefined)} -->
-        {#if imageIndex > 12}
+        {#if imageIndex > 13}
           <script>console.log('Past where Mores are defined')</script>
         {:else}
           {#if (moment.frames[imageIndex].moreWhoLinks.length > 0)}
