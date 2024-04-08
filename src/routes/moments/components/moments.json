@@ -190,11 +190,11 @@
                 "moreBlurb": "Many enslaved people played an active role in the wider community.",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [
-                    {"title": "The Bars Fight Poem", "slug": "bars-fight-poem"}
+                    {"title": "\"The Bars Fight Poem\"", "slug": "bars-fight-poem"}
                 ],
                 "moreHowLinks": [
                     {"title": "Hoop Toy", "slug": "hoop"},
-                    {"title": "Portrait of Two Boys: Colonial Boy's Clothing", "slug": "colonial-boys-clothing"}
+                    {"title": "Colonial Boy's Clothing: \"Portrait of Two Boys\"", "slug": "colonial-boys-clothing"}
                 ],
                 "moreWhereLinks": [
                     {"title": "African Americans in Deerfield", "slug": "deerfield-african-americans"}
@@ -239,7 +239,7 @@
                 "imageName": "main-street-plain",
                 "storyAudio": "5-honestmans-come-to-town",
                 "soundFx": "ox-cart",
-                "storyText": "The Honestmans have come to town to shop at Captain Williams’s store for fabric, knee buckles, and sleeve buttons. Lucy asks Heber if his foot still pains him. “Sometimes,” he replies, “but I still smile to myself when I wonder what a bear would think to see me caught in one of my own traps.” Lucy thinks about another Black man who needs a crutch: Pompey’s feet froze like blocks of ice after Joseph Barnard made him cut and sled wood every day one bitter winter.",
+                "storyText": "The Honestmans have come to town to shop at Captain Williams’s store. Lucy asks Heber if his foot still pains him. “Sometimes,” he replies, “but I wonder what a bear would think to see me caught in one of my own traps!” Lucy thinks about another Black man who needs a crutch: Pompey’s feet froze like blocks of ice after Joseph Barnard made him cut and sled wood every day one bitter winter.",
                 "alt": "5   Ox cart enters right",
                 "textAlign": "left",
                 "moreBlurb": "The coercion that was part of daily life for enslaved people could also include physical and emotional abuse.",
@@ -251,7 +251,7 @@
                 ],
                 "moreHowLinks": [
                     {"title": "Heber Honestman Store Account", "slug": "heber-store-account"},                   
-                    {"title": "\"Bath Races\": Crutches", "slug": "crutch"},
+                    {"title": "Crutches: \"Bath Races\"", "slug": "crutch"},
                     {"title": "Ox Cart", "slug": "ox-cart"},
                     {"title": "Bear trap", "slug": "bear-trap"}
                 ],
@@ -295,7 +295,7 @@
                 "imageName": "jin-approaches-bkgnd",
                 "storyAudio": "silence",
                 "soundFx": "silence",
-                "storyText": "“Heber and Susanna have a good farm, like the place I’ll be getting now that I’ve bought my freedom,” says Abijah, hinting at a possible future with Lucy. Worried that he has been too forward, he shifts to the weather. “The river is running high even for spring.” Lucy smiles and nods but wishes Abijah would talk more about his future. She hopes she's right that his plans include her...but how can that possibly happen?",
+                "storyText": "“Heber and Susanna have a good farm, like the place I’ll be getting now that I’ve bought my freedom,” says Abijah, hinting at a possible future with Lucy. Worried that he has been too forward, he shifts to the weather. Lucy smiles and nods but wishes Abijah would talk more about his future. She hopes she's right that his plans include her...but how can that possibly happen?",
                 "alt": "8 Jin approaches",
                 "textAlign": "right",
                 "moreBlurb": "At a time when most people were farmers, owning land was the typical path to independence and prosperity—a goal that often proved elusive, especially for people of color.",
@@ -379,7 +379,7 @@
                     {"title": "Ebenezer Wells", "slug": "ebenezer-wells"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Courtship and Marriage in a Hierarchical Society", "slug": "hierarchy-courtship"}
+                    {"title": "Courtship and Marriage in a Hierarchical Society", "slug": "courtship"}
                 ],
                 "moreHowLinks": [],       
                 "moreWhereLinks": []            
@@ -393,11 +393,11 @@
                 "textAlign": "right",
                 "moreBlurb": "Colonial New Englanders, free and enslaved, lived in a patriarchal and hierarchical society in which the heads of their households decided who could or should marry.",
                 "moreWhoLinks": [
-                    {"title": "Abigail Wells", "slug": "abigail-wells"},           
+                    {"title": "Abijah Prince", "slug": "abijah-prince"},           
                     {"title": "Ebenezer Wells", "slug": "ebenezer-wells"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Courtship and Marriage in a Hierarchical Society", "slug": "hierarchy-courtship"}
+                    {"title": "Courtship in Early New England", "slug": "courtship"}
                 ],
                 "moreHowLinks": [],       
                 "moreWhereLinks": []            
