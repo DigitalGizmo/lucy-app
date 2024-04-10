@@ -23,6 +23,15 @@
       </video>
     </figure>
   {/if}
+  {#if itemInfo.has_image}
+    <figure>
+        <img 
+        src="https://lucy-proto.deerfield-ma.org/assets/topics/images/{itemInfo.slug}.jpg"
+        alt="{itemInfo.title}"
+        >
+        <figcaption>{itemInfo.caption}</figcaption>
+    </figure>
+  {/if}
 
 
   <div class="about">

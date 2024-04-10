@@ -1,5 +1,14 @@
 <script>
-    export let itemInfo;
+  export let itemInfo;
+  let isMoreShowing = false;
+  const readMore = 'Read more..'
+  let moreLinkText = readMore
+
+  function showMore() {
+    isMoreShowing = !isMoreShowing;
+    moreLinkText = isMoreShowing ? 'Show less' : readMore
+
+  };
 </script>
 
 
@@ -14,6 +23,15 @@
 
   <h3>About This Person</h3>
   {@html itemInfo.bio.html}
+  {#if itemInfo.has_more}
+        <a href="/"
+        on:click={(e) => { e.preventDefault(); showMore();}}>
+        {moreLinkText}
+    </a>
+  {/if}
+  {#if isMoreShowing}
+    {@html itemInfo.more_text.html}
+  {/if}
 
   <div>
     {#if itemInfo.relateds.length > 0}
