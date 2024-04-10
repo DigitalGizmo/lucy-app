@@ -23,7 +23,7 @@ p, li {/* should this be part of wireframe-wrapper? */
 }
 
 section.wireframe-wrapper {
-	padding: 0 1em;
+	padding: 0 5%;
 }
 
 header#header {
@@ -495,7 +495,8 @@ nav.moment-options ul li.prev-moment {
 }
 
 .more-container ul {
-	list-style-type: none;
+	list-style-type: disc;
+	padding-left: 2em;
 }
 
 .more-container ul li{
@@ -505,18 +506,22 @@ nav.moment-options ul li.prev-moment {
 
 .more-container h5, .more-container h3 {
 	color: black;
-	margin: 1.75em 0 0 0;
+	margin: 1.5em 0 0 0;
 	text-transform: uppercase;
 }
 
 .hotspot {
-  opacity: 0.25;
-  fill: #06a5ff;
+    fill: orange;
+    fill-opacity: 0.1;
+    stroke-width: 2;
+    stroke: orange;
+    stroke-dasharray: 5;
+    stroke-opacity: 1;
 }
 
 .hotspot:hover {
-  fill: #06a5ff;
-  opacity: 0.65;
+  fill: orange;
+  fill-opacity: 0.65;
 }
 
 .more-panel-fixed {/* is this in the right place? */
@@ -632,7 +637,7 @@ nav.moment-options ul li.prev-moment {
 	background-color: white;
 	grid-column: 1 / 3;
 	grid-row: 2;
-	padding: 1em;
+	padding: 2em 5% 5% 5%;
 	z-index: 40;
 }
 
@@ -642,8 +647,18 @@ nav.moment-options ul li.prev-moment {
 	margin-left: 2em;
 }
 
+.total-more-essay ul.questions {
+	list-style-type: decimal;
+	padding-left: 1em;
+	padding-bottom: 3em;
+}
+
+.total-more-essay ul.questions li {
+	padding-bottom: .5em;
+}
+
 .total-more-list {
-float: left;
+	float: left;
 }
 
 .total-more ul {

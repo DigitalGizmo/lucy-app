@@ -154,7 +154,7 @@
                 ],
                 "moreHowLinks": [
                     {"title": "Basket", "slug": "basket"},
-                    {"title": "18th-century chocolate", "slug": "cake-of-chocolate"},
+                    {"title": "18th-century Chocolate", "slug": "cake-of-chocolate"},
                     {"title": "Chocolate Pot", "slug": "chocolate-pot"},
                     {"title": "Account Book Record of Chocolate Purchase", "slug": "williams-account-book-chocolate"}                    
                 ],
@@ -176,7 +176,7 @@
                     {"title": "Courtship in Early New England", "slug": "courtship"}
                 ],
                 "moreHowLinks": [
-                    {"title": "A newpaper ad for the sale of a woman and children", "slug": "for-sale-ad"}
+                    {"title": "Newspaper Ad for the Sale of a Woman and Children", "slug": "for-sale-ad"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -190,14 +190,14 @@
                 "moreBlurb": "Many enslaved people played an active role in the wider community.",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [
-                    {"title": "\"The Bars Fight Poem\"", "slug": "bars-fight-poem"}
+                    {"title": "\"The Bars Fight\" Poem", "slug": "bars-fight-poem"}
                 ],
                 "moreHowLinks": [
                     {"title": "Hoop Toy", "slug": "hoop"},
                     {"title": "Colonial Boy's Clothing: \"Portrait of Two Boys\"", "slug": "colonial-boys-clothing"}
                 ],
                 "moreWhereLinks": [
-                    {"title": "African Americans in Deerfield", "slug": "deerfield-african-americans"}
+                    {"title": "Map: African Americans in Deerfield", "slug": "deerfield-african-americans"}
                 ]            
             },
             {
@@ -250,10 +250,10 @@
                     {"title": "Coercion and Abuse", "slug": "coercion-abuse"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Heber Honestman Store Account", "slug": "heber-store-account"},                   
+                    {"title": "Heber Honestman's Store Account", "slug": "heber-store-account"},                   
                     {"title": "Crutches: \"Bath Races\"", "slug": "crutch"},
-                    {"title": "Ox Cart", "slug": "ox-cart"},
-                    {"title": "Bear trap", "slug": "bear-trap"}
+                    {"title": "Ox Cart:  \"Horned Cattle Drawing a Dung Cart\"", "slug": "ox-cart"},
+                    {"title": "Bear Trap", "slug": "bear-trap"}
                 ],
                 "moreWhereLinks": []           
             },
@@ -286,7 +286,7 @@
                 "moreBlurb": "Men and women in 18th-century New England hoped to marry and raise a family in an independent household—a goal that enslaved people could not hope to attain.",
                 "moreWhoLinks": [],
                 "moreTopicLinks": [
-                    {"title": "Slavery and the 18th Century Family", "slug": "slavery-family"}
+                    {"title": "Slavery and the 18th-century Family", "slug": "slavery-family"}
                 ],
                 "moreHowLinks": [],
                 "moreWhereLinks": []            
