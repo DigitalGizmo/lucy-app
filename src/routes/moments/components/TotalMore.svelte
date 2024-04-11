@@ -2,6 +2,42 @@
   export let moment;
   export let showModal = () => {}; // no-operation function
   export let scrollToChosen = () => {}; // no-operation function
+
+  // Create lists with unique values
+  // credit to https://www.tutorialspoint.com/extract-unique-objects-by-attribute-from-an-array-of-objects-in-javascript
+  const moreWhosAll = [];
+  const moreHowsAll = [];
+  const moreTopicsAll = [];
+  const moreWheresAll = [];
+  for (let frame of moment.frames) {
+    for (let record of frame.moreWhoLinks) {
+        moreWhosAll.push(record)
+    }
+    for (let record of frame.moreHowLinks) {
+        moreHowsAll.push(record)
+    }
+    for (let record of frame.moreTopicLinks) {
+        moreTopicsAll.push(record)
+    }
+    for (let record of frame.moreWhereLinks) {
+        moreWheresAll.push(record)
+    }
+  }
+
+  function getUnique(fullArray) {
+    var itemMap = new Map();
+    for (let moreItem of fullArray) {
+        itemMap.set(moreItem["slug"], moreItem);
+    }
+    var interatorItemValues = itemMap.values();
+    return [...interatorItemValues];
+  }
+
+  const uniqueWhos = getUnique(moreWhosAll);
+  const uniqueHows = getUnique(moreHowsAll);
+  const uniqueTopics = getUnique(moreTopicsAll);
+  const uniqueWheres = getUnique(moreWheresAll);
+
 </script>
 
 
@@ -35,58 +71,43 @@
 
     <div class="total-more-list">
       {#if moment.frames[0]}
-
+      
         <h3>Who Else?</h3>
         <ul >
-          {#each moment.frames as frame}
-            {#if (frame.moreWhoLinks.length > 0)}
-              {#each frame.moreWhoLinks as link }
-                <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "people");}}>
-                    {link.title}</a></li>
-              {/each}
-            {/if}
+          {#each uniqueWhos as link}
+            <li><a href="/" 
+                on:click={(e) => { e.preventDefault(); showModal(link.slug, "people");}}>
+                {link.title}</a></li>
           {/each}
-        </ul>
+        </ul>        
 
         <h3>How Do We Know?</h3>
-        <ul>
-          {#each moment.frames as frame}
-            {#if (frame.moreHowLinks.length > 0)}
-              {#each frame.moreHowLinks as link }
-                <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
-                    {link.title}</a></li>
-              {/each}
-            {/if}
+        <ul >
+          {#each uniqueHows as link}
+            <li><a href="/" 
+              on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
+              {link.title}</a></li>
           {/each}
-        </ul>
-
+        </ul>        
+        
         <h3>Topics &amp; Ideas</h3>
-        <ul>
-          {#each moment.frames as frame}
-            {#if (frame.moreTopicLinks.length > 0)}
-              {#each frame.moreTopicLinks as link }
-                <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "topics");}}>
-                    {link.title}</a></li>
-              {/each}
-            {/if}
+        <ul >
+          {#each uniqueTopics as link}
+          <li><a href="/" 
+            on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
+            {link.title}</a></li>
           {/each}
-        </ul> 
-
+        </ul>        
+          
         <h3>Where in the world?</h3>
-        <ul>
-          {#each moment.frames as frame}
-            {#if (frame.moreWhereLinks.length > 0)}
-              {#each frame.moreWhereLinks as link }
-                <li><a href="/" 
-                    on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
-                    {link.title}</a></li>
-              {/each}
-            {/if}
+        <ul >
+          {#each uniqueWheres as link}
+          <li><a href="/" 
+            on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
+            {link.title}</a></li>
           {/each}
-        </ul>
+        </ul>        
+          
       {/if}
     </div>
 
