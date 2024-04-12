@@ -547,6 +547,11 @@ nav.moment-options ul li.prev-moment {
 	opacity: .70;
 }
 
+/* Don adding fake highlight */
+.audio-active a g circle {
+  fill: bisque;
+}
+
 #read-aloud {
 	margin-bottom: 1em;
 }

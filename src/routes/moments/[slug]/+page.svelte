@@ -191,7 +191,7 @@
               </a>
             </li>
           {/if}
-          {#if (currMomentIndex == 7 || currMomentIndex == 3)}
+          {#if (currMomentIndex == 7)}
             <li class="this-moment">
               <a href="/" on:click={(e) => { e.preventDefault(); explore();}}>
                 Explore this moment

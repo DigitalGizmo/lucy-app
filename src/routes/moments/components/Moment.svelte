@@ -181,7 +181,8 @@
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 190">
 
-        <g id="sound-fx" class="icon">
+        <!-- class = "icon" was not being used -->
+        <g id="sound-fx" class={isSoundFx ? 'audio-active' : ''}>
           <a href="/" 
             on:click={(e) => { e.preventDefault(); toggleSoundFx();}}>
             <g>
@@ -203,7 +204,8 @@
           </a>
         </g>
 
-        <g id="read-aloud" class="icon" transform="translate(0,10)">
+        <g id="read-aloud" class={isReadAloud ? 'audio-active' : ''} 
+            transform="translate(0,10)" >
           <a href="/" 
             on:click={(e) => { e.preventDefault(); toggleReadAloud();}}>
             <g>
