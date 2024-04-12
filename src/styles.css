@@ -47,7 +47,7 @@ header#header h3 {
 }
 
 h1, h2, h3, h4 {
-	color: #038EDF;
+	color: #303030;
 }
 
 h1 {
@@ -62,7 +62,7 @@ h1 {
 }
 
 a:link {
-	color: #038EDF;
+	color: blue;
 	text-decoration: none;
 }
 
@@ -72,7 +72,7 @@ a:hover {
 }
 
 a:visited {
-	color: #038EDF;
+	color: #5e5e5e;
 }
 
 .picture {/* where is this used? cf .detail img and .more-content figure img */
@@ -304,7 +304,7 @@ nav.moment-options ul {
 }
 
 nav.moment-options ul li a svg path {
-	fill: #038EDF;
+	fill: #E7BA1B;
 }
 
 nav.moment-options ul li a svg path:hover {
@@ -476,7 +476,7 @@ nav.moment-options ul li.prev-moment {
 }
 
 .more-tab {
-  background-color: #038EDF;
+  background-color: #FF6F06;
   border-radius: 0 0 3px 3px;
 	color: #fff;
 	font-weight: 800;
@@ -543,7 +543,7 @@ nav.moment-options ul li.prev-moment {
 }
 
 .audio-icons a g circle:hover {
-	fill: #06A5FF;
+	fill: orange;
 	opacity: .70;
 }
 
@@ -552,24 +552,24 @@ nav.moment-options ul li.prev-moment {
 }
 
 .circle {
-	fill: #06A5FF;
+	fill: orange;
 	opacity: .20;
 }
 
 .circle-stroke {
-  stroke: #06A5FF;
+  stroke: orange;
 	stroke-width: 4px;
 	fill: none
 }
 
 .dot {
-  fill: #06A5FF;
+  fill: orange;
   stroke-width: 0px;
 }
 
 .lines {
   fill: none;
-  stroke: #06A5FF;
+  stroke: orange;
 }
 
 .lines-thick {

@@ -13,7 +13,7 @@
   </header>
 
   <section class="wrapper">    
-    <p class="menu-tools">Filter by: <a href="">Topic</a> | <a href="">Item Type</a></p>
+    <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
 
     <table class="feature-menu evidence">
       <tr>

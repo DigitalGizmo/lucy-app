@@ -14,7 +14,8 @@
   </header>
 
   <section class="wrapper">
-    <p class="menu-tools">Sort by: <a href="#">Name</a> | <a href="#">Date</a> Filter by: <a href="#">Status</a></p>
+
+  <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
 
     <table class="feature-menu people">
       <tr>

@@ -14,6 +14,7 @@
 	</header>
 
 	<section class="wrapper">
+  <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
 
     <ul class="menu">
       {#each moments as moment, i}

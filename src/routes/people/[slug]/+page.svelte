@@ -20,6 +20,8 @@
   </header>
 
   <section class="wrapper detail">
+  <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
+
     <People
       {itemInfo}
     />        

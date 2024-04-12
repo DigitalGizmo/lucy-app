@@ -1,5 +1,7 @@
 <section class="wireframe-wrapper">
     <h1>Singer of History: Lucy Terry Prince</h1>
+    <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
+
     <ul>
         <li><a href="/moments/">Lucy's Life</a></li>
         <li><a href="/people/">Who Else?</a></li>
