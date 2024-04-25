@@ -922,21 +922,23 @@ dl.evidence-info dt {
 }
 
 #map-nav rect.map-selected {
-  fill: #ff6f06;;
+  fill: #6F8D1C;
 }
 
 #map-nav a:hover {
 	text-decoration: none;
 }
-
-#map-nav a:hover rect, #map-nav a:hover tspan {
+#map-nav a:hover rect {
+  fill: #6F8D1C;
+}
+/*#map-nav a:hover rect, #map-nav a:hover tspan {
 	filter: 
     invert(1)
     brightness(1);
-}
+}*/
 
 #map-nav rect {
-	fill: dodgerblue;
+	fill: #E37A06;
 }
 
 #map-nav tspan {
@@ -964,3 +966,9 @@ dl.evidence-info dt {
   fill: #a89074;
 }
 
+.wireframe-note {
+	border: 2px dashed #E37A06;
+	padding: .5em;
+	margin: -1em null 0 null;
+	width: fit-content;
+}
