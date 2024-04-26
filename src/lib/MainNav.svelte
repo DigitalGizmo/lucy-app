@@ -28,7 +28,7 @@
         <li><a href="/evidence/">How Do We Know?</a></li>
         <li><a href="/topics/">Topics &amp; Ideas</a></li>
         <li><a href="/maps/">Where In the World?</a></li>
-        <li><a href="/">When?</a></li>
+        <li><a href="/when/">When?</a></li>
     </ul>
 </nav>
   
