@@ -15,7 +15,7 @@
 <!-- <article class="more-content">, or 
       <section class="wrapper detail"> -->
 
-  <h4>More: <a href="/people">Who Else?</a></h4>
+  <h4>More: <a href="/people">Other Lives</a></h4>
 
   <h2>{itemInfo.first_name} {itemInfo.last_name}</h2>
 

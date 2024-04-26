@@ -16,7 +16,7 @@
     <MainNav />
 
     <!-- Can this be outside of header -->
-    <h1>Who Else?</h1>
+    <h1>Other Lives</h1>
   </header>
 
   <section class="wrapper detail">
