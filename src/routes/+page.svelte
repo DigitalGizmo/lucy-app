@@ -1,13 +1,18 @@
 <section class="wireframe-wrapper">
-    <h1>Lucy Terry Prince: African American Experiences in Early Rural New England</h1>
-    <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
+    <div class="landing">
+        <h1>Lucy Terry Prince</h1>
+        <h2>African American Experiences in Early Rural New England</h2>
 
-    <ul>
-        <li><a href="/moments/">Lucy's Life</a></li>
-        <li><a href="/people/">Other Lives</a></li>
-        <li><a href="/evidence/">How Do We Know?</a></li>
-        <li><a href="/topics/">Topics &amp; Ideas</a></li>
-        <li><a href="/maps/">Where in the World?</a></li>
-        <li><a href="/">When?</a></li>
-    </ul>
+        <ul>
+            <li><a href="/moments/">Lucy's Life</a></li>
+            <li><a href="/people/">Other Lives</a></li>
+            <li><a href="/evidence/">How Do We Know?</a></li>
+            <li><a href="/topics/">Topics &amp; Ideas</a></li>
+            <li><a href="/maps/">Where in the World?</a></li>
+            <li><a href="/">When?</a></li>
+        </ul>
+
+        <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED<br>
+            Please note that this is a work in progress; the only section that has been drafted to review level is the <a href="https://lucy-app-b8qj5.ondigitalocean.app/moments/community">"Community Within Community"</a> Moment. Thank you for your understanding.</p>
+    </div>
   </section>

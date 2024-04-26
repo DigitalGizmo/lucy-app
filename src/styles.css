@@ -2,10 +2,10 @@
 /* BASICS -------------------*/
 /* --------------------------*/
 /* ----- Colors -------------
-orange: #FF6F06
-blue: darker 038EDF, lighter 06A5FF
+orange: #E37A06
+brick: darker 963803, lighter B64A0D
 yellow: E7BA1B, yellow text: FFC90C
-green: 83B101-*/
+green: darker 6F8D1C, lighter 8BA612*/
 
 body {
 	margin: 0;
@@ -78,7 +78,23 @@ a:visited {
 .picture {/* where is this used? cf .detail img and .more-content figure img */
 	max-width: 600px;
 }
+/* --------------------------------- */
+/* LANDING PAGE -------------------- */
+/* --------------------------------- */
+.landing h2 {
+	margin-top: 0;
+}
 
+.landing ul {
+	float: left;
+	width: 30%;
+}
+
+.landing p.wireframe-note {
+	background-color: rgba(227, 122, 6, 0.2);
+	margin-left: 32%;
+	width: 35%;
+}
 /* --------------------------------- */
 /* GLOBAL NAV ---------------------- */
 /* --------------------------------- */
