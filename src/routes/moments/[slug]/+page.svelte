@@ -139,6 +139,7 @@
       {currScrollY}
       {panelHeight}
       {moment}
+      {scrollToChosenSlug}
 
     />
 

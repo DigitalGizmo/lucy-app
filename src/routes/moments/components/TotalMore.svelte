@@ -1,7 +1,8 @@
 <script>
   export let moment;
   export let showModal = () => {}; // no-operation function
-  export let scrollToChosen = () => {}; // no-operation function
+//   export let scrollToChosen = () => {}; // no-operation function
+  export let scrollToChosenSlug = () => {}; // no-operation function
 
   // Create lists with unique values
   // credit to https://www.tutorialspoint.com/extract-unique-objects-by-attribute-from-an-array-of-objects-in-javascript
@@ -56,7 +57,7 @@
       <p>Follow Lucy's story&hellip;</p>
       <h3>Next: 
         <a href="/moments/union"
-          on:click={() => { scrollToChosen(8);}}>
+          on:click={() => { scrollToChosenSlug(8, 'union');}}>
           Fruitful Union
         </a>
 

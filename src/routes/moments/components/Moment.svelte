@@ -7,6 +7,7 @@
   import MoreModal from './MoreModal.svelte';
   export let currMomentIndex, currScrollY,panelHeight,
   moment;
+  export let scrollToChosenSlug = () => {};
 
   let imageIndex = 0; // calculation will subtract 1
   let imageDecimal = 0.1;
@@ -301,6 +302,7 @@
   <TotalMore
     {moment}
     {showModal}
+    {scrollToChosenSlug}
     />
     <!-- scrollToChosen -->
 
