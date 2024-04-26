@@ -55,7 +55,7 @@
 
       <p>Follow Lucy's story&hellip;</p>
       <h3>Next: 
-        <a href="/moments/fruitful-union"
+        <a href="/moments/union"
           on:click={() => { scrollToChosen(8);}}>
           Fruitful Union
         </a>
@@ -94,7 +94,7 @@
         <ul >
           {#each uniqueTopics as link}
           <li><a href="/" 
-            on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
+            on:click={(e) => { e.preventDefault(); showModal(link.slug, "topics");}}>
             {link.title}</a></li>
           {/each}
         </ul>        
@@ -103,7 +103,7 @@
         <ul >
           {#each uniqueWheres as link}
           <li><a href="/" 
-            on:click={(e) => { e.preventDefault(); showModal(link.slug, "evidence");}}>
+            on:click={(e) => { e.preventDefault(); showModal(link.slug, "maps");}}>
             {link.title}</a></li>
           {/each}
         </ul>        
