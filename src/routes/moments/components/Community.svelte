@@ -128,7 +128,7 @@
 
 <!-- ---- BACKGROUND ---- -->
 <!-- ---- CLOUDS ---- -->
-{#if (imageIndex > 1 && imageIndex < 9)}
+{#if (imageIndex > 1 && imageIndex < 10)}
     <image transition:fade={{ duration: 500}} 
     width="100%" 
     transform="translate({cloudsTransX} 0), scale(2.8)"
@@ -324,15 +324,15 @@
 <!-- ---  lucy, abijah greet jin ---- -->
 {#if imageIndex === 9}
     <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.jpg"
-    alt="{moment.frames[imageIndex].alt}"></image>
-
-    <image transition:fade={{ duration: 1500}} class="moment-image"
-    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/greeting-jin-lucy-abijah.png"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/{moment.slug}/{moment.frames[imageIndex].imageName}.png"
     alt="{moment.frames[imageIndex].alt}"></image>
 
     <image transition:fade={{ duration: 1500}} class="moment-image"
     href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/greeting-jin-jin.png"
+    alt="{moment.frames[imageIndex].alt}"></image>
+
+    <image transition:fade={{ duration: 1500}} class="moment-image"
+    href="https://lucy-proto.deerfield-ma.org/assets/moments/images/community/greeting-jin-lucy-abijah.png"
     alt="{moment.frames[imageIndex].alt}"></image>
 
     <image transition:fade={{ duration: 1500}} class="moment-image"
