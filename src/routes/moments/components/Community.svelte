@@ -9,7 +9,7 @@
 
   // Clouds
   let cloudsTransX = 0;
-  $: if (imageIndex < 9 ) {
+  $: if (imageIndex < 10 ) {
       cloudsTransX = (currScrollY/8) - (frameHeight * 2) + 100;
       // frame height compenstion because we start on the 3rd frame    
   }
