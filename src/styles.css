@@ -66,15 +66,15 @@ a:link {
 	text-decoration: none;
 }
 
-a:hover {
-	color: #ff6f06;
-	text-decoration: underline;
-}
-
 a:visited {
-	color: #5e5e5e;
+  /* color: #5e5e5e; */
+  color: blueviolet;
 }
 
+a:hover {
+  color: #ff6f06;
+  text-decoration: underline;
+}
 .picture {/* where is this used? cf .detail img and .more-content figure img */
 	max-width: 600px;
 }

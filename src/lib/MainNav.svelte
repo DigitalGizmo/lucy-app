@@ -1,5 +1,5 @@
 <script>
-    import { page } from '$app/stores';
+    // import { page } from '$app/stores';
     function toggleHamburger() {
         console.log("hamburger")
         const x = document.getElementById("mainNav");
