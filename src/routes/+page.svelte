@@ -4,12 +4,12 @@
         <h2>African American Experiences in Early Rural New England</h2>
 
         <ul>
-            <li><a href="/moments/">Lucy's Life</a></li>
-            <li><a href="/people/">Other Lives</a></li>
-            <li><a href="/evidence/">How Do We Know?</a></li>
-            <li><a href="/topics/">Topics &amp; Ideas</a></li>
-            <li><a href="/maps/">Where in the World?</a></li>
-            <li><a href="/">When?</a></li>
+            <li><a data-sveltekit-reload href="/moments/">Lucy's Life</a></li>
+            <li><a data-sveltekit-reload href="/people/">Other Lives</a></li>
+            <li><a data-sveltekit-reload href="/evidence/">How Do We Know?</a></li>
+            <li><a data-sveltekit-reload href="/topics/">Topics &amp; Ideas</a></li>
+            <li><a data-sveltekit-reload href="/maps/">Where in the World?</a></li>
+            <li><a data-sveltekit-reload href="/">When?</a></li>
         </ul>
 
         <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED<br>

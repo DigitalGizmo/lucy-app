@@ -22,13 +22,12 @@
         <i class="fa fa-bars"></i>
     </a>
     <ul>
-        <li><a href="/moments/">Lucy's Life</a></li>
-        <!-- <li class="{ $page.path === '/people/' ? 'selected' : ''}"> -->
-        <li><a href="/people/">Other Lives</a></li>
-        <li><a href="/evidence/">How Do We Know?</a></li>
-        <li><a href="/topics/">Topics &amp; Ideas</a></li>
-        <li><a href="/maps/">Where In the World?</a></li>
-        <li><a href="/when/">When?</a></li>
+        <li><a data-sveltekit-reload href="/moments/">Lucy's Life</a></li>
+        <li><a data-sveltekit-reload href="/people/">Other Lives</a></li>
+        <li><a data-sveltekit-reload href="/evidence/">How Do We Know?</a></li>
+        <li><a data-sveltekit-reload href="/topics/">Topics &amp; Ideas</a></li>
+        <li><a data-sveltekit-reload href="/maps/">Where In the World?</a></li>
+        <li><a data-sveltekit-reload href="/when/">When?</a></li>
     </ul>
 </nav>
   
