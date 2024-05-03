@@ -62,12 +62,15 @@ h1 {
 }
 
 a:link {
-	color: #445284;
+	/* color: #445284; */
+	color: #3f51b5;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #5e5e5e;
+	/* color: #5e5e5e; */
+	/* color: #5e4983; */
+	color: #7f70a4;
 }
 
 a:hover {
