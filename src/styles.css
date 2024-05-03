@@ -62,22 +62,23 @@ h1 {
 }
 
 a:link {
-	color: blue;
+	color: #445284;
 	text-decoration: none;
 }
 
 a:visited {
-  /* color: #5e5e5e; */
-  color: blueviolet;
+	color: #5e5e5e;
 }
 
 a:hover {
   color: #ff6f06;
   text-decoration: underline;
 }
+
 .picture {/* where is this used? cf .detail img and .more-content figure img */
 	max-width: 600px;
 }
+
 /* --------------------------------- */
 /* LANDING PAGE -------------------- */
 /* --------------------------------- */
@@ -173,6 +174,10 @@ section.wrapper {
 	}
 }
 
+/* --------------------------------- */
+/* MOMENT NAV ---------------------- */
+/* --------------------------------- */
+
 nav.moment-nav {/* for mini-nav */
 	overflow-x: scroll;
 	width: 100%;
@@ -194,15 +199,23 @@ nav.moment-nav ul li {
 	margin: 0 2px;
 	padding: 0.25em;
 	text-align: center;
-	text-wrap: wrap;
+	white-space: pre-wrap;
 	vertical-align: middle;
 	width: 80px;
 }
 
-nav.moment-nav ul li.selected{
+nav.moment-nav ul li.selected {
 	background-color: lightgrey;
 }
 
+nav.moment-nav ul li a:link, nav.moment-nav ul li a:visited {
+	color: #5e5e5e;
+}
+
+nav.moment-nav ul li a:hover, nav.moment-nav ul li a:active {
+	color: #E37A06;
+	text-decoration: underline;
+}
 /* --------------------------------- */
 /* MOMENTS ------------------------- */
 /* --------------------------------- */
