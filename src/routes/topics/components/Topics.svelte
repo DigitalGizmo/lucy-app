@@ -39,4 +39,15 @@
     {@html itemInfo.full_text.html}
   </div>
 
+  <div>
+    {#if itemInfo.relateds.length > 0}
+      <h3>Related</h3>
+      <ul>
+        {#each itemInfo.relateds as related (related.title)}
+        <li><a data-sveltekit-reload href="{related.link}">{related.title}</a></li>
+        {/each}
+      </ul>
+    {/if}
+  </div>
+
   <!-- / more-content or wrapper detail -->
