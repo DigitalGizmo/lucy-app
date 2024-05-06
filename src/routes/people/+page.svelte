@@ -17,16 +17,16 @@
 
   <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
 
-    <table class="feature-menu people">
-      <tr>
-        <th class="col-title">Name</th>
-        <th class="col-date">Dates</th>
-        <th>About</th>
-      </tr>
+    <div class="feature-menu people">
+      <ul class="col-heads">
+        <li class="feature-title">Name</li>
+        <li class="feature-date">Dates</li>
+        <li class="feature-blurb">About</li>
+      </ul>
 
       {#each data.people as person (person.slug)}
-      <tr>
-        <td>
+      <ul class="col-content">
+        <li class="feature-title">
           {#if person.prod_status > 1}
             <a href='/people/{person.slug}'>
               {person.first_name} {person.last_name}
@@ -34,13 +34,13 @@
           {:else}
             {person.first_name} {person.last_name}
           {/if}         
-        </td>
-        <td>{person.birth_year} - {person.death_year}</td>
-        <td>{person.menu_blurb}</td>
-      </tr>
+        </li>
+        <li class="feature-date">{person.birth_year} - {person.death_year}</li>
+        <li class="feature-blurb">{person.menu_blurb}</li>
+      </ul>
       {/each}
 
-    </table>
+    </div>
 
   </section><!-- /wrapper -->
 </section><!-- /wireframe-wrapper -->

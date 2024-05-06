@@ -13,17 +13,17 @@
   </header>
 
   <section class="wrapper">
-  <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
+    <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
     
-    <table class="feature-menu topics">
-      <tr>
-        <th class="col1">Topic</th>
-        <th>About</th>
-      </tr>
+    <div class="feature-menu topics">
+      <ul class="col-heads">
+        <li class="feature-title">Topic</li>
+        <li class="feature-blurb">About</li>
+      </ul>
 
       {#each data.topics as topic (topic.slug)}
-      <tr>
-        <td>
+      <ul class="col-content">
+        <li class="feature-title">
           {#if topic.prod_status > 1}
             <a href='/topics/{topic.slug}'>
                 {topic.title}
@@ -32,12 +32,12 @@
             {topic.title}
           {/if}                   
 
-        </td>
-        <td>{topic.menu_blurb}</td>
-      </tr>
+        </li>
+        <li class="feature-blurb">{topic.menu_blurb}</li>
+      </ul>
       {/each}
 
-    </table>
+    </div>
 
   </section><!-- /wrapper -->
 </section><!-- /wireframe-wrapper -->

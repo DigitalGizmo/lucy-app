@@ -15,40 +15,23 @@
   <section class="wrapper">
   <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
     
-  <table class="feature-menu maps">
-    <tr>
-      <th>Image</th>
-      <th>Title</th>
-      <th>About</th>
-    </tr>
+  <div class="feature-menu maps">
+      <ul class="col-heads">
+        <li class="feature-title">Title</li>
+        <li class="feature-blurb">About</li>
+      </ul>
 
-    <tr>
-      <td>
-        <img 
-          src="https://lucy-proto.deerfield-ma.org/assets/maps/images/thumbpics/slave-trade.jpg"
-          alt="title 1}"
-        >
-      </td>
-      <td>
-          Title 1
-      </td>
-      <td>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</td>
-    </tr>
-    <tr>
-      <td>
-        <img 
-          src="https://lucy-proto.deerfield-ma.org/assets/maps/images/thumbpics/slave-trade.jpg"
-          alt="title 2}"
-        >
-      </td>
-      <td>
-          Title IX
-      </td>
-      <td>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</td>
-    </tr>
+      <ul class="col-content">
+        <li class="feature-title">Title 1</li>
+        <li class="feature-blurb">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</li>
+      </ul>
 
+      <ul class="col-content">
+        <li class="feature-title">Title X</li>
+        <li class="feature-blurb">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</li>
+      </ul>
 
-  </table>
+    </div>
 
   </section><!-- /wrapper -->
 </section><!-- /wireframe-wrapper -->

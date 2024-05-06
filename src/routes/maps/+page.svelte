@@ -15,23 +15,23 @@
   <section class="wrapper">
     <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
 
-    <table class="feature-menu maps">
-      <tr>
-        <th>Image</th>
-        <th>Title</th>
-        <th>About</th>
-      </tr>
+    <div class="feature-menu maps">
+      <ul class="col-heads">
+        <li class="feature-thumb">Image</li>
+        <li class="feature-title">Title</li>
+        <li class="feature-blurb">About</li>
+      </ul>
 
       {#each data.maps as map (map.slug)}
-      <tr>
+      <ul class="col-content">
 
-        <td>
+        <li class="feature-thumb">
           <img 
             src="https://lucy-proto.deerfield-ma.org/assets/maps/images/thumbpics/{map.slug}.jpg"
             alt="{map.title}"
           >
-        </td>
-        <td>
+        </li>
+        <li class="feature-title">
           {#if map.prod_status > 1}
             <a href='/maps/{map.slug}'>
                 {map.title}
@@ -39,12 +39,12 @@
           {:else}
             {map.title}
           {/if}                   
-        </td>
-        <td>{map.menu_blurb}</td>
-      </tr>
+        </li>
+        <li class="feature-blurb">{map.menu_blurb}</li>
+      </ul>
       {/each}
 
-    </table>
+    </div>
 
   </section><!-- /wrapper -->
 </section><!-- /wireframe-wrapper -->
