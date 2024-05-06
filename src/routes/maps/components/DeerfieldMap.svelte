@@ -548,7 +548,7 @@
   <h3>Related</h3>
   <ul>
     {#each itemInfo.relateds as related (related.title)}
-    <li><a href="{related.link}">{related.title}</a></li>
+    <li><a data-sveltekit-reload href="{related.link}">{related.title}</a></li>
     {/each}
   </ul>
 
