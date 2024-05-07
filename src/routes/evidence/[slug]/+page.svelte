@@ -28,11 +28,12 @@
         <h3>Related</h3>
         <ul>
           {#each itemInfo.relateds as related (related.title)}
-          <li><a data-sveltekit-reload href="{related.link}">{related.title}</a></li>
+          <li><a data-sveltekit-reload 
+            href="/{related.content_type}/{related.slug}">{related.title}</a></li>
           {/each}
         </ul>
       </div>
-    {/if}    
+    {/if}
 
   </section><!-- /wrapper -->
 </section><!-- /wireframe-wrapper -->
