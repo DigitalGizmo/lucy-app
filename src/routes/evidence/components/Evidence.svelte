@@ -5,7 +5,7 @@
 
 <!-- <article class="more-content">, or 
      <section class="wrapper detail"> -->
-  <h4>More: <a href="/evidence">How Do We Know?</a></h4>
+  <!-- <h4>More: <a href="/evidence">How Do We Know?</a></h4> -->
 
   <h2>{itemInfo.title}</h2>
   <dl class="evidence-info">

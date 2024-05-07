@@ -5,7 +5,6 @@
 
 <!-- <article class="more-content">, or 
       <section class="wrapper detail"> -->
-  <h4>More: <a href="/topics">Topics and Ideas</a></h4>
 
   <h2>
       {itemInfo.title}

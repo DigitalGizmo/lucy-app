@@ -73,18 +73,22 @@ on:click={(e) => { closeModal(e)}}/>
 
     <article class="more-content">
       {#if modalType === 'people'}
+        <h4>More: Other Lives</h4>
         <People
           {itemInfo}
         />
       {:else if modalType === 'evidence'}
+        <h4>More: How Do We Know?</h4>
         <Evidence
           {itemInfo}
         />
       {:else if modalType === 'topics'}
+        <h4>More: Topics and Ideas</h4>
         <Topics
           {itemInfo}
         />
       {:else if modalType === 'maps'}
+        <h4>MM More: Where in the World?</h4>
         <Maps
           {itemInfo}
         />
