@@ -26,9 +26,16 @@
   let panelWidth = 1000;
   // should get width of element modal-basic
   // but for now, since that's70vw
+
   onMount(() => {
     panelWidth = (window.innerWidth * 0.7);
   })
+
+  function switchModal(_type, _slug) {
+    modalType = _type;
+    slug = _slug
+    itemInfoPromise = getItemInfo();
+  }
 
   function onKeyDown(e) {
     // console.log('got to key down');
@@ -82,6 +89,23 @@ on:click={(e) => { closeModal(e)}}/>
           {itemInfo}
         />
       {/if}
+
+      {#if itemInfo.relateds.length > 0}
+        <div>
+          <h3>Related</h3>
+          <ul>
+            {#each itemInfo.relateds as related (related.title)}
+    
+              <li><a href="/" 
+                on:click={(e) => { e.preventDefault(); 
+                  switchModal(related.content_type, related.slug);}}>
+                {related.title}</a></li>            
+    
+            {/each}
+          </ul>
+        </div>
+      {/if}
+
     </article><!-- /more-content -->
 
     {:catch error}

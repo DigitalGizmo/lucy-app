@@ -23,6 +23,16 @@
       {itemInfo}
     />  
 
+    {#if itemInfo.relateds.length > 0}
+      <div>
+        <h3>Related</h3>
+        <ul>
+          {#each itemInfo.relateds as related (related.title)}
+          <li><a data-sveltekit-reload href="{related.link}">{related.title}</a></li>
+          {/each}
+        </ul>
+      </div>
+    {/if}    
 
   </section><!-- /wrapper -->
 </section><!-- /wireframe-wrapper -->
