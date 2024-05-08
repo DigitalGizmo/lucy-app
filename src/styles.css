@@ -256,6 +256,10 @@ nav.moment-nav ul li a:hover, nav.moment-nav ul li a:active {
 
 .title-container {
 	position: relative;
+  /* don testing */
+  /* overflow-x: hidden;
+  overflow-y: auto; */
+
 }
 
 #horizontal-titles {
@@ -263,9 +267,10 @@ nav.moment-nav ul li a:hover, nav.moment-nav ul li a:active {
 	flex-direction: column;
 	width: 100vw;
 	height: 85vh;
-	/* overflow: auto; */
-  overflow-y: hidden;
-  overflow-x: auto;
+	overflow: auto;
+  /* don testing */
+  /* overflow-y: hidden;
+  overflow-x: auto; */
   resize: both;
 	white-space: nowrap;
 	scroll-snap-type: x mandatory;
