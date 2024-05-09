@@ -65,15 +65,12 @@ h1 {
 }
 
 a:link {
-	/* color: #445284; */
-	color: #3f51b5;
+	color: #445284;
 	text-decoration: none;
 }
 
 a:visited {
-	/* color: #5e5e5e; */
-	/* color: #5e4983; */
-	color: #7f70a4;
+	color: #5e5e5e;
 }
 
 a:hover {
@@ -81,9 +78,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.picture {/* where is this used? cf .detail img and .more-content figure img */
-	max-width: 600px;
-}
 
 /* --------------------------------- */
 /* LANDING PAGE -------------------- */
@@ -255,24 +249,24 @@ nav.moment-nav ul li a:hover, nav.moment-nav ul li a:active {
 }
 
 .title-container {
-  overflow-x: hidden;
-  overflow-y: auto;
-  width: 100%;
   height: 100%;
   min-width: 100%;
-  min-height: 100%;  
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
 }
 
 #horizontal-titles {
-	display: flex;
-	flex-direction: column;
-  resize: both;
+/*	display: flex;*/
+/*	flex-direction: column;*/
+/*  resize: both;*/
 	white-space: nowrap;
 	scroll-snap-type: x mandatory;
-  /* juliet to fix */
   overflow-y: hidden;
   overflow-x: auto;
-  width: auto;
+/*  width: auto;*/
   min-width: 100%;
   min-height: 100%;
 }
@@ -296,7 +290,7 @@ nav.moment-nav ul li a:hover, nav.moment-nav ul li a:active {
 }
 
 @media screen and (min-width: 800px) { /* displays larger than 800px */
-	#horizontal-titles section div.moment-title-block {
+	#horizontal-titles div.content-container section div.moment-title-block {
 		margin-left: 35vw;
 		margin-right: 35vw;
     margin-bottom: 0;
@@ -305,7 +299,7 @@ nav.moment-nav ul li a:hover, nav.moment-nav ul li a:active {
 }
 
 @media (min-aspect-ratio: 2/1) {/* letterbox displays */
-	#horizontal-titles section div.moment-title-block {
+	#horizontal-titles div.content-container section div.moment-title-block {
 		margin-left: 5vw;
 		margin-right: 55vw;
 		text-align: left;
@@ -318,7 +312,6 @@ nav.moment-nav ul li a:hover, nav.moment-nav ul li a:active {
 .content-container {
   min-width: 100%;
   min-height: 100%;
-
 }
 
 .moment-title-block div {
@@ -343,7 +336,7 @@ nav.moment-nav ul li a:hover, nav.moment-nav ul li a:active {
 }
 
 .moment-title-block div p.story-intro {
-	font-weight: 600;
+/*	font-weight: 600;*/
 	margin-top: 0;
 	padding: 0;
 }
@@ -371,7 +364,7 @@ nav.moment-options ul li a svg path:hover {
 }
 
 nav.moment-options ul li.this-moment {
-	bottom: 55vh;
+	bottom: 5vh;
 	font-weight: 600;
 	left: 50%;
 	position: absolute;
@@ -383,7 +376,7 @@ nav.moment-options ul li.this-moment {
 
 @media screen and (min-width: 800px) { /* displays larger than 800px */
 	nav.moment-options ul li.this-moment {
-		bottom: 5vh;
+		bottom: 18vh;
 	}
 }
 
