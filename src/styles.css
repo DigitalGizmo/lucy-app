@@ -350,7 +350,6 @@ nav.moment-options ul {
 	list-style: none;
 	text-transform: uppercase;
 	font-size: .8em;
-	font-weight: 800;
 }
 
 nav.moment-options ul li a svg path {
@@ -361,21 +360,27 @@ nav.moment-options ul li a svg path:hover {
 	fill: #ffc107;
 }
 
-
 nav.moment-options ul li.this-moment {
+	bottom: 55vh;
+	font-weight: 600;
+	left: 50%;
 	position: absolute;
 	text-align: center;
-	width: 130px;
-	bottom: 35vh;
-	left: 50%;
+	transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%)
+	width: 150px;
 }
 
 @media screen and (min-width: 800px) { /* displays larger than 800px */
 	nav.moment-options ul li.this-moment {
 		bottom: 5vh;
 	}
+}
+
+nav.moment-options ul li.this-moment a {
+	color: #E7BA1B;
+	letter-spacing: 0.075em;
+	text-shadow: 1px 1px 1px black;
 }
 
 /* hide next/previous links on mobile */

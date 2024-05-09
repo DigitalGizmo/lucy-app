@@ -133,7 +133,7 @@
 }
 
 .moment-title-block div p.story-intro {
-  color: red;
+  color: green;
 }
 
 
@@ -141,6 +141,7 @@
 	display: inline-block;
 	margin-left: 5vw;
 	margin-right: 5vw;
+  margin-bottom: 5em;
 	width: 90vw;
 	height: 100vh;
 	text-align: center;
