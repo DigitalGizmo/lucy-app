@@ -164,18 +164,22 @@
           class="{ horizScrollClass }"
           bind:this={horizontalTitles}
           on:scroll={()=>currScrollX=horizontalTitles.scrollLeft} >
-          <section>
-            {#each data.moments as moment, i}
-              <div class="moment-title-block">
-                <div>
-                  <h1>{moment.title}</h1>
-                  <p class="story-intro">{moment.storyIntro}</p>
-                  <p class="history-intro">{moment.historyIntro}</p>
+
+          <div class="content-container">
+            <section>
+              {#each data.moments as moment, i}
+                <div class="moment-title-block">
+                  <div>
+                    <h1>{moment.title}</h1>
+                    <p class="story-intro">{moment.storyIntro}</p>
+                    <p class="history-intro">{moment.historyIntro}</p>
+                  </div>
                 </div>
-              </div>
-            {/each}
-          </section>
-        </div>
+              {/each}
+            </section>
+          </div> <!-- /content-container -->
+
+        </div> <!-- /horizontal titles -->
       </div><!-- /title-container -->
     
       <nav class="moment-options">
