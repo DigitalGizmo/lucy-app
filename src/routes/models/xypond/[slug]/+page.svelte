@@ -141,7 +141,7 @@
 	display: inline-block;
 	margin-left: 5vw;
 	margin-right: 5vw;
-  margin-bottom: 5em;
+  margin-bottom: 15em;
 	width: 90vw;
 	height: 100vh;
 	text-align: center;
@@ -155,6 +155,7 @@
 	#horizontal-titles-x div.content-container section div.moment-title-block {
 		margin-left: 35vw;
 		margin-right: 35vw;
+    margin-bottom: 0;
 		width: 30vw;
 	}
 }
@@ -163,6 +164,7 @@
 	#horizontal-titles-x div.content-container section div.moment-title-block {
 		margin-left: 5vw;
 		margin-right: 55vw;
+    margin-bottom: 0;
 		text-align: left;
 		width: 40vw;
 		scroll-snap-align: none;
