@@ -123,18 +123,81 @@
 </script>
 
 <style>
+.title-container {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;  
+}
+
 .moment-title-block div p.story-intro {
   color: red;
 }
 
-.title-container {
-  overflow-x: hidden;
-  overflow-y: auto;
+
+#horizontal-titles-x div.content-container section div.moment-title-block {
+	display: inline-block;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	width: 90vw;
+	height: 100vh;
+	text-align: center;
+	vertical-align: top;
+	white-space: normal;
+	font-size: 1.2em;
+	scroll-snap-align: center;
 }
 
-#horizontal-titles {
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	#horizontal-titles-x div.content-container section div.moment-title-block {
+		margin-left: 35vw;
+		margin-right: 35vw;
+		width: 30vw;
+	}
+}
+
+@media (min-aspect-ratio: 2/1) {/* letterbox displays */
+	#horizontal-titles-x div.content-container section div.moment-title-block {
+		margin-left: 5vw;
+		margin-right: 55vw;
+		text-align: left;
+		width: 40vw;
+		scroll-snap-align: none;
+	}
+}
+
+#horizontal-titles-x {
+	display: flex;
+	flex-direction: column;
+
+	/* width: 100vw;
+	height: 85vh;
+	overflow: auto; */
+
+  /* don testing */
+  /* overflow-y: hidden;
+  overflow-x: auto; */
+
+  resize: both;
+	white-space: nowrap;
+	scroll-snap-type: x mandatory;
+}
+
+#horizontal-titles-x {
   overflow-y: hidden;
   overflow-x: auto;
+  width: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+.content-container {
+  min-width: 100%;
+  min-height: 100%;
+
 }
 </style>
 
@@ -176,21 +239,27 @@
       </div><!-- end image-panel-fixed -->   
     
       <div class="title-container">
-        <div id="horizontal-titles"
+
+        <div id="horizontal-titles-x"
           class="{ horizScrollClass }"
           bind:this={horizontalTitles}
           on:scroll={()=>currScrollX=horizontalTitles.scrollLeft} >
-          <section>
-            {#each data.moments as moment, i}
-              <div class="moment-title-block">
-                <div>
-                  <h1>{moment.title}</h1>
-                  <p class="story-intro">{moment.storyIntro}</p>
-                  <p class="history-intro">{moment.historyIntro}</p>
+          
+          <div class="content-container">
+
+            <section>
+              {#each data.moments as moment, i}
+                <div class="moment-title-block">
+                  <div>
+                    <h1>{moment.title}</h1>
+                    <p class="story-intro">{moment.storyIntro}</p>
+                    <p class="history-intro">{moment.historyIntro}</p>
+                  </div>
                 </div>
-              </div>
-            {/each}
-          </section>
+              {/each}
+            </section>
+          </div>
+
         </div>
       </div><!-- /title-container -->
     
