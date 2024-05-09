@@ -910,8 +910,8 @@ dl.evidence-info dt {
 }
 
 /* supporting feature menus ----------- */
-ul.col-heads, ul li.feature-title {
-	font-weight: 600;
+ul.col-heads li, ul.col-content li.feature-title {
+	font-weight: 500;
 }
 
 @media screen and (max-width: 799px) { /* displays smaller than 800px */
