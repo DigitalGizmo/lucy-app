@@ -125,11 +125,17 @@
 <style>
 .moment-title-block div p.story-intro {
   color: red;
-	font-weight: 600;
-	margin-top: 0;
-	padding: 0;
 }
 
+.title-container {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#horizontal-titles {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
 </style>
 
 <svelte:window bind:scrollY={currScrollY} />

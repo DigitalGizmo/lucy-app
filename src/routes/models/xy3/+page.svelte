@@ -24,12 +24,12 @@
   }
 
   #horizontal-titles {
-    display: flex;
+    /*    display: flex;
     flex-direction: column;
     width: 100vw;
     height: 85vh;
     overflow: auto;
-    /* don testing */
+ don testing */
     /* overflow-y: hidden;
     overflow-x: auto; */
     resize: both;
