@@ -30,6 +30,12 @@
   <div class="about">
     <h3>About</h3>
     {@html itemInfo.full_text.html}
+    
+    {#if itemInfo.transcript}
+      <h3>Transcript</h3>
+      {@html itemInfo.transcript}
+    {/if}
+
   </div>
 
   <!-- / more-content or wrapper detail -->
