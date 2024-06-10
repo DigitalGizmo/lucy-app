@@ -35,7 +35,19 @@
             {person.first_name} {person.last_name}
           {/if}         
         </li>
-        <li class="feature-date">{person.birth_year} - {person.death_year}</li>
+        <li class="feature-date">
+          {#if person.birth_year}
+            {person.birth_year} 
+          {:else}
+            {person.birth_text}
+          {/if}
+          - 
+          {#if person.death_year}
+            {person.death_year} 
+          {:else}
+            {person.death_text}
+          {/if}
+        </li>
         <li class="feature-blurb">{person.menu_blurb}</li>
       </ul>
       {/each}

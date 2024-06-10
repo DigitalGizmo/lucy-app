@@ -16,7 +16,20 @@
 
   <h2>{itemInfo.first_name} {itemInfo.last_name}</h2>
 
-  <p class="dates">{itemInfo.birth_year} - {itemInfo.death_year}</p>
+  <p class="dates">
+    {#if itemInfo.birth_year}
+      {itemInfo.birth_year} 
+    {:else}
+      {itemInfo.birth_text}
+    {/if}
+    - 
+    {#if itemInfo.death_year}
+      {itemInfo.death_year} 
+    {:else}
+      {itemInfo.death_text}
+    {/if}
+
+  </p>
 
   <h3>About This Person</h3>
   {@html itemInfo.bio.html}
