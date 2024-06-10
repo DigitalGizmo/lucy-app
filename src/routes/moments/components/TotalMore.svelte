@@ -48,13 +48,14 @@
     </header>
     <div class="total-more-essay">
       <h2>The Necessity for Community</h2>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+      <p>Community building was vital for Black Americans living in colonial and revolutionary America. Most African Americans living at that time were enslaved; many, particularly in the North, lived in the homes of their enslavers. Developing a web of relationships with other people of color beyond the boundaries of the household was essential to enslaved Black people’s emotional, mental and physical health.</p>
+
+      <p>Creating such a community occurred both intentionally and organically. Carrying out errands for enslavers, for example, provided opportunities to interact with others beyond the household. A person running errands could stop and talk to another servant or enslaved person, asking about one another’s day, sharing news, and asking after friends and family.  Such day-to-day human interactions among people living in bondage were essential to their retaining a sense of self and building community.</p>
 
       <h2>Questions to Consider</h2>
       <ul class="questions">
-        <li>If you were enslaved, would you choose to have children?</li>
-        <li>What risks might you be willing to take to maintain friendships?</li>
-        <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consecteture?</li>
+        <li>What options, if any did an enslaved woman have if she wanted to ensure her children would be born free?</li>
+        <li>What challenges did enslaved people face in their attempts to sustain family and community ties?</li>
       </ul>
 
       <p>Follow Lucy's story&hellip;</p>
