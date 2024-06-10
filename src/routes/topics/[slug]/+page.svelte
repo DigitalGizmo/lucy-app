@@ -18,7 +18,7 @@
 
   <section class="wrapper detail">
     <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
-    <h4>More: <a href="/topics">Topics and Ideas</a></h4>
+    <h4><a href="/topics">Topics and Ideas</a></h4>
 
     <Topics
       {itemInfo}

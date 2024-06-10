@@ -18,7 +18,7 @@
 
   <section class="wrapper detail">
     <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
-    <h4>More: <a href="/evidence">How Do We Know?</a></h4>
+    <h4><a href="/evidence">How Do We Know?</a></h4>
     <Evidence
       {itemInfo}
     />  

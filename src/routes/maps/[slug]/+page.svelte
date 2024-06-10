@@ -32,7 +32,7 @@
 
   <section class="wrapper detail">
     <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
-    <h4>More: <a href="/maps">Where in the World?</a></h4>
+    <h4><a href="/maps">Where in the World?</a></h4>
         
     {#if itemInfo.slug == 'deerfield-african-americans'}
         <DeerfieldMap

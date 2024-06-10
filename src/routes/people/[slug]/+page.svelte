@@ -21,7 +21,7 @@
 
   <section class="wrapper detail">
     <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED</p>
-    <h4>More: <a href="/people">Other Lives</a></h4>
+    <h4><a href="/people">Other Lives</a></h4>
 
     <People
       {itemInfo}
