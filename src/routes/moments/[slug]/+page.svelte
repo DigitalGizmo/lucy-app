@@ -70,7 +70,7 @@
 
   // ----- Titles-----
   async function scrollToChosen(chosenIndex) {
-    console.log('scroll to chosen: ' + chosenIndex)
+    // console.log('scroll to chosen: ' + chosenIndex)
     // Jump, don't smooth scroll
     isScrollMode.set(false);
 

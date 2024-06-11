@@ -26,8 +26,9 @@
   let isSoundFx = false;
 
   onMount(() => {
-    console.log('moment just mounted')
+    // console.log('moment just mounted')
     calcMomentHeight();
+    window.scrollTo({ top: 0, left: 0 }); // , behavior: "smooth"
   })
 
   function calcMomentHeight () {
