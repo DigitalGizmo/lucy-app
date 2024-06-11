@@ -26,10 +26,12 @@
       <ul class="col-content">
 
         <li class="feature-thumb">
-          <img 
-            src="https://lucy-proto.deerfield-ma.org/assets/maps/images/thumbpics/{map.slug}.jpg"
-            alt="{map.title}"
-          >
+          <a href='/maps/{map.slug}'>
+            <img 
+              src="https://lucy-proto.deerfield-ma.org/assets/maps/images/thumbpics/{map.slug}.jpg"
+              alt="{map.title}"
+            >
+          </a>
         </li>
         <li class="feature-title">
           {#if map.prod_status > 1}

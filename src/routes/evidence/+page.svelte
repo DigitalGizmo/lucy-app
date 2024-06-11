@@ -27,10 +27,12 @@
       {#each data.items as item (item.slug)}
       <ul class="col-content">
         <li class="feature-thumb">
-          <img 
-            src="https://lucy-proto.deerfield-ma.org/assets/evidence/images/thumbpics/{item.slug}.jpg"
-            alt="{item.title}"
-          >
+          <a href='/evidence/{item.slug}'>
+            <img 
+              src="https://lucy-proto.deerfield-ma.org/assets/evidence/images/thumbpics/{item.slug}.jpg"
+              alt="{item.title}"
+            >
+          </a>
         </li>
         <li class="feature-title">
           {#if item.prod_status > 1}
