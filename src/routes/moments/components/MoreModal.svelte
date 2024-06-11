@@ -10,6 +10,7 @@
   import Evidence from '../../evidence/components/Evidence.svelte';
   import Topics from '../../topics/components/Topics.svelte';
   import Maps from '../../maps/components/Maps.svelte';
+  import DeerfieldMap from '../../maps/components/DeerfieldMap.svelte';
 
   async function getItemInfo() {
     const response = await fetch(`https://lucy-proto.deerfield-ma.org/${modalType}/api/${slug}`);
@@ -88,10 +89,17 @@ on:click={(e) => { closeModal(e)}}/>
           {itemInfo}
         />
       {:else if modalType === 'maps'}
-        <h4>MM More: Where in the World?</h4>
-        <Maps
-          {itemInfo}
-        />
+        <h4>More: Where in the World?</h4>
+        {#if itemInfo.slug === 'deerfield-african-americans'}
+          <DeerfieldMap
+            {itemInfo}
+          />
+        {:else}
+          <Maps
+            {itemInfo}
+          />
+        {/if}
+
       {/if}
 
       {#if itemInfo.relateds.length > 0}
