@@ -2,7 +2,7 @@
     {
         "slug": "sold",
         "title": "Sold Out of Africa",
-        "date": "1700",
+        "date": "1726",
         "storyIntro": "Lucy is captured and taken away from all that is safe and familiar.",
         "historyIntro": "Millions of captured Africans imprisoned at the West Africa coast were sold and forced into the ships that would transport them to the Americas in the infamous Middle Passage.",
         "frames": []
@@ -10,7 +10,7 @@
     {
         "slug": "forsale",
         "title": "For Sale Again",
-        "date": "1701",
+        "date": "1728",
         "storyIntro": "Three-year old Lucy is among a group of captured Africans for sale in Bristol, Rhode Island.",
         "historyIntro": "Africans who survived capture and the horrors of the Middle Passage encountered a world where loss of freedom and the arbitrary power of their enslavers were the only constants.",
         "frames": []
@@ -18,7 +18,7 @@
     {
         "slug": "newlife",
         "title": "A Strange New Life",
-        "date": "1702",
+        "date": "1732",
         "storyIntro": "Eight-year-old Lucy arrives in a new place but her status as an enslaved child does not change.",
         "historyIntro": "Enslaved people could be sold at a moment’s notice to new captors anytime, anywhere, upending any and all relationships including parents, children, siblings and spouses.",
         "frames": []
@@ -26,7 +26,7 @@
     {
         "slug": "wells",
         "title": "Enslaved at the Wells's House",
-        "date": "1703",
+        "date": "1740",
         "storyIntro": "Lucy and Cesar are expected to undertake the most menial tasks on a rural farm in an unending cycle of labor.",
         "historyIntro": "Enslaved people provided essential, often backbreaking agricultural labor but unlike free members of an 18th-century household, they worked for someone else’s benefit. ",
         "frames": [
@@ -118,7 +118,7 @@
     {
         "slug": "church",
         "title": "Joining the Church",
-        "date": "1700",
+        "date": "1744",
         "storyIntro": "Lucy joins a baptized body of Protestant believers, free and enslaved, who believe they have experienced God’s saving grace.",
         "historyIntro": "Enslaved people who embraced Christianity were still expected to accept what enslavers insisted was their God-ordained station in this life: human property.",
         "frames": []
@@ -126,7 +126,7 @@
     {
         "slug": "singer",
         "title": "Singer of History",
-        "date": "1700",
+        "date": "1748",
         "storyIntro": "Lucy sings her poem, the Bars Fight, to customers in Ebenezer Wells’s tavern.",
         "historyIntro": "Many enslaved people brought their story-telling and oral traditions to the Americas. Their talent could sometimes confer social status in the White community.",
         "frames": []
@@ -134,7 +134,7 @@
     {
         "slug": "engaging",
         "title": "In the Community",
-        "date": "1700",
+        "date": "1755",
         "storyIntro": "Running errands for her enslaver, Lucy stops at the busy Williams store, encountering many people including one who might play a central role in her life.",
         "historyIntro": "New Englanders at times permitted enslaved people to earn a bit of money; their purchases of rum, tobacco, chocolate, and textiles linked them to the trans-Atlantic slave economy.",
         "frames": []
@@ -142,7 +142,7 @@
     {
         "slug": "community",
         "title": "Community Within Community",
-        "date": "1700",
+        "date": "1755",
         "storyIntro": "As Abijah walks Lucy home along the village street they encounter several Black residents of Deerfield and surrounding towns.",
         "historyIntro": "An interior network of relationships among enslaved and free people of color fostered an essential “community within community” in Deerfield and other New England towns.",
         "frames": [
@@ -258,7 +258,7 @@
                     {"title": "Coercion and Abuse", "slug": "coercion-abuse"}
                 ],
                 "moreHowLinks": [
-                    {"title": "Heber Honestman's Store Account", "slug": "heber-store-account"},                   
+                    {"title": "Heber Honestman's account at Elijah Williams' store", "slug": "heber-store-account"},                   
                     {"title": "Crutches: \"Bath Races\"", "slug": "crutch"},
                     {"title": "Ox Cart:  \"Horned Cattle Drawing a Dung Cart\"", "slug": "ox-cart"},
                     {"title": "Bear Trap", "slug": "bear-trap"}
@@ -335,8 +335,8 @@
                 "moreHowLinks": [
                     {"title": "Sermon by Jonathan Ashley", "slug": "ashley-sermon"},
                     {"title": "Plow", "slug": "plow"},
-                    {"title": "Plan of the Town of Deerfield", "slug": "hoyt-map"},
-                    {"title": "Account Book of Jonathan Ashley", "slug": "ashley-account-book"}
+                    {"title": "Deerfield town plan", "slug": "hoyt-map"},
+                    {"title": "Jonathan Ashley's account book", "slug": "ashley-account-book"}
                 ],
                 "moreWhereLinks": []            
             },
@@ -387,7 +387,7 @@
                     {"title": "Ebenezer Wells", "slug": "ebenezer-wells"}            
                 ],
                 "moreTopicLinks": [
-                    {"title": "Courtship and Marriage in a Hierarchical Society", "slug": "courtship"}
+                    {"title": "Courtship in Early New England", "slug": "courtship"}
                 ],
                 "moreHowLinks": [],       
                 "moreWhereLinks": []            
@@ -415,7 +415,7 @@
     {
         "slug": "union",
         "title": "A Fruitful Union",
-        "date": "1700",
+        "date": "1756",
         "storyIntro": "Lucy and Abijah get married and begin their life together as free people. ",
         "historyIntro": "If an enslaved women was emancipated, her new status ensured that any children she might have would be born free.",
         "frames": []
@@ -423,23 +423,23 @@
     {
         "slug": "revolution",
         "title": "Sons of the Revolution",
-        "date": "1700",
+        "date": "1777",
         "storyIntro": "Like many Black mothers, Lucy sends her sons off to fight in the Revolution.",
         "historyIntro": "Even as they embraced the promises of the American Revolution, African American and Indigenous people knew the bitter irony of fighting for freedom alongside colonial enslavers.",
         "frames": []
     },  
     {
         "slug": "frontier",
-        "title": "Fighting for A Home",
-        "date": "1700",
+        "title": "Hostile Neighbors",
+        "date": "1780s",
         "storyIntro": "Lucy and Abijah face intimidation and violence from hostile neighbors as they struggle to make a life for themselves on their Vermont farm.",
         "historyIntro": "Even as Vermont’s constitution put slavery on the defensive, free African Americans often encountered challenges as they endeavored to live and prosper as citizens of a new nation. ",
         "frames": []
     },  
     {
         "slug": "court",
-        "title": "Fighting in Court",
-        "date": "1700",
+        "title": "Fighting for Justice",
+        "date": "1785",
         "storyIntro": "Lucy fights in court to protect her family's legal claim to their land and for fair treatment by their neighbors.",
         "historyIntro": "The laws of Vermont and other New England states protected their citizens’ property rights while simultaneously posing challenges to those rights for free people of color.",
         "frames": []
@@ -447,7 +447,7 @@
     {
         "slug": "returning",
         "title": "Returning to Deerfield",
-        "date": "1700",
+        "date": "1794",
         "storyIntro": "Her children are grown and Lucy is recently widowed when she decides to return to Deerfield for a visit.",
         "historyIntro": "Continued ties between formerly enslaved people with families and communities where they were enslaved highlight a sense of connection to people and place, both positive and negative.",
         "frames": []

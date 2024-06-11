@@ -23,7 +23,7 @@
 
       <ul class="col-content">
         <li class="feature-title">1738<br>Slave Ship Leusden Sinks, January 1, 1738</li>
-        <li>The Leusden sunk off the coast of Suriname, a Dutch colony. Over 600 enslaved Africans drowned in the largest marine tragedy of the Trans-Atlantic slave trade. Captain and crew survived, having left almost 700 imprisoned Africans intentionally trapped in the ship.</li>
+        <li class="feature-blurb">The Leusden sunk off the coast of Suriname, a Dutch colony. Over 600 enslaved Africans drowned in the largest marine tragedy of the Trans-Atlantic slave trade. Captain and crew survived, having left almost 700 imprisoned Africans intentionally trapped in the ship.</li>
       </ul>
 
       <ul class="col-content">
