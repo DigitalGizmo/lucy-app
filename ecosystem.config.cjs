@@ -5,7 +5,7 @@ module.exports = {
     env_production: {
       NODE_ENV: 'production',
       PORT: 3000,
-      ORIGIN: 'https://lucyterryprince.deerfield-ma.org/'
+      ORIGIN: 'https://lucyterryprince.deerfield-ma.org'
     }
   }]
 }
