@@ -19,9 +19,28 @@ No test framework is configured.
 
 ## Stack
 
-- **SvelteKit v1** with `@sveltejs/adapter-node` (deployed to DigitalOcean App Platform)
+- **SvelteKit v1** with `@sveltejs/adapter-node` (deployed to DigitalOcean droplet)
 - **Vite v4** build tool
 - No TypeScript, no linting tools configured
+
+## Deployment
+
+**Server:** DigitalOcean droplet at `lucyterryprince.deerfield-ma.org`  
+**Stack:** nginx (reverse proxy) → PM2 → Node on port 3000  
+**App location on server:** `/srv/www/lucy-app`  
+**PM2 config:** `ecosystem.config.cjs` (committed to repo)
+
+**Deploy workflow (SSH into droplet):**
+```bash
+cd /srv/www/lucy-app
+git fetch && git merge
+npm install
+npm run build
+pm2 restart ecosystem.config.cjs --env production
+```
+
+**Logs:** `pm2 logs lucy-app`  
+**Status:** `pm2 status`
 
 ## Architecture
 
